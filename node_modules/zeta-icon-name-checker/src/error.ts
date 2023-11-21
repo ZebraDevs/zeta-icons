@@ -2,6 +2,7 @@ export enum ErrorType {
   none,
   iconRenamed,
   invalidChar,
+  startsWithNumber,
   reservedWord,
 }
 
@@ -28,6 +29,10 @@ export class ZetaIconError {
         break;
       case ErrorType.invalidChar:
         this.message = `${iconName} contains an invalid character and will not be exported to the library`;
+        this.severity = ErrorSeverity.high;
+        break;
+      case ErrorType.startsWithNumber:
+        this.message = `${iconName} starts with a number and will not be exported to the library`;
         this.severity = ErrorSeverity.high;
         break;
       case ErrorType.reservedWord:

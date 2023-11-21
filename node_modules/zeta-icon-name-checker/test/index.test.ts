@@ -14,8 +14,8 @@ describe("testing checkIconName", () => {
     expect(checkIconName("test123").type).toBe(ErrorType.none);
   });
 
-  test(`"123test" should return a ${ErrorType.invalidChar} error`, () => {
-    expect(checkIconName("123test").type).toBe(ErrorType.invalidChar);
+  test(`"123test" should return a ${ErrorType.startsWithNumber} error`, () => {
+    expect(checkIconName("123test").type).toBe(ErrorType.startsWithNumber);
   });
 
   test(`"-test" should return a ${ErrorType.invalidChar} error`, () => {

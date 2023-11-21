@@ -2,7 +2,8 @@ export declare enum ErrorType {
     none = 0,
     iconRenamed = 1,
     invalidChar = 2,
-    reservedWord = 3
+    startsWithNumber = 3,
+    reservedWord = 4
 }
 export declare enum ErrorSeverity {
     none = 0,

@@ -17,7 +17,7 @@ function checkIconName(
 ): ZetaIconError {
   // Starts with a number
   if (/^\d/.test(iconName)) {
-    return new ZetaIconError(ErrorType.invalidChar, iconName);
+    return new ZetaIconError(ErrorType.startsWithNumber, iconName);
   }
 
   // Contains a non alpha-numeric character except for spaces, _, and $

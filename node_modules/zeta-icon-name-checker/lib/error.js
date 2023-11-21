@@ -3,7 +3,8 @@ export var ErrorType;
     ErrorType[ErrorType["none"] = 0] = "none";
     ErrorType[ErrorType["iconRenamed"] = 1] = "iconRenamed";
     ErrorType[ErrorType["invalidChar"] = 2] = "invalidChar";
-    ErrorType[ErrorType["reservedWord"] = 3] = "reservedWord";
+    ErrorType[ErrorType["startsWithNumber"] = 3] = "startsWithNumber";
+    ErrorType[ErrorType["reservedWord"] = 4] = "reservedWord";
 })(ErrorType || (ErrorType = {}));
 export var ErrorSeverity;
 (function (ErrorSeverity) {
@@ -22,6 +23,10 @@ export class ZetaIconError {
                 break;
             case ErrorType.invalidChar:
                 this.message = `${iconName} contains an invalid character and will not be exported to the library`;
+                this.severity = ErrorSeverity.high;
+                break;
+            case ErrorType.startsWithNumber:
+                this.message = `${iconName} starts with a number and will not be exported to the library`;
                 this.severity = ErrorSeverity.high;
                 break;
             case ErrorType.reservedWord:

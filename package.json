@@ -2,7 +2,6 @@
   "name": "zeta-icons",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@3.5.0",
   "type": "module",
   "dependencies": {
     "@actions/core": "^1.10.0",

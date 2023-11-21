@@ -14,7 +14,7 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
   let unicodeAcc = 0xe001;
 
   const font = await webfont({
-    files: `./build_files/assets/**/*_${type}.svg`,
+    files: `./assets/**/*_${type}.svg`,
     fontName: "zeta-icons",
     formats: ["woff2", "ttf"],
     fontId: "zeta-icons",

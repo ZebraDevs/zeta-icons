@@ -10,6 +10,9 @@ import { webfont } from "webfont";
 
 const fontName = "zeta-icons";
 
+let dartFileContents = createDartFile();
+let typesFileContents = "export type IconName = \n";
+
 const buildFontFile = async (woff2Url, ttfUrl, type) => {
   let unicodeAcc = 0xe001;
 
@@ -52,9 +55,6 @@ try {
 
   await buildFontFile(woff2RoundFontUrl, ttfRoundFontUrl, "round");
   await buildFontFile(woff2SharpFontUrl, ttfSharpFontUrl, "sharp");
-
-  let dartFileContents = createDartFile();
-  let typesFileContents = "export type IconName = \n";
 
   dartFileContents += "} \n";
 

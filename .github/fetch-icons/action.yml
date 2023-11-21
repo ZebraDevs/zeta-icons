@@ -1,0 +1,14 @@
+name: "Fetch Icons"
+description: "Fetch icons from the ZDS Library"
+inputs:
+  figma-access-token:
+    description: "The personal access token given by Figma. Required to make API calls"
+    required: true
+outputs:
+  icons_changed:
+    description: "Boolean that gets set to true if any icons have been added or removed"
+  assets_path:
+    description: "The path to assets.json"
+runs:
+  using: "node16"
+  main: "index.mjs"

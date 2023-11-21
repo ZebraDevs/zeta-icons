@@ -1,0 +1,21 @@
+name: "Build Files"
+description: "Generates ttf, Woff2 and SVG font files and a Dart file containing variable name references"
+inputs:
+  assets_path:
+    description: "The path to assets.json"
+    required: true
+outputs:
+  ttf_path:
+    description: "The path to zeta-icons.ttf"
+  woff2_path:
+    description: "The path to zeta-icons.woff2"
+  dart_path:
+    description: "The path to icons.dart"
+  scss_path:
+    description: "The path to icons.scss"
+  types_path:
+    description: "The path to icon-types.ts"
+
+runs:
+  using: "node16"
+  main: "index.mjs"

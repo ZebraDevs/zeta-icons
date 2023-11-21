@@ -21,10 +21,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Run npm i
+        run: npm install
       - name: Fetch icons
         id: "fetch_icons"
         uses: ./.github/fetch-icons
-        if: ${{github.event.pusher.name != 'zeta-icons-bot'}}
         with:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
       - name: Build files

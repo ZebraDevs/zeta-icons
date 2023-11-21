@@ -47,7 +47,7 @@ try {
   }
 
   // Create the assets folder if it doesn't exist
-  const fileDestination = `${baseUrl}/public/assets`;
+  const fileDestination = `${baseUrl}/assets`;
   await createFolder(fileDestination);
 
   const newAssetsObj = {}; // Maps category names to a list of icon models
@@ -141,10 +141,7 @@ try {
                   await writeSVGToFile(svgDOM, filePath);
 
                   // Set the relative path by removing the base url
-                  const relativePath = filePath.replace(
-                    `${baseUrl}/public/`,
-                    ""
-                  );
+                  const relativePath = filePath.replace(`${baseUrl}/`, "");
                   iconModel[`${styleName}Path`] = relativePath;
                 } else {
                   console.log("corrupt svgDom", svgDOM);
@@ -171,9 +168,9 @@ try {
             console.log(`Deleting icon ${icon.name}`);
 
             try {
-              const roundedPath = `${baseUrl}/public/${icon.roundPath}`;
+              const roundedPath = `${baseUrl}/${icon.roundPath}`;
               deleteFile(roundedPath);
-              const sharpPath = `${baseUrl}/public/${icon.sharpPath}`;
+              const sharpPath = `${baseUrl}/${icon.sharpPath}`;
               deleteFile(sharpPath);
             } catch (e) {
               console.log(e);

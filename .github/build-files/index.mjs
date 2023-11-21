@@ -6,10 +6,9 @@ import {
   readFile,
   writeToFile,
 } from "../utils/file-utils.mjs";
-import { webfont } from 'webfont';
+import { webfont } from "webfont";
 
 const fontName = "zeta-icons";
-
 
 const buildFontFile = async (woff2Url, ttfUrl, type) => {
   let unicodeAcc = 0xe001;
@@ -17,7 +16,7 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
   const font = await webfont({
     files: `./public/assets/**/*_${type}.svg`,
     fontName: "zeta-icons",
-    formats: ['woff2', 'ttf'],
+    formats: ["woff2", "ttf"],
     fontId: "zeta-icons",
     height: 2400,
     centerHorizontally: true,
@@ -30,9 +29,9 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
     },
   });
 
-  writeFileSync(woff2Url, font.woff2);
-  writeFileSync(ttfUrl, font.ttf);
-}
+  fs.writeFileSync(woff2Url, font.woff2);
+  fs.writeFileSync(ttfUrl, font.ttf);
+};
 
 try {
   const baseUrl = process.cwd();
@@ -42,13 +41,12 @@ try {
   const woff2RoundFontUrl = `${baseUrl}/public/build_files/${fontName}_round.woff2`;
   const woff2SharpFontUrl = `${baseUrl}/public/build_files/${fontName}_sharp.woff2`;
 
-  await buildFontFile(woff2RoundFontUrl, ttfRoundFontUrl, 'round');
-  await buildFontFile(woff2SharpFontUrl, ttfSharpFontUrl, 'sharp');
+  await buildFontFile(woff2RoundFontUrl, ttfRoundFontUrl, "round");
+  await buildFontFile(woff2SharpFontUrl, ttfSharpFontUrl, "sharp");
 
   const assets = JSON.parse(await readFile(core.getInput("assets_path")));
 
   const baseIconUrl = `${baseUrl}/public`;
-
 
   var dartFileContents = createDartFile();
   var scssFileContents = "";

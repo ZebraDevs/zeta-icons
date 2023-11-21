@@ -1,0 +1,5255 @@
+{
+  "Toggle": [
+    {
+      "name": "Check Box",
+      "id": "259:1589",
+      "searchTerms": [
+        "Checked"
+      ],
+      "roundPath": "assets/toggle/check_box_round.svg",
+      "sharpPath": "assets/toggle/check_box_sharp.svg"
+    },
+    {
+      "name": "Check Box Empty",
+      "id": "259:1591",
+      "searchTerms": [
+        "Unchecked"
+      ],
+      "roundPath": "assets/toggle/check_box_empty_round.svg",
+      "sharpPath": "assets/toggle/check_box_empty_sharp.svg"
+    },
+    {
+      "name": "Indeterminate Check Box",
+      "id": "259:1592",
+      "searchTerms": [
+        "Half"
+      ],
+      "roundPath": "assets/toggle/indeterminate_check_box_round.svg",
+      "sharpPath": "assets/toggle/indeterminate_check_box_sharp.svg"
+    },
+    {
+      "name": "Radio Button Checked",
+      "id": "259:1593",
+      "searchTerms": [
+        "radio",
+        "on",
+        "button",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/toggle/radio_button_checked_round.svg",
+      "sharpPath": "assets/toggle/radio_button_checked_sharp.svg"
+    },
+    {
+      "name": "Radio Button Unchecked",
+      "id": "259:1594",
+      "searchTerms": [
+        "radio",
+        "off",
+        "button",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/toggle/radio_button_unchecked_round.svg",
+      "sharpPath": "assets/toggle/radio_button_unchecked_sharp.svg"
+    },
+    {
+      "name": "Toggle Off",
+      "id": "259:1595",
+      "searchTerms": [
+        "Switch",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/toggle/toggle_off_round.svg",
+      "sharpPath": "assets/toggle/toggle_off_sharp.svg"
+    },
+    {
+      "name": "Toggle On",
+      "id": "259:1596",
+      "searchTerms": [
+        "Switch",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/toggle/toggle_on_round.svg",
+      "sharpPath": "assets/toggle/toggle_on_sharp.svg"
+    },
+    {
+      "name": "Star",
+      "id": "259:1601",
+      "searchTerms": [
+        "Rating",
+        "favorite",
+        "star",
+        "mark",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/toggle/star_round.svg",
+      "sharpPath": "assets/toggle/star_sharp.svg"
+    },
+    {
+      "name": "Star Outline",
+      "id": "259:1602",
+      "searchTerms": [
+        "Rating",
+        "Empty",
+        "favorite",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/toggle/star_outline_round.svg",
+      "sharpPath": "assets/toggle/star_outline_sharp.svg"
+    },
+    {
+      "name": "Star Half",
+      "id": "259:1603",
+      "searchTerms": [
+        "Rating"
+      ],
+      "roundPath": "assets/toggle/star_half_round.svg",
+      "sharpPath": "assets/toggle/star_half_sharp.svg"
+    }
+  ],
+  "Enterprise": [
+    {
+      "name": "Barcode Settings",
+      "id": "839:1911",
+      "searchTerms": [
+        "Gear",
+        "Cog",
+        "Bar"
+      ],
+      "roundPath": "assets/enterprise/barcode_settings_round.svg",
+      "sharpPath": "assets/enterprise/barcode_settings_sharp.svg"
+    },
+    {
+      "name": "Barcode Bluetooth",
+      "id": "839:1926",
+      "searchTerms": [
+        "Pill",
+        "Connection",
+        "Scanner"
+      ],
+      "roundPath": "assets/enterprise/barcode_bluetooth_round.svg",
+      "sharpPath": "assets/enterprise/barcode_bluetooth_sharp.svg"
+    },
+    {
+      "name": "Barcode Scanner Down",
+      "id": "839:1941",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/barcode_scanner_down_round.svg",
+      "sharpPath": "assets/enterprise/barcode_scanner_down_sharp.svg"
+    },
+    {
+      "name": "Barcode QR Code",
+      "id": "839:1956",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/barcode_qr_code_round.svg",
+      "sharpPath": "assets/enterprise/barcode_qr_code_sharp.svg"
+    },
+    {
+      "name": "Calculator",
+      "id": "839:1985",
+      "searchTerms": [
+        "Math"
+      ],
+      "roundPath": "assets/enterprise/calculator_round.svg",
+      "sharpPath": "assets/enterprise/calculator_sharp.svg"
+    },
+    {
+      "name": "Barcode",
+      "id": "839:1991",
+      "searchTerms": [
+        "Scan",
+        "Bar",
+        "Laser",
+        "Stock",
+        "Inventory"
+      ],
+      "roundPath": "assets/enterprise/barcode_round.svg",
+      "sharpPath": "assets/enterprise/barcode_sharp.svg"
+    },
+    {
+      "name": "Card With Chip",
+      "id": "839:2004",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/card_with_chip_round.svg",
+      "sharpPath": "assets/enterprise/card_with_chip_sharp.svg"
+    },
+    {
+      "name": "Card Orientation",
+      "id": "839:2013",
+      "searchTerms": [
+        "Printer",
+        "Magnetic",
+        "Strip",
+        "Credit",
+        "Chip"
+      ],
+      "roundPath": "assets/enterprise/card_orientation_round.svg",
+      "sharpPath": "assets/enterprise/card_orientation_sharp.svg"
+    },
+    {
+      "name": "Credit Card Swipe",
+      "id": "839:2023",
+      "searchTerms": [
+        "Magnetic",
+        "Stripe",
+        "Hand"
+      ],
+      "roundPath": "assets/enterprise/credit_card_swipe_round.svg",
+      "sharpPath": "assets/enterprise/credit_card_swipe_sharp.svg"
+    },
+    {
+      "name": "Contactless Pay",
+      "id": "839:2031",
+      "searchTerms": [
+        "Tap",
+        "Wave"
+      ],
+      "roundPath": "assets/enterprise/contactless_pay_round.svg",
+      "sharpPath": "assets/enterprise/contactless_pay_sharp.svg"
+    },
+    {
+      "name": "Tap To Pay",
+      "id": "840:2038",
+      "searchTerms": [
+        "Contactless"
+      ],
+      "roundPath": "assets/enterprise/tap_to_pay_round.svg",
+      "sharpPath": "assets/enterprise/tap_to_pay_sharp.svg"
+    },
+    {
+      "name": "Planogram",
+      "id": "840:2045",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/planogram_round.svg",
+      "sharpPath": "assets/enterprise/planogram_sharp.svg"
+    },
+    {
+      "name": "Issue Audit",
+      "id": "841:2058",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/issue_audit_round.svg",
+      "sharpPath": "assets/enterprise/issue_audit_sharp.svg"
+    },
+    {
+      "name": "Barcode Done",
+      "id": "841:2071",
+      "searchTerms": [
+        "Check",
+        "Complete"
+      ],
+      "roundPath": "assets/enterprise/barcode_done_round.svg",
+      "sharpPath": "assets/enterprise/barcode_done_sharp.svg"
+    },
+    {
+      "name": "Barcode Image Scan",
+      "id": "841:2086",
+      "searchTerms": [
+        "Box",
+        "Bounding"
+      ],
+      "roundPath": "assets/enterprise/barcode_image_scan_round.svg",
+      "sharpPath": "assets/enterprise/barcode_image_scan_sharp.svg"
+    },
+    {
+      "name": "Factory",
+      "id": "841:2101",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/factory_round.svg",
+      "sharpPath": "assets/enterprise/factory_sharp.svg"
+    },
+    {
+      "name": "Retail",
+      "id": "841:2113",
+      "searchTerms": [
+        "Tag",
+        "Shop"
+      ],
+      "roundPath": "assets/enterprise/retail_round.svg",
+      "sharpPath": "assets/enterprise/retail_sharp.svg"
+    },
+    {
+      "name": "Receipt",
+      "id": "841:2120",
+      "searchTerms": [
+        "Bill",
+        "$"
+      ],
+      "roundPath": "assets/enterprise/receipt_round.svg",
+      "sharpPath": "assets/enterprise/receipt_sharp.svg"
+    },
+    {
+      "name": "Scan Rate",
+      "id": "841:2137",
+      "searchTerms": [
+        "Box",
+        "Fast",
+        "Slow",
+        "Speed"
+      ],
+      "roundPath": "assets/enterprise/scan_rate_round.svg",
+      "sharpPath": "assets/enterprise/scan_rate_sharp.svg"
+    },
+    {
+      "name": "Performance",
+      "id": "843:2147",
+      "searchTerms": [
+        "Chart",
+        "Graphic"
+      ],
+      "roundPath": "assets/enterprise/performance_round.svg",
+      "sharpPath": "assets/enterprise/performance_sharp.svg"
+    },
+    {
+      "name": "Enterprise Diagnostics",
+      "id": "843:2165",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/enterprise_diagnostics_round.svg",
+      "sharpPath": "assets/enterprise/enterprise_diagnostics_sharp.svg"
+    },
+    {
+      "name": "EAS",
+      "id": "843:2176",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/eas_round.svg",
+      "sharpPath": "assets/enterprise/eas_sharp.svg"
+    },
+    {
+      "name": "Zero Scale",
+      "id": "843:2196",
+      "searchTerms": [
+        "Reset"
+      ],
+      "roundPath": "assets/enterprise/zero_scale_round.svg",
+      "sharpPath": "assets/enterprise/zero_scale_sharp.svg"
+    },
+    {
+      "name": "Road Map",
+      "id": "843:2206",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/road_map_round.svg",
+      "sharpPath": "assets/enterprise/road_map_sharp.svg"
+    },
+    {
+      "name": "Rules",
+      "id": "843:2218",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/rules_round.svg",
+      "sharpPath": "assets/enterprise/rules_sharp.svg"
+    },
+    {
+      "name": "Choices",
+      "id": "843:2230",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/choices_round.svg",
+      "sharpPath": "assets/enterprise/choices_sharp.svg"
+    },
+    {
+      "name": "Strategy",
+      "id": "843:2242",
+      "searchTerms": [
+        "Presentation"
+      ],
+      "roundPath": "assets/enterprise/strategy_round.svg",
+      "sharpPath": "assets/enterprise/strategy_sharp.svg"
+    },
+    {
+      "name": "Shape Recognition",
+      "id": "843:2254",
+      "searchTerms": [
+        "Circle",
+        "Square",
+        "Multicode"
+      ],
+      "roundPath": "assets/enterprise/shape_recognition_round.svg",
+      "sharpPath": "assets/enterprise/shape_recognition_sharp.svg"
+    },
+    {
+      "name": "Solutions",
+      "id": "844:2264",
+      "searchTerms": [
+        "Puzzle"
+      ],
+      "roundPath": "assets/enterprise/solutions_round.svg",
+      "sharpPath": "assets/enterprise/solutions_sharp.svg"
+    },
+    {
+      "name": "Environmental",
+      "id": "844:2271",
+      "searchTerms": [
+        "Green",
+        "Leaf",
+        "Leaves",
+        "Tree"
+      ],
+      "roundPath": "assets/enterprise/environmental_round.svg",
+      "sharpPath": "assets/enterprise/environmental_sharp.svg"
+    },
+    {
+      "name": "Productivity Apps",
+      "id": "844:2278",
+      "searchTerms": [
+        "Mobile",
+        "Smart",
+        "Chart"
+      ],
+      "roundPath": "assets/enterprise/productivity_apps_round.svg",
+      "sharpPath": "assets/enterprise/productivity_apps_sharp.svg"
+    },
+    {
+      "name": "Certificate",
+      "id": "844:2288",
+      "searchTerms": [
+        "Success",
+        "Badge"
+      ],
+      "roundPath": "assets/enterprise/certificate_round.svg",
+      "sharpPath": "assets/enterprise/certificate_sharp.svg"
+    },
+    {
+      "name": "Steps",
+      "id": "844:2310",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/enterprise/steps_round.svg",
+      "sharpPath": "assets/enterprise/steps_sharp.svg"
+    },
+    {
+      "name": "Freezer",
+      "id": "844:2320",
+      "searchTerms": [
+        "Ice",
+        "Cold",
+        "AC",
+        "Climate"
+      ],
+      "roundPath": "assets/enterprise/freezer_round.svg",
+      "sharpPath": "assets/enterprise/freezer_sharp.svg"
+    }
+  ],
+  "DNA": [
+    {
+      "name": "Life Guard",
+      "id": "653:1647",
+      "searchTerms": [
+        "Android"
+      ],
+      "roundPath": "assets/dna/life_guard_round.svg",
+      "sharpPath": "assets/dna/life_guard_sharp.svg"
+    },
+    {
+      "name": "Mobility DNA",
+      "id": "784:1660",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/mobility_dna_round.svg",
+      "sharpPath": "assets/dna/mobility_dna_sharp.svg"
+    },
+    {
+      "name": "TekSpeech Pro",
+      "id": "784:1666",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/tekspeech_pro_round.svg",
+      "sharpPath": "assets/dna/tekspeech_pro_sharp.svg"
+    },
+    {
+      "name": "Enterprise Browser",
+      "id": "785:1658",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/enterprise_browser_round.svg",
+      "sharpPath": "assets/dna/enterprise_browser_sharp.svg"
+    },
+    {
+      "name": "AppGallery",
+      "id": "785:1664",
+      "searchTerms": [
+        "Store"
+      ],
+      "roundPath": "assets/dna/appgallery_round.svg",
+      "sharpPath": "assets/dna/appgallery_sharp.svg"
+    },
+    {
+      "name": "Workforce Connect",
+      "id": "785:1670",
+      "searchTerms": [
+        "WFC"
+      ],
+      "roundPath": "assets/dna/workforce_connect_round.svg",
+      "sharpPath": "assets/dna/workforce_connect_sharp.svg"
+    },
+    {
+      "name": "SimulScan",
+      "id": "785:1676",
+      "searchTerms": [
+        "Signature"
+      ],
+      "roundPath": "assets/dna/simulscan_round.svg",
+      "sharpPath": "assets/dna/simulscan_sharp.svg"
+    },
+    {
+      "name": "Power Precision",
+      "id": "785:1682",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/power_precision_round.svg",
+      "sharpPath": "assets/dna/power_precision_sharp.svg"
+    },
+    {
+      "name": "Mobility Security",
+      "id": "820:1824",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/mobility_security_round.svg",
+      "sharpPath": "assets/dna/mobility_security_sharp.svg"
+    },
+    {
+      "name": "StageNow",
+      "id": "821:1840",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/stagenow_round.svg",
+      "sharpPath": "assets/dna/stagenow_sharp.svg"
+    },
+    {
+      "name": "EMDK",
+      "id": "821:1849",
+      "searchTerms": [
+        "Toolbox"
+      ],
+      "roundPath": "assets/dna/emdk_round.svg",
+      "sharpPath": "assets/dna/emdk_sharp.svg"
+    },
+    {
+      "name": "Enterprise Keyboard",
+      "id": "821:1858",
+      "searchTerms": [
+        "Setting"
+      ],
+      "roundPath": "assets/dna/enterprise_keyboard_round.svg",
+      "sharpPath": "assets/dna/enterprise_keyboard_sharp.svg"
+    },
+    {
+      "name": "MDM Toolkit",
+      "id": "822:1864",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/mdm_toolkit_round.svg",
+      "sharpPath": "assets/dna/mdm_toolkit_sharp.svg"
+    },
+    {
+      "name": "MX",
+      "id": "822:1870",
+      "searchTerms": [
+        "Mobility",
+        "Extensions"
+      ],
+      "roundPath": "assets/dna/mx_round.svg",
+      "sharpPath": "assets/dna/mx_sharp.svg"
+    },
+    {
+      "name": "RX",
+      "id": "822:1876",
+      "searchTerms": [
+        "Prescription"
+      ],
+      "roundPath": "assets/dna/rx_round.svg",
+      "sharpPath": "assets/dna/rx_sharp.svg"
+    },
+    {
+      "name": "Setting Tool",
+      "id": "824:1882",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/setting_tool_round.svg",
+      "sharpPath": "assets/dna/setting_tool_sharp.svg"
+    },
+    {
+      "name": "Data Wedge",
+      "id": "824:1888",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/data_wedge_round.svg",
+      "sharpPath": "assets/dna/data_wedge_sharp.svg"
+    },
+    {
+      "name": "Application Analytics",
+      "id": "824:1894",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/application_analytics_round.svg",
+      "sharpPath": "assets/dna/application_analytics_sharp.svg"
+    },
+    {
+      "name": "Swipe Assist",
+      "id": "824:1900",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/swipe_assist_round.svg",
+      "sharpPath": "assets/dna/swipe_assist_sharp.svg"
+    },
+    {
+      "name": "SmartDEX",
+      "id": "824:1906",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/smartdex_round.svg",
+      "sharpPath": "assets/dna/smartdex_sharp.svg"
+    },
+    {
+      "name": "Direct Connect",
+      "id": "824:1912",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/direct_connect_round.svg",
+      "sharpPath": "assets/dna/direct_connect_sharp.svg"
+    },
+    {
+      "name": "Remote Control",
+      "id": "826:1918",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/remote_control_round.svg",
+      "sharpPath": "assets/dna/remote_control_sharp.svg"
+    },
+    {
+      "name": "Asset Tracker Lite",
+      "id": "826:1924",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/asset_tracker_lite_round.svg",
+      "sharpPath": "assets/dna/asset_tracker_lite_sharp.svg"
+    },
+    {
+      "name": "Voice Wedge",
+      "id": "827:1931",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/voice_wedge_round.svg",
+      "sharpPath": "assets/dna/voice_wedge_sharp.svg"
+    },
+    {
+      "name": "Device Tracker",
+      "id": "827:1942",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/device_tracker_round.svg",
+      "sharpPath": "assets/dna/device_tracker_sharp.svg"
+    },
+    {
+      "name": "Workstation Connect",
+      "id": "827:1958",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/workstation_connect_round.svg",
+      "sharpPath": "assets/dna/workstation_connect_sharp.svg"
+    },
+    {
+      "name": "OEM Config",
+      "id": "827:1973",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/oem_config_round.svg",
+      "sharpPath": "assets/dna/oem_config_sharp.svg"
+    },
+    {
+      "name": "GMS Restricted Mode",
+      "id": "827:1984",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/gms_restricted_mode_round.svg",
+      "sharpPath": "assets/dna/gms_restricted_mode_sharp.svg"
+    },
+    {
+      "name": "Zero Touch",
+      "id": "827:1995",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/zero_touch_round.svg",
+      "sharpPath": "assets/dna/zero_touch_sharp.svg"
+    },
+    {
+      "name": "Smart TEK",
+      "id": "827:2005",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/smart_tek_round.svg",
+      "sharpPath": "assets/dna/smart_tek_sharp.svg"
+    },
+    {
+      "name": "OCR",
+      "id": "827:2026",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/ocr_round.svg",
+      "sharpPath": "assets/dna/ocr_sharp.svg"
+    },
+    {
+      "name": "Smart TE",
+      "id": "827:2039",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/smart_te_round.svg",
+      "sharpPath": "assets/dna/smart_te_sharp.svg"
+    },
+    {
+      "name": "Smart TE Lite",
+      "id": "827:2046",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/smart_te_lite_round.svg",
+      "sharpPath": "assets/dna/smart_te_lite_sharp.svg"
+    },
+    {
+      "name": "PRZM",
+      "id": "827:2065",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/przm_round.svg",
+      "sharpPath": "assets/dna/przm_sharp.svg"
+    },
+    {
+      "name": "Multi Code Data Formatting",
+      "id": "827:2081",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/multi_code_data_formatting_round.svg",
+      "sharpPath": "assets/dna/multi_code_data_formatting_sharp.svg"
+    },
+    {
+      "name": "Remote Management",
+      "id": "827:2087",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/remote_management_round.svg",
+      "sharpPath": "assets/dna/remote_management_sharp.svg"
+    },
+    {
+      "name": "Preferred Symbol",
+      "id": "827:2093",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/preferred_symbol_round.svg",
+      "sharpPath": "assets/dna/preferred_symbol_sharp.svg"
+    },
+    {
+      "name": "Intelligent Document Capture",
+      "id": "828:2113",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/intelligent_document_capture_round.svg",
+      "sharpPath": "assets/dna/intelligent_document_capture_sharp.svg"
+    },
+    {
+      "name": "Scan To Connect",
+      "id": "828:2163",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/scan_to_connect_round.svg",
+      "sharpPath": "assets/dna/scan_to_connect_sharp.svg"
+    },
+    {
+      "name": "Scanner Control Application",
+      "id": "830:1777",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/scanner_control_application_round.svg",
+      "sharpPath": "assets/dna/scanner_control_application_sharp.svg"
+    },
+    {
+      "name": "Scan Speed Analytics",
+      "id": "830:1794",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/scan_speed_analytics_round.svg",
+      "sharpPath": "assets/dna/scan_speed_analytics_sharp.svg"
+    },
+    {
+      "name": "Remote Diagnostics",
+      "id": "830:1801",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/remote_diagnostics_round.svg",
+      "sharpPath": "assets/dna/remote_diagnostics_sharp.svg"
+    },
+    {
+      "name": "Blood Bag Plus",
+      "id": "831:1851",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/blood_bag_plus_round.svg",
+      "sharpPath": "assets/dna/blood_bag_plus_sharp.svg"
+    },
+    {
+      "name": "Label Plus",
+      "id": "831:1857",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/label_plus_round.svg",
+      "sharpPath": "assets/dna/label_plus_sharp.svg"
+    },
+    {
+      "name": "Virtual Tether",
+      "id": "831:1863",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/virtual_tether_round.svg",
+      "sharpPath": "assets/dna/virtual_tether_sharp.svg"
+    },
+    {
+      "name": "Link OS",
+      "id": "831:1869",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/link_os_round.svg",
+      "sharpPath": "assets/dna/link_os_sharp.svg"
+    },
+    {
+      "name": "MDM Connectors",
+      "id": "831:1875",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/mdm_connectors_round.svg",
+      "sharpPath": "assets/dna/mdm_connectors_sharp.svg"
+    },
+    {
+      "name": "Browser Print",
+      "id": "831:1881",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/browser_print_round.svg",
+      "sharpPath": "assets/dna/browser_print_sharp.svg"
+    },
+    {
+      "name": "Cloud Connect",
+      "id": "831:1890",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/cloud_connect_round.svg",
+      "sharpPath": "assets/dna/cloud_connect_sharp.svg"
+    },
+    {
+      "name": "Virtual Devices",
+      "id": "831:1896",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/virtual_devices_round.svg",
+      "sharpPath": "assets/dna/virtual_devices_sharp.svg"
+    },
+    {
+      "name": "Enterprise Connectors",
+      "id": "831:1904",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/enterprise_connectors_round.svg",
+      "sharpPath": "assets/dna/enterprise_connectors_sharp.svg"
+    },
+    {
+      "name": "Pairing Solutions",
+      "id": "831:1910",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/pairing_solutions_round.svg",
+      "sharpPath": "assets/dna/pairing_solutions_sharp.svg"
+    },
+    {
+      "name": "Scan And Pair",
+      "id": "831:1923",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/scan_and_pair_round.svg",
+      "sharpPath": "assets/dna/scan_and_pair_sharp.svg"
+    },
+    {
+      "name": "Zebra Designer",
+      "id": "831:1939",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/zebra_designer_round.svg",
+      "sharpPath": "assets/dna/zebra_designer_sharp.svg"
+    },
+    {
+      "name": "PDF Direct",
+      "id": "831:1956",
+      "searchTerms": [
+        "Print"
+      ],
+      "roundPath": "assets/dna/pdf_direct_round.svg",
+      "sharpPath": "assets/dna/pdf_direct_sharp.svg"
+    },
+    {
+      "name": "Print Station",
+      "id": "831:1963",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/print_station_round.svg",
+      "sharpPath": "assets/dna/print_station_sharp.svg"
+    },
+    {
+      "name": "Printer Profile Manager",
+      "id": "831:1974",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/printer_profile_manager_round.svg",
+      "sharpPath": "assets/dna/printer_profile_manager_sharp.svg"
+    },
+    {
+      "name": "Zebra Setup Utility",
+      "id": "831:1985",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/zebra_setup_utility_round.svg",
+      "sharpPath": "assets/dna/zebra_setup_utility_sharp.svg"
+    },
+    {
+      "name": "Bluetooth Management",
+      "id": "831:1999",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/bluetooth_management_round.svg",
+      "sharpPath": "assets/dna/bluetooth_management_sharp.svg"
+    },
+    {
+      "name": "Zebra OneCare",
+      "id": "831:2005",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/zebra_onecare_round.svg",
+      "sharpPath": "assets/dna/zebra_onecare_sharp.svg"
+    },
+    {
+      "name": "Visibility Services",
+      "id": "831:2012",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/visibility_services_round.svg",
+      "sharpPath": "assets/dna/visibility_services_sharp.svg"
+    },
+    {
+      "name": "Print Secure",
+      "id": "831:2021",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/print_secure_round.svg",
+      "sharpPath": "assets/dna/print_secure_sharp.svg"
+    },
+    {
+      "name": "Design Tools",
+      "id": "831:2031",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/dna/design_tools_round.svg",
+      "sharpPath": "assets/dna/design_tools_sharp.svg"
+    }
+  ],
+  "Communication": [
+    {
+      "name": "Do Not Disturb",
+      "id": "259:1491",
+      "searchTerms": [
+        "Block"
+      ],
+      "roundPath": "assets/communication/do_not_disturb_round.svg",
+      "sharpPath": "assets/communication/do_not_disturb_sharp.svg"
+    },
+    {
+      "name": "SIM Card",
+      "id": "857:1922",
+      "searchTerms": [
+        "GSM",
+        "Chip",
+        "Micro",
+        "Mini"
+      ],
+      "roundPath": "assets/communication/sim_card_round.svg",
+      "sharpPath": "assets/communication/sim_card_sharp.svg"
+    },
+    {
+      "name": "Phone Bluetooth Speaker",
+      "id": "259:1496",
+      "searchTerms": [
+        "Call",
+        "Telephone"
+      ],
+      "roundPath": "assets/communication/phone_bluetooth_speaker_round.svg",
+      "sharpPath": "assets/communication/phone_bluetooth_speaker_sharp.svg"
+    },
+    {
+      "name": "Phone In Talk",
+      "id": "259:1497",
+      "searchTerms": [
+        "Call",
+        "Telephone",
+        "Speaker",
+        "Loud"
+      ],
+      "roundPath": "assets/communication/phone_in_talk_round.svg",
+      "sharpPath": "assets/communication/phone_in_talk_sharp.svg"
+    },
+    {
+      "name": "Priority",
+      "id": "259:1500",
+      "searchTerms": [
+        "High",
+        "Important",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/communication/priority_round.svg",
+      "sharpPath": "assets/communication/priority_sharp.svg"
+    },
+    {
+      "name": "Sync",
+      "id": "259:1503",
+      "searchTerms": [
+        "Loading",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/communication/sync_round.svg",
+      "sharpPath": "assets/communication/sync_sharp.svg"
+    },
+    {
+      "name": "Sync Disabled",
+      "id": "259:1504",
+      "searchTerms": [
+        "Off"
+      ],
+      "roundPath": "assets/communication/sync_disabled_round.svg",
+      "sharpPath": "assets/communication/sync_disabled_sharp.svg"
+    },
+    {
+      "name": "SD Card",
+      "id": "259:1502",
+      "searchTerms": [
+        "Memory",
+        "Micro"
+      ],
+      "roundPath": "assets/communication/sd_card_round.svg",
+      "sharpPath": "assets/communication/sd_card_sharp.svg"
+    },
+    {
+      "name": "Phone",
+      "id": "243:4516",
+      "searchTerms": [
+        "Call",
+        "Telephone",
+        "phone",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/communication/phone_round.svg",
+      "sharpPath": "assets/communication/phone_sharp.svg"
+    },
+    {
+      "name": "Add Call",
+      "id": "243:4518",
+      "searchTerms": [
+        "Call",
+        "Telephone",
+        "IC"
+      ],
+      "roundPath": "assets/communication/add_call_round.svg",
+      "sharpPath": "assets/communication/add_call_sharp.svg"
+    },
+    {
+      "name": "End Call",
+      "id": "858:1994",
+      "searchTerms": [
+        "Telephone",
+        "Disconnect"
+      ],
+      "roundPath": "assets/communication/end_call_round.svg",
+      "sharpPath": "assets/communication/end_call_sharp.svg"
+    },
+    {
+      "name": "Email Alt",
+      "id": "243:4519",
+      "searchTerms": [
+        "Mail",
+        "@",
+        "Internet"
+      ],
+      "roundPath": "assets/communication/email_alt_round.svg",
+      "sharpPath": "assets/communication/email_alt_sharp.svg"
+    },
+    {
+      "name": "Person Search",
+      "id": "243:4522",
+      "searchTerms": [
+        "Find",
+        "User"
+      ],
+      "roundPath": "assets/communication/person_search_round.svg",
+      "sharpPath": "assets/communication/person_search_sharp.svg"
+    },
+    {
+      "name": "Dialpad",
+      "id": "858:1973",
+      "searchTerms": [
+        "Num",
+        "Numpad",
+        "0-9",
+        "Numbers",
+        "keypad",
+        "dial",
+        "dialpad",
+        "number",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/communication/dialpad_round.svg",
+      "sharpPath": "assets/communication/dialpad_sharp.svg"
+    },
+    {
+      "name": "Conversation",
+      "id": "243:4015",
+      "searchTerms": [
+        "Message",
+        "Talk",
+        "Chat",
+        "Bubble"
+      ],
+      "roundPath": "assets/communication/conversation_round.svg",
+      "sharpPath": "assets/communication/conversation_sharp.svg"
+    },
+    {
+      "name": "Message",
+      "id": "243:4523",
+      "searchTerms": [
+        "Comment",
+        "Message"
+      ],
+      "roundPath": "assets/communication/message_round.svg",
+      "sharpPath": "assets/communication/message_sharp.svg"
+    },
+    {
+      "name": "SMS",
+      "id": "243:4524",
+      "searchTerms": [
+        "Text",
+        "Message"
+      ],
+      "roundPath": "assets/communication/sms_round.svg",
+      "sharpPath": "assets/communication/sms_sharp.svg"
+    },
+    {
+      "name": "Chat Bubble",
+      "id": "243:4530",
+      "searchTerms": [
+        "Text",
+        "Message"
+      ],
+      "roundPath": "assets/communication/chat_bubble_round.svg",
+      "sharpPath": "assets/communication/chat_bubble_sharp.svg"
+    },
+    {
+      "name": "Chat Bubble Outline",
+      "id": "243:4532",
+      "searchTerms": [
+        "Text",
+        "Message",
+        "chat",
+        "communication",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/communication/chat_bubble_outline_round.svg",
+      "sharpPath": "assets/communication/chat_bubble_outline_sharp.svg"
+    },
+    {
+      "name": "Email",
+      "id": "243:4533",
+      "searchTerms": [
+        "Mail",
+        "@",
+        "email",
+        "e-mail",
+        "envelope",
+        "message",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/communication/email_round.svg",
+      "sharpPath": "assets/communication/email_sharp.svg"
+    },
+    {
+      "name": "Email Outline",
+      "id": "243:4535",
+      "searchTerms": [
+        "Mail",
+        "@"
+      ],
+      "roundPath": "assets/communication/email_outline_round.svg",
+      "sharpPath": "assets/communication/email_outline_sharp.svg"
+    },
+    {
+      "name": "QR Code",
+      "id": "243:4536",
+      "searchTerms": [
+        "Code",
+        "Barcode",
+        "Scanner"
+      ],
+      "roundPath": "assets/communication/qr_code_round.svg",
+      "sharpPath": "assets/communication/qr_code_sharp.svg"
+    },
+    {
+      "name": "QR Code Scan",
+      "id": "243:4537",
+      "searchTerms": [
+        "Code",
+        "Barcode",
+        "Scanner. qr",
+        "qr code",
+        "scan"
+      ],
+      "roundPath": "assets/communication/qr_code_scan_round.svg",
+      "sharpPath": "assets/communication/qr_code_scan_sharp.svg"
+    },
+    {
+      "name": "RSS Feed",
+      "id": "243:4538",
+      "searchTerms": [
+        "Feeds"
+      ],
+      "roundPath": "assets/communication/rss_feed_round.svg",
+      "sharpPath": "assets/communication/rss_feed_sharp.svg"
+    },
+    {
+      "name": "Dollar",
+      "id": "2661:3027",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/communication/dollar_round.svg",
+      "sharpPath": "assets/communication/dollar_sharp.svg"
+    }
+  ],
+  "Device": [
+    {
+      "name": "VOLTE",
+      "id": "833:1916",
+      "searchTerms": [
+        "Signal",
+        "Network",
+        "Voice",
+        "Over"
+      ],
+      "roundPath": "assets/device/volte_round.svg",
+      "sharpPath": "assets/device/volte_sharp.svg"
+    },
+    {
+      "name": "Bluetooth",
+      "id": "256:763",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/device/bluetooth_round.svg",
+      "sharpPath": "assets/device/bluetooth_sharp.svg"
+    },
+    {
+      "name": "Bluetooth Searching",
+      "id": "256:764",
+      "searchTerms": [
+        "Find",
+        "Wave"
+      ],
+      "roundPath": "assets/device/bluetooth_searching_round.svg",
+      "sharpPath": "assets/device/bluetooth_searching_sharp.svg"
+    },
+    {
+      "name": "Bluetooth Disabled",
+      "id": "256:765",
+      "searchTerms": [
+        "Off"
+      ],
+      "roundPath": "assets/device/bluetooth_disabled_round.svg",
+      "sharpPath": "assets/device/bluetooth_disabled_sharp.svg"
+    },
+    {
+      "name": "Location",
+      "id": "256:766",
+      "searchTerms": [
+        "Search",
+        "GPS"
+      ],
+      "roundPath": "assets/device/location_round.svg",
+      "sharpPath": "assets/device/location_sharp.svg"
+    },
+    {
+      "name": "UHF RFID",
+      "id": "833:2089",
+      "searchTerms": [
+        "Ultra",
+        "High",
+        "Frequency",
+        "Radio",
+        "ID"
+      ],
+      "roundPath": "assets/device/uhf_rfid_round.svg",
+      "sharpPath": "assets/device/uhf_rfid_sharp.svg"
+    },
+    {
+      "name": "Antenna",
+      "id": "833:2254",
+      "searchTerms": [
+        "Frequency",
+        "Radio"
+      ],
+      "roundPath": "assets/device/antenna_round.svg",
+      "sharpPath": "assets/device/antenna_sharp.svg"
+    },
+    {
+      "name": "Location Point",
+      "id": "256:767",
+      "searchTerms": [
+        "GPS",
+        "Fixed"
+      ],
+      "roundPath": "assets/device/location_point_round.svg",
+      "sharpPath": "assets/device/location_point_sharp.svg"
+    },
+    {
+      "name": "Light Mode",
+      "id": "256:768",
+      "searchTerms": [
+        "Brightness",
+        "Sun",
+        "light",
+        "day",
+        "morning",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/device/light_mode_round.svg",
+      "sharpPath": "assets/device/light_mode_sharp.svg"
+    },
+    {
+      "name": "Dark Mode",
+      "id": "256:769",
+      "searchTerms": [
+        "Night",
+        "Moon",
+        "Crescent"
+      ],
+      "roundPath": "assets/device/dark_mode_round.svg",
+      "sharpPath": "assets/device/dark_mode_sharp.svg"
+    },
+    {
+      "name": "Night",
+      "id": "256:771",
+      "searchTerms": [
+        "Light",
+        "Dark",
+        "moon",
+        "night",
+        "evening",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/device/night_round.svg",
+      "sharpPath": "assets/device/night_sharp.svg"
+    },
+    {
+      "name": "Cellular Signal",
+      "id": "256:774",
+      "searchTerms": [
+        "SIM",
+        "Network",
+        "Cell",
+        "GSM"
+      ],
+      "roundPath": "assets/device/cellular_signal_round.svg",
+      "sharpPath": "assets/device/cellular_signal_sharp.svg"
+    },
+    {
+      "name": "Network Signal",
+      "id": "833:1866",
+      "searchTerms": [
+        "Cell",
+        "GSM"
+      ],
+      "roundPath": "assets/device/network_signal_round.svg",
+      "sharpPath": "assets/device/network_signal_sharp.svg"
+    },
+    {
+      "name": "Restart Alt",
+      "id": "256:776",
+      "searchTerms": [
+        "Start",
+        "Again",
+        "reset"
+      ],
+      "roundPath": "assets/device/restart_alt_round.svg",
+      "sharpPath": "assets/device/restart_alt_sharp.svg"
+    },
+    {
+      "name": "Screen Rotation",
+      "id": "256:779",
+      "searchTerms": [
+        "Rotate",
+        "Left",
+        "Right",
+        "Vertical",
+        "Horizontal"
+      ],
+      "roundPath": "assets/device/screen_rotation_round.svg",
+      "sharpPath": "assets/device/screen_rotation_sharp.svg"
+    },
+    {
+      "name": "Devices",
+      "id": "256:781",
+      "searchTerms": [
+        "Device",
+        "Responsive"
+      ],
+      "roundPath": "assets/device/devices_round.svg",
+      "sharpPath": "assets/device/devices_sharp.svg"
+    },
+    {
+      "name": "USB",
+      "id": "256:783",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/device/usb_round.svg",
+      "sharpPath": "assets/device/usb_sharp.svg"
+    },
+    {
+      "name": "USB Alt",
+      "id": "829:1804",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/device/usb_alt_round.svg",
+      "sharpPath": "assets/device/usb_alt_sharp.svg"
+    },
+    {
+      "name": "USB Alt Device",
+      "id": "833:2000",
+      "searchTerms": [
+        "Data",
+        "Expansion",
+        "Disc",
+        "Disk",
+        "External"
+      ],
+      "roundPath": "assets/device/usb_alt_device_round.svg",
+      "sharpPath": "assets/device/usb_alt_device_sharp.svg"
+    },
+    {
+      "name": "Brightness",
+      "id": "257:784",
+      "searchTerms": [
+        "Medium",
+        "Mid"
+      ],
+      "roundPath": "assets/device/brightness_round.svg",
+      "sharpPath": "assets/device/brightness_sharp.svg"
+    },
+    {
+      "name": "Battery Alert",
+      "id": "257:786",
+      "searchTerms": [
+        "Down",
+        "Alert",
+        "Warning"
+      ],
+      "roundPath": "assets/device/battery_alert_round.svg",
+      "sharpPath": "assets/device/battery_alert_sharp.svg"
+    },
+    {
+      "name": "Battery",
+      "id": "257:787",
+      "searchTerms": [
+        "Charged",
+        "Full"
+      ],
+      "roundPath": "assets/device/battery_round.svg",
+      "sharpPath": "assets/device/battery_sharp.svg"
+    },
+    {
+      "name": "Battery Charging",
+      "id": "257:788",
+      "searchTerms": [
+        "Full"
+      ],
+      "roundPath": "assets/device/battery_charging_round.svg",
+      "sharpPath": "assets/device/battery_charging_sharp.svg"
+    },
+    {
+      "name": "Flight Mode",
+      "id": "257:789",
+      "searchTerms": [
+        "Airplane"
+      ],
+      "roundPath": "assets/device/flight_mode_round.svg",
+      "sharpPath": "assets/device/flight_mode_sharp.svg"
+    },
+    {
+      "name": "Ethernet",
+      "id": "833:2189",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/device/ethernet_round.svg",
+      "sharpPath": "assets/device/ethernet_sharp.svg"
+    },
+    {
+      "name": "NFC",
+      "id": "833:2315",
+      "searchTerms": [
+        "Near",
+        "Field",
+        "Communication"
+      ],
+      "roundPath": "assets/device/nfc_round.svg",
+      "sharpPath": "assets/device/nfc_sharp.svg"
+    },
+    {
+      "name": "Chain",
+      "id": "833:2345",
+      "searchTerms": [
+        "Link",
+        "Connect,Connected"
+      ],
+      "roundPath": "assets/device/chain_round.svg",
+      "sharpPath": "assets/device/chain_sharp.svg"
+    },
+    {
+      "name": "HDMI",
+      "id": "833:1827",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/device/hdmi_round.svg",
+      "sharpPath": "assets/device/hdmi_sharp.svg"
+    },
+    {
+      "name": "Mobile Friendly",
+      "id": "257:792",
+      "searchTerms": [
+        "GSM",
+        "Smart",
+        "Device",
+        "Check",
+        "Mark"
+      ],
+      "roundPath": "assets/device/mobile_friendly_round.svg",
+      "sharpPath": "assets/device/mobile_friendly_sharp.svg"
+    },
+    {
+      "name": "Contrast",
+      "id": "833:2204",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/device/contrast_round.svg",
+      "sharpPath": "assets/device/contrast_sharp.svg"
+    }
+  ],
+  "Alert": [
+    {
+      "name": "Add Alert",
+      "id": "240:46",
+      "searchTerms": [
+        "Notification"
+      ],
+      "roundPath": "assets/alert/add_alert_round.svg",
+      "sharpPath": "assets/alert/add_alert_sharp.svg"
+    },
+    {
+      "name": "Auto Delete",
+      "id": "243:4376",
+      "searchTerms": [
+        "Trash",
+        "Bin",
+        "Time"
+      ],
+      "roundPath": "assets/alert/auto_delete_round.svg",
+      "sharpPath": "assets/alert/auto_delete_sharp.svg"
+    },
+    {
+      "name": "Error",
+      "id": "243:4377",
+      "searchTerms": [
+        "Wrong",
+        "alert",
+        "warning",
+        "info",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/alert/error_round.svg",
+      "sharpPath": "assets/alert/error_sharp.svg"
+    },
+    {
+      "name": "Error Outline",
+      "id": "243:4379",
+      "searchTerms": [
+        "Wrong"
+      ],
+      "roundPath": "assets/alert/error_outline_round.svg",
+      "sharpPath": "assets/alert/error_outline_sharp.svg"
+    },
+    {
+      "name": "Important Notification",
+      "id": "243:4380",
+      "searchTerms": [
+        "Urgent",
+        "Attention"
+      ],
+      "roundPath": "assets/alert/important_notification_round.svg",
+      "sharpPath": "assets/alert/important_notification_sharp.svg"
+    },
+    {
+      "name": "Warning Outline",
+      "id": "243:4381",
+      "searchTerms": [
+        "Attention",
+        "Error",
+        "Caution",
+        "Alert"
+      ],
+      "roundPath": "assets/alert/warning_outline_round.svg",
+      "sharpPath": "assets/alert/warning_outline_sharp.svg"
+    },
+    {
+      "name": "Warning",
+      "id": "243:4382",
+      "searchTerms": [
+        "Attention",
+        "Error",
+        "Caution",
+        "Alert"
+      ],
+      "roundPath": "assets/alert/warning_round.svg",
+      "sharpPath": "assets/alert/warning_sharp.svg"
+    },
+    {
+      "name": "Alert",
+      "id": "803:1800",
+      "searchTerms": [
+        "Notification",
+        "alert",
+        "bell",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/alert/alert_round.svg",
+      "sharpPath": "assets/alert/alert_sharp.svg"
+    }
+  ],
+  "Social": [
+    {
+      "name": "Group",
+      "id": "257:1121",
+      "searchTerms": [
+        "People",
+        "profile",
+        "account",
+        "user",
+        "friends",
+        "group",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/social/group_round.svg",
+      "sharpPath": "assets/social/group_sharp.svg"
+    },
+    {
+      "name": "Switch User",
+      "id": "788:2119",
+      "searchTerms": [
+        "People"
+      ],
+      "roundPath": "assets/social/switch_user_round.svg",
+      "sharpPath": "assets/social/switch_user_sharp.svg"
+    },
+    {
+      "name": "Add Person",
+      "id": "257:1119",
+      "searchTerms": [
+        "Add",
+        "User",
+        "Account",
+        "person",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/social/add_person_round.svg",
+      "sharpPath": "assets/social/add_person_sharp.svg"
+    },
+    {
+      "name": "Person Outline",
+      "id": "257:1120",
+      "searchTerms": [
+        "User",
+        "Account"
+      ],
+      "roundPath": "assets/social/person_outline_round.svg",
+      "sharpPath": "assets/social/person_outline_sharp.svg"
+    },
+    {
+      "name": "Remove Person",
+      "id": "257:1118",
+      "searchTerms": [
+        "Remove",
+        "User Remove"
+      ],
+      "roundPath": "assets/social/remove_person_round.svg",
+      "sharpPath": "assets/social/remove_person_sharp.svg"
+    },
+    {
+      "name": "Person",
+      "id": "257:1117",
+      "searchTerms": [
+        "User",
+        "Account",
+        "profile",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/social/person_round.svg",
+      "sharpPath": "assets/social/person_sharp.svg"
+    },
+    {
+      "name": "Add Group",
+      "id": "257:1122",
+      "searchTerms": [
+        "More",
+        "People"
+      ],
+      "roundPath": "assets/social/add_group_round.svg",
+      "sharpPath": "assets/social/add_group_sharp.svg"
+    },
+    {
+      "name": "Remove Group",
+      "id": "257:1123",
+      "searchTerms": [
+        "Less",
+        "People",
+        "Remove"
+      ],
+      "roundPath": "assets/social/remove_group_round.svg",
+      "sharpPath": "assets/social/remove_group_sharp.svg"
+    },
+    {
+      "name": "Groups",
+      "id": "257:1124",
+      "searchTerms": [
+        "People",
+        "profile",
+        "account",
+        "user",
+        "people",
+        "friends",
+        "group",
+        "department",
+        "team",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/social/groups_round.svg",
+      "sharpPath": "assets/social/groups_sharp.svg"
+    },
+    {
+      "name": "iOS Share",
+      "id": "257:1125",
+      "searchTerms": [
+        "Apple",
+        "file",
+        "share",
+        "export",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/social/ios_share_round.svg",
+      "sharpPath": "assets/social/ios_share_sharp.svg"
+    },
+    {
+      "name": "Notifications Active",
+      "id": "257:1126",
+      "searchTerms": [
+        "Alert",
+        "New"
+      ],
+      "roundPath": "assets/social/notifications_active_round.svg",
+      "sharpPath": "assets/social/notifications_active_sharp.svg"
+    },
+    {
+      "name": "Notifications Outline",
+      "id": "257:1128",
+      "searchTerms": [
+        "notification",
+        "alert",
+        "bell",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/social/notifications_outline_round.svg",
+      "sharpPath": "assets/social/notifications_outline_sharp.svg"
+    },
+    {
+      "name": "Notifications",
+      "id": "257:1127",
+      "searchTerms": [
+        "notification",
+        "alert",
+        "bell",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/social/notifications_round.svg",
+      "sharpPath": "assets/social/notifications_sharp.svg"
+    },
+    {
+      "name": "World Map",
+      "id": "257:1129",
+      "searchTerms": [
+        "Public",
+        "Earth",
+        "Publish"
+      ],
+      "roundPath": "assets/social/world_map_round.svg",
+      "sharpPath": "assets/social/world_map_sharp.svg"
+    },
+    {
+      "name": "Share",
+      "id": "257:1130",
+      "searchTerms": [
+        "share",
+        "social",
+        "file",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/social/share_round.svg",
+      "sharpPath": "assets/social/share_sharp.svg"
+    },
+    {
+      "name": "Medium",
+      "id": "788:1946",
+      "searchTerms": [
+        "Social",
+        "Media",
+        "Article"
+      ],
+      "roundPath": "assets/social/medium_round.svg",
+      "sharpPath": "assets/social/medium_sharp.svg"
+    },
+    {
+      "name": "YouTube",
+      "id": "788:1961",
+      "searchTerms": [
+        "Social",
+        "Media",
+        "Video"
+      ],
+      "roundPath": "assets/social/youtube_round.svg",
+      "sharpPath": "assets/social/youtube_sharp.svg"
+    },
+    {
+      "name": "Instagram",
+      "id": "788:1976",
+      "searchTerms": [
+        "Social",
+        "Media",
+        "Photo"
+      ],
+      "roundPath": "assets/social/instagram_round.svg",
+      "sharpPath": "assets/social/instagram_sharp.svg"
+    },
+    {
+      "name": "Facebook",
+      "id": "788:1991",
+      "searchTerms": [
+        "Social",
+        "Media"
+      ],
+      "roundPath": "assets/social/facebook_round.svg",
+      "sharpPath": "assets/social/facebook_sharp.svg"
+    },
+    {
+      "name": "Twitter",
+      "id": "788:2006",
+      "searchTerms": [
+        "Social",
+        "Media",
+        "Tweet"
+      ],
+      "roundPath": "assets/social/twitter_round.svg",
+      "sharpPath": "assets/social/twitter_sharp.svg"
+    },
+    {
+      "name": "Blog",
+      "id": "788:2015",
+      "searchTerms": [
+        "Social",
+        "Media"
+      ],
+      "roundPath": "assets/social/blog_round.svg",
+      "sharpPath": "assets/social/blog_sharp.svg"
+    },
+    {
+      "name": "LinkedIn",
+      "id": "788:2030",
+      "searchTerms": [
+        "Social",
+        "Media"
+      ],
+      "roundPath": "assets/social/linkedin_round.svg",
+      "sharpPath": "assets/social/linkedin_sharp.svg"
+    },
+    {
+      "name": "Like",
+      "id": "257:1131",
+      "searchTerms": [
+        "Thumbs",
+        "Up"
+      ],
+      "roundPath": "assets/social/like_round.svg",
+      "sharpPath": "assets/social/like_sharp.svg"
+    },
+    {
+      "name": "Bad Mood",
+      "id": "257:1132",
+      "searchTerms": [
+        "Sad",
+        "Unhappy"
+      ],
+      "roundPath": "assets/social/bad_mood_round.svg",
+      "sharpPath": "assets/social/bad_mood_sharp.svg"
+    },
+    {
+      "name": "Happy",
+      "id": "257:1133",
+      "searchTerms": [
+        "Happy",
+        "Smiley",
+        "Satisfied"
+      ],
+      "roundPath": "assets/social/happy_round.svg",
+      "sharpPath": "assets/social/happy_sharp.svg"
+    },
+    {
+      "name": "Sad",
+      "id": "257:1134",
+      "searchTerms": [
+        "Dissatisfied",
+        "Unhappy"
+      ],
+      "roundPath": "assets/social/sad_round.svg",
+      "sharpPath": "assets/social/sad_sharp.svg"
+    },
+    {
+      "name": "Satisfied",
+      "id": "257:1135",
+      "searchTerms": [
+        "Happy"
+      ],
+      "roundPath": "assets/social/satisfied_round.svg",
+      "sharpPath": "assets/social/satisfied_sharp.svg"
+    },
+    {
+      "name": "Very Satisfied",
+      "id": "257:1136",
+      "searchTerms": [
+        "Vey Happy",
+        "Happy"
+      ],
+      "roundPath": "assets/social/very_satisfied_round.svg",
+      "sharpPath": "assets/social/very_satisfied_sharp.svg"
+    },
+    {
+      "name": "Dislike",
+      "id": "803:1783",
+      "searchTerms": [
+        "Thumbs",
+        "Down"
+      ],
+      "roundPath": "assets/social/dislike_round.svg",
+      "sharpPath": "assets/social/dislike_sharp.svg"
+    }
+  ],
+  "Maps": [
+    {
+      "name": "Layers",
+      "id": "258:1625",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/maps/layers_round.svg",
+      "sharpPath": "assets/maps/layers_sharp.svg"
+    },
+    {
+      "name": "Offer",
+      "id": "258:1626",
+      "searchTerms": [
+        "Local",
+        "Discount"
+      ],
+      "roundPath": "assets/maps/offer_round.svg",
+      "sharpPath": "assets/maps/offer_sharp.svg"
+    },
+    {
+      "name": "Near Me",
+      "id": "258:1627",
+      "searchTerms": [
+        "Direction",
+        "Arrow"
+      ],
+      "roundPath": "assets/maps/near_me_round.svg",
+      "sharpPath": "assets/maps/near_me_sharp.svg"
+    },
+    {
+      "name": "Place",
+      "id": "258:1628",
+      "searchTerms": [
+        "Pin",
+        "Location",
+        "mark",
+        "here",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/maps/place_round.svg",
+      "sharpPath": "assets/maps/place_sharp.svg"
+    },
+    {
+      "name": "Map",
+      "id": "258:1629",
+      "searchTerms": [
+        "Fold",
+        "Folding"
+      ],
+      "roundPath": "assets/maps/map_round.svg",
+      "sharpPath": "assets/maps/map_sharp.svg"
+    },
+    {
+      "name": "My Location",
+      "id": "258:1630",
+      "searchTerms": [
+        "Find"
+      ],
+      "roundPath": "assets/maps/my_location_round.svg",
+      "sharpPath": "assets/maps/my_location_sharp.svg"
+    },
+    {
+      "name": "Navigation",
+      "id": "258:1631",
+      "searchTerms": [
+        "GPS"
+      ],
+      "roundPath": "assets/maps/navigation_round.svg",
+      "sharpPath": "assets/maps/navigation_sharp.svg"
+    },
+    {
+      "name": "Zoom In Map",
+      "id": "258:1632",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/maps/zoom_in_map_round.svg",
+      "sharpPath": "assets/maps/zoom_in_map_sharp.svg"
+    },
+    {
+      "name": "Zoom Out Map",
+      "id": "258:1633",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/maps/zoom_out_map_round.svg",
+      "sharpPath": "assets/maps/zoom_out_map_sharp.svg"
+    },
+    {
+      "name": "Bus",
+      "id": "258:1634",
+      "searchTerms": [
+        "Direction",
+        "Public",
+        "Transport"
+      ],
+      "roundPath": "assets/maps/bus_round.svg",
+      "sharpPath": "assets/maps/bus_sharp.svg"
+    },
+    {
+      "name": "Light Rail Train",
+      "id": "258:1635",
+      "searchTerms": [
+        "Tram",
+        "Public",
+        "Transport"
+      ],
+      "roundPath": "assets/maps/light_rail_train_round.svg",
+      "sharpPath": "assets/maps/light_rail_train_sharp.svg"
+    },
+    {
+      "name": "Train",
+      "id": "258:1645",
+      "searchTerms": [
+        "Public",
+        "Transport"
+      ],
+      "roundPath": "assets/maps/train_round.svg",
+      "sharpPath": "assets/maps/train_sharp.svg"
+    },
+    {
+      "name": "Car",
+      "id": "258:1646",
+      "searchTerms": [
+        "Auto",
+        "Automobile"
+      ],
+      "roundPath": "assets/maps/car_round.svg",
+      "sharpPath": "assets/maps/car_sharp.svg"
+    },
+    {
+      "name": "Taxi",
+      "id": "258:1647",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/maps/taxi_round.svg",
+      "sharpPath": "assets/maps/taxi_sharp.svg"
+    },
+    {
+      "name": "Local Shipping",
+      "id": "258:1648",
+      "searchTerms": [
+        "Transport",
+        "Truck",
+        "Loaded"
+      ],
+      "roundPath": "assets/maps/local_shipping_round.svg",
+      "sharpPath": "assets/maps/local_shipping_sharp.svg"
+    },
+    {
+      "name": "Flight",
+      "id": "258:1649",
+      "searchTerms": [
+        "Plane",
+        "Aeroplane",
+        "Fly"
+      ],
+      "roundPath": "assets/maps/flight_round.svg",
+      "sharpPath": "assets/maps/flight_sharp.svg"
+    },
+    {
+      "name": "Ship",
+      "id": "788:1760",
+      "searchTerms": [
+        "Naval",
+        "Sea",
+        "Ocean",
+        "Water",
+        "Wave"
+      ],
+      "roundPath": "assets/maps/ship_round.svg",
+      "sharpPath": "assets/maps/ship_sharp.svg"
+    },
+    {
+      "name": "Cafe",
+      "id": "258:1650",
+      "searchTerms": [
+        "Coffee",
+        "Mug",
+        "Tea",
+        "break",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/maps/cafe_round.svg",
+      "sharpPath": "assets/maps/cafe_sharp.svg"
+    },
+    {
+      "name": "World",
+      "id": "788:1742",
+      "searchTerms": [
+        "Language",
+        "Earth",
+        "Globe",
+        "global",
+        "international",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/maps/world_round.svg",
+      "sharpPath": "assets/maps/world_sharp.svg"
+    }
+  ],
+  "File": [
+    {
+      "name": "File Upload",
+      "id": "258:1331",
+      "searchTerms": [
+        "Document",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/file/file_upload_round.svg",
+      "sharpPath": "assets/file/file_upload_sharp.svg"
+    },
+    {
+      "name": "File Download",
+      "id": "258:1334",
+      "searchTerms": [
+        "Document",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/file/file_download_round.svg",
+      "sharpPath": "assets/file/file_download_sharp.svg"
+    },
+    {
+      "name": "Finished Download",
+      "id": "258:1335",
+      "searchTerms": [
+        "Complete",
+        "Success",
+        "Done"
+      ],
+      "roundPath": "assets/file/finished_download_round.svg",
+      "sharpPath": "assets/file/finished_download_sharp.svg"
+    },
+    {
+      "name": "Downloading",
+      "id": "258:1336",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/file/downloading_round.svg",
+      "sharpPath": "assets/file/downloading_sharp.svg"
+    },
+    {
+      "name": "Cloud",
+      "id": "258:1338",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/file/cloud_round.svg",
+      "sharpPath": "assets/file/cloud_sharp.svg"
+    },
+    {
+      "name": "Cloud Done",
+      "id": "258:1339",
+      "searchTerms": [
+        "Check",
+        "Check Mark",
+        "Mark"
+      ],
+      "roundPath": "assets/file/cloud_done_round.svg",
+      "sharpPath": "assets/file/cloud_done_sharp.svg"
+    },
+    {
+      "name": "Cloud Download",
+      "id": "258:1340",
+      "searchTerms": [
+        "file",
+        "download",
+        "cloud",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/file/cloud_download_round.svg",
+      "sharpPath": "assets/file/cloud_download_sharp.svg"
+    },
+    {
+      "name": "Cloud Outline",
+      "id": "258:1341",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/file/cloud_outline_round.svg",
+      "sharpPath": "assets/file/cloud_outline_sharp.svg"
+    },
+    {
+      "name": "Cloud Upload",
+      "id": "258:1342",
+      "searchTerms": [
+        "file",
+        "upload",
+        "cloud",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/file/cloud_upload_round.svg",
+      "sharpPath": "assets/file/cloud_upload_sharp.svg"
+    },
+    {
+      "name": "Cloud Off",
+      "id": "258:1351",
+      "searchTerms": [
+        "Offline"
+      ],
+      "roundPath": "assets/file/cloud_off_round.svg",
+      "sharpPath": "assets/file/cloud_off_sharp.svg"
+    },
+    {
+      "name": "Attachment",
+      "id": "258:1352",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/file/attachment_round.svg",
+      "sharpPath": "assets/file/attachment_sharp.svg"
+    },
+    {
+      "name": "Folder",
+      "id": "258:1353",
+      "searchTerms": [
+        "folder",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/file/folder_round.svg",
+      "sharpPath": "assets/file/folder_sharp.svg"
+    },
+    {
+      "name": "Create New Folder",
+      "id": "258:1354",
+      "searchTerms": [
+        "Add"
+      ],
+      "roundPath": "assets/file/create_new_folder_round.svg",
+      "sharpPath": "assets/file/create_new_folder_sharp.svg"
+    },
+    {
+      "name": "Folder Outline",
+      "id": "258:1355",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/file/folder_outline_round.svg",
+      "sharpPath": "assets/file/folder_outline_sharp.svg"
+    },
+    {
+      "name": "Shared Folder",
+      "id": "258:1356",
+      "searchTerms": [
+        "Network",
+        "Access"
+      ],
+      "roundPath": "assets/file/shared_folder_round.svg",
+      "sharpPath": "assets/file/shared_folder_sharp.svg"
+    },
+    {
+      "name": "Grid View",
+      "id": "258:1357",
+      "searchTerms": [
+        "2x2"
+      ],
+      "roundPath": "assets/file/grid_view_round.svg",
+      "sharpPath": "assets/file/grid_view_sharp.svg"
+    },
+    {
+      "name": "Upload File",
+      "id": "258:1358",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/file/upload_file_round.svg",
+      "sharpPath": "assets/file/upload_file_sharp.svg"
+    },
+    {
+      "name": "JPG Attach",
+      "id": "258:1360",
+      "searchTerms": [
+        "Type",
+        "File"
+      ],
+      "roundPath": "assets/file/jpg_attach_round.svg",
+      "sharpPath": "assets/file/jpg_attach_sharp.svg"
+    },
+    {
+      "name": "PDF Attach",
+      "id": "258:1361",
+      "searchTerms": [
+        "Type",
+        "File"
+      ],
+      "roundPath": "assets/file/pdf_attach_round.svg",
+      "sharpPath": "assets/file/pdf_attach_sharp.svg"
+    },
+    {
+      "name": "PNG Attach",
+      "id": "258:1362",
+      "searchTerms": [
+        "Type",
+        "File"
+      ],
+      "roundPath": "assets/file/png_attach_round.svg",
+      "sharpPath": "assets/file/png_attach_sharp.svg"
+    },
+    {
+      "name": "DOC Attach",
+      "id": "258:1363",
+      "searchTerms": [
+        "Type",
+        "File"
+      ],
+      "roundPath": "assets/file/doc_attach_round.svg",
+      "sharpPath": "assets/file/doc_attach_sharp.svg"
+    },
+    {
+      "name": "PPT Attach",
+      "id": "258:1364",
+      "searchTerms": [
+        "Type",
+        "File"
+      ],
+      "roundPath": "assets/file/ppt_attach_round.svg",
+      "sharpPath": "assets/file/ppt_attach_sharp.svg"
+    }
+  ],
+  "Editor": [
+    {
+      "name": "Font Size Decrease",
+      "id": "257:1348",
+      "searchTerms": [
+        "Text",
+        "Small"
+      ],
+      "roundPath": "assets/editor/font_size_decrease_round.svg",
+      "sharpPath": "assets/editor/font_size_decrease_sharp.svg"
+    },
+    {
+      "name": "Font Size Increase",
+      "id": "257:1349",
+      "searchTerms": [
+        "Text",
+        "Big"
+      ],
+      "roundPath": "assets/editor/font_size_increase_round.svg",
+      "sharpPath": "assets/editor/font_size_increase_sharp.svg"
+    },
+    {
+      "name": "Bold",
+      "id": "257:1350",
+      "searchTerms": [
+        "Format",
+        "Text",
+        "Font"
+      ],
+      "roundPath": "assets/editor/bold_round.svg",
+      "sharpPath": "assets/editor/bold_sharp.svg"
+    },
+    {
+      "name": "Italic",
+      "id": "257:1351",
+      "searchTerms": [
+        "Format",
+        "Text",
+        "Font"
+      ],
+      "roundPath": "assets/editor/italic_round.svg",
+      "sharpPath": "assets/editor/italic_sharp.svg"
+    },
+    {
+      "name": "Edit",
+      "id": "257:1352",
+      "searchTerms": [
+        "edit"
+      ],
+      "roundPath": "assets/editor/edit_round.svg",
+      "sharpPath": "assets/editor/edit_sharp.svg"
+    },
+    {
+      "name": "No Color",
+      "id": "257:1353",
+      "searchTerms": [
+        "Ink",
+        "Reset",
+        "Format",
+        "Print"
+      ],
+      "roundPath": "assets/editor/no_color_round.svg",
+      "sharpPath": "assets/editor/no_color_sharp.svg"
+    },
+    {
+      "name": "Color Fill",
+      "id": "257:1354",
+      "searchTerms": [
+        "Ink",
+        "Reset",
+        "Format",
+        "Print"
+      ],
+      "roundPath": "assets/editor/color_fill_round.svg",
+      "sharpPath": "assets/editor/color_fill_sharp.svg"
+    },
+    {
+      "name": "Type",
+      "id": "257:1355",
+      "searchTerms": [
+        "Title"
+      ],
+      "roundPath": "assets/editor/type_round.svg",
+      "sharpPath": "assets/editor/type_sharp.svg"
+    },
+    {
+      "name": "Strikethrough",
+      "id": "257:1356",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/strikethrough_round.svg",
+      "sharpPath": "assets/editor/strikethrough_sharp.svg"
+    },
+    {
+      "name": "Underline",
+      "id": "257:1357",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/underline_round.svg",
+      "sharpPath": "assets/editor/underline_sharp.svg"
+    },
+    {
+      "name": "Align Horizontal Center",
+      "id": "257:1358",
+      "searchTerms": [
+        "Middle"
+      ],
+      "roundPath": "assets/editor/align_horizontal_center_round.svg",
+      "sharpPath": "assets/editor/align_horizontal_center_sharp.svg"
+    },
+    {
+      "name": "Align Vertical Center",
+      "id": "258:1110",
+      "searchTerms": [
+        "Middle"
+      ],
+      "roundPath": "assets/editor/align_vertical_center_round.svg",
+      "sharpPath": "assets/editor/align_vertical_center_sharp.svg"
+    },
+    {
+      "name": "Align Horizontal Right",
+      "id": "258:1111",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/editor/align_horizontal_right_round.svg",
+      "sharpPath": "assets/editor/align_horizontal_right_sharp.svg"
+    },
+    {
+      "name": "Align Horizontal Left",
+      "id": "258:1112",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/editor/align_horizontal_left_round.svg",
+      "sharpPath": "assets/editor/align_horizontal_left_sharp.svg"
+    },
+    {
+      "name": "Align Vertical Bottom",
+      "id": "258:1113",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/editor/align_vertical_bottom_round.svg",
+      "sharpPath": "assets/editor/align_vertical_bottom_sharp.svg"
+    },
+    {
+      "name": "Align Vertical Top",
+      "id": "258:1114",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/editor/align_vertical_top_round.svg",
+      "sharpPath": "assets/editor/align_vertical_top_sharp.svg"
+    },
+    {
+      "name": "Checklist",
+      "id": "258:1115",
+      "searchTerms": [
+        "list",
+        "items",
+        "tasks",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/editor/checklist_round.svg",
+      "sharpPath": "assets/editor/checklist_sharp.svg"
+    },
+    {
+      "name": "Indent Decrease",
+      "id": "258:1116",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/indent_decrease_round.svg",
+      "sharpPath": "assets/editor/indent_decrease_sharp.svg"
+    },
+    {
+      "name": "Indent Increase",
+      "id": "258:1117",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/indent_increase_round.svg",
+      "sharpPath": "assets/editor/indent_increase_sharp.svg"
+    },
+    {
+      "name": "Bullet List",
+      "id": "258:1118",
+      "searchTerms": [
+        "Type",
+        "Format",
+        "list",
+        "items",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/editor/bullet_list_round.svg",
+      "sharpPath": "assets/editor/bullet_list_sharp.svg"
+    },
+    {
+      "name": "Distribute Vertical",
+      "id": "258:1119",
+      "searchTerms": [
+        "Type",
+        "Format",
+        "Align"
+      ],
+      "roundPath": "assets/editor/distribute_vertical_round.svg",
+      "sharpPath": "assets/editor/distribute_vertical_sharp.svg"
+    },
+    {
+      "name": "Distribute Horizontal",
+      "id": "258:1120",
+      "searchTerms": [
+        "Type",
+        "Format",
+        "Align"
+      ],
+      "roundPath": "assets/editor/distribute_horizontal_round.svg",
+      "sharpPath": "assets/editor/distribute_horizontal_sharp.svg"
+    },
+    {
+      "name": "Line Spacing",
+      "id": "258:1121",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/line_spacing_round.svg",
+      "sharpPath": "assets/editor/line_spacing_sharp.svg"
+    },
+    {
+      "name": "Numbered List",
+      "id": "258:1122",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/numbered_list_round.svg",
+      "sharpPath": "assets/editor/numbered_list_sharp.svg"
+    },
+    {
+      "name": "Align Left",
+      "id": "258:1123",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/align_left_round.svg",
+      "sharpPath": "assets/editor/align_left_sharp.svg"
+    },
+    {
+      "name": "Align Right",
+      "id": "258:1125",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/align_right_round.svg",
+      "sharpPath": "assets/editor/align_right_sharp.svg"
+    },
+    {
+      "name": "Align Center",
+      "id": "258:1126",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/align_center_round.svg",
+      "sharpPath": "assets/editor/align_center_sharp.svg"
+    },
+    {
+      "name": "Justify",
+      "id": "258:1151",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/justify_round.svg",
+      "sharpPath": "assets/editor/justify_sharp.svg"
+    },
+    {
+      "name": "Edit Border",
+      "id": "258:1171",
+      "searchTerms": [
+        "Style",
+        "Color",
+        "Colour",
+        "Shape"
+      ],
+      "roundPath": "assets/editor/edit_border_round.svg",
+      "sharpPath": "assets/editor/edit_border_sharp.svg"
+    },
+    {
+      "name": "Format Shapes",
+      "id": "258:1172",
+      "searchTerms": [
+        "Text",
+        "Bounding",
+        "Box"
+      ],
+      "roundPath": "assets/editor/format_shapes_round.svg",
+      "sharpPath": "assets/editor/format_shapes_sharp.svg"
+    },
+    {
+      "name": "Attach",
+      "id": "258:1173",
+      "searchTerms": [
+        "File",
+        "Document",
+        "attachment",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/editor/attach_round.svg",
+      "sharpPath": "assets/editor/attach_sharp.svg"
+    },
+    {
+      "name": "Link",
+      "id": "258:1174",
+      "searchTerms": [
+        "Chain",
+        "Insert"
+      ],
+      "roundPath": "assets/editor/link_round.svg",
+      "sharpPath": "assets/editor/link_sharp.svg"
+    },
+    {
+      "name": "Text Color",
+      "id": "258:1175",
+      "searchTerms": [
+        "Type",
+        "Format"
+      ],
+      "roundPath": "assets/editor/text_color_round.svg",
+      "sharpPath": "assets/editor/text_color_sharp.svg"
+    }
+  ],
+  "Action": [
+    {
+      "name": "Home",
+      "id": "240:33",
+      "searchTerms": [
+        "Main",
+        "home",
+        "house",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/home_round.svg",
+      "sharpPath": "assets/action/home_sharp.svg"
+    },
+    {
+      "name": "Search",
+      "id": "238:3298",
+      "searchTerms": [
+        "search",
+        "magnifying glass",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/search_round.svg",
+      "sharpPath": "assets/action/search_sharp.svg"
+    },
+    {
+      "name": "Settings",
+      "id": "243:3763",
+      "searchTerms": [
+        "Cog",
+        "Gear",
+        "settings",
+        "configuration",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/settings_round.svg",
+      "sharpPath": "assets/action/settings_sharp.svg"
+    },
+    {
+      "name": "Info",
+      "id": "243:3765",
+      "searchTerms": [
+        "information",
+        "details",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/info_round.svg",
+      "sharpPath": "assets/action/info_sharp.svg"
+    },
+    {
+      "name": "Check Circle Outline Alt",
+      "id": "243:4005",
+      "searchTerms": [
+        "Done",
+        "Complete",
+        "Mark"
+      ],
+      "roundPath": "assets/action/check_circle_outline_alt_round.svg",
+      "sharpPath": "assets/action/check_circle_outline_alt_sharp.svg"
+    },
+    {
+      "name": "Check Circle Outline",
+      "id": "243:3769",
+      "searchTerms": [
+        "Done",
+        "Complete",
+        "Mark",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/check_circle_outline_round.svg",
+      "sharpPath": "assets/action/check_circle_outline_sharp.svg"
+    },
+    {
+      "name": "Check Circle",
+      "id": "243:3767",
+      "searchTerms": [
+        "Done",
+        "Complete",
+        "Mark",
+        "check",
+        "complete",
+        "done",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/check_circle_round.svg",
+      "sharpPath": "assets/action/check_circle_sharp.svg"
+    },
+    {
+      "name": "Check Mark",
+      "id": "243:3764",
+      "searchTerms": [
+        "Done",
+        "Complete",
+        "check",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/check_mark_round.svg",
+      "sharpPath": "assets/action/check_mark_sharp.svg"
+    },
+    {
+      "name": "Love",
+      "id": "243:3849",
+      "searchTerms": [
+        "Like",
+        "Fav",
+        "Favorite",
+        "Favourite"
+      ],
+      "roundPath": "assets/action/love_round.svg",
+      "sharpPath": "assets/action/love_sharp.svg"
+    },
+    {
+      "name": "Love Outline",
+      "id": "243:3850",
+      "searchTerms": [
+        "Like",
+        "Fav",
+        "Favorite",
+        "Favourite"
+      ],
+      "roundPath": "assets/action/love_outline_round.svg",
+      "sharpPath": "assets/action/love_outline_sharp.svg"
+    },
+    {
+      "name": "Unlock Alt",
+      "id": "755:1928",
+      "searchTerms": [
+        "Padlock",
+        "Unsafe"
+      ],
+      "roundPath": "assets/action/unlock_alt_round.svg",
+      "sharpPath": "assets/action/unlock_alt_sharp.svg"
+    },
+    {
+      "name": "Lock Alt",
+      "id": "243:3851",
+      "searchTerms": [
+        "Padlock",
+        "Safe",
+        "lock",
+        "security",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/lock_alt_round.svg",
+      "sharpPath": "assets/action/lock_alt_sharp.svg"
+    },
+    {
+      "name": "Unlock",
+      "id": "755:1950",
+      "searchTerms": [
+        "Padlock",
+        "Unsafe"
+      ],
+      "roundPath": "assets/action/unlock_round.svg",
+      "sharpPath": "assets/action/unlock_sharp.svg"
+    },
+    {
+      "name": "Lock",
+      "id": "755:1941",
+      "searchTerms": [
+        "Padlock",
+        "Safe"
+      ],
+      "roundPath": "assets/action/lock_round.svg",
+      "sharpPath": "assets/action/lock_sharp.svg"
+    },
+    {
+      "name": "World Action",
+      "id": "243:3855",
+      "searchTerms": [
+        "Language",
+        "Earth",
+        "Globe",
+        "global",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/world_action_round.svg",
+      "sharpPath": "assets/action/world_action_sharp.svg"
+    },
+    {
+      "name": "Filter",
+      "id": "243:3858",
+      "searchTerms": [
+        "filter",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/filter_round.svg",
+      "sharpPath": "assets/action/filter_sharp.svg"
+    },
+    {
+      "name": "Filter Alt",
+      "id": "755:1890",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/action/filter_alt_round.svg",
+      "sharpPath": "assets/action/filter_alt_sharp.svg"
+    },
+    {
+      "name": "Like Action",
+      "id": "243:3860",
+      "searchTerms": [
+        "Thumbs Up"
+      ],
+      "roundPath": "assets/action/like_action_round.svg",
+      "sharpPath": "assets/action/like_action_sharp.svg"
+    },
+    {
+      "name": "Dislike Action",
+      "id": "243:3861",
+      "searchTerms": [
+        "Thumbs Down"
+      ],
+      "roundPath": "assets/action/dislike_action_round.svg",
+      "sharpPath": "assets/action/dislike_action_sharp.svg"
+    },
+    {
+      "name": "Trending Up",
+      "id": "243:4006",
+      "searchTerms": [
+        "Success",
+        "Profit"
+      ],
+      "roundPath": "assets/action/trending_up_round.svg",
+      "sharpPath": "assets/action/trending_up_sharp.svg"
+    },
+    {
+      "name": "Trending Down",
+      "id": "243:4007",
+      "searchTerms": [
+        "Failure",
+        "Loss"
+      ],
+      "roundPath": "assets/action/trending_down_round.svg",
+      "sharpPath": "assets/action/trending_down_sharp.svg"
+    },
+    {
+      "name": "User Settings",
+      "id": "243:3857",
+      "searchTerms": [
+        "Account",
+        "ID",
+        "Identity",
+        "Cog",
+        "Gear"
+      ],
+      "roundPath": "assets/action/user_settings_round.svg",
+      "sharpPath": "assets/action/user_settings_sharp.svg"
+    },
+    {
+      "name": "User Circle",
+      "id": "240:40",
+      "searchTerms": [
+        "Account",
+        "ID",
+        "Identity",
+        "profile",
+        "user",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/user_circle_round.svg",
+      "sharpPath": "assets/action/user_circle_sharp.svg"
+    },
+    {
+      "name": "User",
+      "id": "243:4008",
+      "searchTerms": [
+        "Account",
+        "ID",
+        "Identity"
+      ],
+      "roundPath": "assets/action/user_round.svg",
+      "sharpPath": "assets/action/user_sharp.svg"
+    },
+    {
+      "name": "History",
+      "id": "243:4009",
+      "searchTerms": [
+        "Watch",
+        "Time",
+        "Earlier",
+        "Previously",
+        "history",
+        "log",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/history_round.svg",
+      "sharpPath": "assets/action/history_sharp.svg"
+    },
+    {
+      "name": "Update",
+      "id": "243:4010",
+      "searchTerms": [
+        "Watch",
+        "Time",
+        "Later",
+        "update",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/update_round.svg",
+      "sharpPath": "assets/action/update_sharp.svg"
+    },
+    {
+      "name": "Visibility",
+      "id": "243:4012",
+      "searchTerms": [
+        "See",
+        "Eye",
+        "view",
+        "preview",
+        "visibility",
+        "watch",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/visibility_round.svg",
+      "sharpPath": "assets/action/visibility_sharp.svg"
+    },
+    {
+      "name": "Visibility Off",
+      "id": "243:4013",
+      "searchTerms": [
+        "See",
+        "Hidden",
+        "Hide",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/visibility_off_round.svg",
+      "sharpPath": "assets/action/visibility_off_sharp.svg"
+    },
+    {
+      "name": "Clipboard",
+      "id": "243:4014",
+      "searchTerms": [
+        "Assignment",
+        "To do",
+        "List",
+        "Item"
+      ],
+      "roundPath": "assets/action/clipboard_round.svg",
+      "sharpPath": "assets/action/clipboard_sharp.svg"
+    },
+    {
+      "name": "Pin",
+      "id": "243:4018",
+      "searchTerms": [
+        "Place",
+        "Location",
+        "Pin",
+        "Location",
+        "mark",
+        "here",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/pin_round.svg",
+      "sharpPath": "assets/action/pin_sharp.svg"
+    },
+    {
+      "name": "Renew",
+      "id": "243:4019",
+      "searchTerms": [
+        "Refresh",
+        "Reload",
+        "Loop"
+      ],
+      "roundPath": "assets/action/renew_round.svg",
+      "sharpPath": "assets/action/renew_sharp.svg"
+    },
+    {
+      "name": "Sync Action",
+      "id": "755:1965",
+      "searchTerms": [
+        "Refresh",
+        "Reload",
+        "Loop",
+        "sync",
+        "synchronize"
+      ],
+      "roundPath": "assets/action/sync_action_round.svg",
+      "sharpPath": "assets/action/sync_action_sharp.svg"
+    },
+    {
+      "name": "Delete Forever",
+      "id": "243:4020",
+      "searchTerms": [
+        "Trash",
+        "Bin"
+      ],
+      "roundPath": "assets/action/delete_forever_round.svg",
+      "sharpPath": "assets/action/delete_forever_sharp.svg"
+    },
+    {
+      "name": "Build",
+      "id": "243:4021",
+      "searchTerms": [
+        "Wrench"
+      ],
+      "roundPath": "assets/action/build_round.svg",
+      "sharpPath": "assets/action/build_sharp.svg"
+    },
+    {
+      "name": "Alarm",
+      "id": "243:4022",
+      "searchTerms": [
+        "Watch",
+        "Time"
+      ],
+      "roundPath": "assets/action/alarm_round.svg",
+      "sharpPath": "assets/action/alarm_sharp.svg"
+    },
+    {
+      "name": "Bookmark",
+      "id": "243:4023",
+      "searchTerms": [
+        "Remind",
+        "Reminder"
+      ],
+      "roundPath": "assets/action/bookmark_round.svg",
+      "sharpPath": "assets/action/bookmark_sharp.svg"
+    },
+    {
+      "name": "Bookmark Outline",
+      "id": "243:4024",
+      "searchTerms": [
+        "Remind",
+        "Reminder"
+      ],
+      "roundPath": "assets/action/bookmark_outline_round.svg",
+      "sharpPath": "assets/action/bookmark_outline_sharp.svg"
+    },
+    {
+      "name": "AR",
+      "id": "243:4026",
+      "searchTerms": [
+        "Augmented",
+        "Reality",
+        "Cube",
+        "3D"
+      ],
+      "roundPath": "assets/action/ar_round.svg",
+      "sharpPath": "assets/action/ar_sharp.svg"
+    },
+    {
+      "name": "Cached",
+      "id": "243:4158",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/action/cached_round.svg",
+      "sharpPath": "assets/action/cached_sharp.svg"
+    },
+    {
+      "name": "Document",
+      "id": "243:4159",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/action/document_round.svg",
+      "sharpPath": "assets/action/document_sharp.svg"
+    },
+    {
+      "name": "Pending",
+      "id": "243:4170",
+      "searchTerms": [
+        "Waiting",
+        "More",
+        "Circle",
+        "Dots"
+      ],
+      "roundPath": "assets/action/pending_round.svg",
+      "sharpPath": "assets/action/pending_sharp.svg"
+    },
+    {
+      "name": "Open In Full",
+      "id": "243:4175",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/action/open_in_full_round.svg",
+      "sharpPath": "assets/action/open_in_full_sharp.svg"
+    },
+    {
+      "name": "Label",
+      "id": "243:4171",
+      "searchTerms": [
+        "Tag"
+      ],
+      "roundPath": "assets/action/label_round.svg",
+      "sharpPath": "assets/action/label_sharp.svg"
+    },
+    {
+      "name": "Price",
+      "id": "243:4169",
+      "searchTerms": [
+        "Paid",
+        "Money",
+        "Dollar"
+      ],
+      "roundPath": "assets/action/price_round.svg",
+      "sharpPath": "assets/action/price_sharp.svg"
+    },
+    {
+      "name": "Open In New Window",
+      "id": "243:4174",
+      "searchTerms": [
+        "Launch",
+        "Tab",
+        "file",
+        "export",
+        "open in new",
+        "open",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/open_in_new_window_round.svg",
+      "sharpPath": "assets/action/open_in_new_window_sharp.svg"
+    },
+    {
+      "name": "Delete Outline",
+      "id": "243:4167",
+      "searchTerms": [
+        "Trash",
+        "Bin"
+      ],
+      "roundPath": "assets/action/delete_outline_round.svg",
+      "sharpPath": "assets/action/delete_outline_sharp.svg"
+    },
+    {
+      "name": "Security Check",
+      "id": "243:4164",
+      "searchTerms": [
+        "Verify",
+        "Verified",
+        "Shield",
+        "badge",
+        "title",
+        "status",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/security_check_round.svg",
+      "sharpPath": "assets/action/security_check_sharp.svg"
+    },
+    {
+      "name": "Clock Outline",
+      "id": "243:3854",
+      "searchTerms": [
+        "Watch",
+        "Time",
+        "clock",
+        "shift",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/clock_outline_round.svg",
+      "sharpPath": "assets/action/clock_outline_sharp.svg"
+    },
+    {
+      "name": "Clock",
+      "id": "243:4165",
+      "searchTerms": [
+        "Watch",
+        "Time",
+        "Circle"
+      ],
+      "roundPath": "assets/action/clock_round.svg",
+      "sharpPath": "assets/action/clock_sharp.svg"
+    },
+    {
+      "name": "Upload",
+      "id": "755:1821",
+      "searchTerms": [
+        "Get",
+        "file",
+        "upload",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/upload_round.svg",
+      "sharpPath": "assets/action/upload_sharp.svg"
+    },
+    {
+      "name": "Download",
+      "id": "243:4172",
+      "searchTerms": [
+        "Get",
+        "download",
+        "file",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/download_round.svg",
+      "sharpPath": "assets/action/download_sharp.svg"
+    },
+    {
+      "name": "Delete",
+      "id": "243:4166",
+      "searchTerms": [
+        "Trash",
+        "Bin",
+        "delete",
+        "remove",
+        "empty",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/delete_round.svg",
+      "sharpPath": "assets/action/delete_sharp.svg"
+    },
+    {
+      "name": "Log Out",
+      "id": "243:4161",
+      "searchTerms": [
+        "Logout",
+        "Exit",
+        "signout",
+        "sign out",
+        "sign-out",
+        "log out",
+        "log-out",
+        "logoff",
+        "log off",
+        "log-off",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/log_out_round.svg",
+      "sharpPath": "assets/action/log_out_sharp.svg"
+    },
+    {
+      "name": "Log In",
+      "id": "243:4162",
+      "searchTerms": [
+        "Login",
+        "Entry"
+      ],
+      "roundPath": "assets/action/log_in_round.svg",
+      "sharpPath": "assets/action/log_in_sharp.svg"
+    },
+    {
+      "name": "Zoom In",
+      "id": "243:4176",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/action/zoom_in_round.svg",
+      "sharpPath": "assets/action/zoom_in_sharp.svg"
+    },
+    {
+      "name": "Zoom Out",
+      "id": "243:4177",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/action/zoom_out_round.svg",
+      "sharpPath": "assets/action/zoom_out_sharp.svg"
+    },
+    {
+      "name": "Touch",
+      "id": "243:4178",
+      "searchTerms": [
+        "App",
+        "Interact",
+        "With",
+        "Finger",
+        "Zone",
+        "action",
+        "touch",
+        "tap",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/touch_round.svg",
+      "sharpPath": "assets/action/touch_sharp.svg"
+    },
+    {
+      "name": "Hand",
+      "id": "755:1843",
+      "searchTerms": [
+        "Raise",
+        "Interact",
+        "Finger"
+      ],
+      "roundPath": "assets/action/hand_round.svg",
+      "sharpPath": "assets/action/hand_sharp.svg"
+    },
+    {
+      "name": "Credit Card",
+      "id": "243:4252",
+      "searchTerms": [
+        "Payment"
+      ],
+      "roundPath": "assets/action/credit_card_round.svg",
+      "sharpPath": "assets/action/credit_card_sharp.svg"
+    },
+    {
+      "name": "Calendar Available",
+      "id": "243:4247",
+      "searchTerms": [
+        "Event",
+        "Check",
+        "Mark",
+        "Success"
+      ],
+      "roundPath": "assets/action/calendar_available_round.svg",
+      "sharpPath": "assets/action/calendar_available_sharp.svg"
+    },
+    {
+      "name": "Calendar Cancel",
+      "id": "787:1998",
+      "searchTerms": [
+        "Absence",
+        "Delete",
+        "Event"
+      ],
+      "roundPath": "assets/action/calendar_cancel_round.svg",
+      "sharpPath": "assets/action/calendar_cancel_sharp.svg"
+    },
+    {
+      "name": "Calendar Edit",
+      "id": "787:1972",
+      "searchTerms": [
+        "Plan",
+        "Event"
+      ],
+      "roundPath": "assets/action/calendar_edit_round.svg",
+      "sharpPath": "assets/action/calendar_edit_sharp.svg"
+    },
+    {
+      "name": "Calendar Range",
+      "id": "243:4249",
+      "searchTerms": [
+        "Date",
+        "Dates",
+        "Span",
+        "Trade",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/calendar_range_round.svg",
+      "sharpPath": "assets/action/calendar_range_sharp.svg"
+    },
+    {
+      "name": "Calendar Yearly",
+      "id": "787:1859",
+      "searchTerms": [
+        "Date",
+        "Year",
+        "365",
+        "calendar",
+        "yearly",
+        "annual",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/calendar_yearly_round.svg",
+      "sharpPath": "assets/action/calendar_yearly_sharp.svg"
+    },
+    {
+      "name": "Calendar Monthly Alt",
+      "id": "787:1816",
+      "searchTerms": [
+        "Date",
+        "Month",
+        "calendar",
+        "monthly",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/calendar_monthly_alt_round.svg",
+      "sharpPath": "assets/action/calendar_monthly_alt_sharp.svg"
+    },
+    {
+      "name": "Calendar Monthly",
+      "id": "243:4250",
+      "searchTerms": [
+        "Date",
+        "Month"
+      ],
+      "roundPath": "assets/action/calendar_monthly_round.svg",
+      "sharpPath": "assets/action/calendar_monthly_sharp.svg"
+    },
+    {
+      "name": "Calendar Weekly Alt",
+      "id": "787:1797",
+      "searchTerms": [
+        "Date",
+        "Week",
+        "calendar",
+        "weekly",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/calendar_weekly_alt_round.svg",
+      "sharpPath": "assets/action/calendar_weekly_alt_sharp.svg"
+    },
+    {
+      "name": "Calendar Weekly",
+      "id": "243:4251",
+      "searchTerms": [
+        "Date",
+        "Week"
+      ],
+      "roundPath": "assets/action/calendar_weekly_round.svg",
+      "sharpPath": "assets/action/calendar_weekly_sharp.svg"
+    },
+    {
+      "name": "Calendar 3 Day",
+      "id": "243:4245",
+      "searchTerms": [
+        "Date",
+        "Dates",
+        "calendar",
+        "three",
+        "3-day",
+        "3 day",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/calendar_3_day_round.svg",
+      "sharpPath": "assets/action/calendar_3_day_sharp.svg"
+    },
+    {
+      "name": "Calendar Day",
+      "id": "787:1772",
+      "searchTerms": [
+        "Date",
+        "Marked",
+        "Event",
+        "Today",
+        "Appointment",
+        "Meeting",
+        "calendar",
+        "day",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/calendar_day_round.svg",
+      "sharpPath": "assets/action/calendar_day_sharp.svg"
+    },
+    {
+      "name": "Calendar Alt 2",
+      "id": "243:4246",
+      "searchTerms": [
+        "Date",
+        "Marked",
+        "Event",
+        "Today",
+        "Appointment",
+        "Meeting"
+      ],
+      "roundPath": "assets/action/calendar_alt_2_round.svg",
+      "sharpPath": "assets/action/calendar_alt_2_sharp.svg"
+    },
+    {
+      "name": "Calendar Alt 1",
+      "id": "787:1746",
+      "searchTerms": [
+        "Date",
+        "Marked",
+        "Event",
+        "Today",
+        "Appointment",
+        "Meeting",
+        "calendar",
+        "schedule",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/calendar_alt_1_round.svg",
+      "sharpPath": "assets/action/calendar_alt_1_sharp.svg"
+    },
+    {
+      "name": "Calendar",
+      "id": "243:4181",
+      "searchTerms": [
+        "Date",
+        "Appointment",
+        "Meeting",
+        "calendar",
+        "schedule",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/action/calendar_round.svg",
+      "sharpPath": "assets/action/calendar_sharp.svg"
+    },
+    {
+      "name": "Verified",
+      "id": "243:4179",
+      "searchTerms": [
+        "Checked",
+        "Success"
+      ],
+      "roundPath": "assets/action/verified_round.svg",
+      "sharpPath": "assets/action/verified_sharp.svg"
+    }
+  ],
+  "Audio Video": [
+    {
+      "name": "Play",
+      "id": "257:944",
+      "searchTerms": [
+        "Play",
+        "Start"
+      ],
+      "roundPath": "assets/audio_video/play_round.svg",
+      "sharpPath": "assets/audio_video/play_sharp.svg"
+    },
+    {
+      "name": "Play Circle",
+      "id": "257:945",
+      "searchTerms": [
+        "Play Filled"
+      ],
+      "roundPath": "assets/audio_video/play_circle_round.svg",
+      "sharpPath": "assets/audio_video/play_circle_sharp.svg"
+    },
+    {
+      "name": "Play Outline",
+      "id": "257:946",
+      "searchTerms": [
+        "Play Outline"
+      ],
+      "roundPath": "assets/audio_video/play_outline_round.svg",
+      "sharpPath": "assets/audio_video/play_outline_sharp.svg"
+    },
+    {
+      "name": "Stop Circle",
+      "id": "257:947",
+      "searchTerms": [
+        "Stop"
+      ],
+      "roundPath": "assets/audio_video/stop_circle_round.svg",
+      "sharpPath": "assets/audio_video/stop_circle_sharp.svg"
+    },
+    {
+      "name": "Pause Circle",
+      "id": "257:948",
+      "searchTerms": [
+        "Pause"
+      ],
+      "roundPath": "assets/audio_video/pause_circle_round.svg",
+      "sharpPath": "assets/audio_video/pause_circle_sharp.svg"
+    },
+    {
+      "name": "Stop",
+      "id": "257:949",
+      "searchTerms": [
+        "Stop",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/stop_round.svg",
+      "sharpPath": "assets/audio_video/stop_sharp.svg"
+    },
+    {
+      "name": "Pause",
+      "id": "257:950",
+      "searchTerms": [
+        "Pause",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/pause_round.svg",
+      "sharpPath": "assets/audio_video/pause_sharp.svg"
+    },
+    {
+      "name": "Fast Forward",
+      "id": "257:951",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/audio_video/fast_forward_round.svg",
+      "sharpPath": "assets/audio_video/fast_forward_sharp.svg"
+    },
+    {
+      "name": "Fast Rewind",
+      "id": "257:952",
+      "searchTerms": [
+        "Back\n"
+      ],
+      "roundPath": "assets/audio_video/fast_rewind_round.svg",
+      "sharpPath": "assets/audio_video/fast_rewind_sharp.svg"
+    },
+    {
+      "name": "Skip Next",
+      "id": "257:953",
+      "searchTerms": [
+        "Skip",
+        "end",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/skip_next_round.svg",
+      "sharpPath": "assets/audio_video/skip_next_sharp.svg"
+    },
+    {
+      "name": "Skip Previous",
+      "id": "257:954",
+      "searchTerms": [
+        "Skip"
+      ],
+      "roundPath": "assets/audio_video/skip_previous_round.svg",
+      "sharpPath": "assets/audio_video/skip_previous_sharp.svg"
+    },
+    {
+      "name": "Volume Down",
+      "id": "257:955",
+      "searchTerms": [
+        "Decrease",
+        "Lower"
+      ],
+      "roundPath": "assets/audio_video/volume_down_round.svg",
+      "sharpPath": "assets/audio_video/volume_down_sharp.svg"
+    },
+    {
+      "name": "Volume Mute",
+      "id": "257:956",
+      "searchTerms": [
+        "Mute"
+      ],
+      "roundPath": "assets/audio_video/volume_mute_round.svg",
+      "sharpPath": "assets/audio_video/volume_mute_sharp.svg"
+    },
+    {
+      "name": "Volume Off",
+      "id": "257:958",
+      "searchTerms": [
+        "Mute",
+        "No",
+        "audio-off",
+        "sound-off",
+        "volume-off",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/volume_off_round.svg",
+      "sharpPath": "assets/audio_video/volume_off_sharp.svg"
+    },
+    {
+      "name": "Volume Up",
+      "id": "257:959",
+      "searchTerms": [
+        "Increase",
+        "Higher",
+        "audio",
+        "sound",
+        "volume",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/volume_up_round.svg",
+      "sharpPath": "assets/audio_video/volume_up_sharp.svg"
+    },
+    {
+      "name": "Microphone",
+      "id": "257:960",
+      "searchTerms": [
+        "Voice",
+        "Speaker",
+        "mic",
+        "microphone",
+        "talk",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/microphone_round.svg",
+      "sharpPath": "assets/audio_video/microphone_sharp.svg"
+    },
+    {
+      "name": "Microphone Outline",
+      "id": "257:961",
+      "searchTerms": [
+        "Voice",
+        "Speaker,"
+      ],
+      "roundPath": "assets/audio_video/microphone_outline_round.svg",
+      "sharpPath": "assets/audio_video/microphone_outline_sharp.svg"
+    },
+    {
+      "name": "Microphone Off",
+      "id": "257:962",
+      "searchTerms": [
+        "Mute",
+        "Voice",
+        "Speaker Mute",
+        "Mute voice",
+        "Mute mic",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/microphone_off_round.svg",
+      "sharpPath": "assets/audio_video/microphone_off_sharp.svg"
+    },
+    {
+      "name": "Loop",
+      "id": "257:963",
+      "searchTerms": [
+        "Loading",
+        "Sync",
+        "Cached",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/loop_round.svg",
+      "sharpPath": "assets/audio_video/loop_sharp.svg"
+    },
+    {
+      "name": "Replay",
+      "id": "257:964",
+      "searchTerms": [
+        "Restart",
+        "Refresh"
+      ],
+      "roundPath": "assets/audio_video/replay_round.svg",
+      "sharpPath": "assets/audio_video/replay_sharp.svg"
+    },
+    {
+      "name": "Block",
+      "id": "257:965",
+      "searchTerms": [
+        "Delete",
+        "Prevent",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/audio_video/block_round.svg",
+      "sharpPath": "assets/audio_video/block_sharp.svg"
+    },
+    {
+      "name": "Closed Caption",
+      "id": "257:966",
+      "searchTerms": [
+        "Subtitle"
+      ],
+      "roundPath": "assets/audio_video/closed_caption_round.svg",
+      "sharpPath": "assets/audio_video/closed_caption_sharp.svg"
+    },
+    {
+      "name": "Video Camera",
+      "id": "257:968",
+      "searchTerms": [
+        "VIdeo",
+        "Cam",
+        "Camcorder"
+      ],
+      "roundPath": "assets/audio_video/video_camera_round.svg",
+      "sharpPath": "assets/audio_video/video_camera_sharp.svg"
+    }
+  ],
+  "Image": [
+    {
+      "name": "Camera",
+      "id": "259:1737",
+      "searchTerms": [
+        "Photo",
+        "Image",
+        "camera",
+        "picture",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/image/camera_round.svg",
+      "sharpPath": "assets/image/camera_sharp.svg"
+    },
+    {
+      "name": "Flip Camera",
+      "id": "259:1741",
+      "searchTerms": [
+        "Front",
+        "Back",
+        "Photo"
+      ],
+      "roundPath": "assets/image/flip_camera_round.svg",
+      "sharpPath": "assets/image/flip_camera_sharp.svg"
+    },
+    {
+      "name": "Visibility Image",
+      "id": "259:1742",
+      "searchTerms": [
+        "Eye",
+        "See",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/image/visibility_image_round.svg",
+      "sharpPath": "assets/image/visibility_image_sharp.svg"
+    },
+    {
+      "name": "Visibility Off Image",
+      "id": "401:1637",
+      "searchTerms": [
+        "Hide",
+        "Hidden",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/image/visibility_off_image_round.svg",
+      "sharpPath": "assets/image/visibility_off_image_sharp.svg"
+    },
+    {
+      "name": "Camera Shutter",
+      "id": "259:1743",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/image/camera_shutter_round.svg",
+      "sharpPath": "assets/image/camera_shutter_sharp.svg"
+    },
+    {
+      "name": "Image Library",
+      "id": "259:1744",
+      "searchTerms": [
+        "Collection",
+        "Set"
+      ],
+      "roundPath": "assets/image/image_library_round.svg",
+      "sharpPath": "assets/image/image_library_sharp.svg"
+    },
+    {
+      "name": "Image",
+      "id": "259:1745",
+      "searchTerms": [
+        "Photo",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/image/image_round.svg",
+      "sharpPath": "assets/image/image_sharp.svg"
+    },
+    {
+      "name": "Eye Dropper",
+      "id": "259:1746",
+      "searchTerms": [
+        "Color",
+        "Colorize",
+        "Colorise",
+        "Pick",
+        "Sample"
+      ],
+      "roundPath": "assets/image/eye_dropper_round.svg",
+      "sharpPath": "assets/image/eye_dropper_sharp.svg"
+    },
+    {
+      "name": "Contrast Image",
+      "id": "259:1747",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/image/contrast_image_round.svg",
+      "sharpPath": "assets/image/contrast_image_sharp.svg"
+    },
+    {
+      "name": "Portrait",
+      "id": "259:1749",
+      "searchTerms": [
+        "Picture",
+        "Mode"
+      ],
+      "roundPath": "assets/image/portrait_round.svg",
+      "sharpPath": "assets/image/portrait_sharp.svg"
+    },
+    {
+      "name": "HDR",
+      "id": "1103:2965",
+      "searchTerms": [
+        "Picture",
+        "Mode"
+      ],
+      "roundPath": "assets/image/hdr_round.svg",
+      "sharpPath": "assets/image/hdr_sharp.svg"
+    },
+    {
+      "name": "Rotate Left",
+      "id": "259:1750",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/image/rotate_left_round.svg",
+      "sharpPath": "assets/image/rotate_left_sharp.svg"
+    },
+    {
+      "name": "Rotate Right",
+      "id": "755:1643",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/image/rotate_right_round.svg",
+      "sharpPath": "assets/image/rotate_right_sharp.svg"
+    },
+    {
+      "name": "Slide Show",
+      "id": "259:1751",
+      "searchTerms": [
+        "Presentation"
+      ],
+      "roundPath": "assets/image/slide_show_round.svg",
+      "sharpPath": "assets/image/slide_show_sharp.svg"
+    },
+    {
+      "name": "Straighten",
+      "id": "259:1752",
+      "searchTerms": [
+        "Ruler"
+      ],
+      "roundPath": "assets/image/straighten_round.svg",
+      "sharpPath": "assets/image/straighten_sharp.svg"
+    },
+    {
+      "name": "Adjustments",
+      "id": "259:1753",
+      "searchTerms": [
+        "settings",
+        "tune",
+        "configuration",
+        "settings",
+        "tune",
+        "configuration",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/image/adjustments_round.svg",
+      "sharpPath": "assets/image/adjustments_sharp.svg"
+    },
+    {
+      "name": "Crop",
+      "id": "259:1754",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/image/crop_round.svg",
+      "sharpPath": "assets/image/crop_sharp.svg"
+    },
+    {
+      "name": "PRO",
+      "id": "1104:2992",
+      "searchTerms": [
+        "Picture",
+        "Mode"
+      ],
+      "roundPath": "assets/image/pro_round.svg",
+      "sharpPath": "assets/image/pro_sharp.svg"
+    },
+    {
+      "name": "AUTO",
+      "id": "1105:3170",
+      "searchTerms": [
+        "Picture",
+        "Mode"
+      ],
+      "roundPath": "assets/image/auto_round.svg",
+      "sharpPath": "assets/image/auto_sharp.svg"
+    },
+    {
+      "name": "ISO",
+      "id": "1106:3211",
+      "searchTerms": [
+        "Picture",
+        "Mode"
+      ],
+      "roundPath": "assets/image/iso_round.svg",
+      "sharpPath": "assets/image/iso_sharp.svg"
+    },
+    {
+      "name": "WB",
+      "id": "1106:3241",
+      "searchTerms": [
+        "Picture",
+        "Mode",
+        "White",
+        "Balance"
+      ],
+      "roundPath": "assets/image/wb_round.svg",
+      "sharpPath": "assets/image/wb_sharp.svg"
+    },
+    {
+      "name": "AWB",
+      "id": "1108:3291",
+      "searchTerms": [
+        "Picture",
+        "Mode",
+        "Auto",
+        "White",
+        "Balance"
+      ],
+      "roundPath": "assets/image/awb_round.svg",
+      "sharpPath": "assets/image/awb_sharp.svg"
+    },
+    {
+      "name": "WB Image",
+      "id": "1107:3271",
+      "searchTerms": [
+        "Picture",
+        "Mode"
+      ],
+      "roundPath": "assets/image/wb_image_round.svg",
+      "sharpPath": "assets/image/wb_image_sharp.svg"
+    },
+    {
+      "name": "Grid On",
+      "id": "259:1756",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/image/grid_on_round.svg",
+      "sharpPath": "assets/image/grid_on_sharp.svg"
+    },
+    {
+      "name": "Grid Off",
+      "id": "259:1757",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/image/grid_off_round.svg",
+      "sharpPath": "assets/image/grid_off_sharp.svg"
+    },
+    {
+      "name": "Timer",
+      "id": "259:1758",
+      "searchTerms": [
+        "Countdown"
+      ],
+      "roundPath": "assets/image/timer_round.svg",
+      "sharpPath": "assets/image/timer_sharp.svg"
+    }
+  ],
+  "Navigation": [
+    {
+      "name": "Apps",
+      "id": "243:4810",
+      "searchTerms": [
+        "3x3",
+        "menu",
+        "dashboard",
+        "grid",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/apps_round.svg",
+      "sharpPath": "assets/navigation/apps_sharp.svg"
+    },
+    {
+      "name": "Columns",
+      "id": "652:1635",
+      "searchTerms": [
+        "Table"
+      ],
+      "roundPath": "assets/navigation/columns_round.svg",
+      "sharpPath": "assets/navigation/columns_sharp.svg"
+    },
+    {
+      "name": "Cancel",
+      "id": "243:4812",
+      "searchTerms": [
+        "Close",
+        "X",
+        "cancel",
+        "exit",
+        "delete",
+        "remove"
+      ],
+      "roundPath": "assets/navigation/cancel_round.svg",
+      "sharpPath": "assets/navigation/cancel_sharp.svg"
+    },
+    {
+      "name": "Drop Down Circle",
+      "id": "243:4814",
+      "searchTerms": [
+        "Arrow",
+        "Triangle"
+      ],
+      "roundPath": "assets/navigation/drop_down_circle_round.svg",
+      "sharpPath": "assets/navigation/drop_down_circle_sharp.svg"
+    },
+    {
+      "name": "Close",
+      "id": "243:4815",
+      "searchTerms": [
+        "X",
+        "close",
+        "cancel",
+        "X",
+        "exit",
+        "delete",
+        "remove",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/close_round.svg",
+      "sharpPath": "assets/navigation/close_sharp.svg"
+    },
+    {
+      "name": "Check",
+      "id": "243:4816",
+      "searchTerms": [
+        "Mark",
+        "Done",
+        "Complete",
+        "check",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/check_round.svg",
+      "sharpPath": "assets/navigation/check_sharp.svg"
+    },
+    {
+      "name": "More Vertical",
+      "id": "243:4817",
+      "searchTerms": [
+        "menu",
+        "dot",
+        "3-dot",
+        "3 dot",
+        "vertical",
+        "more",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/more_vertical_round.svg",
+      "sharpPath": "assets/navigation/more_vertical_sharp.svg"
+    },
+    {
+      "name": "More Horizontal",
+      "id": "243:4818",
+      "searchTerms": [
+        "menu",
+        "dot",
+        "3-dot",
+        "3 dot",
+        "horizontal",
+        "more",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/more_horizontal_round.svg",
+      "sharpPath": "assets/navigation/more_horizontal_sharp.svg"
+    },
+    {
+      "name": "Chevron Left",
+      "id": "243:4819",
+      "searchTerms": [
+        "Arrow",
+        "chevron",
+        "left",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/chevron_left_round.svg",
+      "sharpPath": "assets/navigation/chevron_left_sharp.svg"
+    },
+    {
+      "name": "Chevron Right",
+      "id": "243:4820",
+      "searchTerms": [
+        "Arrow",
+        "chevron",
+        "right",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/chevron_right_round.svg",
+      "sharpPath": "assets/navigation/chevron_right_sharp.svg"
+    },
+    {
+      "name": "Expand Less",
+      "id": "243:4821",
+      "searchTerms": [
+        "Arrow",
+        "chevron",
+        "up",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/expand_less_round.svg",
+      "sharpPath": "assets/navigation/expand_less_sharp.svg"
+    },
+    {
+      "name": "Expand More",
+      "id": "243:4822",
+      "searchTerms": [
+        "Arrow",
+        "chevon",
+        "down",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/expand_more_round.svg",
+      "sharpPath": "assets/navigation/expand_more_sharp.svg"
+    },
+    {
+      "name": "Caret Down",
+      "id": "243:4823",
+      "searchTerms": [
+        "Triangle"
+      ],
+      "roundPath": "assets/navigation/caret_down_round.svg",
+      "sharpPath": "assets/navigation/caret_down_sharp.svg"
+    },
+    {
+      "name": "Caret Up",
+      "id": "243:4824",
+      "searchTerms": [
+        "Triangle"
+      ],
+      "roundPath": "assets/navigation/caret_up_round.svg",
+      "sharpPath": "assets/navigation/caret_up_sharp.svg"
+    },
+    {
+      "name": "Caret Left",
+      "id": "243:4825",
+      "searchTerms": [
+        "Triangle"
+      ],
+      "roundPath": "assets/navigation/caret_left_round.svg",
+      "sharpPath": "assets/navigation/caret_left_sharp.svg"
+    },
+    {
+      "name": "Caret Right",
+      "id": "243:4826",
+      "searchTerms": [
+        "Triangle"
+      ],
+      "roundPath": "assets/navigation/caret_right_round.svg",
+      "sharpPath": "assets/navigation/caret_right_sharp.svg"
+    },
+    {
+      "name": "Full Screen Exit",
+      "id": "243:4827",
+      "searchTerms": [
+        "fullscreen",
+        "minimize",
+        "shrink",
+        "exit",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/full_screen_exit_round.svg",
+      "sharpPath": "assets/navigation/full_screen_exit_sharp.svg"
+    },
+    {
+      "name": "Full Screen",
+      "id": "243:4829",
+      "searchTerms": [
+        "fullscreen",
+        "enlarge",
+        "maximize",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/full_screen_round.svg",
+      "sharpPath": "assets/navigation/full_screen_sharp.svg"
+    },
+    {
+      "name": "Hamburger Menu",
+      "id": "243:4830",
+      "searchTerms": [
+        "menu",
+        "hamburger",
+        "line",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/hamburger_menu_round.svg",
+      "sharpPath": "assets/navigation/hamburger_menu_sharp.svg"
+    },
+    {
+      "name": "Hamburger Menu Thick",
+      "id": "662:1869",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/navigation/hamburger_menu_thick_round.svg",
+      "sharpPath": "assets/navigation/hamburger_menu_thick_sharp.svg"
+    },
+    {
+      "name": "Hamburger Menu Navigation Rail",
+      "id": "662:1862",
+      "searchTerms": [
+        "Narrow",
+        "Squeeze",
+        "Small"
+      ],
+      "roundPath": "assets/navigation/hamburger_menu_navigation_rail_round.svg",
+      "sharpPath": "assets/navigation/hamburger_menu_navigation_rail_sharp.svg"
+    },
+    {
+      "name": "Refresh",
+      "id": "243:4831",
+      "searchTerms": [
+        "Reload",
+        "refresh",
+        "turnover",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/refresh_round.svg",
+      "sharpPath": "assets/navigation/refresh_sharp.svg"
+    },
+    {
+      "name": "Arrow Up",
+      "id": "247:572",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/navigation/arrow_up_round.svg",
+      "sharpPath": "assets/navigation/arrow_up_sharp.svg"
+    },
+    {
+      "name": "Arrow Forward",
+      "id": "247:570",
+      "searchTerms": [
+        "Right",
+        "arrow",
+        "forward",
+        "next",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/arrow_forward_round.svg",
+      "sharpPath": "assets/navigation/arrow_forward_sharp.svg"
+    },
+    {
+      "name": "Arrow Down",
+      "id": "247:571",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/navigation/arrow_down_round.svg",
+      "sharpPath": "assets/navigation/arrow_down_sharp.svg"
+    },
+    {
+      "name": "Arrow Back",
+      "id": "243:4858",
+      "searchTerms": [
+        "Left",
+        "arrow",
+        "back",
+        "previous",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/arrow_back_round.svg",
+      "sharpPath": "assets/navigation/arrow_back_sharp.svg"
+    },
+    {
+      "name": "Unfold More",
+      "id": "316:1649",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/navigation/unfold_more_round.svg",
+      "sharpPath": "assets/navigation/unfold_more_sharp.svg"
+    },
+    {
+      "name": "Unfold Less",
+      "id": "316:1650",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/navigation/unfold_less_round.svg",
+      "sharpPath": "assets/navigation/unfold_less_sharp.svg"
+    },
+    {
+      "name": "Caret Sort",
+      "id": "474:1634",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/navigation/caret_sort_round.svg",
+      "sharpPath": "assets/navigation/caret_sort_sharp.svg"
+    },
+    {
+      "name": "First Page",
+      "id": "550:1640",
+      "searchTerms": [
+        "Beginning"
+      ],
+      "roundPath": "assets/navigation/first_page_round.svg",
+      "sharpPath": "assets/navigation/first_page_sharp.svg"
+    },
+    {
+      "name": "Last Page",
+      "id": "550:1637",
+      "searchTerms": [
+        "End"
+      ],
+      "roundPath": "assets/navigation/last_page_round.svg",
+      "sharpPath": "assets/navigation/last_page_sharp.svg"
+    },
+    {
+      "name": "Dashboard",
+      "id": "645:1661",
+      "searchTerms": [
+        "dashboard",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/dashboard_round.svg",
+      "sharpPath": "assets/navigation/dashboard_sharp.svg"
+    },
+    {
+      "name": "Cancel Outline",
+      "id": "243:3768",
+      "searchTerms": [
+        "Close",
+        "X"
+      ],
+      "roundPath": "assets/navigation/cancel_outline_round.svg",
+      "sharpPath": "assets/navigation/cancel_outline_sharp.svg"
+    },
+    {
+      "name": "List Alt",
+      "id": "243:3859",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/navigation/list_alt_round.svg",
+      "sharpPath": "assets/navigation/list_alt_sharp.svg"
+    },
+    {
+      "name": "List",
+      "id": "243:4163",
+      "searchTerms": [
+        "list",
+        "details",
+        "information",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/list_round.svg",
+      "sharpPath": "assets/navigation/list_sharp.svg"
+    },
+    {
+      "name": "Help Outline",
+      "id": "243:3856",
+      "searchTerms": [
+        "Question",
+        "Mark"
+      ],
+      "roundPath": "assets/navigation/help_outline_round.svg",
+      "sharpPath": "assets/navigation/help_outline_sharp.svg"
+    },
+    {
+      "name": "Help",
+      "id": "243:4168",
+      "searchTerms": [
+        "Question",
+        "Mark",
+        "help",
+        "question",
+        "info",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/navigation/help_round.svg",
+      "sharpPath": "assets/navigation/help_sharp.svg"
+    }
+  ],
+  "Content": [
+    {
+      "name": "Add",
+      "id": "250:723",
+      "searchTerms": [
+        "Plus",
+        "add"
+      ],
+      "roundPath": "assets/content/add_round.svg",
+      "sharpPath": "assets/content/add_sharp.svg"
+    },
+    {
+      "name": "Link Content",
+      "id": "250:716",
+      "searchTerms": [
+        "Chain",
+        "link",
+        "hyperlink"
+      ],
+      "roundPath": "assets/content/link_content_round.svg",
+      "sharpPath": "assets/content/link_content_sharp.svg"
+    },
+    {
+      "name": "Sort",
+      "id": "250:714",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/content/sort_round.svg",
+      "sharpPath": "assets/content/sort_sharp.svg"
+    },
+    {
+      "name": "Filter List",
+      "id": "250:713",
+      "searchTerms": [
+        "filter",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/filter_list_round.svg",
+      "sharpPath": "assets/content/filter_list_sharp.svg"
+    },
+    {
+      "name": "Create",
+      "id": "250:712",
+      "searchTerms": [
+        "Write",
+        "edit",
+        "request",
+        "complete",
+        "change",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/create_round.svg",
+      "sharpPath": "assets/content/create_sharp.svg"
+    },
+    {
+      "name": "Mail",
+      "id": "250:717",
+      "searchTerms": [
+        "Mail",
+        "@",
+        "email",
+        "e-mail",
+        "envelope",
+        "message",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/mail_round.svg",
+      "sharpPath": "assets/content/mail_sharp.svg"
+    },
+    {
+      "name": "Content",
+      "id": "250:710",
+      "searchTerms": [
+        "duplicate",
+        "copy",
+        "clipboard",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/content_round.svg",
+      "sharpPath": "assets/content/content_sharp.svg"
+    },
+    {
+      "name": "Clear",
+      "id": "250:708",
+      "searchTerms": [
+        "X",
+        "cancel",
+        "exit",
+        "delete",
+        "remove"
+      ],
+      "roundPath": "assets/content/clear_round.svg",
+      "sharpPath": "assets/content/clear_sharp.svg"
+    },
+    {
+      "name": "Copy File",
+      "id": "250:711",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/content/copy_file_round.svg",
+      "sharpPath": "assets/content/copy_file_sharp.svg"
+    },
+    {
+      "name": "Remove Circle Outline",
+      "id": "250:706",
+      "searchTerms": [
+        "Minus"
+      ],
+      "roundPath": "assets/content/remove_circle_outline_round.svg",
+      "sharpPath": "assets/content/remove_circle_outline_sharp.svg"
+    },
+    {
+      "name": "Add Circle Outline",
+      "id": "250:703",
+      "searchTerms": [
+        "Plus"
+      ],
+      "roundPath": "assets/content/add_circle_outline_round.svg",
+      "sharpPath": "assets/content/add_circle_outline_sharp.svg"
+    },
+    {
+      "name": "Remove Circle",
+      "id": "250:705",
+      "searchTerms": [
+        "Minus",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/remove_circle_round.svg",
+      "sharpPath": "assets/content/remove_circle_sharp.svg"
+    },
+    {
+      "name": "Block Content",
+      "id": "250:707",
+      "searchTerms": [
+        "unclaim",
+        "cancel",
+        "do not",
+        "DNE",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/block_content_round.svg",
+      "sharpPath": "assets/content/block_content_sharp.svg"
+    },
+    {
+      "name": "Add Circle",
+      "id": "250:702",
+      "searchTerms": [
+        "Plus"
+      ],
+      "roundPath": "assets/content/add_circle_round.svg",
+      "sharpPath": "assets/content/add_circle_sharp.svg"
+    },
+    {
+      "name": "Remove",
+      "id": "250:704",
+      "searchTerms": [
+        "Minus",
+        "remove",
+        "delete",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/remove_round.svg",
+      "sharpPath": "assets/content/remove_sharp.svg"
+    },
+    {
+      "name": "Android",
+      "id": "649:1688",
+      "searchTerms": [
+        "OS"
+      ],
+      "roundPath": "assets/content/android_round.svg",
+      "sharpPath": "assets/content/android_sharp.svg"
+    },
+    {
+      "name": "Add Box",
+      "id": "250:701",
+      "searchTerms": [
+        "Plus"
+      ],
+      "roundPath": "assets/content/add_box_round.svg",
+      "sharpPath": "assets/content/add_box_sharp.svg"
+    },
+    {
+      "name": "Remove Box",
+      "id": "649:1700",
+      "searchTerms": [
+        "Minus"
+      ],
+      "roundPath": "assets/content/remove_box_round.svg",
+      "sharpPath": "assets/content/remove_box_sharp.svg"
+    },
+    {
+      "name": "Push Pin",
+      "id": "250:726",
+      "searchTerms": [
+        "pin",
+        "save",
+        "pushpin",
+        "mark",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/push_pin_round.svg",
+      "sharpPath": "assets/content/push_pin_sharp.svg"
+    },
+    {
+      "name": "Send",
+      "id": "250:725",
+      "searchTerms": [
+        "chat",
+        "message",
+        "communication",
+        "send",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/send_round.svg",
+      "sharpPath": "assets/content/send_sharp.svg"
+    },
+    {
+      "name": "Backspace",
+      "id": "250:724",
+      "searchTerms": [
+        "Delete",
+        "clear",
+        "remove",
+        "backspace",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/backspace_round.svg",
+      "sharpPath": "assets/content/backspace_sharp.svg"
+    },
+    {
+      "name": "Flag",
+      "id": "250:727",
+      "searchTerms": [
+        "flag",
+        "mark",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/flag_round.svg",
+      "sharpPath": "assets/content/flag_sharp.svg"
+    },
+    {
+      "name": "Save",
+      "id": "250:722",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/content/save_round.svg",
+      "sharpPath": "assets/content/save_sharp.svg"
+    },
+    {
+      "name": "Reply",
+      "id": "250:720",
+      "searchTerms": [
+        "email",
+        "e-mail",
+        "envelope",
+        "message",
+        "reply",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/reply_round.svg",
+      "sharpPath": "assets/content/reply_sharp.svg"
+    },
+    {
+      "name": "Redo",
+      "id": "250:719",
+      "searchTerms": [
+        "redo",
+        "edit",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/redo_round.svg",
+      "sharpPath": "assets/content/redo_sharp.svg"
+    },
+    {
+      "name": "Save Alt",
+      "id": "250:721",
+      "searchTerms": [
+        "save",
+        "file",
+        "import",
+        "download",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/save_alt_round.svg",
+      "sharpPath": "assets/content/save_alt_sharp.svg"
+    },
+    {
+      "name": "Undo",
+      "id": "250:718",
+      "searchTerms": [
+        "undo",
+        "edit",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/content/undo_round.svg",
+      "sharpPath": "assets/content/undo_sharp.svg"
+    },
+    {
+      "name": "Analysis",
+      "id": "2657:3011",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/content/analysis_round.svg",
+      "sharpPath": "assets/content/analysis_sharp.svg"
+    }
+  ],
+  "Hardware": [
+    {
+      "name": "Scanner",
+      "id": "258:1493",
+      "searchTerms": [
+        "mobile"
+      ],
+      "roundPath": "assets/hardware/scanner_round.svg",
+      "sharpPath": "assets/hardware/scanner_sharp.svg"
+    },
+    {
+      "name": "Printer",
+      "id": "750:1654",
+      "searchTerms": [
+        "print",
+        "printer",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/hardware/printer_round.svg",
+      "sharpPath": "assets/hardware/printer_sharp.svg"
+    },
+    {
+      "name": "Cast",
+      "id": "258:1494",
+      "searchTerms": [
+        "Chrome"
+      ],
+      "roundPath": "assets/hardware/cast_round.svg",
+      "sharpPath": "assets/hardware/cast_sharp.svg"
+    },
+    {
+      "name": "Cast Connected",
+      "id": "258:1495",
+      "searchTerms": [
+        "Chrome"
+      ],
+      "roundPath": "assets/hardware/cast_connected_round.svg",
+      "sharpPath": "assets/hardware/cast_connected_sharp.svg"
+    },
+    {
+      "name": "Desktop",
+      "id": "258:1496",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/hardware/desktop_round.svg",
+      "sharpPath": "assets/hardware/desktop_sharp.svg"
+    },
+    {
+      "name": "Devices Ecosystem",
+      "id": "258:1497",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/hardware/devices_ecosystem_round.svg",
+      "sharpPath": "assets/hardware/devices_ecosystem_sharp.svg"
+    },
+    {
+      "name": "Device Settings",
+      "id": "648:1678",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/hardware/device_settings_round.svg",
+      "sharpPath": "assets/hardware/device_settings_sharp.svg"
+    },
+    {
+      "name": "Headphones",
+      "id": "258:1498",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/hardware/headphones_round.svg",
+      "sharpPath": "assets/hardware/headphones_sharp.svg"
+    },
+    {
+      "name": "Keyboard",
+      "id": "258:1499",
+      "searchTerms": [
+        "keyboard",
+        "keypad",
+        "type",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/hardware/keyboard_round.svg",
+      "sharpPath": "assets/hardware/keyboard_sharp.svg"
+    },
+    {
+      "name": "Laptop",
+      "id": "258:1500",
+      "searchTerms": [
+        "Computer"
+      ],
+      "roundPath": "assets/hardware/laptop_round.svg",
+      "sharpPath": "assets/hardware/laptop_sharp.svg"
+    },
+    {
+      "name": "Memory",
+      "id": "258:1501",
+      "searchTerms": [
+        "Processor",
+        "Microprocessor"
+      ],
+      "roundPath": "assets/hardware/memory_round.svg",
+      "sharpPath": "assets/hardware/memory_sharp.svg"
+    },
+    {
+      "name": "Monitor",
+      "id": "258:1502",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/hardware/monitor_round.svg",
+      "sharpPath": "assets/hardware/monitor_sharp.svg"
+    },
+    {
+      "name": "Phone Android",
+      "id": "258:1503",
+      "searchTerms": [
+        "Mobile"
+      ],
+      "roundPath": "assets/hardware/phone_android_round.svg",
+      "sharpPath": "assets/hardware/phone_android_sharp.svg"
+    },
+    {
+      "name": "Phone iPhone",
+      "id": "258:1504",
+      "searchTerms": [
+        "Mobile"
+      ],
+      "roundPath": "assets/hardware/phone_iphone_round.svg",
+      "sharpPath": "assets/hardware/phone_iphone_sharp.svg"
+    },
+    {
+      "name": "Phonelink",
+      "id": "258:1505",
+      "searchTerms": [
+        "Connected"
+      ],
+      "roundPath": "assets/hardware/phonelink_round.svg",
+      "sharpPath": "assets/hardware/phonelink_sharp.svg"
+    },
+    {
+      "name": "Security",
+      "id": "258:1506",
+      "searchTerms": [
+        "Protect",
+        "Protection",
+        "Shield"
+      ],
+      "roundPath": "assets/hardware/security_round.svg",
+      "sharpPath": "assets/hardware/security_sharp.svg"
+    },
+    {
+      "name": "Video Play",
+      "id": "258:1507",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/hardware/video_play_round.svg",
+      "sharpPath": "assets/hardware/video_play_sharp.svg"
+    },
+    {
+      "name": "Smart Phone",
+      "id": "258:1508",
+      "searchTerms": [
+        "Mobile",
+        "phone",
+        "device",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "assets/hardware/smart_phone_round.svg",
+      "sharpPath": "assets/hardware/smart_phone_sharp.svg"
+    },
+    {
+      "name": "Speaker",
+      "id": "258:1509",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/hardware/speaker_round.svg",
+      "sharpPath": "assets/hardware/speaker_sharp.svg"
+    },
+    {
+      "name": "Tablet",
+      "id": "258:1510",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "assets/hardware/tablet_round.svg",
+      "sharpPath": "assets/hardware/tablet_sharp.svg"
+    },
+    {
+      "name": "Tablet Mac",
+      "id": "258:1511",
+      "searchTerms": [
+        "iPad"
+      ],
+      "roundPath": "assets/hardware/tablet_mac_round.svg",
+      "sharpPath": "assets/hardware/tablet_mac_sharp.svg"
+    },
+    {
+      "name": "TV",
+      "id": "258:1512",
+      "searchTerms": [
+        "Television"
+      ],
+      "roundPath": "assets/hardware/tv_round.svg",
+      "sharpPath": "assets/hardware/tv_sharp.svg"
+    },
+    {
+      "name": "Watch",
+      "id": "258:1513",
+      "searchTerms": [
+        "Smartwatch"
+      ],
+      "roundPath": "assets/hardware/watch_round.svg",
+      "sharpPath": "assets/hardware/watch_sharp.svg"
+    }
+  ]
+}

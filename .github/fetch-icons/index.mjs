@@ -40,7 +40,7 @@ try {
   const baseUrl = process.cwd();
 
   // Fetch the assets file from the previous run
-  const assetsPath = `${baseUrl}/src/assets.json`;
+  const assetsPath = `${baseUrl}/assets.json`;
   let oldAssetsObj = {};
   if (fileExists(assetsPath)) {
     oldAssetsObj = JSON.parse(await readFile(assetsPath));

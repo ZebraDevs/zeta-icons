@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2015",
-    "module": "ES2020",
+    "module": "Node16",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./lib",
+    "allowArbitraryExtensions": true,
     "declaration": true,
-    "moduleResolution": "node"   
+    "moduleResolution": "node16"   
   },
   "include": ["./src/"], 
 }

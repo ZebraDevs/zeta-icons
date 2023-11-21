@@ -1,5 +1,5 @@
-import { reservedWords } from "./reserved-words";
-import { ZetaIconError, ErrorType, ErrorSeverity } from "./error";
+import { reservedWords } from "./reserved-words.js";
+import { ZetaIconError, ErrorType, ErrorSeverity } from "./error.js";
 
 export {
   checkIconName,

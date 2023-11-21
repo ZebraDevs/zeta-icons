@@ -1,5 +1,5 @@
-import { checkCategoryName, checkIconName } from "../src/index";
-import { ErrorType } from "../src/error";
+import { checkCategoryName, checkIconName } from "../src/index.js";
+import { ErrorType } from "../src/error.js";
 
 describe("testing checkIconName", () => {
   test(`"Test Icon Name" should return an icon error with the type of ${ErrorType.none}`, () => {

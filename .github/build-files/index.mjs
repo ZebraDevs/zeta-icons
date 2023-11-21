@@ -26,8 +26,8 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
       obj.unicode[0] = String.fromCharCode(unicodeAcc);
       unicodeAcc++;
 
-      const dartIconName = getDartIconName(icon.name);
-      const scssIconName = getScssIconName(icon.name);
+      const dartIconName = getDartIconName(obj.name);
+      const scssIconName = getScssIconName(obj.name);
 
       const strUnicode = Number(unicodeAcc).toString(16);
 

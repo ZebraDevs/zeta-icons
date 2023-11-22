@@ -40,6 +40,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           default: patch
+          skip-commit: "true"
+          skip-tag: "true"
+          skip-push: "true"
       - name: Get package version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1

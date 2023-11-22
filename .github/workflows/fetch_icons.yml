@@ -61,10 +61,22 @@ jobs:
           git push -f --tags
           echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV
       - name: Publish to NPM
-        # if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
+        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  update_zeta_web:
+    needs: fetch_icons
+    runs-on: ubuntu-latest
+    name: Update Zeta Web
+    steps:
+      - uses: octokit/request-action@v2.x
+        id: create_check_run
+        with:
+          route: https://api.github.com/repos/zebratechnologies/zeta-web/actions/jobs/update-icons/rerun
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   zeta_flutter_PR:
     needs: fetch_icons

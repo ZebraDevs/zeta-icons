@@ -34,12 +34,15 @@ jobs:
         # if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
         with:
           assets_path: ${{ steps.fetch_icons.outputs.assets_path }}
-      - name: "Automated Version Bump"
+      - name: "Bump Version"
         uses: "phips28/gh-action-bump-version@master"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          default: minor
+          default: patch
+      - name: Get package version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: Update
         # if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
         id: update
@@ -47,10 +50,14 @@ jobs:
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
           git add -A
-          # git tag ${{ steps.bump.outputs.new_version }}
-          git commit --amend --no-edit
+          git tag ${{ steps.package-version.outputs.current-version }}
+          git commit -m "Version ${{ steps.package-version.outputs.current-version }}" --no-edit
           git push -f
+          git push -f --tags
           echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV
+      - name: Publish to NPM
+        # if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
+        run: npm publish
 
   zeta_flutter_PR:
     needs: fetch_icons

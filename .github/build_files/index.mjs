@@ -1,16 +1,12 @@
 import core from "@actions/core";
 import * as fs from "fs";
-import {
-  getDartIconName,
-  getScssIconName,
-  writeToFile,
-} from "../utils/file-utils.mjs";
+import { getDartIconName, writeToFile } from "../utils/file-utils.mjs";
 import { webfont } from "webfont";
 
 const fontName = "zeta-icons";
 
 let dartFileContents = createDartFile();
-let typesFileContents = "export type ZetaIcon = \n";
+let typesFileContents = "export type ZetaIconName = \n";
 
 const buildFontFile = async (woff2Url, ttfUrl, type) => {
   let unicodeAcc = 0xe001;

@@ -25,7 +25,6 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
       obj.name = obj.unicode[1] = obj.name
         .replace("_round", "")
         .replace("_sharp", "");
-      unicodeAcc++;
 
       const dartIconName = getDartIconName(obj.name);
 
@@ -39,6 +38,7 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
         typesFileContents += getIconTypeDefinition(obj.name);
       }
 
+      unicodeAcc++;
       return obj;
     },
   });

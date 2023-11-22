@@ -76,11 +76,7 @@ export const writeToFile = async (fileName, data) => {
 };
 
 export const getDartIconName = (iconName) => {
-  return iconName
-    .toLowerCase()
-    .replaceAll(" ", "_")
-    .replace("_round", "")
-    .replace("_sharp", "");
+  return iconName.toLowerCase().replaceAll(" ", "_");
 };
 
 export const getScssIconName = (iconName) => {

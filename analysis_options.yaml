@@ -1,0 +1,7 @@
+# Ignore dart errors in VS code
+analyzer:
+  errors:
+    uri_does_not_exist: ignore
+    undefined_class: ignore
+    undefined_method: ignore
+    const_initialized_with_non_constant_value: ignore

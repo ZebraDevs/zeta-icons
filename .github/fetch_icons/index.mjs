@@ -47,7 +47,7 @@ try {
   }
 
   // Create the assets folder if it doesn't exist
-  const fileDestination = `${baseUrl}/assets`;
+  const fileDestination = `${baseUrl}/icons`;
   await createFolder(fileDestination);
 
   const newAssetsObj = {}; // Maps category names to a list of icon models

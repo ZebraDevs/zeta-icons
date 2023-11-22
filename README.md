@@ -1,6 +1,6 @@
 # zeta-icons
 
-An icon library for the ZDS design system.
+An icon library for the Zeta design system.
 
 <details>
     <summary>Zebra Repository Information</summary>
@@ -13,5 +13,3 @@ An icon library for the ZDS design system.
         <li> Topics: zeta-icons, icon library</li>
     </ul>
 </details>
-
-

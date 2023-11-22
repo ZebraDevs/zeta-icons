@@ -46,42 +46,6 @@ jobs:
           git push -f
           echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: fetch_icons
-    name: Deploy to Firebase
-    if: ${{ needs.fetch_icons.outputs.icons_changed == 'true' }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: "npm"
-      - name: Install dependancies
-        run: yarn install --immutable --immutable-cache
-      - name: Build
-        run: yarn build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-          channelId: live
-          projectId: zebra-icons
-          target: zeta-icons
-      - name: Update
-        id: update
-        run: |
-          git config --global user.name "zeta-icons-bot"
-          git config --global user.email "zeta-icons-bot@github.com"
-          git add -A
-          # git tag ${{ steps.bump.outputs.new_version }}
-          git commit --amend --no-edit
-          git push -f
-          echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV
-
   zeta_web_PR:
     needs: fetch_icons
     runs-on: ubuntu-latest
@@ -102,7 +66,7 @@ jobs:
           destination_branch: "icons/test-1"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
-          commit_message: "Font file"
+          commit_message: "Rounded icon font"
       - name: Push sharp woff2 file to Zeta Web
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
@@ -113,7 +77,7 @@ jobs:
           destination_branch: "icons/test-1"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
-          commit_message: "Font file"
+          commit_message: "Sharp icon font"
       - name: Push types file to Zeta Web
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:

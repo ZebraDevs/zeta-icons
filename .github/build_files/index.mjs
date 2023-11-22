@@ -3,7 +3,6 @@ import * as fs from "fs";
 import {
   getDartIconName,
   getScssIconName,
-  readFile,
   writeToFile,
 } from "../utils/file-utils.mjs";
 import { webfont } from "webfont";
@@ -11,7 +10,7 @@ import { webfont } from "webfont";
 const fontName = "zeta-icons";
 
 let dartFileContents = createDartFile();
-let typesFileContents = "export type IconName = \n";
+let typesFileContents = "export type ZetaIcon = \n";
 
 const buildFontFile = async (woff2Url, ttfUrl, type) => {
   let unicodeAcc = 0xe001;
@@ -27,16 +26,20 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
     normalize: true,
     glyphTransformFn: (obj) => {
       obj.unicode[0] = String.fromCharCode(unicodeAcc);
-      obj.name = obj.name.replace('_round', '').replace('_sharp', '');
+      obj.name = obj.name.replace("_round", "").replace("_sharp", "");
       unicodeAcc++;
 
       const dartIconName = getDartIconName(obj.name);
-      const scssIconName = getScssIconName(obj.name);
 
       const strUnicode = Number(unicodeAcc).toString(16);
 
-      dartFileContents += getDartIconDefinition(dartIconName, strUnicode);
-      typesFileContents += getIconTypeDefinition(scssIconName);
+      if (!dartFileContents.includes(dartIconName)) {
+        dartFileContents += getDartIconDefinition(dartIconName, strUnicode);
+      }
+
+      if (!typesFileContents.includes(obj.name)) {
+        typesFileContents += getIconTypeDefinition(obj.name);
+      }
 
       return obj;
     },
@@ -48,11 +51,12 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
 
 try {
   const baseUrl = process.cwd();
+  const baseFontUrl = `${baseUrl}/fonts`;
 
-  const ttfRoundFontUrl = `${baseUrl}/build_files/${fontName}_round.ttf`;
-  const ttfSharpFontUrl = `${baseUrl}/build_files/${fontName}_sharp.ttf`;
-  const woff2RoundFontUrl = `${baseUrl}/build_files/${fontName}_round.woff2`;
-  const woff2SharpFontUrl = `${baseUrl}/build_files/${fontName}_sharp.woff2`;
+  const ttfRoundFontUrl = `${baseFontUrl}/${fontName}_round.ttf`;
+  const ttfSharpFontUrl = `${baseFontUrl}/${fontName}_sharp.ttf`;
+  const woff2RoundFontUrl = `${baseFontUrl}/${fontName}_round.woff2`;
+  const woff2SharpFontUrl = `${baseFontUrl}/${fontName}_sharp.woff2`;
 
   await buildFontFile(woff2RoundFontUrl, ttfRoundFontUrl, "round");
   await buildFontFile(woff2SharpFontUrl, ttfSharpFontUrl, "sharp");
@@ -62,10 +66,12 @@ try {
   typesFileContents = typesFileContents.trim();
   typesFileContents += "; \n";
 
-  const dartFilePath = `${baseUrl}/build_files/icons.dart`;
+  const baseAssetsUrl = `${baseUrl}/build_files`;
+
+  const dartFilePath = `${baseAssetsUrl}/icons.dart`;
   writeToFile(dartFilePath, dartFileContents);
 
-  const typesPath = `${baseUrl}/build_files/icon-types.ts`;
+  const typesPath = `${baseAssetsUrl}/icon-types.ts`;
   writeToFile(typesPath, typesFileContents);
 } catch (error) {
   core.setFailed(error.message);

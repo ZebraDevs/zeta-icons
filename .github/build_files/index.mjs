@@ -51,10 +51,10 @@ try {
   const baseUrl = process.cwd();
   const baseFontUrl = `${baseUrl}/fonts`;
 
-  const ttfRoundFontUrl = `${baseFontUrl}/${fontName}_round.ttf`;
-  const ttfSharpFontUrl = `${baseFontUrl}/${fontName}_sharp.ttf`;
-  const woff2RoundFontUrl = `${baseFontUrl}/${fontName}_round.woff2`;
-  const woff2SharpFontUrl = `${baseFontUrl}/${fontName}_sharp.woff2`;
+  const ttfRoundFontUrl = `${baseFontUrl}/${fontName}-round.ttf`;
+  const ttfSharpFontUrl = `${baseFontUrl}/${fontName}-sharp.ttf`;
+  const woff2RoundFontUrl = `${baseFontUrl}/${fontName}-round.woff2`;
+  const woff2SharpFontUrl = `${baseFontUrl}/${fontName}-sharp.woff2`;
 
   await buildFontFile(woff2RoundFontUrl, ttfRoundFontUrl, "round");
   await buildFontFile(woff2SharpFontUrl, ttfSharpFontUrl, "sharp");

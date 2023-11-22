@@ -1,8 +1,8 @@
 {
-  "name": "zeta-icons",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@zebra-fed/zeta-icons",
+  "version": "0.0.1",
   "type": "module",
+  "main": "index.js",
   "devDependencies": {
     "@actions/core": "^1.10.0",
     "node-fetch": "^3.3.1",
@@ -13,5 +13,20 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "An icon library for the Zeta design system.",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zebratechnologies/zeta-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zebratechnologies/zeta-icons/issues"
+  },
+  "homepage": "https://github.com/zebratechnologies/zeta-icons#readme"
 }

@@ -17,12 +17,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "latest"
+          registry-url: "https://registry.npmjs.org"
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Run npm i
-        run: npm install
+        run: npm ci
       - name: Fetch icons
         id: "fetch_icons"
         uses: ./.github/fetch_icons

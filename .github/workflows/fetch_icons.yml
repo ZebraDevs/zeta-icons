@@ -25,12 +25,12 @@ jobs:
         run: npm install
       - name: Fetch icons
         id: "fetch_icons"
-        uses: ./.github/fetch-icons
+        uses: ./.github/fetch_icons
         with:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
       - name: Build files
         id: build_files
-        uses: ./.github/build-files
+        uses: ./.github/build_files
         # if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
         with:
           assets_path: ${{ steps.fetch_icons.outputs.assets_path }}

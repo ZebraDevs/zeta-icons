@@ -26,7 +26,9 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
     normalize: true,
     glyphTransformFn: (obj) => {
       obj.unicode[0] = String.fromCharCode(unicodeAcc);
-      obj.name = obj.name.replace("_round", "").replace("_sharp", "");
+      obj.name = obj.unicode[1] = obj.name
+        .replace("_round", "")
+        .replace("_sharp", "");
       unicodeAcc++;
 
       const dartIconName = getDartIconName(obj.name);

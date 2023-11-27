@@ -1461,7 +1461,9 @@
       "searchTerms": [
         "Start",
         "Again",
-        "reset"
+        "reset",
+        "Workcloud",
+        "WC"
       ],
       "roundPath": "assets/device/restart_alt_round.svg",
       "sharpPath": "assets/device/restart_alt_sharp.svg"

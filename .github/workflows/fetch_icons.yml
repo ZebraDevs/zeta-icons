@@ -1,6 +1,9 @@
 name: "fetch-icons"
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "* 8 * * *"
     - cron: "* 23 * * *"

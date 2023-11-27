@@ -1,16 +1,16 @@
 name: "fetch-icons"
 
 on:
-  push:
-  # schedule:
-  #   - cron: "* 8 * * *"
-  #   - cron: "* 23 * * *"
+  schedule:
+    - cron: "* 8 * * *"
+    - cron: "* 23 * * *"
 
 jobs:
   fetch_icons:
     runs-on: ubuntu-latest
     name: Fetch Icons
-    if: ${{github.event.pusher.name != 'zeta-icons-bot'}}
+    # Uncomment below line if testing action via push to prevent recursion
+    # if: ${{github.event.pusher.name != 'zeta-icons-bot'}}
     outputs:
       icons_changed: ${{steps.fetch_icons.outputs.icons_changed}}
     steps:
@@ -66,15 +66,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  update_zeta_web:
-    needs: fetch_icons
-    runs-on: ubuntu-latest
-    name: Update Zeta Web
-    steps:
-      - name: Trigger action in Zeta Web
-        run: |
-          curl -X POST -u mikecoomber:${{ secrets.PAT }} -H "Content-Type: application/json" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/zebra-technologies/zeta-web/dispatches" -d '{"event_type":"update-icons"}'
-
   zeta_flutter_PR:
     needs: fetch_icons
     runs-on: ubuntu-latest
@@ -85,27 +76,30 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Get package version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: Push dart file to Zeta Flutter
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.PAT }}
+          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
         with:
           source_file: "./build_files/icons.dart"
           destination_repo: "ZebraDevs/zeta_flutter"
           destination_folder: "lib/src/assets"
-          destination_branch_create: "icons/test-1"
+          destination_branch_create: "icons/${{ steps.package-version.outputs.current-version }}"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "icons.dart"
       - name: Push icon font file to Zeta Flutter
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.PAT }}
+          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
         with:
           source_file: "./fonts/zeta-icons-round.ttf"
           destination_repo: "ZebraDevs/zeta_flutter"
           destination_folder: "lib/src/assets/fonts"
-          destination_branch: "icons/test-1"
+          destination_branch: "icons/${{ steps.package-version.outputs.current-version }}"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "Font file"
@@ -113,10 +107,10 @@ jobs:
       - name: Open Zeta Flutter PR
         uses: thecanadianroot/open-pull-request-action@v1.0.3
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           base: main
-          head: "icons/test-1"
-          title: "icons/test-1"
+          head: "icons/${{ steps.package-version.outputs.current-version }}"
+          title: "icons/${{ steps.package-version.outputs.current-version }}"
           labels: icons
           owner: zebratechnologies
           repository: ZebraDevs/zeta_flutter

@@ -30,11 +30,11 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
 
       const strUnicode = Number(unicodeAcc).toString(16);
 
-      if (!dartFileContents.includes(dartIconName)) {
+      if (type === 'round') {
         dartFileContents += getDartIconDefinition(dartIconName, strUnicode);
       }
 
-      if (!typesFileContents.includes(obj.name)) {
+      if (type === 'round') {
         typesFileContents += getIconTypeDefinition(obj.name);
       }
 

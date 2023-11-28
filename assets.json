@@ -1682,7 +1682,14 @@
       "id": "243:4380",
       "searchTerms": [
         "Urgent",
-        "Attention"
+        "Attention",
+        "priority",
+        "status",
+        "alert",
+        "alarm",
+        "bell",
+        "Workcloud",
+        "WC"
       ],
       "roundPath": "assets/alert/important_notification_round.svg",
       "sharpPath": "assets/alert/important_notification_sharp.svg"

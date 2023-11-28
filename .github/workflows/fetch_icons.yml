@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Fetch Icons
     # Uncomment below line if testing action via push to prevent recursion
-    if: ${{( github.event_name == 'push' && github.event.pusher.name != 'zeta-icons-bot') ||  github.event_name == 'schedule' }}
+    if: ${{( github.event_name == 'push' && github.event.commits[0].author.name != 'Automated Version Bump') ||  github.event_name == 'schedule' }}
     outputs:
       icons_changed: ${{steps.fetch_icons.outputs.icons_changed}}
     steps:
@@ -65,7 +65,7 @@ jobs:
           git push -f --tags
           echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV
       - name: Publish to NPM
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
+        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push' }}
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

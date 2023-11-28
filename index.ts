@@ -1,6 +1,5 @@
 import assets from "./assets.json";
-export type {
-  ZetaIconNameList,
-  ZetaIconName,
-} from "./build_files/icon-types.ts";
-export { assets };
+export type { ZetaIconName } from "./build_files/icon-types.ts";
+import { ZetaIconNameList } from "./build_files/icon-types.js";
+
+export { assets, ZetaIconNameList };

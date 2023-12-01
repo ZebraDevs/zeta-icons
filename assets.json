@@ -1192,6 +1192,8 @@
         "dial",
         "dialpad",
         "number",
+        "ptt",
+        "phone",
         "Workcloud",
         "WC"
       ],
@@ -3713,10 +3715,6 @@
       "searchTerms": [
         "Date",
         "Marked",
-        "Event",
-        "Today",
-        "Appointment",
-        "Meeting",
         "calendar",
         "day",
         "Workcloud",
@@ -3734,7 +3732,9 @@
         "Event",
         "Today",
         "Appointment",
-        "Meeting"
+        "Meeting",
+        "calendar",
+        "schedule"
       ],
       "roundPath": "assets/action/calendar_alt_2_round.svg",
       "sharpPath": "assets/action/calendar_alt_2_sharp.svg"

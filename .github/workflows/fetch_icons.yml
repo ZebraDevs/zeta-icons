@@ -2,8 +2,8 @@ name: "fetch-icons"
 
 on:
   schedule:
-    - cron: "* 8 * * *"
-    - cron: "* 23 * * *"
+    - cron: "0 8 * * *"
+    - cron: "0 23 * * *"
 
 jobs:
   fetch_icons:

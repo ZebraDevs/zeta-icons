@@ -1,6 +1,9 @@
 name: "fetch-icons"
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "0 8 * * *"
     - cron: "0 23 * * *"
@@ -10,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Fetch Icons
     # Uncomment below line if testing action via push to prevent recursion
-    # if: ${{github.event.pusher.name != 'zeta-icons-bot'}}
+    if: ${{( github.event_name == 'push' && github.event.commits[0].author.name != 'Automated Version Bump') ||  github.event_name == 'schedule' }}
     outputs:
       icons_changed: ${{steps.fetch_icons.outputs.icons_changed}}
     steps:
@@ -22,6 +25,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          token: ${{ secrets.PAT }}
       - name: Run npm i
         run: npm ci
       - name: Fetch icons
@@ -32,12 +36,12 @@ jobs:
       - name: Build files
         id: build_files
         uses: ./.github/build_files
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
+        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push'}}
         with:
           assets_path: ${{ steps.fetch_icons.outputs.assets_path }}
       - name: "Bump Version"
         uses: "phips28/gh-action-bump-version@master"
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
+        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push'  }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -49,7 +53,7 @@ jobs:
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: Update
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
+        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push'}}
         id: update
         run: |
           git config --global user.name "zeta-icons-bot"
@@ -61,7 +65,7 @@ jobs:
           git push -f --tags
           echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV
       - name: Publish to NPM
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' }}
+        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push' }}
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

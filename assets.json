@@ -58,6 +58,8 @@
       "id": "259:1595",
       "searchTerms": [
         "Switch",
+        "toggle",
+        "off",
         "Workcloud",
         "WC"
       ],
@@ -69,6 +71,8 @@
       "id": "259:1596",
       "searchTerms": [
         "Switch",
+        "toggle",
+        "on",
         "Workcloud",
         "WC"
       ],
@@ -1029,7 +1033,12 @@
       "name": "Do Not Disturb",
       "id": "259:1491",
       "searchTerms": [
-        "Block"
+        "Block",
+        "delete",
+        "prevent",
+        "do not disturb",
+        "Workcloud",
+        "WC"
       ],
       "roundPath": "assets/communication/do_not_disturb_round.svg",
       "sharpPath": "assets/communication/do_not_disturb_sharp.svg"
@@ -1085,6 +1094,12 @@
       "id": "259:1503",
       "searchTerms": [
         "Loading",
+        "Refresh",
+        "Reload",
+        "Loop",
+        "sync",
+        "synchronize",
+        "cached",
         "Workcloud",
         "WC"
       ],
@@ -1177,6 +1192,8 @@
         "dial",
         "dialpad",
         "number",
+        "ptt",
+        "phone",
         "Workcloud",
         "WC"
       ],
@@ -1284,7 +1301,10 @@
         "Barcode",
         "Scanner. qr",
         "qr code",
-        "scan"
+        "bar",
+        "scan",
+        "Workcloud",
+        "WC"
       ],
       "roundPath": "assets/communication/qr_code_scan_round.svg",
       "sharpPath": "assets/communication/qr_code_scan_sharp.svg"
@@ -1427,6 +1447,7 @@
         "moon",
         "night",
         "evening",
+        "mode dark",
         "Workcloud",
         "WC"
       ],
@@ -1461,7 +1482,9 @@
       "searchTerms": [
         "Start",
         "Again",
-        "reset"
+        "reset",
+        "Workcloud",
+        "WC"
       ],
       "roundPath": "assets/device/restart_alt_round.svg",
       "sharpPath": "assets/device/restart_alt_sharp.svg"
@@ -1680,7 +1703,14 @@
       "id": "243:4380",
       "searchTerms": [
         "Urgent",
-        "Attention"
+        "Attention",
+        "priority",
+        "status",
+        "alert",
+        "alarm",
+        "bell",
+        "Workcloud",
+        "WC"
       ],
       "roundPath": "assets/alert/important_notification_round.svg",
       "sharpPath": "assets/alert/important_notification_sharp.svg"
@@ -1734,6 +1764,8 @@
         "user",
         "friends",
         "group",
+        "profile",
+        "user multiple",
         "Workcloud",
         "WC"
       ],
@@ -2070,7 +2102,10 @@
       "id": "258:1626",
       "searchTerms": [
         "Local",
-        "Discount"
+        "Discount",
+        "retail",
+        "shop",
+        "offer"
       ],
       "roundPath": "assets/maps/offer_round.svg",
       "sharpPath": "assets/maps/offer_sharp.svg"
@@ -2532,7 +2567,9 @@
       "name": "Edit",
       "id": "257:1352",
       "searchTerms": [
-        "edit"
+        "edit",
+        "write",
+        "change"
       ],
       "roundPath": "assets/editor/edit_round.svg",
       "sharpPath": "assets/editor/edit_sharp.svg"
@@ -2814,7 +2851,8 @@
       "id": "258:1174",
       "searchTerms": [
         "Chain",
-        "Insert"
+        "Insert",
+        "hyperlink"
       ],
       "roundPath": "assets/editor/link_round.svg",
       "sharpPath": "assets/editor/link_sharp.svg"
@@ -3419,6 +3457,7 @@
         "Get",
         "file",
         "upload",
+        "document",
         "Workcloud",
         "WC"
       ],
@@ -3432,6 +3471,7 @@
         "Get",
         "download",
         "file",
+        "document",
         "Workcloud",
         "WC"
       ],
@@ -3580,6 +3620,9 @@
         "Dates",
         "Span",
         "Trade",
+        "calendar",
+        "swap",
+        "switch",
         "Workcloud",
         "WC"
       ],
@@ -3672,10 +3715,6 @@
       "searchTerms": [
         "Date",
         "Marked",
-        "Event",
-        "Today",
-        "Appointment",
-        "Meeting",
         "calendar",
         "day",
         "Workcloud",
@@ -3693,7 +3732,9 @@
         "Event",
         "Today",
         "Appointment",
-        "Meeting"
+        "Meeting",
+        "calendar",
+        "schedule"
       ],
       "roundPath": "assets/action/calendar_alt_2_round.svg",
       "sharpPath": "assets/action/calendar_alt_2_sharp.svg"
@@ -4709,7 +4750,9 @@
       "id": "250:723",
       "searchTerms": [
         "Plus",
-        "add"
+        "add",
+        "create",
+        "request"
       ],
       "roundPath": "assets/content/add_round.svg",
       "sharpPath": "assets/content/add_sharp.svg"

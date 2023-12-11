@@ -1237,7 +1237,8 @@
       "id": "243:4530",
       "searchTerms": [
         "Text",
-        "Message"
+        "Message",
+        "comment filled"
       ],
       "roundPath": "assets/communication/chat_bubble_round.svg",
       "sharpPath": "assets/communication/chat_bubble_sharp.svg"
@@ -1250,6 +1251,7 @@
         "Message",
         "chat",
         "communication",
+        "comment",
         "Workcloud",
         "WC"
       ],
@@ -1766,6 +1768,7 @@
         "group",
         "profile",
         "user multiple",
+        "associates",
         "Workcloud",
         "WC"
       ],
@@ -1789,6 +1792,7 @@
         "User",
         "Account",
         "person",
+        "new hire",
         "Workcloud",
         "WC"
       ],
@@ -2021,7 +2025,8 @@
       "id": "257:1131",
       "searchTerms": [
         "Thumbs",
-        "Up"
+        "Up",
+        "like filled"
       ],
       "roundPath": "assets/social/like_round.svg",
       "sharpPath": "assets/social/like_sharp.svg"
@@ -2061,7 +2066,8 @@
       "name": "Satisfied",
       "id": "257:1135",
       "searchTerms": [
-        "Happy"
+        "Happy",
+        "smiley"
       ],
       "roundPath": "assets/social/satisfied_round.svg",
       "sharpPath": "assets/social/satisfied_sharp.svg"
@@ -2139,7 +2145,9 @@
       "id": "258:1629",
       "searchTerms": [
         "Fold",
-        "Folding"
+        "Folding",
+        "alternative work location",
+        "share stores"
       ],
       "roundPath": "assets/maps/map_round.svg",
       "sharpPath": "assets/maps/map_sharp.svg"
@@ -2840,6 +2848,7 @@
         "File",
         "Document",
         "attachment",
+        "paperchip",
         "Workcloud",
         "WC"
       ],
@@ -3433,6 +3442,7 @@
         "Time",
         "clock",
         "shift",
+        "specific time",
         "Workcloud",
         "WC"
       ],
@@ -3620,6 +3630,7 @@
         "Dates",
         "Span",
         "Trade",
+        "shift trade",
         "calendar",
         "swap",
         "switch",
@@ -3717,6 +3728,7 @@
         "Marked",
         "calendar",
         "day",
+        "daily view",
         "Workcloud",
         "WC"
       ],
@@ -3960,7 +3972,11 @@
       "id": "257:961",
       "searchTerms": [
         "Voice",
-        "Speaker,"
+        "Speaker",
+        "mic",
+        "microphone",
+        "voice",
+        "talk"
       ],
       "roundPath": "assets/audio_video/microphone_outline_round.svg",
       "sharpPath": "assets/audio_video/microphone_outline_sharp.svg"

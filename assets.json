@@ -116,6 +116,814 @@
       "sharpPath": "assets/toggle/star_half_sharp.svg"
     }
   ],
+  "Charts": [
+    {
+      "name": "Chart Bar",
+      "id": "4932:3494",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "bar",
+        "bar chart",
+        "bar-chart",
+        "bar graph",
+        "forecast"
+      ],
+      "roundPath": "icons/charts/chart_bar_round.svg",
+      "sharpPath": "icons/charts/chart_bar_sharp.svg"
+    },
+    {
+      "name": "Chart Line Predict",
+      "id": "4932:3497",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "predict"
+      ],
+      "roundPath": "icons/charts/chart_line_predict_round.svg",
+      "sharpPath": "icons/charts/chart_line_predict_sharp.svg"
+    },
+    {
+      "name": "Chart Line",
+      "id": "4932:3500",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "line chart",
+        "line-chart",
+        "linechart",
+        "trend",
+        "trendline",
+        "line graph"
+      ],
+      "roundPath": "icons/charts/chart_line_round.svg",
+      "sharpPath": "icons/charts/chart_line_sharp.svg"
+    },
+    {
+      "name": "Chart Pie",
+      "id": "4932:3503",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "chart",
+        "pie",
+        "pie graph"
+      ],
+      "roundPath": "icons/charts/chart_pie_round.svg",
+      "sharpPath": "icons/charts/chart_pie_sharp.svg"
+    },
+    {
+      "name": "Chart Bubble",
+      "id": "4932:3506",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "chart",
+        "bubble"
+      ],
+      "roundPath": "icons/charts/chart_bubble_round.svg",
+      "sharpPath": "icons/charts/chart_bubble_sharp.svg"
+    },
+    {
+      "name": "Chart Line Stacked",
+      "id": "4932:3509",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "Comparison chart",
+        "Comparison-chart"
+      ],
+      "roundPath": "icons/charts/chart_line_stacked_round.svg",
+      "sharpPath": "icons/charts/chart_line_stacked_sharp.svg"
+    },
+    {
+      "name": "Chart Bubble Charts",
+      "id": "4932:3512",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "bubble chart",
+        "bubble-chart",
+        "bubblechart"
+      ],
+      "roundPath": "icons/charts/chart_bubble_charts_round.svg",
+      "sharpPath": "icons/charts/chart_bubble_charts_sharp.svg"
+    },
+    {
+      "name": "Chart Pie Charts",
+      "id": "4932:3516",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "pie chart",
+        "pie-chart",
+        "piechart",
+        "Analysis",
+        "pie graph",
+        "balance"
+      ],
+      "roundPath": "icons/charts/chart_pie_charts_round.svg",
+      "sharpPath": "icons/charts/chart_pie_charts_sharp.svg"
+    },
+    {
+      "name": "Chart Waterfall",
+      "id": "4932:3519",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "chart",
+        "waterfall"
+      ],
+      "roundPath": "icons/charts/chart_waterfall_round.svg",
+      "sharpPath": "icons/charts/chart_waterfall_sharp.svg"
+    },
+    {
+      "name": "Chart Filled",
+      "id": "4932:3529",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "(used to display chart",
+        "report",
+        "analytics",
+        "not denote which type of chart is being used) report",
+        "analytics",
+        "chart",
+        "performance",
+        "graphic"
+      ],
+      "roundPath": "icons/charts/chart_filled_round.svg",
+      "sharpPath": "icons/charts/chart_filled_sharp.svg"
+    },
+    {
+      "name": "Chart Outline",
+      "id": "4932:3532",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart outline",
+        "chart",
+        "Assessment"
+      ],
+      "roundPath": "icons/charts/chart_outline_round.svg",
+      "sharpPath": "icons/charts/chart_outline_sharp.svg"
+    },
+    {
+      "name": "Analytics",
+      "id": "4932:3536",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "(used to display chart",
+        "report",
+        "analytics",
+        "not denote which type of chart is being used) report",
+        "analytics",
+        "chart",
+        "performance",
+        "graphic"
+      ],
+      "roundPath": "icons/charts/analytics_round.svg",
+      "sharpPath": "icons/charts/analytics_sharp.svg"
+    },
+    {
+      "name": "Chart Gantt",
+      "id": "4932:3541",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "Gantt chart",
+        "Gantt-chart"
+      ],
+      "roundPath": "icons/charts/chart_gantt_round.svg",
+      "sharpPath": "icons/charts/chart_gantt_sharp.svg"
+    },
+    {
+      "name": "Chart Stacked",
+      "id": "4932:3546",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "bar",
+        "bar chart",
+        "bar-chart",
+        "stacked",
+        "stack",
+        "stacked bar"
+      ],
+      "roundPath": "icons/charts/chart_stacked_round.svg",
+      "sharpPath": "icons/charts/chart_stacked_sharp.svg"
+    },
+    {
+      "name": "Chart Doughnut",
+      "id": "4932:3549",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "doughnut chart",
+        "doughtnut-chart",
+        "doughtnutchart",
+        "donut chart",
+        "donut-chart",
+        "donutchart"
+      ],
+      "roundPath": "icons/charts/chart_doughnut_round.svg",
+      "sharpPath": "icons/charts/chart_doughnut_sharp.svg"
+    },
+    {
+      "name": "Report",
+      "id": "4932:3552",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics"
+      ],
+      "roundPath": "icons/charts/report_round.svg",
+      "sharpPath": "icons/charts/report_sharp.svg"
+    },
+    {
+      "name": "Table",
+      "id": "4932:3555",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "Table",
+        "analytics"
+      ],
+      "roundPath": "icons/charts/table_round.svg",
+      "sharpPath": "icons/charts/table_sharp.svg"
+    },
+    {
+      "name": "Chart Scatter Plot",
+      "id": "4932:3558",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "report",
+        "analytics",
+        "chart",
+        "Scatter",
+        "Scatter chart",
+        "Scatter-chart"
+      ],
+      "roundPath": "icons/charts/chart_scatter_plot_round.svg",
+      "sharpPath": "icons/charts/chart_scatter_plot_sharp.svg"
+    }
+  ],
+  "Date Time": [
+    {
+      "name": "Calendar Rollover",
+      "id": "4932:3670",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "calendar",
+        "rollover",
+        "roll-over",
+        "roll over",
+        "split",
+        "carryover",
+        "carry-over",
+        "carry over",
+        "week split"
+      ],
+      "roundPath": "icons/date_time/calendar_rollover_round.svg",
+      "sharpPath": "icons/date_time/calendar_rollover_sharp.svg"
+    },
+    {
+      "name": "Calendar Next",
+      "id": "4932:3673",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "calendar",
+        "rollover",
+        "roll-over",
+        "roll over",
+        "split",
+        "carryover",
+        "carry-over",
+        "carry over",
+        "upcoming",
+        "upcoming shift"
+      ],
+      "roundPath": "icons/date_time/calendar_next_round.svg",
+      "sharpPath": "icons/date_time/calendar_next_sharp.svg"
+    },
+    {
+      "name": "Calendar Gantt",
+      "id": "4932:3676",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "calendar",
+        "rollover",
+        "roll-over",
+        "roll over",
+        "split",
+        "carryover",
+        "carry-over",
+        "carry over",
+        "upcoming"
+      ],
+      "roundPath": "icons/date_time/calendar_gantt_round.svg",
+      "sharpPath": "icons/date_time/calendar_gantt_sharp.svg"
+    },
+    {
+      "name": "Schedule",
+      "id": "4932:3680",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "calendar",
+        "available",
+        "publish",
+        "live",
+        "check",
+        "complete",
+        "published"
+      ],
+      "roundPath": "icons/date_time/schedule_round.svg",
+      "sharpPath": "icons/date_time/schedule_sharp.svg"
+    },
+    {
+      "name": "Clock Flexible",
+      "id": "4932:3683",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "flexible"
+      ],
+      "roundPath": "icons/date_time/clock_flexible_round.svg",
+      "sharpPath": "icons/date_time/clock_flexible_sharp.svg"
+    },
+    {
+      "name": "Clock On",
+      "id": "4932:3686",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "available",
+        "on",
+        "active"
+      ],
+      "roundPath": "icons/date_time/clock_on_round.svg",
+      "sharpPath": "icons/date_time/clock_on_sharp.svg"
+    },
+    {
+      "name": "Clock Available",
+      "id": "4932:3690",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "available",
+        "complete",
+        "check",
+        "publish"
+      ],
+      "roundPath": "icons/date_time/clock_available_round.svg",
+      "sharpPath": "icons/date_time/clock_available_sharp.svg"
+    },
+    {
+      "name": "Clock Missed",
+      "id": "4932:3693",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "missed",
+        "help"
+      ],
+      "roundPath": "icons/date_time/clock_missed_round.svg",
+      "sharpPath": "icons/date_time/clock_missed_sharp.svg"
+    },
+    {
+      "name": "Clock Info",
+      "id": "4932:3696",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "details",
+        "info",
+        "information"
+      ],
+      "roundPath": "icons/date_time/clock_info_round.svg",
+      "sharpPath": "icons/date_time/clock_info_sharp.svg"
+    },
+    {
+      "name": "Clock Start",
+      "id": "4932:3699",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "start",
+        "initiate",
+        "begin"
+      ],
+      "roundPath": "icons/date_time/clock_start_round.svg",
+      "sharpPath": "icons/date_time/clock_start_sharp.svg"
+    },
+    {
+      "name": "Clock In Progress",
+      "id": "4932:3703",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "inprogress",
+        "in-progress",
+        "in progress",
+        "ongoing"
+      ],
+      "roundPath": "icons/date_time/clock_in_progress_round.svg",
+      "sharpPath": "icons/date_time/clock_in_progress_sharp.svg"
+    },
+    {
+      "name": "Clock Stop",
+      "id": "4932:3706",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "stop",
+        "end"
+      ],
+      "roundPath": "icons/date_time/clock_stop_round.svg",
+      "sharpPath": "icons/date_time/clock_stop_sharp.svg"
+    },
+    {
+      "name": "Clock Upcoming",
+      "id": "4932:3709",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "swap",
+        "switch",
+        "trade",
+        "open shifts"
+      ],
+      "roundPath": "icons/date_time/clock_upcoming_round.svg",
+      "sharpPath": "icons/date_time/clock_upcoming_sharp.svg"
+    },
+    {
+      "name": "Clock Switch",
+      "id": "4932:3712",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "swap",
+        "switch",
+        "trade"
+      ],
+      "roundPath": "icons/date_time/clock_switch_round.svg",
+      "sharpPath": "icons/date_time/clock_switch_sharp.svg"
+    },
+    {
+      "name": "Clock Bid",
+      "id": "4932:3715",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "bid"
+      ],
+      "roundPath": "icons/date_time/clock_bid_round.svg",
+      "sharpPath": "icons/date_time/clock_bid_sharp.svg"
+    },
+    {
+      "name": "Clock Edit",
+      "id": "4932:3718",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "edit",
+        "write",
+        "sign-up",
+        "sign",
+        "register",
+        "pencil",
+        "custom",
+        "request"
+      ],
+      "roundPath": "icons/date_time/clock_edit_round.svg",
+      "sharpPath": "icons/date_time/clock_edit_sharp.svg"
+    },
+    {
+      "name": "Clock Rollover",
+      "id": "4932:3723",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "over",
+        "overtime",
+        "carryover",
+        "carry over",
+        "carry-over"
+      ],
+      "roundPath": "icons/date_time/clock_rollover_round.svg",
+      "sharpPath": "icons/date_time/clock_rollover_sharp.svg"
+    },
+    {
+      "name": "Clock Timer",
+      "id": "4932:3726",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "timer",
+        "stopwatch",
+        "stop watch",
+        "on schedule"
+      ],
+      "roundPath": "icons/date_time/clock_timer_round.svg",
+      "sharpPath": "icons/date_time/clock_timer_sharp.svg"
+    },
+    {
+      "name": "Clock Segment",
+      "id": "4932:3729",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "clock",
+        "shift",
+        "time",
+        "timer",
+        "time left",
+        "remainder",
+        "remaining",
+        "remain"
+      ],
+      "roundPath": "icons/date_time/clock_segment_round.svg",
+      "sharpPath": "icons/date_time/clock_segment_sharp.svg"
+    },
+    {
+      "name": "Timecard",
+      "id": "4932:3734",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "timecard",
+        "time card",
+        "punch in",
+        "punch-in",
+        "punch out",
+        "punch-out"
+      ],
+      "roundPath": "icons/date_time/timecard_round.svg",
+      "sharpPath": "icons/date_time/timecard_sharp.svg"
+    },
+    {
+      "name": "Timecard Warning",
+      "id": "4932:3737",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "timecard",
+        "time card",
+        "warning",
+        "alert",
+        "attendance management"
+      ],
+      "roundPath": "icons/date_time/timecard_warning_round.svg",
+      "sharpPath": "icons/date_time/timecard_warning_sharp.svg"
+    },
+    {
+      "name": "Timecard Approve",
+      "id": "4932:3740",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "timecard",
+        "time card",
+        "approve",
+        "complete"
+      ],
+      "roundPath": "icons/date_time/timecard_approve_round.svg",
+      "sharpPath": "icons/date_time/timecard_approve_sharp.svg"
+    },
+    {
+      "name": "Meal",
+      "id": "4932:3743",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "meal",
+        "break",
+        "lunch",
+        "dinner",
+        "food"
+      ],
+      "roundPath": "icons/date_time/meal_round.svg",
+      "sharpPath": "icons/date_time/meal_sharp.svg"
+    }
+  ],
+  "People": [
+    {
+      "name": "User Minor",
+      "id": "4932:78",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "user",
+        "person",
+        "minor",
+        "age",
+        "student",
+        "child"
+      ],
+      "roundPath": "icons/people/user_minor_round.svg",
+      "sharpPath": "icons/people/user_minor_sharp.svg"
+    },
+    {
+      "name": "Person Swap",
+      "id": "4932:82",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "person",
+        "swap",
+        "labor",
+        "transfer",
+        "reassign"
+      ],
+      "roundPath": "icons/people/person_swap_round.svg",
+      "sharpPath": "icons/people/person_swap_sharp.svg"
+    },
+    {
+      "name": "Person Walk",
+      "id": "4932:85",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "person",
+        "walk",
+        "store walk",
+        "store-walk",
+        "audit"
+      ],
+      "roundPath": "icons/people/person_walk_round.svg",
+      "sharpPath": "icons/people/person_walk_sharp.svg"
+    },
+    {
+      "name": "Person Clock",
+      "id": "4932:88",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "associate",
+        "person",
+        "clock",
+        "shift",
+        "on-shift",
+        "onshift",
+        "available",
+        "attendance",
+        "punctuality"
+      ],
+      "roundPath": "icons/people/person_clock_round.svg",
+      "sharpPath": "icons/people/person_clock_sharp.svg"
+    },
+    {
+      "name": "Person Move",
+      "id": "4932:91",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "associate",
+        "person",
+        "user",
+        "trade",
+        "transfer",
+        "borrow",
+        "move",
+        "borrowed employee",
+        "unscheduled labor transfer"
+      ],
+      "roundPath": "icons/people/person_move_round.svg",
+      "sharpPath": "icons/people/person_move_sharp.svg"
+    },
+    {
+      "name": "Person Manager",
+      "id": "4932:94",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "manager",
+        "user",
+        "person",
+        "employee"
+      ],
+      "roundPath": "icons/people/person_manager_round.svg",
+      "sharpPath": "icons/people/person_manager_sharp.svg"
+    },
+    {
+      "name": "Person Assign",
+      "id": "4932:97",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "person",
+        "user",
+        "assign",
+        "associate"
+      ],
+      "roundPath": "icons/people/person_assign_round.svg",
+      "sharpPath": "icons/people/person_assign_sharp.svg"
+    },
+    {
+      "name": "Person Info",
+      "id": "4932:100",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "person",
+        "user",
+        "associate",
+        "info",
+        "details"
+      ],
+      "roundPath": "icons/people/person_info_round.svg",
+      "sharpPath": "icons/people/person_info_sharp.svg"
+    },
+    {
+      "name": "Person Admin",
+      "id": "4932:103",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "admin"
+      ],
+      "roundPath": "icons/people/person_admin_round.svg",
+      "sharpPath": "icons/people/person_admin_sharp.svg"
+    }
+  ],
   "Enterprise": [
     {
       "name": "Barcode Settings",
@@ -279,16 +1087,6 @@
       "sharpPath": "assets/enterprise/factory_sharp.svg"
     },
     {
-      "name": "Retail",
-      "id": "841:2113",
-      "searchTerms": [
-        "Tag",
-        "Shop"
-      ],
-      "roundPath": "assets/enterprise/retail_round.svg",
-      "sharpPath": "assets/enterprise/retail_sharp.svg"
-    },
-    {
       "name": "Receipt",
       "id": "841:2120",
       "searchTerms": [
@@ -311,11 +1109,12 @@
       "sharpPath": "assets/enterprise/scan_rate_sharp.svg"
     },
     {
-      "name": "Performance",
+      "name": "Chart Filled Enterprise",
       "id": "843:2147",
       "searchTerms": [
-        "Chart",
-        "Graphic"
+        "report",
+        "analytics",
+        "chart"
       ],
       "roundPath": "assets/enterprise/performance_round.svg",
       "sharpPath": "assets/enterprise/performance_sharp.svg"
@@ -456,6 +1255,19 @@
       ],
       "roundPath": "assets/enterprise/freezer_round.svg",
       "sharpPath": "assets/enterprise/freezer_sharp.svg"
+    },
+    {
+      "name": "Tag",
+      "id": "258:1626",
+      "searchTerms": [
+        "Local",
+        "Discount",
+        "retail",
+        "shop",
+        "offer"
+      ],
+      "roundPath": "icons/enterprise/tag_round.svg",
+      "sharpPath": "icons/enterprise/tag_sharp.svg"
     }
   ],
   "DNA": [
@@ -1030,7 +1842,7 @@
   ],
   "Communication": [
     {
-      "name": "Do Not Disturb",
+      "name": "Block",
       "id": "259:1491",
       "searchTerms": [
         "Block",
@@ -1259,44 +2071,7 @@
       "sharpPath": "assets/communication/chat_bubble_outline_sharp.svg"
     },
     {
-      "name": "Email",
-      "id": "243:4533",
-      "searchTerms": [
-        "Mail",
-        "@",
-        "email",
-        "e-mail",
-        "envelope",
-        "message",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/communication/email_round.svg",
-      "sharpPath": "assets/communication/email_sharp.svg"
-    },
-    {
-      "name": "Email Outline",
-      "id": "243:4535",
-      "searchTerms": [
-        "Mail",
-        "@"
-      ],
-      "roundPath": "assets/communication/email_outline_round.svg",
-      "sharpPath": "assets/communication/email_outline_sharp.svg"
-    },
-    {
       "name": "QR Code",
-      "id": "243:4536",
-      "searchTerms": [
-        "Code",
-        "Barcode",
-        "Scanner"
-      ],
-      "roundPath": "assets/communication/qr_code_round.svg",
-      "sharpPath": "assets/communication/qr_code_sharp.svg"
-    },
-    {
-      "name": "QR Code Scan",
       "id": "243:4537",
       "searchTerms": [
         "Code",
@@ -1328,6 +2103,209 @@
       ],
       "roundPath": "assets/communication/dollar_round.svg",
       "sharpPath": "assets/communication/dollar_sharp.svg"
+    },
+    {
+      "name": "New Chat",
+      "id": "4932:3323",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "new",
+        "create",
+        "start",
+        "chat",
+        "message",
+        "communication",
+        "direct message",
+        "dm",
+        "sms",
+        "add message"
+      ],
+      "roundPath": "icons/communication/new_chat_round.svg",
+      "sharpPath": "icons/communication/new_chat_sharp.svg"
+    },
+    {
+      "name": "Chat Search",
+      "id": "4932:3326",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "chat",
+        "message",
+        "communication",
+        "search",
+        "conversation",
+        "find"
+      ],
+      "roundPath": "icons/communication/chat_search_round.svg",
+      "sharpPath": "icons/communication/chat_search_sharp.svg"
+    },
+    {
+      "name": "Chat Message Unread",
+      "id": "4932:3329",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "chat",
+        "message",
+        "communication",
+        "unread",
+        "notification",
+        "badge"
+      ],
+      "roundPath": "icons/communication/chat_message_unread_round.svg",
+      "sharpPath": "icons/communication/chat_message_unread_sharp.svg"
+    },
+    {
+      "name": "Chat",
+      "id": "4932:3336",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "chat",
+        "message",
+        "communication"
+      ],
+      "roundPath": "icons/communication/chat_round.svg",
+      "sharpPath": "icons/communication/chat_sharp.svg"
+    },
+    {
+      "name": "Headset",
+      "id": "4932:3367",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "headset",
+        "headphone",
+        "support"
+      ],
+      "roundPath": "icons/communication/headset_round.svg",
+      "sharpPath": "icons/communication/headset_sharp.svg"
+    },
+    {
+      "name": "Audio",
+      "id": "4932:3370",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "audio",
+        "voice",
+        "message",
+        "sound",
+        "recording",
+        "record voice",
+        "sound bar",
+        "audio wave"
+      ],
+      "roundPath": "icons/communication/audio_round.svg",
+      "sharpPath": "icons/communication/audio_sharp.svg"
+    },
+    {
+      "name": "Navigate",
+      "id": "4932:3393",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "navigation",
+        "channel",
+        "location"
+      ],
+      "roundPath": "icons/communication/navigate_round.svg",
+      "sharpPath": "icons/communication/navigate_sharp.svg"
+    },
+    {
+      "name": "Palette",
+      "id": "4932:3396",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "art",
+        "palette",
+        "theme"
+      ],
+      "roundPath": "icons/communication/palette_round.svg",
+      "sharpPath": "icons/communication/palette_sharp.svg"
+    },
+    {
+      "name": "Recording",
+      "id": "4932:3399",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "recording"
+      ],
+      "roundPath": "icons/communication/recording_round.svg",
+      "sharpPath": "icons/communication/recording_sharp.svg"
+    },
+    {
+      "name": "Basket",
+      "id": "4932:3402",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "shift basket"
+      ],
+      "roundPath": "icons/communication/basket_round.svg",
+      "sharpPath": "icons/communication/basket_sharp.svg"
+    },
+    {
+      "name": "Lightbulb",
+      "id": "4932:3405",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "lightbulb",
+        "light",
+        "idea",
+        "how",
+        "information",
+        "info"
+      ],
+      "roundPath": "icons/communication/lightbulb_round.svg",
+      "sharpPath": "icons/communication/lightbulb_sharp.svg"
+    },
+    {
+      "name": "Hourglass",
+      "id": "4932:3408",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "hourglass",
+        "timer",
+        "time",
+        "wait",
+        "load",
+        "loading"
+      ],
+      "roundPath": "icons/communication/hourglass_round.svg",
+      "sharpPath": "icons/communication/hourglass_sharp.svg"
+    },
+    {
+      "name": "Location Off",
+      "id": "4932:3411",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "location",
+        "pin",
+        "mark",
+        "here"
+      ],
+      "roundPath": "icons/communication/location_off_round.svg",
+      "sharpPath": "icons/communication/location_off_sharp.svg"
+    },
+    {
+      "name": "Notifications Off",
+      "id": "4932:3414",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "notification-off",
+        "alert-off",
+        "bell-off"
+      ],
+      "roundPath": "icons/communication/notifications_off_round.svg",
+      "sharpPath": "icons/communication/notifications_off_sharp.svg"
     }
   ],
   "Device": [
@@ -1753,6 +2731,30 @@
       ],
       "roundPath": "assets/alert/alert_round.svg",
       "sharpPath": "assets/alert/alert_sharp.svg"
+    },
+    {
+      "name": "Alert Active",
+      "id": "257:1126",
+      "searchTerms": [
+        "Alert",
+        "notification",
+        "bell"
+      ],
+      "roundPath": "icons/alert/alert_active_round.svg",
+      "sharpPath": "icons/alert/alert_active_sharp.svg"
+    },
+    {
+      "name": "Alert Outline",
+      "id": "257:1128",
+      "searchTerms": [
+        "notification",
+        "alert",
+        "bell",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "icons/alert/alert_outline_round.svg",
+      "sharpPath": "icons/alert/alert_outline_sharp.svg"
     }
   ],
   "Social": [
@@ -1873,80 +2875,6 @@
       "sharpPath": "assets/social/groups_sharp.svg"
     },
     {
-      "name": "iOS Share",
-      "id": "257:1125",
-      "searchTerms": [
-        "Apple",
-        "file",
-        "share",
-        "export",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/social/ios_share_round.svg",
-      "sharpPath": "assets/social/ios_share_sharp.svg"
-    },
-    {
-      "name": "Notifications Active",
-      "id": "257:1126",
-      "searchTerms": [
-        "Alert",
-        "New"
-      ],
-      "roundPath": "assets/social/notifications_active_round.svg",
-      "sharpPath": "assets/social/notifications_active_sharp.svg"
-    },
-    {
-      "name": "Notifications Outline",
-      "id": "257:1128",
-      "searchTerms": [
-        "notification",
-        "alert",
-        "bell",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/social/notifications_outline_round.svg",
-      "sharpPath": "assets/social/notifications_outline_sharp.svg"
-    },
-    {
-      "name": "Notifications",
-      "id": "257:1127",
-      "searchTerms": [
-        "notification",
-        "alert",
-        "bell",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/social/notifications_round.svg",
-      "sharpPath": "assets/social/notifications_sharp.svg"
-    },
-    {
-      "name": "World Map",
-      "id": "257:1129",
-      "searchTerms": [
-        "Public",
-        "Earth",
-        "Publish"
-      ],
-      "roundPath": "assets/social/world_map_round.svg",
-      "sharpPath": "assets/social/world_map_sharp.svg"
-    },
-    {
-      "name": "Share",
-      "id": "257:1130",
-      "searchTerms": [
-        "share",
-        "social",
-        "file",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/social/share_round.svg",
-      "sharpPath": "assets/social/share_sharp.svg"
-    },
-    {
       "name": "Medium",
       "id": "788:1946",
       "searchTerms": [
@@ -2021,17 +2949,6 @@
       "sharpPath": "assets/social/linkedin_sharp.svg"
     },
     {
-      "name": "Like",
-      "id": "257:1131",
-      "searchTerms": [
-        "Thumbs",
-        "Up",
-        "like filled"
-      ],
-      "roundPath": "assets/social/like_round.svg",
-      "sharpPath": "assets/social/like_sharp.svg"
-    },
-    {
       "name": "Bad Mood",
       "id": "257:1132",
       "searchTerms": [
@@ -2081,16 +2998,6 @@
       ],
       "roundPath": "assets/social/very_satisfied_round.svg",
       "sharpPath": "assets/social/very_satisfied_sharp.svg"
-    },
-    {
-      "name": "Dislike",
-      "id": "803:1783",
-      "searchTerms": [
-        "Thumbs",
-        "Down"
-      ],
-      "roundPath": "assets/social/dislike_round.svg",
-      "sharpPath": "assets/social/dislike_sharp.svg"
     }
   ],
   "Maps": [
@@ -2102,19 +3009,6 @@
       ],
       "roundPath": "assets/maps/layers_round.svg",
       "sharpPath": "assets/maps/layers_sharp.svg"
-    },
-    {
-      "name": "Offer",
-      "id": "258:1626",
-      "searchTerms": [
-        "Local",
-        "Discount",
-        "retail",
-        "shop",
-        "offer"
-      ],
-      "roundPath": "assets/maps/offer_round.svg",
-      "sharpPath": "assets/maps/offer_sharp.svg"
     },
     {
       "name": "Near Me",
@@ -2306,28 +3200,6 @@
   ],
   "File": [
     {
-      "name": "File Upload",
-      "id": "258:1331",
-      "searchTerms": [
-        "Document",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/file/file_upload_round.svg",
-      "sharpPath": "assets/file/file_upload_sharp.svg"
-    },
-    {
-      "name": "File Download",
-      "id": "258:1334",
-      "searchTerms": [
-        "Document",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/file/file_download_round.svg",
-      "sharpPath": "assets/file/file_download_sharp.svg"
-    },
-    {
       "name": "Finished Download",
       "id": "258:1335",
       "searchTerms": [
@@ -2410,15 +3282,6 @@
       ],
       "roundPath": "assets/file/cloud_off_round.svg",
       "sharpPath": "assets/file/cloud_off_sharp.svg"
-    },
-    {
-      "name": "Attachment",
-      "id": "258:1352",
-      "searchTerms": [
-        ""
-      ],
-      "roundPath": "assets/file/attachment_round.svg",
-      "sharpPath": "assets/file/attachment_sharp.svg"
     },
     {
       "name": "Folder",
@@ -2526,6 +3389,120 @@
       ],
       "roundPath": "assets/file/ppt_attach_round.svg",
       "sharpPath": "assets/file/ppt_attach_sharp.svg"
+    },
+    {
+      "name": "Open New Off",
+      "id": "4932:3339",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "file",
+        "do not export",
+        "export",
+        "open in new",
+        "open",
+        "launch"
+      ],
+      "roundPath": "icons/file/open_new_off_round.svg",
+      "sharpPath": "icons/file/open_new_off_sharp.svg"
+    },
+    {
+      "name": "Page Height",
+      "id": "4932:3342",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "page height"
+      ],
+      "roundPath": "icons/file/page_height_round.svg",
+      "sharpPath": "icons/file/page_height_sharp.svg"
+    },
+    {
+      "name": "Page Width",
+      "id": "4932:3345",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "page height"
+      ],
+      "roundPath": "icons/file/page_width_round.svg",
+      "sharpPath": "icons/file/page_width_sharp.svg"
+    },
+    {
+      "name": "Page Rotate",
+      "id": "4932:3348",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "page rotate"
+      ],
+      "roundPath": "icons/file/page_rotate_round.svg",
+      "sharpPath": "icons/file/page_rotate_sharp.svg"
+    },
+    {
+      "name": "Save",
+      "id": "4932:3352",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "file",
+        "save"
+      ],
+      "roundPath": "icons/file/save_round.svg",
+      "sharpPath": "icons/file/save_sharp.svg"
+    },
+    {
+      "name": "Publish",
+      "id": "4932:3355",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "file",
+        "publish"
+      ],
+      "roundPath": "icons/file/publish_round.svg",
+      "sharpPath": "icons/file/publish_sharp.svg"
+    },
+    {
+      "name": "File",
+      "id": "4932:3358",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "file",
+        "note",
+        "paper"
+      ],
+      "roundPath": "icons/file/file_round.svg",
+      "sharpPath": "icons/file/file_sharp.svg"
+    },
+    {
+      "name": "Folder File",
+      "id": "4932:3361",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "project",
+        "folder",
+        "file"
+      ],
+      "roundPath": "icons/file/folder_file_round.svg",
+      "sharpPath": "icons/file/folder_file_sharp.svg"
+    },
+    {
+      "name": "Maintenance",
+      "id": "4932:3364",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "maintenance",
+        "repair",
+        "hammer",
+        "wrench",
+        "tools"
+      ],
+      "roundPath": "icons/file/maintenance_round.svg",
+      "sharpPath": "icons/file/maintenance_sharp.svg"
     }
   ],
   "Editor": [
@@ -2577,7 +3554,10 @@
       "searchTerms": [
         "edit",
         "write",
-        "change"
+        "change",
+        "create",
+        "request",
+        "complete"
       ],
       "roundPath": "assets/editor/edit_round.svg",
       "sharpPath": "assets/editor/edit_sharp.svg"
@@ -2842,7 +3822,7 @@
       "sharpPath": "assets/editor/format_shapes_sharp.svg"
     },
     {
-      "name": "Attach",
+      "name": "Attachment",
       "id": "258:1173",
       "searchTerms": [
         "File",
@@ -3085,7 +4065,7 @@
       "sharpPath": "assets/action/filter_alt_sharp.svg"
     },
     {
-      "name": "Like Action",
+      "name": "Like",
       "id": "243:3860",
       "searchTerms": [
         "Thumbs Up"
@@ -3094,7 +4074,7 @@
       "sharpPath": "assets/action/like_action_sharp.svg"
     },
     {
-      "name": "Dislike Action",
+      "name": "Dislike",
       "id": "243:3861",
       "searchTerms": [
         "Thumbs Down"
@@ -3590,39 +4570,6 @@
       "sharpPath": "assets/action/credit_card_sharp.svg"
     },
     {
-      "name": "Calendar Available",
-      "id": "243:4247",
-      "searchTerms": [
-        "Event",
-        "Check",
-        "Mark",
-        "Success"
-      ],
-      "roundPath": "assets/action/calendar_available_round.svg",
-      "sharpPath": "assets/action/calendar_available_sharp.svg"
-    },
-    {
-      "name": "Calendar Cancel",
-      "id": "787:1998",
-      "searchTerms": [
-        "Absence",
-        "Delete",
-        "Event"
-      ],
-      "roundPath": "assets/action/calendar_cancel_round.svg",
-      "sharpPath": "assets/action/calendar_cancel_sharp.svg"
-    },
-    {
-      "name": "Calendar Edit",
-      "id": "787:1972",
-      "searchTerms": [
-        "Plan",
-        "Event"
-      ],
-      "roundPath": "assets/action/calendar_edit_round.svg",
-      "sharpPath": "assets/action/calendar_edit_sharp.svg"
-    },
-    {
       "name": "Calendar Range",
       "id": "243:4249",
       "searchTerms": [
@@ -3657,7 +4604,7 @@
       "sharpPath": "assets/action/calendar_yearly_sharp.svg"
     },
     {
-      "name": "Calendar Monthly Alt",
+      "name": "Calendar Monthly",
       "id": "787:1816",
       "searchTerms": [
         "Date",
@@ -3671,38 +4618,16 @@
       "sharpPath": "assets/action/calendar_monthly_alt_sharp.svg"
     },
     {
-      "name": "Calendar Monthly",
-      "id": "243:4250",
-      "searchTerms": [
-        "Date",
-        "Month"
-      ],
-      "roundPath": "assets/action/calendar_monthly_round.svg",
-      "sharpPath": "assets/action/calendar_monthly_sharp.svg"
-    },
-    {
-      "name": "Calendar Weekly Alt",
+      "name": "Calendar Weekly",
       "id": "787:1797",
       "searchTerms": [
         "Date",
         "Week",
         "calendar",
-        "weekly",
-        "Workcloud",
-        "WC"
+        "weekly"
       ],
       "roundPath": "assets/action/calendar_weekly_alt_round.svg",
       "sharpPath": "assets/action/calendar_weekly_alt_sharp.svg"
-    },
-    {
-      "name": "Calendar Weekly",
-      "id": "243:4251",
-      "searchTerms": [
-        "Date",
-        "Week"
-      ],
-      "roundPath": "assets/action/calendar_weekly_round.svg",
-      "sharpPath": "assets/action/calendar_weekly_sharp.svg"
     },
     {
       "name": "Calendar 3 Day",
@@ -3793,6 +4718,68 @@
       ],
       "roundPath": "assets/action/verified_round.svg",
       "sharpPath": "assets/action/verified_sharp.svg"
+    },
+    {
+      "name": "Calendar Unavailable",
+      "id": "4914:1820",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "calendar",
+        "unavailable",
+        "cancel",
+        "absence",
+        "absent",
+        "delete",
+        "schedule not mapped"
+      ],
+      "roundPath": "icons/action/calendar_unavailable_round.svg",
+      "sharpPath": "icons/action/calendar_unavailable_sharp.svg"
+    },
+    {
+      "name": "Calendar Available",
+      "id": "4914:1860",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "icons/action/calendar_available_round.svg",
+      "sharpPath": "icons/action/calendar_available_sharp.svg"
+    },
+    {
+      "name": "Calendar Edit",
+      "id": "4914:1914",
+      "searchTerms": [
+        ""
+      ],
+      "roundPath": "icons/action/calendar_edit_round.svg",
+      "sharpPath": "icons/action/calendar_edit_sharp.svg"
+    },
+    {
+      "name": "iOS Share",
+      "id": "257:1125",
+      "searchTerms": [
+        "Apple",
+        "file",
+        "share",
+        "export",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "icons/action/ios_share_round.svg",
+      "sharpPath": "icons/action/ios_share_sharp.svg"
+    },
+    {
+      "name": "Share",
+      "id": "257:1130",
+      "searchTerms": [
+        "share",
+        "social",
+        "file",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "icons/action/share_round.svg",
+      "sharpPath": "icons/action/share_sharp.svg"
     }
   ],
   "Audio Video": [
@@ -3997,19 +4984,6 @@
       "sharpPath": "assets/audio_video/microphone_off_sharp.svg"
     },
     {
-      "name": "Loop",
-      "id": "257:963",
-      "searchTerms": [
-        "Loading",
-        "Sync",
-        "Cached",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/audio_video/loop_round.svg",
-      "sharpPath": "assets/audio_video/loop_sharp.svg"
-    },
-    {
       "name": "Replay",
       "id": "257:964",
       "searchTerms": [
@@ -4018,18 +4992,6 @@
       ],
       "roundPath": "assets/audio_video/replay_round.svg",
       "sharpPath": "assets/audio_video/replay_sharp.svg"
-    },
-    {
-      "name": "Block",
-      "id": "257:965",
-      "searchTerms": [
-        "Delete",
-        "Prevent",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/audio_video/block_round.svg",
-      "sharpPath": "assets/audio_video/block_sharp.svg"
     },
     {
       "name": "Closed Caption",
@@ -4068,39 +5030,16 @@
       "sharpPath": "assets/image/camera_sharp.svg"
     },
     {
-      "name": "Flip Camera",
+      "name": "Camera Switch",
       "id": "259:1741",
       "searchTerms": [
-        "Front",
-        "Back",
-        "Photo"
+        "camera",
+        "photo",
+        "picture",
+        "flip"
       ],
       "roundPath": "assets/image/flip_camera_round.svg",
       "sharpPath": "assets/image/flip_camera_sharp.svg"
-    },
-    {
-      "name": "Visibility Image",
-      "id": "259:1742",
-      "searchTerms": [
-        "Eye",
-        "See",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/image/visibility_image_round.svg",
-      "sharpPath": "assets/image/visibility_image_sharp.svg"
-    },
-    {
-      "name": "Visibility Off Image",
-      "id": "401:1637",
-      "searchTerms": [
-        "Hide",
-        "Hidden",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/image/visibility_off_image_round.svg",
-      "sharpPath": "assets/image/visibility_off_image_sharp.svg"
     },
     {
       "name": "Camera Shutter",
@@ -4392,20 +5331,6 @@
       ],
       "roundPath": "assets/navigation/close_round.svg",
       "sharpPath": "assets/navigation/close_sharp.svg"
-    },
-    {
-      "name": "Check",
-      "id": "243:4816",
-      "searchTerms": [
-        "Mark",
-        "Done",
-        "Complete",
-        "check",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/navigation/check_round.svg",
-      "sharpPath": "assets/navigation/check_sharp.svg"
     },
     {
       "name": "More Vertical",
@@ -4774,66 +5699,14 @@
       "sharpPath": "assets/content/add_sharp.svg"
     },
     {
-      "name": "Link Content",
-      "id": "250:716",
-      "searchTerms": [
-        "Chain",
-        "link",
-        "hyperlink"
-      ],
-      "roundPath": "assets/content/link_content_round.svg",
-      "sharpPath": "assets/content/link_content_sharp.svg"
-    },
-    {
       "name": "Sort",
       "id": "250:714",
       "searchTerms": [
-        ""
+        "sort",
+        "reorder"
       ],
       "roundPath": "assets/content/sort_round.svg",
       "sharpPath": "assets/content/sort_sharp.svg"
-    },
-    {
-      "name": "Filter List",
-      "id": "250:713",
-      "searchTerms": [
-        "filter",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/content/filter_list_round.svg",
-      "sharpPath": "assets/content/filter_list_sharp.svg"
-    },
-    {
-      "name": "Create",
-      "id": "250:712",
-      "searchTerms": [
-        "Write",
-        "edit",
-        "request",
-        "complete",
-        "change",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/content/create_round.svg",
-      "sharpPath": "assets/content/create_sharp.svg"
-    },
-    {
-      "name": "Mail",
-      "id": "250:717",
-      "searchTerms": [
-        "Mail",
-        "@",
-        "email",
-        "e-mail",
-        "envelope",
-        "message",
-        "Workcloud",
-        "WC"
-      ],
-      "roundPath": "assets/content/mail_round.svg",
-      "sharpPath": "assets/content/mail_sharp.svg"
     },
     {
       "name": "Content",
@@ -4847,19 +5720,6 @@
       ],
       "roundPath": "assets/content/content_round.svg",
       "sharpPath": "assets/content/content_sharp.svg"
-    },
-    {
-      "name": "Clear",
-      "id": "250:708",
-      "searchTerms": [
-        "X",
-        "cancel",
-        "exit",
-        "delete",
-        "remove"
-      ],
-      "roundPath": "assets/content/clear_round.svg",
-      "sharpPath": "assets/content/clear_sharp.svg"
     },
     {
       "name": "Copy File",
@@ -5017,10 +5877,11 @@
       "sharpPath": "assets/content/flag_sharp.svg"
     },
     {
-      "name": "Save",
+      "name": "Save Content",
       "id": "250:722",
       "searchTerms": [
-        ""
+        "file",
+        "save"
       ],
       "roundPath": "assets/content/save_round.svg",
       "sharpPath": "assets/content/save_sharp.svg"
@@ -5079,13 +5940,51 @@
       "sharpPath": "assets/content/undo_sharp.svg"
     },
     {
-      "name": "Analysis",
+      "name": "Chart Pie Content",
       "id": "2657:3011",
       "searchTerms": [
-        ""
+        "report",
+        "analytics",
+        "chart",
+        "pie chart",
+        "pie-chart",
+        "piechart"
       ],
       "roundPath": "assets/content/analysis_round.svg",
       "sharpPath": "assets/content/analysis_sharp.svg"
+    },
+    {
+      "name": "Email",
+      "id": "243:4533",
+      "searchTerms": [
+        "Mail",
+        "@",
+        "email",
+        "e-mail",
+        "envelope",
+        "message",
+        "Workcloud",
+        "WC"
+      ],
+      "roundPath": "icons/content/email_round.svg",
+      "sharpPath": "icons/content/email_sharp.svg"
+    },
+    {
+      "name": "Email Outline",
+      "id": "243:4535",
+      "searchTerms": [
+        "Mail",
+        "@",
+        "email",
+        "e-mail",
+        "envelope",
+        "message",
+        "Workcloud",
+        "WC",
+        "outline"
+      ],
+      "roundPath": "icons/content/email_outline_round.svg",
+      "sharpPath": "icons/content/email_outline_sharp.svg"
     }
   ],
   "Hardware": [
@@ -5309,6 +6208,123 @@
       ],
       "roundPath": "assets/hardware/watch_round.svg",
       "sharpPath": "assets/hardware/watch_sharp.svg"
+    }
+  ],
+  "General": [
+    {
+      "name": "Clipboard General",
+      "id": "4932:25",
+      "searchTerms": [
+        "clipboard",
+        "note",
+        "workcloud",
+        "wc"
+      ],
+      "roundPath": "icons/general/clipboard_general_round.svg",
+      "sharpPath": "icons/general/clipboard_general_sharp.svg"
+    },
+    {
+      "name": "Note",
+      "id": "4932:31",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "note",
+        "paper"
+      ],
+      "roundPath": "icons/general/note_round.svg",
+      "sharpPath": "icons/general/note_sharp.svg"
+    },
+    {
+      "name": "Audit Activity",
+      "id": "4932:36",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "audit activity"
+      ],
+      "roundPath": "icons/general/audit_activity_round.svg",
+      "sharpPath": "icons/general/audit_activity_sharp.svg"
+    },
+    {
+      "name": "List Feedback",
+      "id": "4932:40",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "list",
+        "feedback",
+        "items"
+      ],
+      "roundPath": "icons/general/list_feedback_round.svg",
+      "sharpPath": "icons/general/list_feedback_sharp.svg"
+    },
+    {
+      "name": "List Bullet Contained",
+      "id": "4932:43",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "list",
+        "feedback",
+        "items"
+      ],
+      "roundPath": "icons/general/list_bullet_contained_round.svg",
+      "sharpPath": "icons/general/list_bullet_contained_sharp.svg"
+    },
+    {
+      "name": "List Form",
+      "id": "4932:46",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "list",
+        "feedback",
+        "items"
+      ],
+      "roundPath": "icons/general/list_form_round.svg",
+      "sharpPath": "icons/general/list_form_sharp.svg"
+    },
+    {
+      "name": "Face Id",
+      "id": "4932:49",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "activity",
+        "chart",
+        "line",
+        "log",
+        "history"
+      ],
+      "roundPath": "icons/general/face_id_round.svg",
+      "sharpPath": "icons/general/face_id_sharp.svg"
+    },
+    {
+      "name": "Add Task",
+      "id": "4932:54",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "add",
+        "task",
+        "complete",
+        "check"
+      ],
+      "roundPath": "icons/general/add_task_round.svg",
+      "sharpPath": "icons/general/add_task_sharp.svg"
+    },
+    {
+      "name": "Queue",
+      "id": "4932:57",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "add",
+        "queue"
+      ],
+      "roundPath": "icons/general/queue_round.svg",
+      "sharpPath": "icons/general/queue_sharp.svg"
     }
   ]
 }

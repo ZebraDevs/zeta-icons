@@ -1,4 +1,4 @@
-export const IconNameList = [ 
+export const ZetaIconNameList = [ 
 "alarm",
 "ar",
 "bookmark_outline",
@@ -452,5 +452,5 @@ export const IconNameList = [
 "star",
 "toggle_off",
 "toggle_on",];
- type IconNameTuple = typeof IconNameList;
- export type IconNames = IconNameTuple[number];
+ type ZetaIconNameTuple = typeof ZetaIconNameList;
+ export type ZetaIconNames = ZetaIconNameTuple[number];

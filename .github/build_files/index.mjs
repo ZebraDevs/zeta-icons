@@ -6,7 +6,7 @@ import { webfont } from "webfont";
 const fontName = "zeta-icons";
 
 let dartFileContents = createDartFile();
-let typesFileContents = "export const IconNameList = [ \n";
+let typesFileContents = "export const ZetaIconNameList = [ \n";
 
 const buildFontFile = async (woff2Url, ttfUrl, type) => {
   let unicodeAcc = 0xe001;
@@ -62,7 +62,7 @@ try {
   dartFileContents += "} \n";
 
   typesFileContents = typesFileContents.trim();
-  typesFileContents += `];\n type IconNameTuple = typeof IconNameList;\n export type IconNames = IconNameTuple[number];`;
+  typesFileContents += `];\n type ZetaIconNameTuple = typeof ZetaIconNameList;\n export type ZetaIconNames = ZetaIconNameTuple[number];`;
 
   const baseAssetsUrl = `${baseUrl}/build_files`;
 

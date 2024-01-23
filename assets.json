@@ -2429,6 +2429,17 @@
       "sharpPath": "assets/communication/add_call_sharp.svg"
     },
     {
+      "name": "Call Back",
+      "id": "5130:226",
+      "searchTerms": [
+        "Call",
+        "Telephone",
+        "Internet"
+      ],
+      "roundPath": "icons/communication/call_back_round.svg",
+      "sharpPath": "icons/communication/call_back_sharp.svg"
+    },
+    {
       "name": "End Call",
       "id": "858:1994",
       "searchTerms": [

@@ -1158,6 +1158,20 @@
       "sharpPath": "icons/general/switch_sharp.svg"
     },
     {
+      "name": "Swap",
+      "id": "5121:226",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "switch",
+        "swap",
+        "transfer",
+        "trade"
+      ],
+      "roundPath": "icons/general/swap_round.svg",
+      "sharpPath": "icons/general/swap_sharp.svg"
+    },
+    {
       "name": "Repeat",
       "id": "4937:534",
       "searchTerms": [

@@ -453,4 +453,4 @@ export const ZetaIconNameList = [
 "toggle_off",
 "toggle_on",];
  type ZetaIconNameTuple = typeof ZetaIconNameList;
- export type ZetaIconNames = ZetaIconNameTuple[number];
+ export type ZetaIconName = ZetaIconNameTuple[number];

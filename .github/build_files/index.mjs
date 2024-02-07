@@ -62,7 +62,7 @@ try {
   dartFileContents += "} \n";
 
   typesFileContents = typesFileContents.trim();
-  typesFileContents += `];\n type ZetaIconNameTuple = typeof ZetaIconNameList;\n export type ZetaIconNames = ZetaIconNameTuple[number];`;
+  typesFileContents += `];\n type ZetaIconNameTuple = typeof ZetaIconNameList;\n export type ZetaIconName = ZetaIconNameTuple[number];`;
 
   const baseAssetsUrl = `${baseUrl}/build_files`;
 

@@ -8,8 +8,8 @@ const fontName = "zeta-icons";
 let dartFileContents = createDartFile();
 let typesFileContents = "export const ZetaIconNameList = [ \n";
 
-let dartRoundIcons = "",
-  dartSharpIcons = "";
+let dartRoundIcons = "";
+let dartSharpIcons = "";
 
 let dartRoundList =
   "/// List of all rounded icons. \n   const List<IconData> iconsRounded = [\n";

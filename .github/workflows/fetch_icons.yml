@@ -96,7 +96,7 @@ jobs:
       - name: Push dart file to Zeta Flutter
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.PAT }}
         with:
           source_file: "./build_files/icons.dart"
           destination_repo: "ZebraDevs/zeta_flutter"
@@ -105,18 +105,20 @@ jobs:
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "icons.dart"
-      - name: Push icon font file to Zeta Flutter
-        uses: dmnemec/copy_file_to_another_repo_action@main
+      - name: Push icon fonts file to Zeta Flutter
+        uses: nkoppel/push-files-to-another-repository@v1.1.2
         env:
-          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+          API_TOKEN_GITHUB: ${{ secrets.PAT }}
         with:
-          source_file: "./fonts/zeta-icons-round.ttf"
-          destination_repo: "ZebraDevs/zeta_flutter"
-          destination_folder: "lib/src/assets/fonts"
-          destination_branch: "icons/${{ steps.package-version.outputs.current-version }}"
-          user_email: "zeta-icons-bot@github.com"
-          user_name: "zeta-icons-bot"
-          commit_message: "Font file"
+          source-files: "./fonts/zeta-icons-round.ttf ./fonts/zeta-icons-round.ttf"
+          destination-username: "ZebraDevs"
+          destination-repository: "zeta_flutter"
+          destination-directory: "lib/src/assets/fonts"
+          destination-branch: "icons/${{ steps.package-version.outputs.current-version }}"
+          commit-email: "zeta-icons-bot@github.com"
+          commit-username: "zeta-icons-bot"
+          commit-message: "Font files"
+
       #TODO close previous PRs, delete branch with previous version number
       - name: Open Zeta Flutter PR
         uses: thecanadianroot/open-pull-request-action@v1.0.3

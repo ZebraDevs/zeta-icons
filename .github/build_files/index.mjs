@@ -8,10 +8,13 @@ const fontName = "zeta-icons";
 let dartFileContents = createDartFile();
 let typesFileContents = "export const ZetaIconNameList = [ \n";
 
-let dartRoundIcons = '', dartSharpIcons = '';
+let dartRoundIcons = "",
+  dartSharpIcons = "";
 
-let dartRoundList = '/// List of all rounded icons. \n   const List<IconData> iconsRounded = [\n';
-let dartSharpList = '/// List of all sharp icons. \n   const List<IconData> iconsSharp = [\n';
+let dartRoundList =
+  "/// List of all rounded icons. \n   const List<IconData> iconsRounded = [\n";
+let dartSharpList =
+  "/// List of all sharp icons. \n   const List<IconData> iconsSharp = [\n";
 
 const buildFontFile = async (woff2Url, ttfUrl, type) => {
   let unicodeAcc = 0xe001;
@@ -35,15 +38,23 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
 
       const strUnicode = Number(unicodeAcc).toString(16);
 
-      if (type === 'round') {
-        dartRoundIcons += getDartIconDefinition(dartIconName, strUnicode, 'round');
+      if (type === "round") {
+        dartRoundIcons += getDartIconDefinition(
+          dartIconName,
+          strUnicode,
+          "round"
+        );
         dartRoundList += `   ZetaIcons.${dartIconName}_round,\n`;
-      } else if (type === 'sharp') {
-        dartSharpIcons += getDartIconDefinition(dartIconName, strUnicode, 'sharp');
+      } else if (type === "sharp") {
+        dartSharpIcons += getDartIconDefinition(
+          dartIconName,
+          strUnicode,
+          "sharp"
+        );
         dartSharpList += `   ZetaIcons.${dartIconName}_sharp,\n`;
       }
 
-      if (type === 'round') {
+      if (type === "round") {
         typesFileContents += getIconTypeDefinition(obj.name);
       }
 
@@ -55,8 +66,6 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
   fs.writeFileSync(woff2Url, font.woff2);
   fs.writeFileSync(ttfUrl, font.ttf);
 };
-
-
 
 try {
   const baseUrl = process.cwd();
@@ -70,12 +79,12 @@ try {
   await buildFontFile(woff2RoundFontUrl, ttfRoundFontUrl, "round");
   await buildFontFile(woff2SharpFontUrl, ttfSharpFontUrl, "sharp");
 
-  dartRoundList += '];';
-  dartSharpList += '];';
+  dartRoundList += "];";
+  dartSharpList += "];";
 
-  dartFileContents += '/// Round Icons \n';
+  dartFileContents += "/// Round Icons \n";
   dartFileContents += dartRoundIcons;
-  dartFileContents += '\n \n/// Sharp Icons \n'
+  dartFileContents += "\n \n/// Sharp Icons \n";
   dartFileContents += dartSharpIcons;
   dartFileContents += "} \n \n";
   dartFileContents += dartRoundList;
@@ -96,7 +105,8 @@ try {
 }
 
 function createDartFile() {
-  var contents = "// ignore_for_file: public_member_api_docs, constant_identifier_names\n";
+  var contents =
+    "// ignore_for_file: public_member_api_docs, constant_identifier_names\n";
 
   // Add imports
 
@@ -108,23 +118,23 @@ function createDartFile() {
   contents += "  ZetaIcons._(); \n";
 
   // Font family definition
-  contents += `  static const String _familyRound = '${fontName}-round'; \n \n`;
-  contents += `  static const String _familySharp = '${fontName}-sharp'; \n \n`;
+  contents += `  static const String _familyRound = '${fontName}-round'; \n`;
+  contents += `  static const String _familySharp = '${fontName}-sharp'; \n`;
   contents += `  static const String _package = 'zeta_flutter';\n \n`;
   return contents;
 }
 
 function getDartIconDefinition(iconName, unicode, modifier) {
-  return `  static const IconData ${iconName}_${modifier} = IconData(0x${unicode}, fontFamily: _family${capitalizeFirstLetter(modifier)}, fontPackage: _package); \n`;
+  return `  static const IconData ${iconName}_${modifier} = IconData(0x${unicode}, fontFamily: _family${capitalizeFirstLetter(
+    modifier
+  )}, fontPackage: _package); \n`;
 }
 
 function getIconTypeDefinition(iconName) {
   return `"${iconName}",\n`;
 }
 
-function createDartIconLists() {
-
-}
+function createDartIconLists() {}
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);

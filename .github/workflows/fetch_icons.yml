@@ -14,9 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Fetch Icons
     # Uncomment below line if testing action via push to prevent recursion
-    if: ${{( github.event_name == 'push' && github.event.commits[0].author.name != 'Automated Version Bump') ||  github.event_name == 'schedule' }}
+    if: ${{( github.event_name != 'schedule' && github.event.commits[0].author.name != 'Automated Version Bump') ||  github.event_name == 'schedule' }}
     outputs:
-      icons_changed: ${{steps.fetch_icons.outputs.icons_changed}}
+      update-zeta-web: ${{steps.zeta-web-changed.outputs.update }}
+      update-zeta-flutter: ${{steps.zeta-flutter-changed.outputs.update }}
     steps:
       - uses: actions/setup-node@v4
         with:
@@ -26,7 +27,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: ${{ secrets.PAT }}
       - name: Run npm i
         run: npm ci
       - name: Fetch icons
@@ -37,12 +37,30 @@ jobs:
       - name: Build files
         id: build_files
         uses: ./.github/build_files
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push'}}
+        if: ${{ github.event_name != 'schedule'}}
         with:
           assets_path: ${{ steps.fetch_icons.outputs.assets_path }}
+      - name: Verify Changed files
+        uses: tj-actions/verify-changed-files@v18
+        id: verify-changed-files
+      - name: List all changed tracked and untracked files
+        env:
+          CHANGED_FILES: ${{ steps.verify-changed-files.outputs.changed_files }}
+        run: |
+          echo "Changed files: $CHANGED_FILES"
+      - name: Check if web files changed
+        id: zeta-web-changed
+        if: contains(steps.verify-changed-files.outputs.changed_files, 'icon-types.ts')
+        run: |
+          echo "update=true" >> $GITHUB_OUTPUT
+      - name: Check if flutter files changed
+        id: zeta-flutter-changed
+        if: contains(steps.verify-changed-files.outputs.changed_files, 'icons.dart')
+        run: |
+          echo "update=true" >> $GITHUB_OUTPUT
       - name: "Bump Version"
         uses: "phips28/gh-action-bump-version@master"
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push'  }}
+        if: ${{ steps.zeta-web-changed.outputs.update == 'true' || steps.zeta-flutter-changed.outputs.update == 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -54,7 +72,7 @@ jobs:
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: Update
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push'}}
+        if: ${{ steps.zeta-web-changed.outputs.update == 'true' || steps.zeta-flutter-changed.outputs.update == 'true'}}
         id: update
         run: |
           git config --global user.name "zeta-icons-bot"
@@ -66,12 +84,18 @@ jobs:
           git push -f --tags
           echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV
       - name: Publish to NPM
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push' }}
+        if: ${{ steps.zeta-web-changed.outputs.update == 'true' }}
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Trigger repository_dispatch in zeta-web
-        if: ${{ steps.fetch_icons.outputs.icons_changed == 'true' || github.event_name == 'push' }}
+
+  zeta_web:
+    name: Update Zeta Web
+    needs: fetch_icons
+    runs-on: ubuntu-latest
+    if: ${{ needs.fetch_icons.outputs.update-zeta-web }}
+    steps:
+      - name: "Trigger repository_dispatch in zeta-web"
         run: |
           curl -L \
             -X POST \
@@ -80,10 +104,11 @@ jobs:
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://api.github.com/repos/zebratechnologies/zeta-web/dispatches \
             -d '{"event_type":"update-icons","client_payload":{"version": "${{ steps.package-version.outputs.current-version }}"}'
+
   zeta_flutter_PR:
     needs: fetch_icons
     runs-on: ubuntu-latest
-    if: ${{ needs.fetch_icons.outputs.icons_changed == 'true' }}
+    if: ${{ needs.fetch_icons.outputs.update-zeta-flutter }}
     name: Commit and raise PR in Zeta Flutter
     steps:
       - name: Checkout
@@ -105,25 +130,36 @@ jobs:
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "icons.dart"
-      - name: Push icon fonts file to Zeta Flutter
-        uses: nkoppel/push-files-to-another-repository@v1.1.2
+      - name: Push round icon font file to Zeta Flutter
+        uses: dmnemec/copy_file_to_another_repo_action@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.PAT }}
         with:
-          source-files: "./fonts/zeta-icons-round.ttf ./fonts/zeta-icons-round.ttf"
-          destination-username: "ZebraDevs"
-          destination-repository: "zeta_flutter"
-          destination-directory: "lib/src/assets/fonts"
-          destination-branch: "icons/${{ steps.package-version.outputs.current-version }}"
-          commit-email: "zeta-icons-bot@github.com"
-          commit-username: "zeta-icons-bot"
-          commit-message: "Font files"
+          source_file: "./fonts/zeta-icons-round.ttf"
+          destination_repo: "ZebraDevs/zeta_flutter"
+          destination_folder: "lib/src/assets/fonts"
+          destination_branch: "icons/${{ steps.package-version.outputs.current-version }}"
+          user_email: "zeta-icons-bot@github.com"
+          user_name: "zeta-icons-bot"
+          commit_message: "rounded font file"
+      - name: Push sharp icon font file to Zeta Flutter
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.PAT }}
+        with:
+          source_file: "./fonts/zeta-icons-sharp.ttf"
+          destination_repo: "ZebraDevs/zeta_flutter"
+          destination_folder: "lib/src/assets/fonts"
+          destination_branch: "icons/${{ steps.package-version.outputs.current-version }}"
+          user_email: "zeta-icons-bot@github.com"
+          user_name: "zeta-icons-bot"
+          commit_message: "sharp font file"
 
       #TODO close previous PRs, delete branch with previous version number
       - name: Open Zeta Flutter PR
         uses: thecanadianroot/open-pull-request-action@v1.0.3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
           base: main
           head: "icons/${{ steps.package-version.outputs.current-version }}"
           title: "icons/${{ steps.package-version.outputs.current-version }}"

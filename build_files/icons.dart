@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 class ZetaIcons { 
   ZetaIcons._(); 
   static const String _familyRound = 'zeta-icons-round'; 
- 
   static const String _familySharp = 'zeta-icons-sharp'; 
- 
   static const String _package = 'zeta_flutter';
  
 /// Round Icons 

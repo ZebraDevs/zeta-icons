@@ -17,5 +17,5 @@ outputs:
     description: "The path to icon-types.ts"
 
 runs:
-  using: "node16"
+  using: "node20"
   main: "index.mjs"

@@ -82,9 +82,9 @@ try {
   dartRoundList += "};\n";
   dartSharpList += "};\n";
 
-  dartFileContents += "   /// Round Icons \n";
+  dartFileContents += "   /// Round Icons\n";
   dartFileContents += dartRoundIcons;
-  dartFileContents += "\n \n    /// Sharp Icons \n";
+  dartFileContents += "\n \n    /// Sharp Icons\n";
   dartFileContents += dartSharpIcons;
   dartFileContents += "} \n \n";
   dartFileContents += dartRoundList;

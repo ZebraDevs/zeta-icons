@@ -12,9 +12,9 @@ let dartRoundIcons = "";
 let dartSharpIcons = "";
 
 let dartRoundList =
-  "/// List of all rounded icons. \n   const List<IconData> iconsRounded = [\n";
+  "/// List of all rounded icons. \nconst Map<String, IconData> iconsRounded = {\n";
 let dartSharpList =
-  "/// List of all sharp icons. \n   const List<IconData> iconsSharp = [\n";
+  "\n/// List of all sharp icons. \nconst Map<String, IconData> iconsSharp = {\n";
 
 const buildFontFile = async (woff2Url, ttfUrl, type) => {
   let unicodeAcc = 0xe001;
@@ -44,14 +44,14 @@ const buildFontFile = async (woff2Url, ttfUrl, type) => {
           strUnicode,
           "round"
         );
-        dartRoundList += `   ZetaIcons.${dartIconName}_round,\n`;
+        dartRoundList += `   '${dartIconName}_round': ZetaIcons.${dartIconName}_round,\n`;
       } else if (type === "sharp") {
         dartSharpIcons += getDartIconDefinition(
           dartIconName,
           strUnicode,
           "sharp"
         );
-        dartSharpList += `   ZetaIcons.${dartIconName}_sharp,\n`;
+        dartSharpList += `   '${dartIconName}_sharp': ZetaIcons.${dartIconName}_sharp,\n`;
       }
 
       if (type === "round") {
@@ -79,12 +79,12 @@ try {
   await buildFontFile(woff2RoundFontUrl, ttfRoundFontUrl, "round");
   await buildFontFile(woff2SharpFontUrl, ttfSharpFontUrl, "sharp");
 
-  dartRoundList += "];";
-  dartSharpList += "];";
+  dartRoundList += "};\n";
+  dartSharpList += "};\n";
 
-  dartFileContents += "/// Round Icons \n";
+  dartFileContents += "   /// Round Icons \n";
   dartFileContents += dartRoundIcons;
-  dartFileContents += "\n \n/// Sharp Icons \n";
+  dartFileContents += "\n \n    /// Sharp Icons \n";
   dartFileContents += dartSharpIcons;
   dartFileContents += "} \n \n";
   dartFileContents += dartRoundList;
@@ -133,8 +133,6 @@ function getDartIconDefinition(iconName, unicode, modifier) {
 function getIconTypeDefinition(iconName) {
   return `"${iconName}",\n`;
 }
-
-function createDartIconLists() {}
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);

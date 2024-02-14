@@ -7,7 +7,7 @@ class ZetaIcons {
   static const String _familySharp = 'zeta-icons-sharp'; 
   static const String _package = 'zeta_flutter';
  
-   /// Round Icons 
+   /// Round Icons
   static const IconData alarm_round = IconData(0xe001, fontFamily: _familyRound, fontPackage: _package); 
   static const IconData ar_round = IconData(0xe002, fontFamily: _familyRound, fontPackage: _package); 
   static const IconData bookmark_outline_round = IconData(0xe003, fontFamily: _familyRound, fontPackage: _package); 
@@ -463,7 +463,7 @@ class ZetaIcons {
   static const IconData toggle_on_round = IconData(0xe1c5, fontFamily: _familyRound, fontPackage: _package); 
 
  
-    /// Sharp Icons 
+    /// Sharp Icons
   static const IconData alarm_sharp = IconData(0xe001, fontFamily: _familySharp, fontPackage: _package); 
   static const IconData ar_sharp = IconData(0xe002, fontFamily: _familySharp, fontPackage: _package); 
   static const IconData bookmark_outline_sharp = IconData(0xe003, fontFamily: _familySharp, fontPackage: _package); 

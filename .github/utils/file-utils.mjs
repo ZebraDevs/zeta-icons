@@ -2,6 +2,9 @@ import * as fs from "fs";
 import core from "@actions/core";
 import { optimize } from "svgo";
 import { scale } from "scale-that-svg";
+import SVGFixer from 'oslllo-svg-fixer';
+import { dirname } from "path";
+import { exec } from "child_process";
 
 export const fileExists = (path) => {
   return fs.existsSync(path);
@@ -38,31 +41,7 @@ export const writeSVGToFile = async (svgDOM, filePath) => {
   });
   svgData = await scale(svgData, { scale: 100 });
 
-  const optimizedSvg = optimize(svgData, {
-    plugins: [
-      plugin,
-      {
-        name: "removeUselessDefs",
-      },
-      {
-        name: "convertShapeToPath",
-      },
-      {
-        name: "mergePaths",
-      },
-      {
-        name: "removeDimensions",
-      },
-      {
-        name: "removeAttrs",
-        params: {
-          attrs: ["clip-path"],
-        },
-      },
-    ],
-  });
-
-  return writeToFile(filePath, optimizedSvg.data);
+  return writeToFile(filePath, svgData);
 };
 
 export const writeToFile = async (fileName, data) => {
@@ -104,3 +83,33 @@ const plugin = {
     };
   },
 };
+
+export const optimizeSvgsInDir = async (dirName) => {
+  await SVGFixer(dirName, dirName, { showProgressBar: true, throwIfDestinationDoesNotExist: false }).fix();
+
+  exec('npm i -g svgo', (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+    }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+    }
+    if (stdout) {
+      console.log(`stderr: ${stdout}`);
+    }
+    exec('svgo -f ' + dirName + ' -o ' + dirName, (error, stdout, stderr) => {
+      if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+      }
+      if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+      }
+      if (stdout) {
+        console.log(`stderr: ${stdout}`);
+      }
+    });
+  })
+
+}

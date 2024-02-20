@@ -3,8 +3,7 @@ name: "fetch-icons"
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: main
   schedule:
     - cron: "0 8 * * *"
     - cron: "0 23 * * *"
@@ -52,12 +51,12 @@ jobs:
           echo "Changed files: $CHANGED_FILES"
       - name: Check if web files changed
         id: zeta-web-changed
-        if: contains(steps.verify-changed-files.outputs.changed_files, 'icon-types.ts')
+        if: contains(steps.verify-changed-files.outputs.changed_files, 'icon-types.ts') ||  contains(steps.verify-changed-files.outputs.changed_files, '.woff2')
         run: |
           echo "update=true" >> $GITHUB_OUTPUT
       - name: Check if flutter files changed
         id: zeta-flutter-changed
-        if: contains(steps.verify-changed-files.outputs.changed_files, 'icons.dart')
+        if: contains(steps.verify-changed-files.outputs.changed_files, 'icons.dart') ||  contains(steps.verify-changed-files.outputs.changed_files, '.ttf')
         run: |
           echo "update=true" >> $GITHUB_OUTPUT
       - name: "Bump Version"

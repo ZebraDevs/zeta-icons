@@ -1,6 +1,6 @@
 {
   "name": "@zebra-fed/zeta-icons",
-  "version": "0.1.61",
+  "version": "0.1.64",
   "type": "module",
   "main": "index.js",
   "devDependencies": {
@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/zebratechnologies/zeta-icons#readme",
   "dependencies": {
+    "oslllo-svg-fixer": "^3.0.0",
     "typescript": "^5.3.2"
   }
 }

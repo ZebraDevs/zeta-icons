@@ -11,4 +11,4 @@ outputs:
     description: "The path to assets.json"
 runs:
   using: "node20"
-  main: "index.mjs"
+  main: "index.js"

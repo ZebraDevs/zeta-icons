@@ -6,7 +6,7 @@ try {
   // Fetch the figma document
   console.log("Fetching Figma document...");
   const result = await getDocumentApi();
-  console.log("Figma document fetched");
+  console.log("Figma document fetched", result.body);
 
   // Find the correct page
   const body = await result.json();

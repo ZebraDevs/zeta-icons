@@ -1121,6 +1121,40 @@
       "sharpPath": "icons/general/store_swap_sharp.svg"
     },
     {
+      "name": "Store Transfer",
+      "id": "5512:2999",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "store",
+        "business",
+        "retail",
+        "sync",
+        "transfer",
+        "swap,"
+      ],
+      "roundPath": "icons/general/store_transfer_round.svg",
+      "sharpPath": "icons/general/store_transfer_sharp.svg"
+    },
+    {
+      "name": "Store Release",
+      "id": "5517:3016",
+      "searchTerms": [
+        "Workcloud",
+        "WC",
+        "store",
+        "business",
+        "retail",
+        "sync",
+        "switch",
+        "swap",
+        "release",
+        "transfer"
+      ],
+      "roundPath": "icons/general/store_release_round.svg",
+      "sharpPath": "icons/general/store_release_sharp.svg"
+    },
+    {
       "name": "How Do I",
       "id": "4937:525",
       "searchTerms": [

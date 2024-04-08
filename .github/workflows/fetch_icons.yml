@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches: main
-  schedule:
-    # Runs automatically twice a week on Monday and Wednesday
-    - cron: "0 8 * * 1"
-    - cron: "0 8 * * 3"
+  # schedule:
+  #   # Runs automatically twice a week on Monday and Wednesday
+  #   - cron: "0 8 * * 1"
+  #   - cron: "0 8 * * 3"
 
 jobs:
   fetch_icons:

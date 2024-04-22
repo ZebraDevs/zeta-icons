@@ -3,7 +3,10 @@ import { ComponentSets, FigmaNode } from "../types/figmaTypes.js";
  * Locates the relevant icon page from a Figma document.
  *
  * @param {FigmaNode} document The Figma document to be searched.
- * @returns {FigmaNode} a `FigmaNode` containing the icons page.
+ * @param iconPageName The name of the icon page to be located.
+ *
+ * @returns {FigmaNode} A `FigmaNode` containing the icons page.
+ * @throws An error if the given page name cannot be found from the document.
  */
 export declare function findIconPage(document: FigmaNode, iconPageName: string): FigmaNode;
 /**

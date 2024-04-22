@@ -2,7 +2,10 @@
  * Locates the relevant icon page from a Figma document.
  *
  * @param {FigmaNode} document The Figma document to be searched.
- * @returns {FigmaNode} a `FigmaNode` containing the icons page.
+ * @param iconPageName The name of the icon page to be located.
+ *
+ * @returns {FigmaNode} A `FigmaNode` containing the icons page.
+ * @throws An error if the given page name cannot be found from the document.
  */
 export function findIconPage(document, iconPageName) {
     const iconPage = document.children.filter((page) => page.name == iconPageName)[0];

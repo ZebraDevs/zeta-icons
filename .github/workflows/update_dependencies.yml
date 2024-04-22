@@ -1,6 +1,10 @@
 name: Update dependencies (zeta-web, zeta-icons-website)
 
-on: workflow_call
+on:
+  workflow_call:
+    secrets:
+      PAT:
+        required: true
 
 jobs:
   get_version:

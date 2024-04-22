@@ -1,4 +1,4 @@
-name: "Build and Deploy Zeta Icons"
+name: "Build and Deploy"
 
 on:
   workflow_dispatch:
@@ -12,6 +12,7 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/build.yml
+    secrets: inherit
 
   publish:
     needs: build

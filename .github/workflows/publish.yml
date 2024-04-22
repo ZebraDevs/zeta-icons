@@ -2,6 +2,11 @@ name: Publish
 
 on:
   workflow_call:
+    secrets:
+      PAT:
+        required: true
+      NPM_TOKEN:
+        required: true
 
 jobs:
   publish_npm:

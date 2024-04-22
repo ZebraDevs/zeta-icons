@@ -1,7 +1,5 @@
-// import assets from "./assets.json";
-// export type { ZetaIconName } from "./build_files/icon-types.ts";
-// import { ZetaIconNameList } from "./build_files/icon-types.js";
+import iconManifest from "./outputs/icon-manifest.json";
+export { ZetaIconNameList } from "./outputs/definitions/icon-types";
+export { iconManifest };
 
-// export { assets, ZetaIconNameList };
-
-// TODO redo index
+export type { ZetaIconName } from "./outputs/definitions/icon-types";

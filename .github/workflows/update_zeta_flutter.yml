@@ -8,24 +8,17 @@ on:
         required: true
 
 jobs:
-  get_version:
-    name: Get version
-    runs-on: ubuntu-latest
-    outputs:
-      version: ${{ steps.package-version.outputs.current-version }}
-    steps:
-      - name: Get package version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
   publish_flutter:
     runs-on: ubuntu-latest
     name: Commit and raise PR in Zeta Flutter
-    needs: get_version
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Get package version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: Push dart file to Zeta Flutter
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
@@ -35,7 +28,7 @@ jobs:
           source_file: "./outputs/definitions/icons.dart"
           destination_repo: "ZebraDevs/zeta_flutter"
           destination_folder: "lib/src/assets"
-          destination_branch_create: "icons/${{ needs.get_version.outputs.version }}"
+          destination_branch_create: "icons/${{ steps.package-version.outputs.current-version }}"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "icons.dart"
@@ -47,7 +40,7 @@ jobs:
           source_file: "./outputs/font/zeta-icons-round.ttf"
           destination_repo: "ZebraDevs/zeta_flutter"
           destination_folder: "lib/src/assets/fonts"
-          destination_branch: "icons/${{ needs.get_version.outputs.version }}"
+          destination_branch: "icons/${{ steps.package-version.outputs.current-version }}"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "rounded font file"
@@ -59,7 +52,7 @@ jobs:
           source_file: "./outputs/font/zeta-icons-sharp.ttf"
           destination_repo: "ZebraDevs/zeta_flutter"
           destination_folder: "lib/src/assets/fonts"
-          destination_branch: "icons/${{ needs.get_version.outputs.version }}"
+          destination_branch: "icons/${{ steps.package-version.outputs.current-version }}"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "sharp font file"
@@ -70,8 +63,8 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           base: main
-          head: "icons/${{ needs.fetch_icons.outputs.version }}"
-          title: "icons/${{ needs.fetch_icons.outputs.version }}"
+          head: "icons/${{ steps.package-version.outputs.current-version }}"
+          title: "icons/${{ steps.package-version.outputs.current-version }}"
           labels: icons
           owner: zebratechnologies
           repository: ZebraDevs/zeta_flutter

@@ -1,0 +1,5 @@
+export const ZetaIconNameList = [
+  {{iconNames}}
+];
+type ZetaIconNameTuple = typeof ZetaIconNameList;
+export type ZetaIconName = ZetaIconNameTuple[number];

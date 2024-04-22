@@ -5,10 +5,8 @@ inputs:
     description: "The personal access token given by Figma. Required to make API calls"
     required: true
 outputs:
-  icons_changed:
+  files_changed:
     description: "Boolean that gets set to true if any icons have been added or removed"
-  assets_path:
-    description: "The path to assets.json"
 runs:
   using: "node20"
   main: "index.js"

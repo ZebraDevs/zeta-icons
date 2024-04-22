@@ -1,32 +1,31 @@
 import core from "@actions/core";
-import { getDocumentApi } from "./api.js";
-import { parseIconPage } from "./parse-icons.js";
+import { readFileSync, writeFileSync } from "fs";
+import fetchIcons from "../../scripts/dist/fetchIcons.js";
 
 try {
-  // Fetch the figma document
-  console.log("Fetching Figma document...");
-  const result = await getDocumentApi();
-  console.log("Figma document fetched", result.body);
+  let oldHash = "";
+  const iconPageName = "🦓 Icons";
 
-  // Find the correct page
-  const body = await result.json();
-  const iconPage = body.document.children.filter(
-    (page) => page.name == "Icons"
-  )[0];
+  try {
+    oldHash = readFileSync("./hash.txt").toString();
+  } catch (e) {
+    oldHash = "";
+  }
 
-  const baseUrl = process.cwd();
-
-  const assetsPath = `${baseUrl}/assets.json`;
-
-  await parseIconPage(
-    iconPage,
-    assetsPath,
-    `${baseUrl}/icons`,
-    body.componentSets
+  const newHash = await fetchIcons(
+    core.getInput("figma-access-token"),
+    "VQ7Aa3rDYB7mgpToI3bZ4D",
+    iconPageName,
+    oldHash,
+    "./outputs",
+    false
   );
 
-  core.setOutput("assets_path", assetsPath);
-  console.log("DONE");
+  if (newHash) {
+    writeFileSync("./hash.txt", newHash);
+  }
+  console.log("Files changed", newHash);
+  core.setOutput("files_changed", newHash != undefined);
 } catch (error) {
   core.setFailed(error.message);
 }

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
+    "target": "ES2021",
     "module": "Node16",
     "strict": true,
     "esModuleInterop": true,
@@ -8,7 +8,15 @@
     "allowArbitraryExtensions": true,
     "declaration": true,
     "moduleResolution": "node16",
-    "resolveJsonModule": true
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "outDir": "scripts/dist",
+    "typeRoots": ["./node_modules/@types", "scripts/src/definitions"]
   },
-  "include": ["./build_files/", "./index.ts"], 
+  "ts-node": {
+    "esm": true,
+    "files": true
+  },
+  "include": ["./scripts/src/**/*.ts"]
 }

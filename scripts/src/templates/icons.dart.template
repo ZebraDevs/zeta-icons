@@ -1,0 +1,25 @@
+// ignore_for_file: public_member_api_docs, constant_identifier_names
+import 'package:flutter/material.dart';
+
+class ZetaIcons {
+  ZetaIcons._();
+  static const String _familyRound = 'zeta-icons-round';
+  static const String _familySharp = 'zeta-icons-sharp';
+  static const String _package = 'zeta_flutter';
+
+  /// Round Icons
+  {{roundIcons}}
+
+  /// Sharp Icons
+  {{sharpIcons}}
+}
+
+/// List of all rounded icons.
+const Map<String, IconData> iconsRound = {
+  {{roundIconList}}
+};
+
+/// List of all sharp icons.
+const Map<String, IconData> iconsSharp = {
+    {{sharpIconList}}
+};

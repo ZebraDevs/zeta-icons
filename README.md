@@ -14,6 +14,14 @@
 
 An icon library for the Zeta design system.
 
-## Build the package
+## Testing
 
-`npm run build:action`
+1. Initialize test values:
+
+`ts-node --files test/reset-values.ts`
+
+2. Select tests to run. Within `test/test.ts`, set the values of `functionsToTest` to true.
+
+3. Run tests
+
+`ts-node -files test/test.ts`

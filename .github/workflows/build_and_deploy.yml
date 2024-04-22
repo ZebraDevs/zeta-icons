@@ -1,0 +1,31 @@
+name: "Build and Deploy Zeta Icons"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+  schedule:
+    # Runs automatically twice a week on Monday and Wednesday
+    - cron: "0 8 * * 1"
+    - cron: "0 8 * * 3"
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml
+
+  publish:
+    needs: build
+    if: ${{ needs.build.outputs.icons_changed  == 'true'}}
+    uses: ./.github/workflows/publish.yml
+    secrets: inherit
+
+  update_npm_dependencies:
+    needs: publish
+    uses: ./.github/workflows/update_dependencies.yml
+    secrets: inherit
+
+  update_flutter:
+    needs: build
+    uses: ./.github/workflows/update_zeta_flutter.yml
+    if: ${{ needs.build.outputs.icons_changed  == 'true'}}
+    secrets: inherit

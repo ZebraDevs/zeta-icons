@@ -1,0 +1,67 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    outputs:
+      icons_changed:
+        description: "A boolean stating if the icons from Figma have changed"
+        value: ${{ jobs.fetch_icons.outputs.update }}
+
+jobs:
+  fetch_icons:
+    runs-on: ubuntu-latest
+    name: Fetch icons and build output files
+    # Uncomment below line if testing action via push to prevent recursion
+    if: ${{ github.event.commits[0].author.name != 'Automated Version Bump' }}
+    outputs:
+      update: ${{ steps.fetch_icons.outputs.files_changed }}
+      version: ${{ steps.package-version-new.outputs.current-version }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: "https://registry.npmjs.org"
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PAT }}
+      - name: Install packages
+        run: npm ci
+      - name: Compile Typescript files
+        run: tsc
+      - name: Fetch icons
+        id: "fetch_icons"
+        uses: ./.github/fetch_icons
+        with:
+          figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
+      - name: "Files changed"
+        run: echo ${{ steps.fetch_icons.outputs.files_changed }}
+      - name: "Files changed"
+        run: echo ${{ steps.fetch_icons.outputs.files_changed }}
+      - name: "Bump Version"
+        uses: "phips28/gh-action-bump-version@master"
+        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          default: patch
+          skip-commit: "true"
+          skip-tag: "true"
+          skip-push: "true"
+      - name: Get new package version
+        id: package-version-new
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+      - name: Update
+        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
+        id: update
+        run: |
+          git config --global user.name "zeta-icons-bot"
+          git config --global user.email "zeta-icons-bot@github.com"
+          git add -A
+          git tag ${{ steps.package-version-new.outputs.current-version }}
+          git commit -m "Version ${{ steps.package-version-new.outputs.current-version }}" --no-edit
+          git push -f
+          git push -f --tags
+          echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV

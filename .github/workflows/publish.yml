@@ -1,0 +1,19 @@
+name: Publish
+
+on:
+  workflow_call:
+
+jobs:
+  publish_npm:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PAT }}
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

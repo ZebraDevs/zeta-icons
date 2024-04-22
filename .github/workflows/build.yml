@@ -41,9 +41,7 @@ jobs:
         uses: ./.github/fetch_icons
         with:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
-      - name: "Files changed"
-        run: echo ${{ steps.fetch_icons.outputs.files_changed }}
-      - name: "Files changed"
+      - name: "Icons changed"
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
       - name: "Bump Version"
         uses: "phips28/gh-action-bump-version@master"

@@ -28,7 +28,7 @@ jobs:
           source_file: "./outputs/definitions/icons.dart"
           destination_repo: "ZebraDevs/zeta_flutter"
           destination_folder: "lib/src/assets"
-          destination_branch_create: "icons/${{ steps.package-version.outputs.current-version }}"
+          destination_branch_create: "update-zeta-icons"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "icons.dart"
@@ -40,7 +40,7 @@ jobs:
           source_file: "./outputs/font/zeta-icons-round.ttf"
           destination_repo: "ZebraDevs/zeta_flutter"
           destination_folder: "lib/src/assets/fonts"
-          destination_branch: "icons/${{ steps.package-version.outputs.current-version }}"
+          destination_branch: "update-zeta-icons"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "rounded font file"
@@ -52,7 +52,7 @@ jobs:
           source_file: "./outputs/font/zeta-icons-sharp.ttf"
           destination_repo: "ZebraDevs/zeta_flutter"
           destination_folder: "lib/src/assets/fonts"
-          destination_branch: "icons/${{ steps.package-version.outputs.current-version }}"
+          destination_branch: "update-zeta-icons"
           user_email: "zeta-icons-bot@github.com"
           user_name: "zeta-icons-bot"
           commit_message: "sharp font file"
@@ -63,8 +63,9 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           base: main
-          head: "icons/${{ steps.package-version.outputs.current-version }}"
-          title: "icons/${{ steps.package-version.outputs.current-version }}"
+          head: "update-zeta-icons"
+          title: "deps: Update zeta-icon library"
           labels: icons
+          body: Updating to icons version ${{ steps.package-version.outputs.current-version }}
           owner: zebratechnologies
           repository: ZebraDevs/zeta_flutter

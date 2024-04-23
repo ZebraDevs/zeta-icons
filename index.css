@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "zeta-icons-round";
+  src: url("./outputs/font/zeta-icons-round.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "zeta-icons-sharp";
+  src: url("./outputs/font/zeta-icons-sharp.woff2") format("woff2");
+}

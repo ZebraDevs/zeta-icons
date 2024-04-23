@@ -2,16 +2,10 @@ name: Build
 
 on:
   workflow_dispatch:
-  workflow_call:
-    secrets:
-      PAT:
-        required: true
-      FIGMA_PERSONAL_ACCESS_TOKEN:
-        required: true
-    outputs:
-      icons_changed:
-        description: "A boolean stating if the icons from Figma have changed"
-        value: ${{ jobs.fetch_icons.outputs.update }}
+  schedule:
+    # Runs automatically twice a week on Monday and Wednesday
+    - cron: "0 8 * * 1"
+    - cron: "0 8 * * 3"
 
 jobs:
   fetch_icons:
@@ -44,28 +38,24 @@ jobs:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
       - name: "Icons changed"
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
-      - name: "Bump Version"
-        uses: "phips28/gh-action-bump-version@master"
+      - name: Get current date
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          default: patch
-          skip-commit: "true"
-          skip-tag: "true"
-          skip-push: "true"
-      - name: Get new package version
-        id: package-version-new
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
+        id: date
+        run: echo "::set-output name=date::$(date +'%d-%b-%Y')"
       - name: Update
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         id: update
         run: |
+          git checkout -b icon-updates
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
           git add -A
-          git tag ${{ steps.package-version-new.outputs.current-version }}
-          git commit -m "Version ${{ steps.package-version-new.outputs.current-version }}" --no-edit
-          git push -f
-          git push -f --tags
-          echo "newSha=$(git rev-parse origin/main)" >>  $GITHUB_ENV
+          git commit -m "ci: Icon updates ${{ steps.date.outputs.date }}"
+          git push --set-upstream origin icon-updates
+      - name: Create Pull Request
+        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: icon-updates
+          base: main
+          title: "ci: Icon updates"

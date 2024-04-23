@@ -3,11 +3,12 @@ import { readFileSync, writeFileSync } from "fs";
 import fetchIcons from "../../scripts/dist/fetchIcons.js";
 
 try {
+  const hashPath = "./.github/fetch_icons/hash.txt";
   let oldHash = "";
   const iconPageName = "🦓 Icons";
 
   try {
-    oldHash = readFileSync("./hash.txt").toString();
+    oldHash = readFileSync(hashPath).toString();
   } catch (e) {
     oldHash = "";
   }
@@ -22,7 +23,7 @@ try {
   );
 
   if (newHash) {
-    writeFileSync("./hash.txt", newHash);
+    writeFileSync(hashPath, newHash);
   }
   console.log("Files changed", newHash);
   core.setOutput("files_changed", newHash != undefined);

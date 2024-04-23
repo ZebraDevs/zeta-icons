@@ -25,27 +25,27 @@ export const generateFonts = async (inputDir: string, fontOutputDir: string): Pr
   } as GenerateFontResult;
 
   const fontName = "zeta-icons";
-
+  const baseFontPath = `${fontOutputDir}/${fontName}`;
+  createFolder(fontOutputDir);
   const roundFonts = await buildFontFile("round", fontResult, inputDir);
-  const sharpFonts = await buildFontFile("sharp", fontResult, inputDir);
 
-  if (roundFonts.ttf && roundFonts.woff2 && sharpFonts.ttf && sharpFonts.woff2) {
-    const baseFontPath = `${fontOutputDir}/${fontName}`;
-    createFolder(fontOutputDir);
-
+  if (roundFonts.ttf && roundFonts.woff2) {
     writeFileSync(`${baseFontPath}-round.ttf`, roundFonts.ttf);
     writeFileSync(`${baseFontPath}-round.woff2`, roundFonts.woff2);
+  } else {
+    throw new Error(
+      "Failed to build round fonts: " + (!roundFonts.ttf ? "ttf " : "") + !roundFonts.woff2 ? "woff2" : ""
+    );
+  }
+
+  const sharpFonts = await buildFontFile("sharp", fontResult, inputDir);
+  if (sharpFonts.ttf && sharpFonts.woff2) {
     writeFileSync(`${baseFontPath}-sharp.ttf`, sharpFonts.ttf);
     writeFileSync(`${baseFontPath}-sharp.woff2`, sharpFonts.woff2);
   } else {
-    let errorStringBuilder = [];
-    if (!roundFonts.ttf) errorStringBuilder.push("round ttf");
-    if (!sharpFonts.ttf) errorStringBuilder.push("sharp ttf");
-    if (!roundFonts.woff2) errorStringBuilder.push("round woff2");
-    if (!sharpFonts.woff2) errorStringBuilder.push("sharp woff2");
-    const str = `Font${errorStringBuilder.length > 1 ? "s" : ""} not created: ${errorStringBuilder.join(", ")} `;
-
-    throw new Error(str);
+    throw new Error(
+      "Failed to build sharp fonts: " + (!sharpFonts.ttf ? "ttf " : "") + !sharpFonts.woff2 ? "woff2" : ""
+    );
   }
   return fontResult;
 };

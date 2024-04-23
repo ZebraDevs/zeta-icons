@@ -17,6 +17,7 @@ export const allImageFiles: ImageManifest = new Map(
   Object.entries(JSON.parse(readFileSync("./test/test-data/allImageFiles.json").toString()))
 );
 export const hash = readFileSync("./test/test-data/hash.txt").toString();
+//@ts-ignore
 export const categoryNames = categories.map((category) => category.name.toSnakeCase());
 export const generatedFontDefinitions = JSON.parse(
   readFileSync("./test/test-data/generatedFontResponse.json").toString()

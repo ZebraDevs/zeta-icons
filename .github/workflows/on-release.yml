@@ -1,16 +1,12 @@
-name: Publish
+name: "Release"
 
 on:
   workflow_dispatch:
-  workflow_call:
-    secrets:
-      PAT:
-        required: true
-      NPM_TOKEN:
-        required: true
+  release:
+    types: [released]
 
 jobs:
-  publish_npm:
+  publish:
     name: Publish to NPM
     runs-on: ubuntu-latest
     steps:
@@ -28,3 +24,12 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  update_npm_dependencies:
+    needs: publish
+    uses: ./.github/workflows/update_dependencies.yml
+    secrets: inherit
+
+  update_flutter:
+    uses: ./.github/workflows/update_zeta_flutter.yml
+    secrets: inherit

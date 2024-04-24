@@ -6,15 +6,15 @@ import { generateFonts } from "./generators/generateFonts.js";
 import { generateIconManifest } from "./generators/generateIconManifest.js";
 import { optimizeSVGs } from "./utils/optmizeSvgs.js";
 import { saveSVGs } from "./utils/saveSvgs.js";
-
 import { generateHash } from "./utils/hash.js";
 import { ComponentSets } from "./types/figmaTypes.js";
+import { generatePNGs } from "./generators/generatePNGs.js";
 
 const fontDir = "/font";
 const iconsDir = "/icons";
 const definitionsDir = "/definitions";
 const tempDir = "/temp";
-
+const pngDir = "/png";
 /**
  * Main function to run icons action. For slightly more information, see {@link https://miro.com/app/board/uXjVKUMv1ME=/?share_link_id=952145602435 | Miro }
  *
@@ -39,6 +39,7 @@ export default async function main(
   const iconsOutputDir = outputDir + iconsDir;
   const definitionsOutputDir = outputDir + definitionsDir;
   const tempOutputDir = outputDir + tempDir;
+  const pngOutputDir = outputDir + pngDir;
 
   const response = await getFigmaDocument(figmaFileId, figmaToken);
   console.log("✅ - Fetched figma document");
@@ -83,6 +84,9 @@ export default async function main(
 
   generateDefinitionFiles(outputDir, definitionsOutputDir, generateFontResult, manifest);
   console.log("✅ - Generated definition files.");
+
+  generatePNGs(iconsOutputDir, pngOutputDir, categoryNames);
+  console.log("✅ - Generated PNGs.");
 
   console.log("✅ - Done - Icons updated!");
 

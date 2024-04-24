@@ -8,6 +8,7 @@ import { readFileSync, writeFileSync } from "fs";
  * @param {String} outputDir - Location of output directory. Icon manifest is saved here.
  * @param {String} definitionsOutputDir - Location of definitions output.
  * @param {GenerateFontResult} fontData - Object containing body lines for generating definition files.
+ * @param {IconManifest} manifest - data to be written to `icon-manifest.json`
  */
 export const generateDefinitionFiles = (
   outputDir: string,

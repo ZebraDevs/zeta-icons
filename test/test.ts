@@ -19,6 +19,10 @@ import {
 } from "./test-data.js";
 import { Component } from "../scripts/src/types/figmaTypes.js";
 import { generateHash } from "../scripts/src/utils/hash.js";
+import { optimizeSVGs } from "../scripts/src/utils/optmizeSvgs.js";
+import { generateFonts } from "../scripts/src/generators/generateFonts.js";
+import { generateDefinitionFiles } from "../scripts/src/generators/generateDefinitionFiles.js";
+import { generatePNGs } from "../scripts/src/generators/generatePNGs.js";
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 
@@ -35,7 +39,7 @@ const functionsToTest = {
   clearDirectory: false,
   saveSVGs: false,
   generateFonts: false,
-  generateDefinitions: false,
+  generatePNGs: false,
 };
 
 const output = (name: string, val1: any, val2: any) => {
@@ -84,10 +88,11 @@ if (functionsToTest.clearDirectory) {
 if (functionsToTest.saveSVGs) {
   await saveSVGs(allImageFiles, outputDir, categoryNames);
 }
-// if (functionsToTest.generateFonts) {
-//   const optimizedSvgDir = await optimizeSVGs(outputDir, categoryNames);
-//   await generateFonts(optimizedSvgDir, outputDir);
-// }
-// if (functionsToTest.generateDefinitions) {
-//   generateDefinitionFiles(outputDir, generatedFontDefinitions, manifest);
-// }
+if (functionsToTest.generateFonts) {
+  await optimizeSVGs(outputDir + "/icons", outputDir + "/temp", categoryNames);
+  const fontData = await generateFonts(outputDir + "/temp", outputDir);
+  generateDefinitionFiles(outputDir, outputDir + "/definitions", fontData, manifest);
+}
+if (functionsToTest.generatePNGs) {
+  generatePNGs(outputDir + "/icons", outputDir + "/png", categoryNames);
+}

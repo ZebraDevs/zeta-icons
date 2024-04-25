@@ -1,7 +1,6 @@
 *.png
 .github/
 test/
-scripts/
 **/temp/
 changelog.md
 analysis_options.yaml

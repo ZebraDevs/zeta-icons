@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.3.0...zeta-icons-v0.3.1) (2024-04-25)
+
+
+### Bug Fixes
+
+* adding scripts back to npm ([622be31](https://github.com/zebratechnologies/zeta-icons/commit/622be31fd2b6c0a862348b98b952c395baf4a277))
+
 ## [0.3.0](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.2.5...zeta-icons-v0.3.0) (2024-04-25)
 
 

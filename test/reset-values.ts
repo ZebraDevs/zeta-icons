@@ -1,11 +1,11 @@
-import { getFigmaDocument, getImageFiles } from "../scripts/src/utils/api.js";
-import { findIconPage, extractCategoryNodes } from "../scripts/src/utils/figmaUtils.js";
-import { generateFonts } from "../scripts/src/generators/generateFonts.js";
-import { generateIconManifest } from "../scripts/src/generators/generateIconManifest.js";
+import { getFigmaDocument, getImageFiles } from "../scripts/utils/api.js";
+import { findIconPage, extractCategoryNodes } from "../scripts/utils/figmaUtils.js";
+import { generateFonts } from "../scripts/generators/generateFonts.js";
+import { generateIconManifest } from "../scripts/generators/generateIconManifest.js";
 import { figmaToken, outputDir, zdsAssetsfigmaFileId } from "./test-data.js";
 import { writeFileSync } from "fs";
-import { generateHash } from "../scripts/src/utils/hash.js";
-import { Component } from "../scripts/src/types/figmaTypes.js";
+import { generateHash } from "../scripts/utils/hash.js";
+import { Component } from "../scripts/types/figmaTypes.js";
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 

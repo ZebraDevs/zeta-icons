@@ -1,9 +1,9 @@
-import { getFigmaDocument, getImageFiles } from "../scripts/src/utils/api.js";
-import fetchIcons from "../scripts/src/fetchIcons.js";
-import { findIconPage, extractCategoryNodes } from "../scripts/src/utils/figmaUtils.js";
-import { clearDirectory } from "../scripts/src/utils/fileUtils.js";
-import { generateIconManifest } from "../scripts/src/generators/generateIconManifest.js";
-import { saveSVGs } from "../scripts/src/utils/saveSvgs.js";
+import { getFigmaDocument, getImageFiles } from "../scripts/utils/api.js";
+import fetchIcons from "../scripts/fetchIcons.js";
+import { findIconPage, extractCategoryNodes } from "../scripts/utils/figmaUtils.js";
+import { clearDirectory } from "../scripts/utils/fileUtils.js";
+import { generateIconManifest } from "../scripts/generators/generateIconManifest.js";
+import { saveSVGs } from "../scripts/utils/saveSvgs.js";
 import {
   figmaToken,
   testFigmaFileId,
@@ -17,12 +17,12 @@ import {
   categoryNames,
   zdsAssetsfigmaFileId,
 } from "./test-data.js";
-import { Component } from "../scripts/src/types/figmaTypes.js";
-import { generateHash } from "../scripts/src/utils/hash.js";
-import { optimizeSVGs } from "../scripts/src/utils/optmizeSvgs.js";
-import { generateFonts } from "../scripts/src/generators/generateFonts.js";
-import { generateDefinitionFiles } from "../scripts/src/generators/generateDefinitionFiles.js";
-import { generatePNGs } from "../scripts/src/generators/generatePNGs.js";
+import { Component } from "../scripts/types/figmaTypes.js";
+import { generateHash } from "../scripts/utils/hash.js";
+import { optimizeSVGs } from "../scripts/utils/optmizeSvgs.js";
+import { generateFonts } from "../scripts/generators/generateFonts.js";
+import { generateDefinitionFiles } from "../scripts/generators/generateDefinitionFiles.js";
+import { generatePNGs } from "../scripts/generators/generatePNGs.js";
 
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 

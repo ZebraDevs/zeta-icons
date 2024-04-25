@@ -11,12 +11,12 @@
     "allowJs": true,
     "checkJs": false,
     "resolveJsonModule": true,
-    "outDir": "scripts/dist",
-    "typeRoots": ["./node_modules/@types", "scripts/src/definitions"]
+    "outDir": "./dist",
+    "typeRoots": ["./node_modules/@types", "scripts/definitions"]
   },
   "ts-node": {
     "esm": true,
     "files": true
   },
-  "include": ["./scripts/src/**/*.ts"]
+  "exclude": ["./test", "./dist"]
 }

@@ -20,6 +20,8 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: Install packages
         run: npm ci
+      - name: Compile Typescript files
+        run: tsc
       - name: Publish
         run: npm publish
         env:

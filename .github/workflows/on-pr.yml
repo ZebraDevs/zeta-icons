@@ -1,0 +1,32 @@
+name: Pull request
+
+on: pull_request
+
+jobs:
+  compile_js_modules:
+    name: Compile JS Modules
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: "https://registry.npmjs.org"
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{github.head_ref}}
+      - name: Install packages
+        run: npm ci
+      - name: Compile Typescript files
+        run: tsc
+      - name: Check for modified files
+        id: git-check
+        run: echo "modified=$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)" >>  $GITHUB_ENV
+      - name: Update changes in GitHub repository
+        if: env.modified == 'true'
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add -A
+          git commit -m '[automated commit] compiled JS modules'
+          git push

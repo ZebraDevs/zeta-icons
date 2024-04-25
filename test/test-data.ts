@@ -1,6 +1,6 @@
-import { IconManifest, ImageManifest } from "../scripts/src/types/customTypes.js";
+import { IconManifest, ImageManifest } from "../scripts/types/customTypes.js";
 import { readFileSync } from "fs";
-import { DocumentResponse, FigmaNode } from "../scripts/src/types/figmaTypes.js";
+import { DocumentResponse, FigmaNode } from "../scripts/types/figmaTypes.js";
 
 export const testFigmaFileId = "oIiGXVNKX4KjppcGxOEbZa";
 export const zdsAssetsfigmaFileId = "VQ7Aa3rDYB7mgpToI3bZ4D";

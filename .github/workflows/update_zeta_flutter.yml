@@ -7,21 +7,20 @@ on:
       PAT:
         required: true
 
+env:
+  flutter_branch: update-zeta-icons
+  flutter_repo: ZebraDevs/zeta_flutter
+  GH_TOKEN: ${{ secrets.PAT }}
+
 jobs:
   publish_flutter:
     runs-on: ubuntu-latest
     name: Commit and raise PR in Zeta Flutter
     steps:
-      - name: Set environment variables
-        run: |
-          echo "flutter_branch=update-zeta-icons" >> $GITHUB_ENV
-          echo "flutter_repo=ZebraDevs/zeta_flutter" >> $GITHUB_ENV
       - name: Check if existing icons branch exists
         run: echo "branch_exists=$(git ls-remote --heads https://github.com/${{env.flutter_repo}}.git refs/heads/${{env.flutter_branch}} | wc -l)" >> $GITHUB_ENV
       - name: Check if open PR exists
-        run: echo "pr_exists=$(curl https://api.github.com/repos/${{env.flutter_repo}}/pulls?head=ZebraDevs:${{env.flutter_branch}} | jq length)" >> $GITHUB_ENV
-      - name: Retrieve PR number
-        run: echo "pr_num=$(curl https://api.github.com/repos/${{env.flutter_repo}}/pulls?head=ZebraDevs:${{env.flutter_branch}} | jq .[0].number)" >> $GITHUB_ENV
+        run: echo "pr_exists=$(gh pr list -R ${{env.flutter_repo}} -H ${{env.flutter_branch}} --json number -q length" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -97,13 +96,4 @@ jobs:
           repository: ${{env.flutter_repo}}
       - name: Add comment to existing PR
         if: ${{env.pr_exists != 0}}
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{secrets.PAT}}
-          script: |
-            github.rest.issues.createComment({
-              issue_number: ${{env.pr_num}},
-              owner: "ZebraDevs",
-              repo: "zeta_flutter",
-              body: '${{env.pr_message}}'
-            })
+        run: gh pr comment -R ${{env.flutter_repo}} ${{env.flutter_branch}} --body  '${{env.pr_message}}'

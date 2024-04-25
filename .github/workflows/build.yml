@@ -46,16 +46,9 @@ jobs:
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         id: update
         run: |
-          git checkout -b icon-updates
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
+          git checkout -b icon-updates
           git add -A
           git commit -m "ci: Icon updates ${{ steps.date.outputs.date }}"
           git push --set-upstream origin icon-updates
-      - name: Create Pull Request
-        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: icon-updates
-          base: main
-          title: "ci: Icon updates"

@@ -20,7 +20,7 @@ jobs:
       - name: Check if existing icons branch exists
         run: echo "branch_exists=$(git ls-remote --heads https://github.com/${{env.flutter_repo}}.git refs/heads/${{env.flutter_branch}} | wc -l)" >> $GITHUB_ENV
       - name: Check if open PR exists
-        run: echo "pr_exists=$(gh pr list -R ${{env.flutter_repo}} -H ${{env.flutter_branch}} --json number -q length" >> $GITHUB_ENV
+        run: echo "pr_exists=$(gh pr list -R ${{env.flutter_repo}} -H ${{env.flutter_branch}} --json number -q length)" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v4
         with:

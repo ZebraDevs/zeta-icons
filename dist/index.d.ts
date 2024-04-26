@@ -1,4 +1,4 @@
-import { IconManifest } from "./scripts/types/customTypes.js";
+import { type IconManifest } from "./scripts/types/customTypes.js";
 export { ZetaIconNameList } from "./outputs/definitions/icon-types.js";
 declare const convertedIconManifest: IconManifest;
 export { convertedIconManifest as iconManifest };

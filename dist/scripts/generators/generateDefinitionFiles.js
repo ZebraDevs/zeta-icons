@@ -26,7 +26,7 @@ export const generateDefinitionFiles = (outputDir, definitionsOutputDir, fontDat
  * @returns {string} Content of `icons.dart`.
  */
 const generateDartFile = (fontData) => {
-    let dartTemplate = readFileSync("./scripts/src/templates/icons.dart.template").toString();
+    let dartTemplate = readFileSync("./scripts/templates/icons.dart.template").toString();
     const roundIcons = fontData.dartRoundTypes.join("\n");
     const sharpIcons = fontData.dartSharpTypes.join("\n");
     const roundList = fontData.dartRoundList.join(",\n") + ",";
@@ -45,7 +45,7 @@ const generateDartFile = (fontData) => {
  * @returns {string} Content of `icon-types.ts`.
  */
 const generateTSFile = (fontData) => {
-    let tsTemplate = readFileSync("./scripts/src/templates/icon-types.ts.template").toString();
+    let tsTemplate = readFileSync("./scripts/templates/icon-types.ts.template").toString();
     const tsList = fontData.tsTypes.map((icon) => `"${icon}"`).join(",\n  ");
     tsTemplate = tsTemplate.replace("{{iconNames}}", tsList);
     return tsTemplate;

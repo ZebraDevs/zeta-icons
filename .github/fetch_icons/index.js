@@ -1,6 +1,6 @@
 import core from "@actions/core";
 import { readFileSync, writeFileSync } from "fs";
-import fetchIcons from "../../scripts/dist/fetchIcons.js";
+import fetchIcons from "../../dist/scripts/fetchIcons.js";
 
 try {
   const hashPath = "./.github/fetch_icons/hash.txt";
@@ -18,7 +18,7 @@ try {
     "VQ7Aa3rDYB7mgpToI3bZ4D",
     iconPageName,
     oldHash,
-    "./outputs",
+    "outputs",
     false
   );
 

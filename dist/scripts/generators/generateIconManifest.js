@@ -6,13 +6,13 @@ import { getIconFileName } from "../utils/fileUtils.js";
  *
  * @param {FigmaNode[]} categoryNodes The given list of category nodes.
  * @param {ComponentSets} componentSets The component set map from the Figma document. Used to fetch search terms for each icon.
- * @param {string} fontOutputDir The directory that the icons should be saved to. Icon paths are generated using the pattern `[categoryName]/[icon]`
+ * @param {string} iconOutputDir The directory that the icons should be saved to. Icon paths are generated using the pattern `[categoryName]/[icon]`
  * @param {boolean} verboseLogs Logs more verbose outputs for testing.
  *
  * @returns {IconManifest} An icon manifest object.
  * @throws If any category name has an error of `ErrorSeverity.high`.
  */
-export function generateIconManifest(categoryNodes, componentSets, fontOutputDir, verboseLogs) {
+export function generateIconManifest(categoryNodes, componentSets, iconOutputDir, verboseLogs) {
     const iconMap = new Map();
     const usedIconNames = []; // A list of used icon names
     for (const category of categoryNodes) {
@@ -49,8 +49,8 @@ export function generateIconManifest(categoryNodes, componentSets, fontOutputDir
                         iconMap.set(icon.id, {
                             name: name,
                             searchTerms: getSearchTerms(icon.id, componentSets),
-                            roundPath: `${fontOutputDir}/${formattedCategoryName}/${getIconFileName(name, "round")}.svg`,
-                            sharpPath: `${fontOutputDir}/${formattedCategoryName}/${getIconFileName(name, "sharp")}.svg`,
+                            roundPath: `${iconOutputDir}/${formattedCategoryName}/${getIconFileName(name, "round")}.svg`,
+                            sharpPath: `${iconOutputDir}/${formattedCategoryName}/${getIconFileName(name, "sharp")}.svg`,
                             category: formattedCategoryName,
                             roundId: roundId,
                             sharpId: sharpId,

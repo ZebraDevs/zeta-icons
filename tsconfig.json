@@ -11,7 +11,8 @@
     "allowJs": true,
     "checkJs": false,
     "resolveJsonModule": true,
-    "outDir": "./dist",
+    "outDir": "./dist",    
+    "newLine": "lf",
     "typeRoots": ["./node_modules/@types", "scripts/definitions"]
   },
   "ts-node": {

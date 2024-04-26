@@ -2,8 +2,16 @@
   "name": "@zebra-fed/zeta-icons",
   "version": "0.3.2",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./icons/*": "./outputs/icons/*",
+    "./png/*": "./outputs/png/*",
+    "./font/*": "./outputs/font/*",
+    "./icon-manifest.json": "./outputs/icon-manifest.json",
+    "./index.css": "./index.css"
+  },
   "devDependencies": {
     "@actions/core": "^1.10.0",
     "@types/node": "^20.12.7",

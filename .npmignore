@@ -1,5 +1,6 @@
 *.png
 .github/
+.release-please/
 test/
 **/temp/
 changelog.md

@@ -16,6 +16,7 @@ import {
   manifest,
   categoryNames,
   zdsAssetsfigmaFileId,
+  zdsAssetsFigmaIconsPageName,
 } from "./test-data.js";
 import { Component } from "../scripts/types/figmaTypes.js";
 import { generateHash } from "../scripts/utils/hash.js";
@@ -46,7 +47,7 @@ const output = (name: string, val1: any, val2: any) => {
   return val1.toString() === val2.toString() ? console.log("Success - " + name) : console.error("Error - " + name);
 };
 if (functionsToTest.integration) {
-  fetchIcons(figmaToken, testFigmaFileId, "Icons", hash, outputDir, true);
+  fetchIcons(figmaToken, zdsAssetsfigmaFileId, zdsAssetsFigmaIconsPageName, hash, "outputs", true);
 }
 
 if (functionsToTest.getFigmaDocument) {
@@ -68,7 +69,7 @@ if (functionsToTest.extractCategories) {
 
 if (functionsToTest.generateIconManifest) {
   const componentSet: Map<string, Component> = new Map(Object.entries(figmaDoc.componentSets));
-  const _manifest = generateIconManifest(categories, componentSet, outputDir, true);
+  const _manifest = generateIconManifest(categories, componentSet, "/icons", true);
   output("generateIconManifest", manifest, _manifest);
 }
 

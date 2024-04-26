@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
+    ".": "./index.js",
     "./icons/*": "./outputs/icons/*",
     "./png/*": "./outputs/png/*",
     "./font/*": "./outputs/font/*",

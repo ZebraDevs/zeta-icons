@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.3.2...zeta-icons-v0.4.0) (2024-04-26)
+
+
+### Features
+
+* icon-updates ([#33](https://github.com/zebratechnologies/zeta-icons/issues/33)) ([2ff01fe](https://github.com/zebratechnologies/zeta-icons/commit/2ff01fe8f4425075bf095a376801feb8729b9837))
+
+
+### Bug Fixes
+
+* icon paths ([#34](https://github.com/zebratechnologies/zeta-icons/issues/34)) ([480e3bf](https://github.com/zebratechnologies/zeta-icons/commit/480e3bfac067d43bf78c1240d16f0bd4faef709e))
+
 ## [0.3.2](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.3.1...zeta-icons-v0.3.2) (2024-04-25)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.4.0...zeta-icons-v0.4.1) (2024-04-26)
+
+
+### Bug Fixes
+
+* Fixed export for index file ([98cfc11](https://github.com/zebratechnologies/zeta-icons/commit/98cfc11b1cdde575a4d40e50986cb969541e85fa))
+
 ## [0.4.0](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.3.2...zeta-icons-v0.4.0) (2024-04-26)
 
 

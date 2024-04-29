@@ -29,6 +29,8 @@ jobs:
       - name: Get package version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
+      - name: Inject version
+        run: sed -i 's/VERSION_NUM/${{steps.package-version.outputs.current-version}}/g' outputs/definitions/icons.dart
       - name: Push dart file to Zeta Flutter (branch exists)
         uses: dmnemec/copy_file_to_another_repo_action@main
         if: ${{env.branch_exists == 1}}

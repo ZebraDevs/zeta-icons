@@ -66,7 +66,7 @@ jobs:
       - name: Check if PR exists
         run: echo "pr_exists=$(gh pr list -H icon-updates --json number -q length)" >> $GITHUB_ENV
       - name: Create Pull Request
-        if: ${{env.pr_exists == 0}}
+        if: ${{env.pr_exists == 0 && steps.fetch_icons.outputs.files_changed == 'true'}}
         run: gh pr create -B main -H ${{env.UPDATE_BRANCH_NAME}} --title "feat:${{env.UPDATE_BRANCH_NAME}}" --body 'Created by the Zeta Icons bot'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.5.0](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.4.1...zeta-icons-v0.5.0) (2024-05-03)
+
+
+### Features
+
+* icon-updates ([#41](https://github.com/zebratechnologies/zeta-icons/issues/41)) ([ca1880c](https://github.com/zebratechnologies/zeta-icons/commit/ca1880cfdb23dc6a0aca7369ec83b990731dc8d1))
+* removing non open-sourceable icons (DNA category) ([540926b](https://github.com/zebratechnologies/zeta-icons/commit/540926b2a9f431f625e6b6c76ee0e1b5e38d3c76))
+
+
+### Miscellaneous Chores
+
+* release 0.5.0 ([3290be9](https://github.com/zebratechnologies/zeta-icons/commit/3290be9476059a1e7778baf4e33d3078396a28ee))
+
 ## [0.4.1](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.4.0...zeta-icons-v0.4.1) (2024-04-26)
 
 

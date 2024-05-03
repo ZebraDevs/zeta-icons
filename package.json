@@ -5,11 +5,11 @@
   "main": "index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./index.js",
+    ".": "./dist/index.js",
+    "./icon-manifest.json": "./outputs/icon-manifest.json",
     "./icons/*": "./outputs/icons/*",
     "./png/*": "./outputs/png/*",
     "./font/*": "./outputs/font/*",
-    "./icon-manifest.json": "./outputs/icon-manifest.json",
     "./index.css": "./index.css"
   },
   "devDependencies": {

@@ -4,11 +4,20 @@
   "type": "module",
   "main": "index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "index.css",
+    "dist/index.*js",
+    "dist/outputs",
+    "outputs/definitions",
+    "outputs/font",
+    "outputs/icons",
+    "outputs/icon-manifest.json",
+    "CHANGELOG.md"
+  ],
   "exports": {
     ".": "./dist/index.js",
     "./icon-manifest.json": "./outputs/icon-manifest.json",
     "./icons/*": "./outputs/icons/*",
-    "./png/*": "./outputs/png/*",
     "./font/*": "./outputs/font/*",
     "./index.css": "./index.css"
   },
@@ -19,19 +28,26 @@
     "sharp": "^0.33.3",
     "typescript": "^5.4.5",
     "webfont": "^11.2.26",
-    "zeta-icon-name-checker": "^0.0.5"
+    "zeta-icon-name-checker": "^0.0.5",
+    "@types/md5": "^2.3.5",
+    "md5": "^2.3.0",
+    "oslllo-svg-fixer": "^3.0.0"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "icon",
+    "library",
+    "svg"
+  ],
+  "author": "Zebra Technologies - Innovation & Design - Front-end Development Team",
   "license": "MIT",
-  "description": "An icon library for the Zeta design system.",
-  "directories": {
-    "test": "test"
-  },
+  "description": "The icon library for Zebra Technologies' Zeta Design System.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc -p tsconfig.json",
-    "build:action": "node ./.github/build_files/index.mjs"
+    "test": "npx tsx --env-file .env test/test.ts",
+    "test:all": "npx tsx --env-file .env test/test.ts --all",
+    "build": "npx tsc -p tsconfig.build.json",
+    "build:fetch-icons": "npx tsc -p tsconfig.scripts.json",
+    "fetch-icons": "npm run build:fetch-icons && node --env-file=.env ./.github/fetch_icons/index.js",
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -40,10 +56,5 @@
   "bugs": {
     "url": "https://github.com/zebratechnologies/zeta-icons/issues"
   },
-  "homepage": "https://github.com/zebratechnologies/zeta-icons#readme",
-  "dependencies": {
-    "@types/md5": "^2.3.5",
-    "md5": "^2.3.0",
-    "oslllo-svg-fixer": "^3.0.0"
-  }
+  "homepage": "https://github.com/zebratechnologies/zeta-icons#readme"
 }

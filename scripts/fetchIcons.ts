@@ -4,7 +4,7 @@ import { clearDirectory } from "./utils/fileUtils.js";
 import { generateDefinitionFiles } from "./generators/generateDefinitionFiles.js";
 import { generateFonts } from "./generators/generateFonts.js";
 import { generateIconManifest } from "./generators/generateIconManifest.js";
-import { optimizeSVGs } from "./utils/optmizeSvgs.js";
+import { optimizeSVGs } from "./utils/optimizeSvgs.js";
 import { saveSVGs } from "./utils/saveSvgs.js";
 import { generateHash } from "./utils/hash.js";
 import { ComponentSets } from "./types/figmaTypes.js";

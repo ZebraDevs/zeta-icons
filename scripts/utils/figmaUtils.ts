@@ -1,5 +1,7 @@
 import { ComponentSets, FigmaNode } from "../types/figmaTypes.js";
 
+const IGNORED_ICONSETS = ["dna"];
+
 /**
  * Locates the relevant icon page from a Figma document.
  *
@@ -24,7 +26,9 @@ export function findIconPage(document: FigmaNode, iconPageName: string): FigmaNo
  * @returns {FigmaNode[]} A list of `FigmaNode`s representing categories.
  */
 export function extractCategoryNodes(iconPage: FigmaNode): FigmaNode[] {
-  return iconPage.children.filter((child) => child.type == "FRAME") as FigmaNode[];
+  return iconPage.children.filter((child) => {
+    return child.type == "FRAME" && !IGNORED_ICONSETS.includes(child.name.toLowerCase());
+  }) as FigmaNode[];
 }
 
 /**
@@ -49,4 +53,11 @@ export function getSearchTerms(iconSetId: string, componentSets: ComponentSets):
 
   if (!iconComponentSet) return [];
   return iconComponentSet.description.split(", ") ?? "";
+}
+
+
+export function checkFigmaTokenIsSet(figmaToken: string): void {
+  if (!figmaToken || figmaToken == "") {
+    throw new Error("❌ Figma Token is not set. Set the Figma token by creating an `.env` file with its contents `FIGMA_ACCESS_TOKEN=\"...\"`");
+  }
 }

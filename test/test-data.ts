@@ -8,7 +8,7 @@ export const testIconsPageName = "Icons";
 export const zdsAssetsfigmaFileId = "VQ7Aa3rDYB7mgpToI3bZ4D";
 export const zdsAssetsFigmaIconsPageName = "🦓 Icons";
 
-export const figmaToken = ""; //TODO: populate before testing.
+export const figmaToken = process.env.FIGMA_ACCESS_TOKEN;
 export const outputDir = "test/outputs";
 
 export const figmaDoc: DocumentResponse = JSON.parse(readFileSync("./test/test-data/figmaDoc.json").toString());

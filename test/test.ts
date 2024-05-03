@@ -1,6 +1,6 @@
 import { getFigmaDocument, getImageFiles } from "../scripts/utils/api.js";
 import fetchIcons from "../scripts/fetchIcons.js";
-import { findIconPage, extractCategoryNodes } from "../scripts/utils/figmaUtils.js";
+import { findIconPage, extractCategoryNodes, checkFigmaTokenIsSet } from "../scripts/utils/figmaUtils.js";
 import { clearDirectory } from "../scripts/utils/fileUtils.js";
 import { generateIconManifest } from "../scripts/generators/generateIconManifest.js";
 import { saveSVGs } from "../scripts/utils/saveSvgs.js";
@@ -20,7 +20,7 @@ import {
 } from "./test-data.js";
 import { Component } from "../scripts/types/figmaTypes.js";
 import { generateHash } from "../scripts/utils/hash.js";
-import { optimizeSVGs } from "../scripts/utils/optmizeSvgs.js";
+import { optimizeSVGs } from "../scripts/utils/optimizeSvgs.js";
 import { generateFonts } from "../scripts/generators/generateFonts.js";
 import { generateDefinitionFiles } from "../scripts/generators/generateDefinitionFiles.js";
 import { generatePNGs } from "../scripts/generators/generatePNGs.js";
@@ -44,13 +44,15 @@ const functionsToTest = {
 };
 
 const output = (name: string, val1: any, val2: any) => {
-  return val1.toString() === val2.toString() ? console.log("Success - " + name) : console.error("Error - " + name);
+  return val1.toString() === val2.toString() ? console.log("✅ Success - " + name) : console.error("❌ Error - " + name);
 };
 if (functionsToTest.integration) {
+  checkFigmaTokenIsSet(figmaToken);
   fetchIcons(figmaToken, zdsAssetsfigmaFileId, zdsAssetsFigmaIconsPageName, hash, "outputs", true);
 }
 
 if (functionsToTest.getFigmaDocument) {
+  checkFigmaTokenIsSet(figmaToken);
   const _figmaDoc = await getFigmaDocument(testFigmaFileId, figmaToken);
   output("getFigmaDocument", figmaDoc, _figmaDoc);
 }
@@ -74,6 +76,7 @@ if (functionsToTest.generateIconManifest) {
 }
 
 if (functionsToTest.getImageFiles) {
+  checkFigmaTokenIsSet(figmaToken);
   const _allImageFiles = await getImageFiles(manifest, testFigmaFileId, figmaToken);
   output("getImageFiles", allImageFiles, _allImageFiles);
 }

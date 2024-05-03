@@ -43,7 +43,7 @@ jobs:
       - name: Install packages
         run: npm ci
       - name: Compile Typescript files
-        run: tsc
+        run: npm run build:fetch-icons
       - name: Fetch icons
         id: "fetch_icons"
         uses: ./.github/fetch_icons

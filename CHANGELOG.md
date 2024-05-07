@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.1](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.5.0...zeta-icons-v0.5.1) (2024-05-07)
+
+
+### Bug Fixes
+
+* add types to npm release ([#45](https://github.com/zebratechnologies/zeta-icons/issues/45)) ([03080b7](https://github.com/zebratechnologies/zeta-icons/commit/03080b7ae44b912567945786d130367a1795fc44))
+* flutter line endings ([#44](https://github.com/zebratechnologies/zeta-icons/issues/44)) ([38f7bc1](https://github.com/zebratechnologies/zeta-icons/commit/38f7bc1f8e892a62b822f7602ca7e9906aa60bb9))
+
 ## [0.5.0](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.4.1...zeta-icons-v0.5.0) (2024-05-03)
 
 

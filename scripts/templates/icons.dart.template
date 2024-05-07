@@ -3,25 +3,26 @@ import 'package:flutter/material.dart';
 
 const zetaIconsVersion = 'VERSION_NUM';
 
+/// Zeta Icons. Full list of icons can be found at [Zeta Icons](https://zeta-icons.web.app/).
 class ZetaIcons {
   ZetaIcons._();
   static const String _familyRound = 'zeta-icons-round';
   static const String _familySharp = 'zeta-icons-sharp';
   static const String _package = 'zeta_flutter';
 
-  /// Round Icons
-  {{roundIcons}}
+  // Round Icons
+{{roundIcons}}
 
-  /// Sharp Icons
-  {{sharpIcons}}
+  // Sharp Icons
+{{sharpIcons}}
 }
 
-/// List of all rounded icons.
+// List of all rounded icons.
 const Map<String, IconData> iconsRound = {
-  {{roundIconList}}
+{{roundIconList}}
 };
 
-/// List of all sharp icons.
+// List of all sharp icons.
 const Map<String, IconData> iconsSharp = {
-    {{sharpIconList}}
+{{sharpIconList}}
 };

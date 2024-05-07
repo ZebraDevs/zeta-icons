@@ -37,12 +37,12 @@ export const generateDefinitionFiles = (
  */
 const generateDartFile = (fontData: GenerateFontResult): string => {
   let dartTemplate = readFileSync("./scripts/templates/icons.dart.template").toString();
-  const newLine = "\n  ";
+  const newLine = "\n";
 
   const roundIcons = fontData.dartRoundTypes.join(newLine);
   const sharpIcons = fontData.dartSharpTypes.join(newLine);
-  const roundList = fontData.dartRoundList.join(newLine) + ",";
-  const sharpList = fontData.dartSharpList.join(newLine) + ",";
+  const roundList = fontData.dartRoundList.join("," + newLine) + ",";
+  const sharpList = fontData.dartSharpList.join("," + newLine) + ",";
 
   dartTemplate = dartTemplate.replace("{{roundIcons}}", roundIcons);
   dartTemplate = dartTemplate.replace("{{sharpIcons}}", sharpIcons);

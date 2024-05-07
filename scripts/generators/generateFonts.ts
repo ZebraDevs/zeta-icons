@@ -122,7 +122,7 @@ function getDartIconDefinition(iconName: string, unicode: string, type: FontType
  * @returns {string} Dart map item used for list of icons.
  */
 function getDartIconListItem(iconName: string): string {
-  return `   '${iconName}': ZetaIcons.${iconName}`;
+  return `  '${iconName}': ZetaIcons.${iconName}`;
 }
 
 /**

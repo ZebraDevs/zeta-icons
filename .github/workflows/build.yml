@@ -44,6 +44,10 @@ jobs:
         run: npm ci
       - name: Compile Typescript files
         run: npm run build:fetch-icons
+      - name: Reset values if action is not scheduled.
+        if: ${{github.event_name  != 'schedule'}}
+        run: |
+          : > ./.github/fetch_icons/hash.txt
       - name: Fetch icons
         id: "fetch_icons"
         uses: ./.github/fetch_icons

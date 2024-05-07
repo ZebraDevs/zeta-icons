@@ -6,7 +6,6 @@ import { generateIconManifest } from "../scripts/generators/generateIconManifest
 import { saveSVGs } from "../scripts/utils/saveSvgs.js";
 import {
   figmaToken,
-  testFigmaFileId,
   outputDir,
   allImageFiles,
   categories,
@@ -15,6 +14,8 @@ import {
   iconPage,
   manifest,
   categoryNames,
+  testFigmaFileId,
+  testIconsPageName,
   zdsAssetsfigmaFileId,
   zdsAssetsFigmaIconsPageName,
 } from "./test-data.js";
@@ -44,11 +45,13 @@ const functionsToTest = {
 };
 
 const output = (name: string, val1: any, val2: any) => {
-  return val1.toString() === val2.toString() ? console.log("✅ Success - " + name) : console.error("❌ Error - " + name);
+  return val1.toString() === val2.toString()
+    ? console.log("✅ Success - " + name)
+    : console.error("❌ Error - " + name);
 };
 if (functionsToTest.integration) {
   checkFigmaTokenIsSet(figmaToken);
-  fetchIcons(figmaToken, zdsAssetsfigmaFileId, zdsAssetsFigmaIconsPageName, hash, "outputs", true);
+  fetchIcons(figmaToken, testFigmaFileId, testIconsPageName, hash, outputDir, true);
 }
 
 if (functionsToTest.getFigmaDocument) {

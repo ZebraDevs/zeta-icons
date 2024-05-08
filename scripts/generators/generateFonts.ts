@@ -15,7 +15,11 @@ import { writeFileSync } from "fs";
  * @returns {Promise<GenerateFontResult>} Object containing body lines for generating definition files.
  * @throws If any font file was not generated.
  */
-export const generateFonts = async (inputDir: string, fontOutputDir: string): Promise<GenerateFontResult> => {
+export const generateFonts = async (
+  inputDir: string,
+  fontOutputDir: string,
+  fontName: string
+): Promise<GenerateFontResult> => {
   const fontResult: GenerateFontResult = {
     dartRoundTypes: [],
     dartRoundList: [],
@@ -24,7 +28,6 @@ export const generateFonts = async (inputDir: string, fontOutputDir: string): Pr
     tsTypes: [],
   } as GenerateFontResult;
 
-  const fontName = "zeta-icons";
   const baseFontPath = `${fontOutputDir}/${fontName}`;
   createFolder(fontOutputDir);
   const roundFonts = await buildFontFile("round", fontResult, inputDir);
@@ -107,9 +110,7 @@ const buildFontFile = async (type: FontType, fontResult: GenerateFontResult, inp
  * @returns {string} Dart definition line used in body of `Icons.dart`.
  */
 function getDartIconDefinition(iconName: string, unicode: string, type: FontType): string {
-  return `  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: _family${capitalizeFirstLetter(
-    type
-  )}, fontPackage: _package);`;
+  return `  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: _family${type.capitalize()}, fontPackage: _package);`;
 }
 
 /**
@@ -123,14 +124,4 @@ function getDartIconDefinition(iconName: string, unicode: string, type: FontType
  */
 function getDartIconListItem(iconName: string): string {
   return `  '${iconName}': ZetaIcons.${iconName}`;
-}
-
-/**
- * Capitalizes the first letter of a string.
- *
- * @param {string} string - String to capitalized.
- * @returns {string} Capitalized string.
- */
-function capitalizeFirstLetter(string: string): string {
-  return string.charAt(0).toUpperCase() + string.slice(1);
 }

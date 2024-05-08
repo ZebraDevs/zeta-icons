@@ -1,14 +1,13 @@
 import core from "@actions/core";
 import { readFileSync, writeFileSync } from "fs";
 import fetchIcons from "../../dist/scripts/fetchIcons.js";
+import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../figmaConfig.js";
 
-const FIGMA_ICON_FILE_ID = "VQ7Aa3rDYB7mgpToI3bZ4D";
 const FIGMA_ACCESS_TOKEN = core.getInput("figma-access-token") || process.env.FIGMA_ACCESS_TOKEN;
 
 try {
   const hashPath = "./.github/fetch_icons/hash.txt";
   let oldHash = "";
-  const iconPageName = "🦓 Icons";
 
   try {
     oldHash = readFileSync(hashPath).toString();
@@ -18,8 +17,8 @@ try {
 
   const newHash = await fetchIcons(
     FIGMA_ACCESS_TOKEN,
-    FIGMA_ICON_FILE_ID,
-    iconPageName,
+    ZDS_ASSETS_FILE_ID,
+    ZDS_ASSETS_ICON_PAGE_NAME,
     oldHash,
     "outputs",
     false

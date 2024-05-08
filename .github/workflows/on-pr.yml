@@ -2,6 +2,9 @@ name: Pull request
 
 on: pull_request
 
+env:
+  FIGMA_ACCESS_TOKEN: ${{secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}
+
 jobs:
   compile_js_modules:
     name: Compile JS Modules
@@ -17,16 +20,5 @@ jobs:
           ref: ${{github.head_ref}}
       - name: Install packages
         run: npm ci
-      - name: Compile Typescript files
-        run: tsc
-      - name: Check for modified files
-        id: git-check
-        run: echo "modified=$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)" >>  $GITHUB_ENV
-      - name: Update changes in GitHub repository
-        if: env.modified == 'true'
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add -A
-          git commit -m '[automated commit] compiled JS modules'
-          git push
+      - name: Run tests
+        run: npm run test

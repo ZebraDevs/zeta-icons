@@ -1,4 +1,3 @@
-import { writeFileSync } from "fs";
 import { ImageManifest, IconManifest } from "../types/customTypes.js";
 import { DocumentResponse } from "../types/figmaTypes.js";
 

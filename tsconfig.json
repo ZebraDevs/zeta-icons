@@ -19,5 +19,5 @@
     "esm": true,
     "files": true
   },
-  "exclude": ["./test", "./dist"]
+  "exclude": ["./test", "./dist", "./tests"]
 }

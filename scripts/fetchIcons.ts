@@ -1,5 +1,5 @@
 import { getFigmaDocument, getImageFiles } from "./utils/api.js";
-import { extractCategoryNodes, findIconPage } from "./utils/figmaUtils.js";
+import { extractCategoryNames, extractCategoryNodes, findIconPage } from "./utils/figmaUtils.js";
 import { clearDirectory } from "./utils/fileUtils.js";
 import { generateDefinitionFiles } from "./generators/generateDefinitionFiles.js";
 import { generateFonts } from "./generators/generateFonts.js";
@@ -10,11 +10,11 @@ import { generateHash } from "./utils/hash.js";
 import { ComponentSets } from "./types/figmaTypes.js";
 import { generatePNGs } from "./generators/generatePNGs.js";
 
-const fontDir = "/font";
-const iconsDir = "/icons";
-const definitionsDir = "/definitions";
-const tempDir = "/temp";
-const pngDir = "/png";
+export const fontDir = "/font";
+export const iconsDir = "/icons";
+export const definitionsDir = "/definitions";
+export const tempDir = "/temp";
+export const pngDir = "/png";
 /**
  * Main function to run icons action. For slightly more information, see {@link https://miro.com/app/board/uXjVKUMv1ME=/?share_link_id=952145602435 | Miro }
  *
@@ -71,7 +71,7 @@ export default async function main(
   console.log("✅ - Deleted old files");
 
   /// Create simple array of category names
-  const categoryNames = categories.map((category) => category.name.toSnakeCase());
+  const categoryNames = extractCategoryNames(categories);
 
   await saveSVGs(allImageFiles, iconsOutputDir, categoryNames);
   console.log("✅ - Saved new SVGs");
@@ -79,7 +79,7 @@ export default async function main(
   await optimizeSVGs(iconsOutputDir, tempOutputDir, categoryNames);
   console.log("✅ - Optimized SVGs");
 
-  const generateFontResult = await generateFonts(tempOutputDir, fontOutputDir);
+  const generateFontResult = await generateFonts(tempOutputDir, fontOutputDir, "zeta-icons");
   console.log("✅ - Generated fonts");
 
   generateDefinitionFiles(outputDir, definitionsOutputDir, generateFontResult, manifest);

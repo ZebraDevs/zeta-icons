@@ -11,11 +11,7 @@
 
 # production
 /build
-/dist
-
-# firebase
-/.firebase
-firebase-debug.log
+dist
 
 # misc
 .DS_Store

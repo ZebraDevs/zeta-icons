@@ -7,12 +7,15 @@ import { FontType } from "../types/customTypes.js";
  * Creates a directory recursively; creating intermediate directories if needed.
  *
  * @param {string} dir - Directory to create.
+ * @returns true if the directory is created.
  */
-export const createFolder = (dir: string) => {
+export const createFolder = (dir: string): boolean => {
   dir = path.normalize(dir);
   if (!existsSync(dir)) {
     mkdirSync(dir, { recursive: true });
+    return true;
   }
+  return false;
 };
 
 /**

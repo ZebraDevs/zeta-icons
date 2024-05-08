@@ -86,14 +86,18 @@ These can be displayed using the `Icon` class built into Flutter.
 
 > 🚧 **Note**: This does not work with all versions of node - tested and working with node 18.17.0
 
-1. Initialize test values:
+Before any tests are ran, make sure to create an `env.test.local` file with the value of `FIGMA_ACCESS_TOKEN` set to a Figma token which has access to the [ZDS Assets Figma](https://www.figma.com/file/VQ7Aa3rDYB7mgpToI3bZ4D/%F0%9F%A6%93-ZDS---Assets?type=design&mode=design&t=Ry8n3GUYc8uvxhMt-0) and the [Test Figma](https://www.figma.com/file/oIiGXVNKX4KjppcGxOEbZa/IconsTestPage?type=design&node-id=156-1674&mode=design&t=pBj7y8J7b6q906it-0).
 
-`ts-node --files test/reset-values.ts`
+To test the functionality of the scripts against a test Figma file with a subset of the icons, run
 
-2. Select tests to run. Within `test/test.ts`, set the values of `functionsToTest` to true.
+`npm run test`
 
-3. Run tests
+and inspect the outputs in test/outputs/test-figma.
 
-`ts-node -files test/test.ts`
+To run a full test against the ZDS Assets Figma, run
+
+`npm run test:build`
+
+and inspect the outputs in test/outputs/zds.
 
 </details>

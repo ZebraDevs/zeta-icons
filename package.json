@@ -38,7 +38,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "webfont": "^11.2.26",
-    "zeta-icon-name-checker": "^0.0.5",
+    "zeta-icon-name-checker": "^0.0.13",
     "@types/md5": "^2.3.5",
     "md5": "^2.3.0",
     "oslllo-svg-fixer": "^3.0.0"
@@ -53,12 +53,12 @@
   "license": "MIT",
   "description": "The icon library for Zebra Technologies' Zeta Design System.",
   "scripts": {
-    "pretest": "tsc -p tsconfig.test.json",
-    "test": "mocha dist/test/**/*.test.js -g fetchIcons -i --file ./test/setup.js --timeout 100000",
-    "test:build": "mocha dist/test/**/*.test.js -g fetchIcons --timeout 100000",
+    "test": "tsc -p tsconfig.test.json && mocha dist/test/**/*.test.js -g fetchIcons -i --file ./test/setup.js --timeout 100000",
+    "test:build": "tsc -p tsconfig.test.json && mocha dist/test/**/*.test.js -g fetchIcons --timeout 100000",
     "build": "npx tsc -p tsconfig.build.json",
     "build:fetch-icons": "npx tsc -p tsconfig.scripts.json",
     "fetch-icons": "npm run build:fetch-icons && node --env-file=.env ./.github/fetch_icons/index.js",
+    "regenerate-test-files": "ts-node ./test/regenerateTestFiles.ts",
     "prepack": "npm run build"
   },
   "repository": {

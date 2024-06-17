@@ -18,11 +18,10 @@ export interface FontDefinition extends IconDefinition {
 }
 
 export interface GenerateFontResult {
-  dartRoundTypes: string[];
-  dartRoundList: string[];
-  dartSharpTypes: string[];
-  dartSharpList: string[];
-  tsTypes: string[];
+  dartDefinitions: string[];
+  dartRoundDefinitions: string[];
+  dartSharpDefinitions: string[];
+  iconNames: string[];
 }
 
 export type IconManifest = Map<string, IconDefinition>;

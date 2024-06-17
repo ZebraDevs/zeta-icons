@@ -39,15 +39,16 @@ const generateDartFile = (fontData: GenerateFontResult): string => {
   let dartTemplate = readFileSync("./scripts/templates/icons.dart.template").toString();
   const newLine = "\n";
 
-  const roundIcons = fontData.dartRoundTypes.join(newLine);
-  const sharpIcons = fontData.dartSharpTypes.join(newLine);
-  const roundList = fontData.dartRoundList.join("," + newLine) + ",";
-  const sharpList = fontData.dartSharpList.join("," + newLine) + ",";
+  const icons = fontData.dartDefinitions.join(newLine);
+  const roundIcons = fontData.dartRoundDefinitions.join(newLine);
+  const sharpIcons = fontData.dartSharpDefinitions.join(newLine);
+  const iconNames =
+    fontData.iconNames.map((iconName) => `  '${iconName}': ZetaIcons.${iconName}`).join(`,${newLine}`) + ",";
 
+  dartTemplate = dartTemplate.replace("{{icons}}", icons);
   dartTemplate = dartTemplate.replace("{{roundIcons}}", roundIcons);
   dartTemplate = dartTemplate.replace("{{sharpIcons}}", sharpIcons);
-  dartTemplate = dartTemplate.replace("{{sharpIconList}}", sharpList);
-  dartTemplate = dartTemplate.replace("{{roundIconList}}", roundList);
+  dartTemplate = dartTemplate.replace("{{iconNames}}", iconNames);
 
   return dartTemplate;
 };
@@ -62,9 +63,12 @@ const generateDartFile = (fontData: GenerateFontResult): string => {
 const generateTSFile = (fontData: GenerateFontResult): string => {
   let tsTemplate = readFileSync("./scripts/templates/icon-types.ts.template").toString();
 
-  const tsList = fontData.tsTypes.map((icon) => `"${icon}"`).join(",\n  ");
+  const nameList = fontData.iconNames.map((icon) => `"${icon}"`);
+  const iconNames = nameList.join(",\n  ");
+  const unionType = nameList.join("\n | ");
 
-  tsTemplate = tsTemplate.replace("{{iconNames}}", tsList);
+  tsTemplate = tsTemplate.replace("{{iconNames}}", iconNames);
+  tsTemplate = tsTemplate.replace("{{iconTypes}}", unionType);
 
   return tsTemplate;
 };

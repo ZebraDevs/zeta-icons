@@ -21,12 +21,11 @@ export const generateFonts = async (
   fontName: string
 ): Promise<GenerateFontResult> => {
   const fontResult: GenerateFontResult = {
-    dartRoundTypes: [],
-    dartRoundList: [],
-    dartSharpTypes: [],
-    dartSharpList: [],
-    tsTypes: [],
-  } as GenerateFontResult;
+    dartDefinitions: [],
+    dartRoundDefinitions: [],
+    dartSharpDefinitions: [],
+    iconNames: [],
+  };
 
   const baseFontPath = `${fontOutputDir}/${fontName}`;
   createFolder(fontOutputDir);
@@ -77,18 +76,15 @@ const buildFontFile = async (type: FontType, fontResult: GenerateFontResult, inp
         obj.unicode[0] = String.fromCharCode(unicodeAcc);
         obj.name = obj.unicode[1] = obj.name.replace("_round", "").replace("_sharp", "");
 
-        const dartIconName = getIconFileName(obj.name, type);
-
         const strUnicode = Number(unicodeAcc).toString(16);
 
         if (type === "round") {
-          fontResult.dartRoundTypes.push(getDartIconDefinition(dartIconName, strUnicode, "round"));
-          fontResult.dartRoundList.push(getDartIconListItem(dartIconName));
+          fontResult.dartDefinitions.push(getDartIconDefinition(obj.name, strUnicode, undefined));
+          fontResult.dartRoundDefinitions.push(getDartIconDefinition(obj.name, strUnicode, "round"));
 
-          fontResult.tsTypes.push(obj.name);
+          fontResult.iconNames.push(obj.name);
         } else if (type === "sharp") {
-          fontResult.dartSharpTypes.push(getDartIconDefinition(dartIconName, strUnicode, "sharp"));
-          fontResult.dartSharpList.push(getDartIconListItem(dartIconName));
+          fontResult.dartSharpDefinitions.push(getDartIconDefinition(obj.name, strUnicode, "sharp"));
         }
 
         unicodeAcc++;
@@ -109,19 +105,14 @@ const buildFontFile = async (type: FontType, fontResult: GenerateFontResult, inp
  * @param {FontType} type - Round or sharp.
  * @returns {string} Dart definition line used in body of `Icons.dart`.
  */
-function getDartIconDefinition(iconName: string, unicode: string, type: FontType): string {
-  return `  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: _family${type.capitalize()}, fontPackage: _package);`;
-}
+function getDartIconDefinition(iconName: string, unicode: string, type: FontType | undefined): string {
+  if (type == undefined) {
+    iconName = iconName.toSnakeCase();
+  } else {
+    iconName = getIconFileName(iconName, type);
+  }
 
-/**
- * Generates line in dart icons list for an icon.
- *
- * * Does not contain new line characters, or commas.
- * * Does contain spaces for formatting.
- *
- * @param {string} iconName - snake_case formatted name for icon.
- * @returns {string} Dart map item used for list of icons.
- */
-function getDartIconListItem(iconName: string): string {
-  return `  '${iconName}': ZetaIcons.${iconName}`;
+  return `  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${
+    type?.capitalize() ?? ""
+  }, fontPackage: package);`;
 }

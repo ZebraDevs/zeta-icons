@@ -6,6 +6,8 @@ import { zdsIntegrationOutputDir } from "../data/constants.js";
 import { existsSync, readFileSync, rmSync } from "fs";
 import { IconManifest } from "../../scripts/types/customTypes.js";
 import { checkFontsExist, checkIconsExist } from "../utils.js";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
 
 describe("fetchIcons", () => {
   before(async () => {

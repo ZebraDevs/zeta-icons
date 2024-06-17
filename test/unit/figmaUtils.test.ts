@@ -16,12 +16,12 @@ import {
   iconPage,
   singleCategoryNode,
 } from "../data/index.js";
+import { testIconPageName } from "../data/constants.js";
 
 describe("figmaUtils", () => {
   describe("findIconPage", () => {
     it("should find the correct page with the given page name", () => {
-      const iconPageName = "Icons";
-      const result = findIconPage(figmaDoc.document, iconPageName);
+      const result = findIconPage(figmaDoc.document, testIconPageName);
 
       assert.deepEqual(result, iconPage);
     });

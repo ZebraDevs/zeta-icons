@@ -11,3 +11,5 @@ export const zdsIntegrationOutputDir = `${baseDir}/zds`;
 export const testFontName = "test-zeta-icons";
 
 export const testFileId = "oIiGXVNKX4KjppcGxOEbZa";
+
+export const testIconPageName = "Icons";

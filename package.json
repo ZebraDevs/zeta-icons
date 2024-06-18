@@ -38,7 +38,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "webfont": "^11.2.26",
-    "zeta-icon-name-checker": "^0.0.13",
+    "zeta-icon-name-checker": "^0.0.15",
     "@types/md5": "^2.3.5",
     "md5": "^2.3.0",
     "oslllo-svg-fixer": "^3.0.0"

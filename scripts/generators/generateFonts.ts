@@ -4,6 +4,7 @@ import { webfont } from "webfont";
 import { createFolder, getIconFileName } from "../utils/fileUtils.js";
 import { writeFileSync } from "fs";
 
+const GITHUB_URL = "https://raw.githubusercontent.com/ZebraDevs/zeta-icons/main/ouputs/png/";
 /**
  * Generates font files from optimized SVGs.
  *
@@ -106,13 +107,22 @@ const buildFontFile = async (type: FontType, fontResult: GenerateFontResult, inp
  * @returns {string} Dart definition line used in body of `Icons.dart`.
  */
 function getDartIconDefinition(iconName: string, unicode: string, type: FontType | undefined): string {
+  const name_link = `${iconName}_${type === undefined ? "round" : type}`;
+  const readableName = iconName
+    .split("_")
+    .map((e) => e.capitalize())
+    .join(" ");
+
   if (type == undefined) {
     iconName = iconName.toSnakeCase();
   } else {
     iconName = getIconFileName(iconName, type);
   }
 
-  return `  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${
+  return `  /// <i> <img width='48' src="${GITHUB_URL}${name_link}.png"></br>${readableName} icon ${
+    type != undefined ? `(${type})` : ""
+  }</i>
+  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${
     type?.capitalize() ?? ""
   }, fontPackage: package);`;
 }

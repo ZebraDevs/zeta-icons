@@ -1,20 +1,8 @@
-<details>
-    <summary>Zebra Repository Information</summary>
-    <ul>
-        <li> Zebra Business Unit : DMO - I&D Team </li>
-        <li> Zebra Manager : ncvt73 </li>
-        <li> Zebra Repo Admin: mikecoomber </li>
-        <li> Zebra Jira Project ID: N/A  </li>
-        <li> Product: zeta-icons</li>
-        <li> Topics: zeta-icons, icon library</li>
-    </ul>
-</details>
-
 # zeta-icons
 
 An icon library for the Zeta design system.
 
-## Web
+# Web
 
 > 🚧 **Note**: Currently, the only way to use these icons is directly from `zeta-icons`. This will change in the future with the impending release of `zeta-web` and `zeta-react`.
 
@@ -101,3 +89,7 @@ To run a full test against the ZDS Assets Figma, run
 and inspect the outputs in test/outputs/zds.
 
 </details>
+
+## Licensing
+
+This software is licensed with the MIT license (see [LICENSE](./LICENSE)).

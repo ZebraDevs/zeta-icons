@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "Node16",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowArbitraryExtensions": true,
+    "declaration": true,
+    "moduleResolution": "node16",
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "outDir": "./dist",    
+    "newLine": "lf",
+    "typeRoots": ["./node_modules/@types", "scripts/definitions"]
+  },
+  "ts-node": {
+    "esm": true,
+    "files": true
+  },
+  "exclude": ["./test", "./dist"]
+}

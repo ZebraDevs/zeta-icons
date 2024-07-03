@@ -1,0 +1,37 @@
+name: "Release"
+
+on:
+  workflow_dispatch:
+  release:
+    types: [released]
+
+jobs:
+  publish:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{github.ref_name}}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: "https://registry.npmjs.org"
+      - name: Install packages
+        run: npm ci
+      - name: Compile Typescript files
+        run: tsc
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  update_npm_dependencies:
+    needs: publish
+    uses: ./.github/workflows/update_dependencies.yml
+    secrets: inherit
+
+  update_flutter:
+    uses: ./.github/workflows/update_zeta_flutter.yml
+    secrets: inherit

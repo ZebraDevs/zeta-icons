@@ -1,0 +1,72 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs automatically twice a week on Monday and Wednesday
+    - cron: "0 8 * * 1"
+    - cron: "0 8 * * 3"
+
+env:
+  UPDATE_BRANCH_NAME: icon-updates
+  GH_TOKEN: ${{ secrets.PAT }}
+
+jobs:
+  fetch_icons:
+    runs-on: ubuntu-latest
+    name: Fetch icons and build output files
+    # Uncomment below line if testing action via push to prevent recursion
+    if: ${{ github.event.commits[0].author.name != 'Automated Version Bump' }}
+    outputs:
+      update: ${{ steps.fetch_icons.outputs.files_changed }}
+      version: ${{ steps.package-version-new.outputs.current-version }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: "https://registry.npmjs.org"
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{github.ref_name}}
+          token: ${{ secrets.PAT }}
+      - name: Check if icon-updates branch exists
+        id: branch-exists
+        run: echo "branch_exists=$(git ls-remote --heads origin refs/heads/${{env.UPDATE_BRANCH_NAME}} | wc -l)" >> $GITHUB_ENV
+      - name: Checkout existing branch
+        if: ${{ env.branch_exists == 1 }}
+        run: git checkout ${{env.UPDATE_BRANCH_NAME}}
+      - name: Checkout new branch
+        if: ${{ env.branch_exists == 0 }}
+        run: git checkout -b ${{env.UPDATE_BRANCH_NAME}}
+      - name: Install packages
+        run: npm ci
+      - name: Compile Typescript files
+        run: npm run build:fetch-icons
+      - name: Fetch icons
+        id: "fetch_icons"
+        uses: ./.github/fetch_icons
+        with:
+          figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
+      - name: Icons changed
+        run: echo ${{ steps.fetch_icons.outputs.files_changed }}
+      - name: Get current date
+        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
+        id: date
+        run: echo "::set-output name=date::$(date +'%d-%b-%Y')"
+      - name: Push
+        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
+        run: |
+          git config --global user.name "zeta-icons-bot"
+          git config --global user.email "zeta-icons-bot@github.com"
+          git add -A
+          git commit -m "feat: Icon updates ${{ steps.date.outputs.date }}"
+          git push --set-upstream origin ${{env.UPDATE_BRANCH_NAME}}
+      - name: Check if PR exists
+        run: echo "pr_exists=$(gh pr list -H icon-updates --json number -q length)" >> $GITHUB_ENV
+      - name: Create Pull Request
+        if: ${{env.pr_exists == 0 && steps.fetch_icons.outputs.files_changed == 'true'}}
+        run: gh pr create -B main -H ${{env.UPDATE_BRANCH_NAME}} --title "feat:${{env.UPDATE_BRANCH_NAME}}" --body 'Created by the Zeta Icons bot'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

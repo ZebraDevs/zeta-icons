@@ -19,6 +19,7 @@ export const generatePNGs = (inputDir: string, outputDir: string, categories: st
       const name = split.pop()?.slice(0, -3);
       sharp(inputDir + "/" + cat + "/" + svg)
         .resize(512)
+        .modulate({ lightness: 44 })
         .png()
         .toFile(outputDir + "/" + name + "png");
     }

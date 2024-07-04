@@ -107,11 +107,7 @@ const buildFontFile = async (type: FontType, fontResult: GenerateFontResult, inp
  * @returns {string} Dart definition line used in body of `Icons.dart`.
  */
 function getDartIconDefinition(iconName: string, unicode: string, type: FontType | undefined): string {
-  const name_link = `${iconName}_${type === undefined ? "round" : type}`;
-  const readableName = iconName
-    .split("_")
-    .map((e) => e.capitalize())
-    .join(" ");
+  const iconPreview = getIconPreview(iconName, type);
 
   if (type == undefined) {
     iconName = iconName.toSnakeCase();
@@ -119,10 +115,19 @@ function getDartIconDefinition(iconName: string, unicode: string, type: FontType
     iconName = getIconFileName(iconName, type);
   }
 
-  return `  /// <i> <img width='48' src="${GITHUB_URL}${name_link}.png"></br>${readableName} icon ${
-    type != undefined ? `(${type})` : ""
-  }</i>
+  return `${iconPreview}
   static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${
     type?.capitalize() ?? ""
   }, fontPackage: package);`;
+}
+
+function getIconPreview(iconName: string, type: FontType | undefined) {
+  const name_link = `${iconName}_${type === undefined ? "round" : type}`;
+  const readableName = iconName
+    .split("_")
+    .map((e) => e.capitalize())
+    .join(" ");
+  return `  /// <i> <img width='48' src="${GITHUB_URL}${name_link}.png"></br>${readableName} icon ${
+    type != undefined ? `(${type})` : ""
+  }</i>`;
 }

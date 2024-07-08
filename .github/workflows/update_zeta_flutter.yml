@@ -10,7 +10,6 @@ on:
 env:
   flutter_branch: update-zeta-icons
   flutter_repo: ZebraDevs/zeta_flutter
-  GH_TOKEN: ${{ secrets.PAT }}
 
 jobs:
   publish_flutter:

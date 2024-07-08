@@ -9,7 +9,6 @@ on:
 
 env:
   UPDATE_BRANCH_NAME: icon-updates
-  GH_TOKEN: ${{ secrets.PAT }}
 
 jobs:
   fetch_icons:
@@ -76,4 +75,4 @@ jobs:
         run: |
           gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "${{steps.title.outputs.TITLE}}" --body 'Created by the Zeta Icons bot'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}

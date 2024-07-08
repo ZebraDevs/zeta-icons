@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.5.2](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.5.2...zeta-icons-v0.5.2) (2024-07-08)
+
+
+### Features
+
+* Icon updates 03-Jul-2024 ([#2](https://github.com/ZebraDevs/zeta-icons/issues/2)) ([67aff3a](https://github.com/ZebraDevs/zeta-icons/commit/67aff3a28c5b64625feaaed92f3a1fc9e6fff22c))
+* Icon updates 07-May-2024 ([#48](https://github.com/ZebraDevs/zeta-icons/issues/48)) ([98b671e](https://github.com/ZebraDevs/zeta-icons/commit/98b671e340237e099cef6ffc3c90407f862c772e))
+* Icon updates 08-Jul-2024 ([#12](https://github.com/ZebraDevs/zeta-icons/issues/12)) ([609fd2f](https://github.com/ZebraDevs/zeta-icons/commit/609fd2ffef78717f141895c7c1a7ea5eba8eb89f))
+* icon-updates ([#56](https://github.com/ZebraDevs/zeta-icons/issues/56)) ([45cb828](https://github.com/ZebraDevs/zeta-icons/commit/45cb82836979c3b27918a6e10a9a73cccb237267))
+* **UX-1021:** Add inline icon previews for dart ([#5](https://github.com/ZebraDevs/zeta-icons/issues/5)) ([1908294](https://github.com/ZebraDevs/zeta-icons/commit/19082947c4535a24f131427047ed35d15a2eee8f))
+
+
+### Bug Fixes
+
+* add types to npm release ([#45](https://github.com/ZebraDevs/zeta-icons/issues/45)) ([9a9ccf2](https://github.com/ZebraDevs/zeta-icons/commit/9a9ccf2af7bb37af1f70b3f0e319d0cc0352fa5a))
+* Fixed typo in dart template ([c0a8ccc](https://github.com/ZebraDevs/zeta-icons/commit/c0a8cccac7c7c1871e4a5ba682f44c8c2274c384))
+* flutter line endings ([#44](https://github.com/ZebraDevs/zeta-icons/issues/44)) ([e9be4ff](https://github.com/ZebraDevs/zeta-icons/commit/e9be4ff661ca0f0f790d58a24132bf9f12e4ce3f))
+* Typo in github URL for dart previews ([#7](https://github.com/ZebraDevs/zeta-icons/issues/7)) ([69e3950](https://github.com/ZebraDevs/zeta-icons/commit/69e3950a6711fc2bb8b0c3d227472ae934725a48))
+* Update figma page name ([#58](https://github.com/ZebraDevs/zeta-icons/issues/58)) ([ddaa23c](https://github.com/ZebraDevs/zeta-icons/commit/ddaa23c5b14e8023cfcc10db5a9da9ea461034e0))
+
+
+### Miscellaneous Chores
+
+* release 0.5.0 ([b4e5322](https://github.com/ZebraDevs/zeta-icons/commit/b4e53220b4fc25e81b1f1e440a6f1b633520598b))
+* update to 0.5.2 ([49d3433](https://github.com/ZebraDevs/zeta-icons/commit/49d3433426266cda7b40994b7da860db5c619e3f))
+
 ## [0.5.2](https://github.com/zebratechnologies/zeta-icons/compare/zeta-icons-v0.5.1...zeta-icons-v0.5.2) (2024-06-19)
 
 

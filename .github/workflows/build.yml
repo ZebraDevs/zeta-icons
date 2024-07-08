@@ -51,6 +51,15 @@ jobs:
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         id: date
         run: echo date=$(date +'%d-%b-%Y') >> $GITHUB_OUTPUT
+      - name: Create PR title
+        id: title
+        run: |
+          if [ ${{github.ref_name=='main'}} ]; then
+            TITLE='feat: Icon updates ${{ steps.date.outputs.date }}'
+          else
+            TITLE='feat: Icon updates ${{ steps.date.outputs.date }}(${{github.ref_name}})'
+          fi
+          echo "TITLE=$TITLE" >> $GITHUB_OUTPUT
       - name: Push
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         run: |
@@ -58,12 +67,13 @@ jobs:
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
           git add -A
-          git commit -m "feat: Icon updates ${{ steps.date.outputs.date }}"
+          git commit -m "${{steps.title.outputs.TITLE}}"
           git push --set-upstream origin ${{steps.branch_name.outputs.BRANCH_NAME}} -f
       - name: Check if PR exists
         run: echo "pr_exists=$(gh pr list -H ${{steps.branch_name.outputs.BRANCH_NAME}} --json number -q length)" >> $GITHUB_ENV
       - name: Create Pull Request
         if: ${{env.pr_exists == 0 && steps.fetch_icons.outputs.files_changed == 'true'}}
-        run: gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "feat:${{steps.branch_name.outputs.BRANCH_NAME}}" --body 'Created by the Zeta Icons bot'
+        run: |
+          gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "${{steps.title.outputs.TITLE}}" --body 'Created by the Zeta Icons bot'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

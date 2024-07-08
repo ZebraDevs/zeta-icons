@@ -28,18 +28,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
           ref: ${{github.ref_name}}
-          token: ${{ secrets.PAT }}
-      - name: Check if icon-updates branch exists
-        id: branch-exists
-        run: echo "branch_exists=$(git ls-remote --heads origin refs/heads/${{env.UPDATE_BRANCH_NAME}} | wc -l)" >> $GITHUB_ENV
-      - name: Checkout existing branch
-        if: ${{ env.branch_exists == 1 }}
-        run: git checkout ${{env.UPDATE_BRANCH_NAME}}
-      - name: Checkout new branch
-        if: ${{ env.branch_exists == 0 }}
-        run: git checkout -b ${{env.UPDATE_BRANCH_NAME}}
+      - name: Create new branch name
+        id: "branch_name"
+        run: echo "BRANCH_NAME='${{env.UPDATE_BRANCH_NAME}}-${{github.ref_name}}'" >> $GITHUB_OUTPUT
       - name: Install packages
         run: npm ci
       - name: Compile Typescript files
@@ -58,19 +50,20 @@ jobs:
       - name: Get current date
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         id: date
-        run: echo "::set-output name=date::$(date +'%d-%b-%Y')"
+        run: echo date=$(date +'%d-%b-%Y') >> $GITHUB_OUTPUT
       - name: Push
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         run: |
+          git checkout -b ${{steps.branch_name.outputs.BRANCH_NAME}}
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
           git add -A
           git commit -m "feat: Icon updates ${{ steps.date.outputs.date }}"
-          git push --set-upstream origin ${{env.UPDATE_BRANCH_NAME}}
+          git push --set-upstream origin ${{steps.branch_name.outputs.BRANCH_NAME}} -f
       - name: Check if PR exists
-        run: echo "pr_exists=$(gh pr list -H icon-updates --json number -q length)" >> $GITHUB_ENV
+        run: echo "pr_exists=$(gh pr list -H ${{steps.branch_name.outputs.BRANCH_NAME}} --json number -q length)" >> $GITHUB_ENV
       - name: Create Pull Request
         if: ${{env.pr_exists == 0 && steps.fetch_icons.outputs.files_changed == 'true'}}
-        run: gh pr create -B main -H ${{env.UPDATE_BRANCH_NAME}} --title "feat:${{env.UPDATE_BRANCH_NAME}}" --body 'Created by the Zeta Icons bot'
+        run: gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "feat:${{steps.branch_name.outputs.BRANCH_NAME}}" --body 'Created by the Zeta Icons bot'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

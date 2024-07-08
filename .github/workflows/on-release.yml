@@ -2,8 +2,9 @@ name: CI - On Release
 
 on:
   workflow_dispatch:
-  release:
-    types: [released]
+  push:
+    tags:
+      - "zeta-icons-v[0-9]+.[0-9]+.[0-9]+*"
 
 jobs:
   publish:

@@ -4,7 +4,7 @@ import { webfont } from "webfont";
 import { createFolder, getIconFileName } from "../utils/fileUtils.js";
 import { writeFileSync } from "fs";
 
-const GITHUB_URL = "https://raw.githubusercontent.com/ZebraDevs/zeta-icons/main/ouputs/png/";
+const GITHUB_URL = "https://raw.githubusercontent.com/ZebraDevs/zeta-icons/main/outputs/png/";
 /**
  * Generates font files from optimized SVGs.
  *

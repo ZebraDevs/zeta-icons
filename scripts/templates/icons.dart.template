@@ -23,7 +23,7 @@ abstract class ZetaIcons {
 {{sharpIcons}}
 }
 
-  // List of all rounded icons.
+  // List of all icons.
 const Map<String, IconData> icons = {
 {{iconNames}}
 };

@@ -10,11 +10,12 @@ import { generateHash } from "./utils/hash.js";
 import { ComponentSets } from "./types/figmaTypes.js";
 import { generatePNGs } from "./generators/generatePNGs.js";
 
-export const fontDir = "/font";
 export const iconsDir = "/icons";
-export const definitionsDir = "/definitions";
 export const tempDir = "/temp";
 export const pngDir = "/png";
+export const dartDir = "/dart";
+export const tsDir = "/ts";
+
 /**
  * Main function to run icons action. For slightly more information, see {@link https://miro.com/app/board/uXjVKUMv1ME=/?share_link_id=952145602435 | Miro }
  *
@@ -35,11 +36,11 @@ export default async function main(
   outputDir: string,
   verboseLogs: boolean
 ): Promise<string | undefined> {
-  const fontOutputDir = outputDir + fontDir;
   const iconsOutputDir = outputDir + iconsDir;
-  const definitionsOutputDir = outputDir + definitionsDir;
   const tempOutputDir = outputDir + tempDir;
   const pngOutputDir = outputDir + pngDir;
+  const dartOutputDir = outputDir + dartDir;
+  const tsOutputDir = outputDir + tsDir;
 
   const response = await getFigmaDocument(figmaFileId, figmaToken);
   console.log("✅ - Fetched figma document");
@@ -79,10 +80,10 @@ export default async function main(
   await optimizeSVGs(iconsOutputDir, tempOutputDir, categoryNames);
   console.log("✅ - Optimized SVGs");
 
-  const generateFontResult = await generateFonts(tempOutputDir, fontOutputDir, "zeta-icons");
+  const generateFontResult = await generateFonts(tempOutputDir, "zeta-icons", dartOutputDir, tsOutputDir);
   console.log("✅ - Generated fonts");
 
-  generateDefinitionFiles(outputDir, definitionsOutputDir, generateFontResult, manifest);
+  generateDefinitionFiles(outputDir, generateFontResult, manifest);
   console.log("✅ - Generated definition files.");
 
   generatePNGs(iconsOutputDir, pngOutputDir, categoryNames);

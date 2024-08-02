@@ -1,8 +1,8 @@
 import { assert } from "chai";
 import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../figmaConfig.js";
-import fetchIcons, { definitionsDir, fontDir } from "../../scripts/fetchIcons.js";
+import fetchIcons from "../../scripts/fetchIcons.js";
 import { checkFigmaTokenIsSet } from "../../scripts/utils/figmaUtils.js";
-import { zdsIntegrationOutputDir } from "../data/constants.js";
+import { testDartOutputDir, testTSOutputDir, zdsIntegrationOutputDir } from "../data/constants.js";
 import { existsSync, readFileSync, rmSync } from "fs";
 import { IconManifest } from "../../scripts/types/customTypes.js";
 import { checkFontsExist, checkIconsExist } from "../utils.js";
@@ -41,11 +41,15 @@ describe("fetchIcons", () => {
   });
 
   it("should create fonts", () => {
-    checkFontsExist("zeta-icons", `${zdsIntegrationOutputDir}/${fontDir}`);
+    checkFontsExist(
+      "zeta-icons",
+      `${zdsIntegrationOutputDir}/${testDartOutputDir}`,
+      `${zdsIntegrationOutputDir}/${testTSOutputDir}`
+    );
   });
 
   it("should write definition files", () => {
-    assert.equal(existsSync(`${zdsIntegrationOutputDir}/${definitionsDir}/icons.dart`), true);
-    assert.equal(existsSync(`${zdsIntegrationOutputDir}/${definitionsDir}/icon-types.ts`), true);
+    assert.equal(existsSync(`${zdsIntegrationOutputDir}/${testDartOutputDir}/icons.dart`), true);
+    assert.equal(existsSync(`${zdsIntegrationOutputDir}/${testTSOutputDir}/icon-types.ts`), true);
   });
 });

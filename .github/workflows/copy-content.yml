@@ -1,0 +1,85 @@
+name: Copy content to other repository
+
+on:
+  workflow_call:
+    inputs:
+      repo:
+        required: true
+        type: string
+      branch:
+        required: true
+        type: string
+      source_dir:
+        required: true
+        type: string
+      destination_dir:
+        required: true
+        type: string
+      commit_msg:
+        required: true
+        type: string
+    secrets:
+      PAT:
+        required: true
+
+jobs:
+  copy_content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if existing tokens branch exists
+        id: check_branch
+        run: echo "branch_exists=$(git ls-remote --heads https://github.com/${{ inputs.repo }}.git refs/heads/${{ inputs.branch }} | wc -l | xargs)" >> $GITHUB_OUTPUT
+      - name: Check if open PR exists
+        id: check_pr
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+        run: echo "pr_exists=$(gh pr list -R ${{ inputs.repo }} -H ${{ inputs.branch }} --json number -q length)" >> $GITHUB_OUTPUT
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Pull latest changes
+        run: git pull
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+      - name: Push files if branch exists
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        if: ${{ steps.check_branch.outputs.branch_exists != 0 }}
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.PAT }}
+        with:
+          source_file: ${{ inputs.source_dir }}
+          destination_repo: ${{ inputs.repo }}
+          destination_folder: ${{ inputs.destination_dir }}
+          destination_branch: ${{ inputs.branch }}
+          user_email: "zeta-tokens-bot@github.com"
+          user_name: "Zeta Tokens Bot"
+          commit_message: "deps(automated): ${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
+      - name: Push files if branch does not exist
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        if: ${{ steps.check_branch.outputs.branch_exists == 0 }}
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.PAT }}
+        with:
+          source_file: ${{ inputs.source_dir }}
+          destination_repo: ${{ inputs.repo }}
+          destination_folder: ${{ inputs.destination_dir }}
+          destination_branch_create: ${{ inputs.branch }}
+          user_email: "zeta-tokens-bot@github.com"
+          user_name: "Zeta Tokens Bot"
+          commit_message: "deps(automated): ${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
+      - name: Open PR
+        uses: thecanadianroot/open-pull-request-action@v1.1.1
+        if: ${{ steps.check_pr.outputs.pr_exists == 0 }}
+        with:
+          token: ${{ secrets.PAT }}
+          base: main
+          head: ${{ inputs.branch }}
+          title: "deps(automated): ${{inputs.commit_msg}}"
+          labels: tokens
+          body: "${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
+          repository: ${{ inputs.repo }}
+      - name: Add comment to existing PR
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+        if: ${{ steps.check_pr.outputs.pr_exists != 0 }}
+        run: gh pr comment -R ${{ inputs.repo }} ${{ inputs.branch }} --body "${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"

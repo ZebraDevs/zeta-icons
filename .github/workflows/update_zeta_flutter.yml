@@ -12,12 +12,11 @@ env:
 
 jobs:
   publish_flutter: #TODO: Rename this to deploy, I think that is a better name
-    uses: ./.github/workflows/copy-content.yml@UX-1145
-    needs: generate_tokens
-    if: ${{ needs.generate_tokens.outputs.changes == 'true' }}
+    uses: ./.github/workflows/copy-content.yml
     secrets: inherit
     with:
       repo: ZebraDevs/zeta_flutter
       branch: "update-zeta-icons"
       source_dir: "./outputs/dart/."
       destination_dir: "lib/generated/icons"
+      commit_msg: "Update icons"

@@ -70,9 +70,10 @@ jobs:
           git push --set-upstream origin ${{steps.branch_name.outputs.BRANCH_NAME}} -f
       - name: Check if PR exists
         run: echo "pr_exists=$(gh pr list -H ${{steps.branch_name.outputs.BRANCH_NAME}} --json number -q length)" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Create Pull Request
         if: ${{env.pr_exists == 0 && steps.fetch_icons.outputs.files_changed == 'true'}}
-        run: |
-          gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "${{steps.title.outputs.TITLE}}" --body 'Created by the Zeta Icons bot'
+        run: gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "${{steps.title.outputs.TITLE}}" --body 'Created by the Zeta Icons bot'
         env:
           GITHUB_TOKEN: ${{ github.token }}

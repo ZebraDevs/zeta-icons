@@ -9,11 +9,11 @@ export function checkIconsExist(manifest: IconManifest) {
   });
 }
 
-export function checkFontsExist(fontName: string, dir: string) {
-  assert.equal(fontExists("ttf", "round", fontName, dir), true);
-  assert.equal(fontExists("ttf", "sharp", fontName, dir), true);
-  assert.equal(fontExists("woff2", "round", fontName, dir), true);
-  assert.equal(fontExists("woff2", "sharp", fontName, dir), true);
+export function checkFontsExist(fontName: string, dartDir: string, tsDir: string) {
+  assert.equal(fontExists("ttf", "round", fontName, dartDir), true);
+  assert.equal(fontExists("ttf", "sharp", fontName, dartDir), true);
+  assert.equal(fontExists("woff2", "round", fontName, tsDir), true);
+  assert.equal(fontExists("woff2", "sharp", fontName, tsDir), true);
 }
 
 function fontExists(format: string, type: FontType, fontName: string, dir: string): boolean {

@@ -3,8 +3,8 @@ const baseDir = "./test/outputs";
 export const testOutputDir = `${baseDir}/test-figma`;
 export const testTempOutputDir = `${testOutputDir}/temp`;
 export const testIconsOutputDir = `${testOutputDir}/icons`;
-export const testFontsOutputDir = `${testOutputDir}/fonts`;
-export const testDefinitionsOutputDir = `${testOutputDir}/definitions`;
+export const testDartOutputDir = `${testOutputDir}/dart`;
+export const testTSOutputDir = `${testOutputDir}/ts`;
 
 export const zdsIntegrationOutputDir = `${baseDir}/zds`;
 

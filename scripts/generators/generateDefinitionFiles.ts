@@ -1,29 +1,28 @@
 import { createFolder } from "../utils/fileUtils.js";
 import { GenerateFontResult, IconManifest } from "../types/customTypes.js";
 import { readFileSync, writeFileSync } from "fs";
+import { dartDir, tsDir } from "../fetchIcons.js";
 
 /**
  * Writes out `icon-manifest.json`, `icons.dart` and `icon-types.ts`.
  *
  * @param {String} outputDir - Location of output directory. Icon manifest is saved here.
- * @param {String} definitionsOutputDir - Location of definitions output.
  * @param {GenerateFontResult} fontData - Object containing body lines for generating definition files.
  * @param {IconManifest} manifest - data to be written to `icon-manifest.json`
  */
-export const generateDefinitionFiles = (
-  outputDir: string,
-  definitionsOutputDir: string,
-  fontData: GenerateFontResult,
-  manifest: IconManifest
-) => {
-  createFolder(definitionsOutputDir);
+export const generateDefinitionFiles = (outputDir: string, fontData: GenerateFontResult, manifest: IconManifest) => {
+  const dartOutputDir = outputDir + dartDir;
+  const tsOutputDir = outputDir + tsDir;
+
+  createFolder(dartOutputDir);
+  createFolder(tsOutputDir);
 
   const dartFile = generateDartFile(fontData);
   const tsFile = generateTSFile(fontData);
   const iconManifestFile = JSON.stringify(Object.fromEntries(manifest));
 
-  writeFileSync(definitionsOutputDir + "/icons.dart", dartFile);
-  writeFileSync(definitionsOutputDir + "/icon-types.ts", tsFile);
+  writeFileSync(dartOutputDir + "/icons.dart", dartFile);
+  writeFileSync(tsOutputDir + "/icon-types.ts", tsFile);
   writeFileSync(outputDir + "/icon-manifest.json", iconManifestFile);
 };
 

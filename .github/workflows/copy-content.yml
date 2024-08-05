@@ -28,7 +28,9 @@ jobs:
     steps:
       - name: Check if existing tokens branch exists
         id: check_branch
-        run: echo "branch_exists=$(git ls-remote --heads https://github.com/${{ inputs.repo }}.git refs/heads/${{ inputs.branch }} | wc -l | xargs)" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+        run: echo "branch_exists=$(gh api repos/${{ inputs.repo }}/branches/${{ inputs.branch }} --jq '.name' | wc -l | xargs)" >> $GITHUB_OUTPUT
       - name: Check if open PR exists
         id: check_pr
         env:

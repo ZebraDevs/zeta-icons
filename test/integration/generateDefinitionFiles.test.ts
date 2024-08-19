@@ -10,7 +10,7 @@ describe("generateDefinitionFiles", () => {
   });
 
   it("should write definition files", () => {
-    assert.equal(existsSync(`${testDartOutputDir}/icons.dart`), true);
+    assert.equal(existsSync(`${testDartOutputDir}/icons.g.dart`), true);
     assert.equal(existsSync(`${testTSOutputDir}/icon-types.ts`), true);
   });
 

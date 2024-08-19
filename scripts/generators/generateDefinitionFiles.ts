@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync } from "fs";
 import { dartDir, tsDir } from "../fetchIcons.js";
 
 /**
- * Writes out `icon-manifest.json`, `icons.dart` and `icon-types.ts`.
+ * Writes out `icon-manifest.json`, `icons.g.dart` and `icon-types.ts`.
  *
  * @param {String} outputDir - Location of output directory. Icon manifest is saved here.
  * @param {GenerateFontResult} fontData - Object containing body lines for generating definition files.
@@ -21,18 +21,18 @@ export const generateDefinitionFiles = (outputDir: string, fontData: GenerateFon
   const tsFile = generateTSFile(fontData);
   const iconManifestFile = JSON.stringify(Object.fromEntries(manifest));
 
-  writeFileSync(dartOutputDir + "/icons.dart", dartFile);
+  writeFileSync(dartOutputDir + "/icons.g.dart", dartFile);
   writeFileSync(tsOutputDir + "/icon-types.ts", tsFile);
   writeFileSync(outputDir + "/icon-manifest.json", iconManifestFile);
 };
 
 /**
- * Builds out contents of `icons.dart`.
+ * Builds out contents of `icons.g.dart`.
  *
  * Inserts new icon data into template file: `scripts/src/templates/icons.dart.template`.
  *
  * @param {GenerateFontResult} fontData - Object containing body lines for generating definition files.
- * @returns {string} Content of `icons.dart`.
+ * @returns {string} Content of `icons.g.dart`.
  */
 const generateDartFile = (fontData: GenerateFontResult): string => {
   let dartTemplate = readFileSync("./scripts/templates/icons.dart.template").toString();

@@ -109,7 +109,7 @@ const buildFontFile = async (type: FontType, fontResult: GenerateFontResult, inp
  * @param {string} iconName - snake_case formatted name for icon.
  * @param {string} unicode - Unicode value to link icon to font.
  * @param {FontType} type - Round or sharp.
- * @returns {string} Dart definition line used in body of `Icons.dart`.
+ * @returns {string} Dart definition line used in body of `icons.g.dart`.
  */
 function getDartIconDefinition(iconName: string, unicode: string, type: FontType | undefined): string {
   const iconPreview = getIconPreview(iconName, type);

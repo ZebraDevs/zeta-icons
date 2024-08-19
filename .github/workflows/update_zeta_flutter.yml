@@ -11,7 +11,7 @@ env:
   flutter_branch: update-zeta-icons
 
 jobs:
-  publish_flutter: #TODO: Rename this to deploy, I think that is a better name
+  publish_flutter:
     uses: ./.github/workflows/copy-content.yml
     secrets: inherit
     with:

@@ -49,7 +49,7 @@ describe("fetchIcons", () => {
   });
 
   it("should write definition files", () => {
-    assert.equal(existsSync(`${zdsIntegrationOutputDir}/${testDartOutputDir}/icons.dart`), true);
+    assert.equal(existsSync(`${zdsIntegrationOutputDir}/${testDartOutputDir}/icons.g.dart`), true);
     assert.equal(existsSync(`${zdsIntegrationOutputDir}/${testTSOutputDir}/icon-types.ts`), true);
   });
 });

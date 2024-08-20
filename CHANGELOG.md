@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.6](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.5.5...zeta-icons-v0.5.6) (2024-08-20)
+
+
+### 🪲 Bug Fixes
+
+* Fix release version in flutter ([#24](https://github.com/ZebraDevs/zeta-icons/issues/24)) ([89f99b0](https://github.com/ZebraDevs/zeta-icons/commit/89f99b0aa099f7d36ad7db9dbae017b8893870ca))
+
 ## [0.5.5](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.5.4...zeta-icons-v0.5.5) (2024-08-20)
 
 

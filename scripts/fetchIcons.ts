@@ -13,8 +13,8 @@ import { generatePNGs } from "./generators/generatePNGs.js";
 export const iconsDir = "/icons";
 export const tempDir = "/temp";
 export const pngDir = "/png";
-export const dartDir = "/dart";
-export const tsDir = "/ts";
+export const flutterDir = "/flutter";
+export const webDir = "/web";
 
 /**
  * Main function to run icons action. For slightly more information, see {@link https://miro.com/app/board/uXjVKUMv1ME=/?share_link_id=952145602435 | Miro }
@@ -39,8 +39,8 @@ export default async function main(
   const iconsOutputDir = outputDir + iconsDir;
   const tempOutputDir = outputDir + tempDir;
   const pngOutputDir = outputDir + pngDir;
-  const dartOutputDir = outputDir + dartDir;
-  const tsOutputDir = outputDir + tsDir;
+  const dartOutputDir = outputDir + flutterDir;
+  const tsOutputDir = outputDir + webDir;
 
   const response = await getFigmaDocument(figmaFileId, figmaToken);
   console.log("✅ - Fetched figma document");

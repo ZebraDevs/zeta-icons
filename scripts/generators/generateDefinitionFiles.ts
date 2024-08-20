@@ -1,7 +1,7 @@
 import { createFolder } from "../utils/fileUtils.js";
 import { GenerateFontResult, IconManifest } from "../types/customTypes.js";
 import { readFileSync, writeFileSync } from "fs";
-import { dartDir, tsDir } from "../fetchIcons.js";
+import { flutterDir, webDir } from "../fetchIcons.js";
 
 /**
  * Writes out `icon-manifest.json`, `icons.g.dart` and `icon-types.ts`.
@@ -11,8 +11,8 @@ import { dartDir, tsDir } from "../fetchIcons.js";
  * @param {IconManifest} manifest - data to be written to `icon-manifest.json`
  */
 export const generateDefinitionFiles = (outputDir: string, fontData: GenerateFontResult, manifest: IconManifest) => {
-  const dartOutputDir = outputDir + dartDir;
-  const tsOutputDir = outputDir + tsDir;
+  const dartOutputDir = outputDir + flutterDir;
+  const tsOutputDir = outputDir + webDir;
 
   createFolder(dartOutputDir);
   createFolder(tsOutputDir);

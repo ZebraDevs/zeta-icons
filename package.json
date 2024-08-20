@@ -9,7 +9,7 @@
     "dist/index.*s",
     "dist/outputs",
     "outputs/definitions",
-    "outputs/font",
+    "outputs/web",
     "outputs/icons",
     "outputs/icon-manifest.json",
     "CHANGELOG.md"
@@ -18,7 +18,7 @@
     ".": "./dist/index.js",
     "./icon-manifest.json": "./outputs/icon-manifest.json",
     "./icons/*": "./outputs/icons/*",
-    "./font/*": "./outputs/font/*",
+    "./font/*": "./outputs/web/*",
     "./index.css": "./index.css"
   },
   "devDependencies": {

@@ -9,92 +9,14 @@ on:
 
 env:
   flutter_branch: update-zeta-icons
-  flutter_repo: ZebraDevs/zeta_flutter
 
 jobs:
   publish_flutter:
-    runs-on: ubuntu-latest
-    name: Commit and raise PR in Zeta Flutter
-    steps:
-      - name: Check if existing icons branch exists
-        run: echo "branch_exists=$(git ls-remote --heads https://github.com/${{env.flutter_repo}}.git refs/heads/${{env.flutter_branch}} | wc -l)" >> $GITHUB_ENV
-      - name: Check if open PR exists
-        run: echo "pr_exists=$(gh pr list -R ${{env.flutter_repo}} -H ${{env.flutter_branch}} --json number -q length)" >> $GITHUB_ENV
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PAT }}
-          ref: ${{github.ref_name}}
-      - name: Get package version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
-      - name: Inject version
-        run: sed -i 's/VERSION_NUM/${{steps.package-version.outputs.current-version}}/g' outputs/definitions/icons.dart
-      - name: Push dart file to Zeta Flutter (branch exists)
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        if: ${{env.branch_exists == 1}}
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.PAT }}
-        with:
-          #TODO: pass file paths as inputs
-          source_file: "./outputs/definitions/icons.dart"
-          destination_repo: "${{env.flutter_repo}}"
-          destination_folder: "lib/src/assets"
-          destination_branch: "${{env.flutter_branch}}"
-          user_email: "zeta-icons-bot@github.com"
-          user_name: "zeta-icons-bot"
-          commit_message: "icons.dart"
-      - name: Push dart file to Zeta Flutter (branch does not exist)
-        if: ${{env.branch_exists == 0}}
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.PAT }}
-        with:
-          #TODO: pass file paths as inputs
-          source_file: "./outputs/definitions/icons.dart"
-          destination_repo: "${{env.flutter_repo}}"
-          destination_folder: "lib/src/assets"
-          destination_branch_create: "${{env.flutter_branch}}"
-          user_email: "zeta-icons-bot@github.com"
-          user_name: "zeta-icons-bot"
-          commit_message: "icons.dart"
-      - name: Push round icon font file to Zeta Flutter
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.PAT }}
-        with:
-          source_file: "./outputs/font/zeta-icons-round.ttf"
-          destination_repo: "${{env.flutter_repo}}"
-          destination_folder: "lib/src/assets/fonts"
-          destination_branch: "${{env.flutter_branch}}"
-          user_email: "zeta-icons-bot@github.com"
-          user_name: "zeta-icons-bot"
-          commit_message: "rounded font file"
-      - name: Push sharp icon font file to Zeta Flutter
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.PAT }}
-        with:
-          source_file: "./outputs/font/zeta-icons-sharp.ttf"
-          destination_repo: "${{env.flutter_repo}}"
-          destination_folder: "lib/src/assets/fonts"
-          destination_branch: "${{env.flutter_branch}}"
-          user_email: "zeta-icons-bot@github.com"
-          user_name: "zeta-icons-bot"
-          commit_message: "sharp font file"
-      - name: Create PR message
-        run: echo "pr_message=Updating to icons version ${{ steps.package-version.outputs.current-version }}" >> $GITHUB_ENV
-      - name: Open Zeta Flutter PR
-        uses: thecanadianroot/open-pull-request-action@v1.1.1
-        if: ${{env.pr_exists == 0}}
-        with:
-          token: ${{ secrets.PAT }}
-          base: main
-          head: ${{env.flutter_branch}}
-          title: "deps: Update zeta-icon library"
-          labels: icons
-          body: "${{env.pr_message}}"
-          repository: ${{env.flutter_repo}}
-      - name: Add comment to existing PR
-        if: ${{env.pr_exists != 0}}
-        run: gh pr comment -R ${{env.flutter_repo}} ${{env.flutter_branch}} --body  '${{env.pr_message}}'
+    uses: ./.github/workflows/copy-content.yml
+    secrets: inherit
+    with:
+      repo: ZebraDevs/zeta_flutter
+      branch: "update-zeta-icons"
+      source_dir: "./outputs/dart/."
+      destination_dir: "lib/generated/icons"
+      commit_msg: "Update icons"

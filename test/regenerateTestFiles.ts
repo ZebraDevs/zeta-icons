@@ -2,11 +2,12 @@ import { rmSync, rmdirSync, writeFileSync } from "fs";
 import * as dotenv from "dotenv";
 import { getFigmaDocument, getImageFiles } from "../scripts/utils/api.js";
 import {
+  testDartOutputDir,
   testFileId,
-  testFontsOutputDir,
   testIconPageName,
   testIconsOutputDir,
   testOutputDir,
+  testTSOutputDir,
 } from "./data/constants.js";
 import {
   extractCategoryNames,
@@ -61,7 +62,7 @@ async function main() {
     await optimizeSVGs(testIconsOutputDir, tempOutputDir, categoryNames);
     console.log("✅ - Optimized SVGs");
 
-    const generateFontResult = await generateFonts(tempOutputDir, testFontsOutputDir, "zeta-icons");
+    const generateFontResult = await generateFonts(tempOutputDir, "zeta-icons", testDartOutputDir, testTSOutputDir);
     writeFile(generateFontResult, "generatedFontResponse.json");
 
     rmSync(testOutputDir, { recursive: true });

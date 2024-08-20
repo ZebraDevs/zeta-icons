@@ -12,14 +12,17 @@ const GITHUB_URL = "https://raw.githubusercontent.com/ZebraDevs/zeta-icons/main/
  * as this data needs to link up to unicode values generated in this step.
  *
  * @param {string} inputDir - Location of temporary directory containing optimized SVG files.
- * @param {String} fontOutputDir - Location of font output directory.
+ * @param {string} fontName - Name of font to be generated.
+ * @param {string} ttfDir - Location to save TTF font files.
+ * @param {string} woff2Dir - Location to save WOFF2 font files.
  * @returns {Promise<GenerateFontResult>} Object containing body lines for generating definition files.
  * @throws If any font file was not generated.
  */
 export const generateFonts = async (
   inputDir: string,
-  fontOutputDir: string,
-  fontName: string
+  fontName: string,
+  ttfDir: string,
+  woff2Dir: string
 ): Promise<GenerateFontResult> => {
   const fontResult: GenerateFontResult = {
     dartDefinitions: [],
@@ -28,13 +31,15 @@ export const generateFonts = async (
     iconNames: [],
   };
 
-  const baseFontPath = `${fontOutputDir}/${fontName}`;
-  createFolder(fontOutputDir);
+  const ttfPath = `${ttfDir}/${fontName}`;
+  const woff2Path = `${woff2Dir}/${fontName}`;
+  createFolder(ttfDir);
+  createFolder(woff2Dir);
   const roundFonts = await buildFontFile("round", fontResult, inputDir);
 
   if (roundFonts.ttf && roundFonts.woff2) {
-    writeFileSync(`${baseFontPath}-round.ttf`, roundFonts.ttf);
-    writeFileSync(`${baseFontPath}-round.woff2`, roundFonts.woff2);
+    writeFileSync(`${ttfPath}-round.ttf`, roundFonts.ttf);
+    writeFileSync(`${woff2Path}-round.woff2`, roundFonts.woff2);
   } else {
     throw new Error(
       "Failed to build round fonts: " + (!roundFonts.ttf ? "ttf " : "") + !roundFonts.woff2 ? "woff2" : ""
@@ -43,8 +48,8 @@ export const generateFonts = async (
 
   const sharpFonts = await buildFontFile("sharp", fontResult, inputDir);
   if (sharpFonts.ttf && sharpFonts.woff2) {
-    writeFileSync(`${baseFontPath}-sharp.ttf`, sharpFonts.ttf);
-    writeFileSync(`${baseFontPath}-sharp.woff2`, sharpFonts.woff2);
+    writeFileSync(`${ttfPath}-sharp.ttf`, sharpFonts.ttf);
+    writeFileSync(`${woff2Path}-sharp.woff2`, sharpFonts.woff2);
   } else {
     throw new Error(
       "Failed to build sharp fonts: " + (!sharpFonts.ttf ? "ttf " : "") + !sharpFonts.woff2 ? "woff2" : ""
@@ -104,7 +109,7 @@ const buildFontFile = async (type: FontType, fontResult: GenerateFontResult, inp
  * @param {string} iconName - snake_case formatted name for icon.
  * @param {string} unicode - Unicode value to link icon to font.
  * @param {FontType} type - Round or sharp.
- * @returns {string} Dart definition line used in body of `Icons.dart`.
+ * @returns {string} Dart definition line used in body of `icons.g.dart`.
  */
 function getDartIconDefinition(iconName: string, unicode: string, type: FontType | undefined): string {
   const iconPreview = getIconPreview(iconName, type);

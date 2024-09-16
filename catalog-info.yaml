@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: zeta-icons
+  title: Zeta Icons Library
+  description: |
+    A library of Zebra Design System Icons
+    This library is intended to be used by any Zebra app to ensure a consistent look and feel by using the icons defined in the Zebra Design System User Experience.
+  links: 
+    - url: https://www.npmjs.com/package/@zebra-fed/zeta-icons
+      title: npmjs
+    - url: https://design.zebra.com/icons
+      title: Zeta Icons Website
+  tags: 
+    - svg
+    - typescript
+    - javascript
+    - dart
+  annotations:
+    github.com/project-slug: ZebraDevs/zeta-icons
+    github.com/team-slug: zebratechnologies/front-end-development
+#    backstage.io/techdocs-ref: dir:.
+spec:
+  type: library
+  owner: group:DMO-FED
+  lifecycle: experimental
+  system: zeta
+  dependsOn:
+    - Resource:zeta-figma

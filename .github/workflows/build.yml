@@ -46,6 +46,9 @@ jobs:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
       - name: Icons changed
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
+      - name: Create code connect files
+        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
+        uses: ./.github/create_code_connect
       - name: Get current date
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         id: date

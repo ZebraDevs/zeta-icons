@@ -1,6 +1,6 @@
-import { GenerateFontResult, IconManifest, ImageManifest } from "../../scripts/types/customTypes.js";
 import { readFileSync } from "fs";
-import { ComponentSets, DocumentResponse, FigmaNode } from "../../scripts/types/figmaTypes.js";
+import { IconManifest, ImageManifest, GenerateFontResult } from "../../scripts/fetch-icons/types/customTypes.js";
+import { DocumentResponse, FigmaNode, ComponentSets } from "../../scripts/fetch-icons/types/figmaTypes.js";
 import { extractCategoryNames } from "../../scripts/utils/figmaUtils.js";
 
 export const outputDir = "./test/outputs";

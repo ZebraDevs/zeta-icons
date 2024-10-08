@@ -1,4 +1,5 @@
-import { ComponentSets, FigmaNode } from "../types/figmaTypes.js";
+import { ComponentSets, FigmaNode } from "../fetch-icons/types/figmaTypes.js";
+import { toSnakeCase } from "./fileUtils.js";
 
 const IGNORED_ICONSETS = ["dna"];
 
@@ -62,7 +63,7 @@ export function getSearchTerms(iconSetId: string, componentSets: ComponentSets):
  * @returns A list of the category names in snake_case
  */
 export function extractCategoryNames(categoryNodes: FigmaNode[]): string[] {
-  return categoryNodes.map((category) => category.name.toSnakeCase());
+  return categoryNodes.map((category) => toSnakeCase(category.name));
 }
 
 export function checkFigmaTokenIsSet(figmaToken: string | undefined): void {

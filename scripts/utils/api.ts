@@ -1,5 +1,5 @@
-import { ImageManifest, IconManifest } from "../types/customTypes.js";
-import { DocumentResponse } from "../types/figmaTypes.js";
+import { ImageManifest, IconManifest } from "../fetch-icons/types/customTypes.js";
+import { DocumentResponse } from "../fetch-icons/types/figmaTypes.js";
 
 /**
  * Fetches a Figma document.

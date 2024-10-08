@@ -1,0 +1,6 @@
+{
+  "codeConnect": {
+    "include": ["outputs/code-connect/**/*.figma.ts"],
+    "exclude": ["test/**/*.figma.ts"]
+  }
+}

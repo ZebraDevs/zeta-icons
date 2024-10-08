@@ -82,7 +82,7 @@ const getTemplate = (iconName: string) =>
               ts.factory.createIdentifier("props"),
               ts.factory.createIdentifier("rounded"),
             ),
-            ts.factory.createTemplateTail(`>${iconName.toLowerCase().replace(" ", "-")}</zeta-icon>`),
+            ts.factory.createTemplateTail(`>${iconName.toLowerCase().replaceAll(" ", "-")}</zeta-icon>`),
           ),
         ]),
       ),

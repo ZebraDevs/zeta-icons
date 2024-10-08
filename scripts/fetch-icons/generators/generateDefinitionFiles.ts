@@ -35,7 +35,7 @@ export const generateDefinitionFiles = (outputDir: string, fontData: GenerateFon
  * @returns {string} Content of `icons.g.dart`.
  */
 const generateDartFile = (fontData: GenerateFontResult): string => {
-  let dartTemplate = readFileSync("./scripts/templates/icons.dart.template").toString();
+  let dartTemplate = readFileSync("./scripts/fetch-icons/templates/icons.dart.template").toString();
   const newLine = "\n";
 
   const icons = fontData.dartDefinitions.join(newLine);
@@ -60,7 +60,7 @@ const generateDartFile = (fontData: GenerateFontResult): string => {
  * @returns {string} Content of `icon-types.ts`.
  */
 const generateTSFile = (fontData: GenerateFontResult): string => {
-  let tsTemplate = readFileSync("./scripts/templates/icon-types.ts.template").toString();
+  let tsTemplate = readFileSync("./scripts/fetch-icons/templates/icon-types.ts.template").toString();
 
   const nameList = fontData.iconNames.map((icon) => `"${icon}"`);
   const iconNames = nameList.join(",\n  ");

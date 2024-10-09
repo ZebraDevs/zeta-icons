@@ -36,7 +36,7 @@ export async function getFigmaDocument(fileID: string, accessToken: string): Pro
 export async function getImageFiles(
   manifest: IconManifest,
   fileID: string,
-  accessToken: string
+  accessToken: string,
 ): Promise<ImageManifest> {
   const ids: string[] = [];
   const allImageFiles: ImageManifest = new Map() as ImageManifest;
@@ -61,7 +61,7 @@ export async function getImageFiles(
       return fetch(value)
         .then((response: Response) => response.text())
         .then((url: string) => [key, url]);
-    })
+    }),
   );
 
   const svgObj: {

@@ -1,6 +1,6 @@
 import sharp from "sharp";
 import { readdirSync } from "fs";
-import { createFolder } from "../utils/fileUtils.js";
+import { createFolder } from "../../utils/fileUtils.js";
 
 /**
  * Builds and saves PNG versions of all icons.

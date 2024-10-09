@@ -1,14 +1,14 @@
-import { getFigmaDocument, getImageFiles } from "./utils/api.js";
-import { extractCategoryNames, extractCategoryNodes, findIconPage } from "./utils/figmaUtils.js";
-import { clearDirectory } from "./utils/fileUtils.js";
 import { generateDefinitionFiles } from "./generators/generateDefinitionFiles.js";
 import { generateFonts } from "./generators/generateFonts.js";
 import { generateIconManifest } from "./generators/generateIconManifest.js";
-import { optimizeSVGs } from "./utils/optimizeSvgs.js";
-import { saveSVGs } from "./utils/saveSvgs.js";
-import { generateHash } from "./utils/hash.js";
-import { ComponentSets } from "./types/figmaTypes.js";
+import { ComponentSets } from "../types/figmaTypes.js";
 import { generatePNGs } from "./generators/generatePNGs.js";
+import { getFigmaDocument, getImageFiles } from "../utils/api.js";
+import { findIconPage, extractCategoryNodes, extractCategoryNames } from "../utils/figmaUtils.js";
+import { clearDirectory } from "../utils/fileUtils.js";
+import { generateHash } from "../utils/hash.js";
+import { optimizeSVGs } from "../utils/optimizeSvgs.js";
+import { saveSVGs } from "../utils/saveSvgs.js";
 
 export const iconsDir = "/icons";
 export const tempDir = "/temp";
@@ -34,7 +34,7 @@ export default async function main(
   iconPageName: string,
   oldHash: string,
   outputDir: string,
-  verboseLogs: boolean
+  verboseLogs: boolean,
 ): Promise<string | undefined> {
   const iconsOutputDir = outputDir + iconsDir;
   const tempOutputDir = outputDir + tempDir;

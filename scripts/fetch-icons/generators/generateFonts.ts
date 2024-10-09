@@ -1,8 +1,8 @@
 import { Result } from "webfont/dist/src/types/Result.js";
-import { FontType, GenerateFontResult } from "../types/customTypes.js";
+import { FontType, GenerateFontResult } from "../../types/customTypes.js";
 import { webfont } from "webfont";
-import { createFolder, getIconFileName } from "../utils/fileUtils.js";
 import { writeFileSync } from "fs";
+import { createFolder, getIconFileName, toSnakeCase } from "../../utils/fileUtils.js";
 
 const GITHUB_URL = "https://raw.githubusercontent.com/ZebraDevs/zeta-icons/main/outputs/png/";
 /**
@@ -22,7 +22,7 @@ export const generateFonts = async (
   inputDir: string,
   fontName: string,
   ttfDir: string,
-  woff2Dir: string
+  woff2Dir: string,
 ): Promise<GenerateFontResult> => {
   const fontResult: GenerateFontResult = {
     dartDefinitions: [],
@@ -42,7 +42,7 @@ export const generateFonts = async (
     writeFileSync(`${woff2Path}-round.woff2`, roundFonts.woff2);
   } else {
     throw new Error(
-      "Failed to build round fonts: " + (!roundFonts.ttf ? "ttf " : "") + !roundFonts.woff2 ? "woff2" : ""
+      "Failed to build round fonts: " + (!roundFonts.ttf ? "ttf " : "") + !roundFonts.woff2 ? "woff2" : "",
     );
   }
 
@@ -52,7 +52,7 @@ export const generateFonts = async (
     writeFileSync(`${woff2Path}-sharp.woff2`, sharpFonts.woff2);
   } else {
     throw new Error(
-      "Failed to build sharp fonts: " + (!sharpFonts.ttf ? "ttf " : "") + !sharpFonts.woff2 ? "woff2" : ""
+      "Failed to build sharp fonts: " + (!sharpFonts.ttf ? "ttf " : "") + !sharpFonts.woff2 ? "woff2" : "",
     );
   }
   return fontResult;
@@ -115,7 +115,7 @@ function getDartIconDefinition(iconName: string, unicode: string, type: FontType
   const iconPreview = getIconPreview(iconName, type);
 
   if (type == undefined) {
-    iconName = iconName.toSnakeCase();
+    iconName = toSnakeCase(iconName);
   } else {
     iconName = getIconFileName(iconName, type);
   }

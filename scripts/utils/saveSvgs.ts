@@ -12,7 +12,7 @@ import { ImageDefinition, ImageManifest } from "../types/customTypes.js";
 export const saveSVGs = async (
   icons: ImageManifest,
   iconsOutputDir: string,
-  categoryNames: string[]
+  categoryNames: string[],
 ): Promise<void> => {
   createFolder(iconsOutputDir);
 

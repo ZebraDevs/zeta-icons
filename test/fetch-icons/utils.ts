@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { FontType, IconManifest } from "../scripts/types/customTypes.js";
+import { FontType, IconManifest } from "../../scripts/types/customTypes.js";
 import { existsSync } from "fs";
 
 export function checkIconsExist(manifest: IconManifest) {

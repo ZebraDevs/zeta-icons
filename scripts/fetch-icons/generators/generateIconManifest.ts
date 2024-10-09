@@ -1,8 +1,8 @@
 import { checkIconName, checkCategoryName, ErrorSeverity } from "zeta-icon-name-checker";
-import { extractIconSets, getSearchTerms } from "../utils/figmaUtils.js";
-import { IconManifest } from "../types/customTypes.js";
-import { getIconFileName } from "../utils/fileUtils.js";
-import { ComponentSets, FigmaNode } from "../types/figmaTypes.js";
+import { extractIconSets, getSearchTerms } from "../../utils/figmaUtils.js";
+import { IconManifest } from "../../types/customTypes.js";
+import { getIconFileName, toSnakeCase } from "../../utils/fileUtils.js";
+import { ComponentSets, FigmaNode } from "../../types/figmaTypes.js";
 
 /**
  * Generates an icon manifest from a list of category nodes.
@@ -19,14 +19,14 @@ export function generateIconManifest(
   categoryNodes: FigmaNode[],
   componentSets: ComponentSets,
   iconOutputDir: string,
-  verboseLogs: boolean
+  verboseLogs: boolean,
 ): IconManifest {
   const iconMap: IconManifest = new Map();
 
   const usedIconNames: string[] = []; // A list of used icon names
 
   for (const category of categoryNodes) {
-    const formattedCategoryName = category.name.toSnakeCase();
+    const formattedCategoryName = toSnakeCase(category.name);
 
     if (verboseLogs) {
       console.log(`---------------- Current category: ${formattedCategoryName} ----------------`);

@@ -1,6 +1,6 @@
-import { rmSync, rmdirSync, writeFileSync } from "fs";
+import { rmSync, writeFileSync } from "fs";
 import * as dotenv from "dotenv";
-import { getFigmaDocument, getImageFiles } from "../scripts/utils/api.js";
+import { getFigmaDocument, getImageFiles } from "../../scripts/utils/api.js";
 import {
   testDartOutputDir,
   testFileId,
@@ -8,18 +8,18 @@ import {
   testIconsOutputDir,
   testOutputDir,
   testTSOutputDir,
-} from "./data/constants.js";
+} from "../data/constants.js";
 import {
   extractCategoryNames,
   extractCategoryNodes,
   extractIconSets,
   findIconPage,
-} from "../scripts/utils/figmaUtils.js";
-import { generateIconManifest } from "../scripts/generators/generateIconManifest.js";
-import { ComponentSets } from "../scripts/types/figmaTypes.js";
-import { generateFonts } from "../scripts/generators/generateFonts.js";
-import { saveSVGs } from "../scripts/utils/saveSvgs.js";
-import { optimizeSVGs } from "../scripts/utils/optimizeSvgs.js";
+} from "../../scripts/utils/figmaUtils.js";
+import { generateIconManifest } from "../../scripts/fetch-icons/generators/generateIconManifest.js";
+import { generateFonts } from "../../scripts/fetch-icons/generators/generateFonts.js";
+import { saveSVGs } from "../../scripts/utils/saveSvgs.js";
+import { optimizeSVGs } from "../../scripts/utils/optimizeSvgs.js";
+import { ComponentSets } from "../../scripts/fetch-icons/types/figmaTypes.js";
 
 async function main() {
   const tempOutputDir = `${testOutputDir}/temp`;

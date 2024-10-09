@@ -1,4 +1,5 @@
 import { ComponentSets, FigmaNode } from "../types/figmaTypes.js";
+import { toSnakeCase } from "./fileUtils.js";
 
 const IGNORED_ICONSETS = ["dna"];
 
@@ -62,13 +63,13 @@ export function getSearchTerms(iconSetId: string, componentSets: ComponentSets):
  * @returns A list of the category names in snake_case
  */
 export function extractCategoryNames(categoryNodes: FigmaNode[]): string[] {
-  return categoryNodes.map((category) => category.name.toSnakeCase());
+  return categoryNodes.map((category) => toSnakeCase(category.name));
 }
 
 export function checkFigmaTokenIsSet(figmaToken: string | undefined): void {
   if (!figmaToken || figmaToken == "") {
     throw new Error(
-      '❌ Figma Token is not set. Set the Figma token by creating an `.env` file with its contents `FIGMA_ACCESS_TOKEN="..."`'
+      '❌ Figma Token is not set. Set the Figma token by creating an `.env` file with its contents `FIGMA_ACCESS_TOKEN="..."`',
     );
   }
 }

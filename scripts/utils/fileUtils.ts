@@ -27,15 +27,15 @@ export const createFolder = (dir: string): boolean => {
  * @param {FontType} type - Round or sharp.
  * @returns {string} Icon name in snake_case.
  */
-export const getIconFileName = (iconName: string, type: FontType): string => `${iconName.toSnakeCase()}_${type}`;
+export const getIconFileName = (iconName: string, type: FontType): string => `${toSnakeCase(iconName)}_${type}`;
 
 /**
  * Formats string in snake_case.
  *
  * @param {string} separator - Character used as word separator in string. Defaults to ` ` (space).
  */
-String.prototype.toSnakeCase = function (separator: string = " "): string {
-  return `${this.toLowerCase().replaceAll(separator, "_")}`;
+export const toSnakeCase = function (string: string, separator: string = " "): string {
+  return `${string.toLowerCase().replaceAll(separator, "_")}`;
 };
 
 /**

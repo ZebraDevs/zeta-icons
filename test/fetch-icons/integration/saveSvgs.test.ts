@@ -1,10 +1,10 @@
-import { saveSVGs } from "../../scripts/utils/saveSvgs.js";
-import { allImageFiles, categoryNames } from "../data/index.js";
-import { testIconsOutputDir } from "../data/constants.js";
+import { saveSVGs } from "../../../scripts/utils/saveSvgs.js";
+import { allImageFiles, categoryNames } from "../../data/index.js";
+import { testIconsOutputDir } from "../../data/constants.js";
 import { existsSync } from "fs";
 import { assert } from "chai";
-import { ImageManifest } from "../../scripts/types/customTypes.js";
 import { checkIconsExist } from "../utils.js";
+import { ImageManifest } from "../../../scripts/types/customTypes.js";
 
 describe("saveSvgs", () => {
   before(async () => {

@@ -1,12 +1,11 @@
 import { assert } from "chai";
-import { ComponentSets } from "../../scripts/types/figmaTypes.js";
 import {
   extractCategoryNames,
   extractCategoryNodes,
   extractIconSets,
   findIconPage,
   getSearchTerms,
-} from "../../scripts/utils/figmaUtils.js";
+} from "../../../scripts/utils/figmaUtils.js";
 import {
   categoryNames,
   categoryNodes,
@@ -15,8 +14,8 @@ import {
   iconNodes,
   iconPage,
   singleCategoryNode,
-} from "../data/index.js";
-import { testIconPageName } from "../data/constants.js";
+} from "../../data/index.js";
+import { testIconPageName } from "../../data/constants.js";
 
 describe("figmaUtils", () => {
   describe("findIconPage", () => {

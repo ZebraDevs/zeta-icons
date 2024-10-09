@@ -1,11 +1,11 @@
 import { assert } from "chai";
-import { DocumentResponse } from "../../../scripts/fetch-icons/types/figmaTypes.js";
 import { getFigmaDocument, getImageFiles } from "../../../scripts/utils/api.js";
 import { testFileId } from "../../data/constants.js";
 import { allImageFiles, manifest } from "../../data/index.js";
 import { before } from "mocha";
 import { checkFigmaTokenIsSet } from "../../../scripts/utils/figmaUtils.js";
 import { ZDS_ASSETS_FILE_ID } from "../../../figmaConfig.js";
+import { DocumentResponse } from "../../../scripts/types/figmaTypes.js";
 
 describe("api", () => {
   before(() => {

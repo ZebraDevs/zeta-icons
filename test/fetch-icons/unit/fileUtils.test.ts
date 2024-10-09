@@ -1,8 +1,8 @@
-import { FontType } from "../../../scripts/fetch-icons/types/customTypes.js";
 import { clearDirectory, createFolder, getIconFileName } from "../../../scripts/utils/fileUtils.js";
 import { existsSync, rmSync, writeFileSync } from "node:fs";
 import { testOutputDir } from "../../data/constants.js";
 import { assert } from "chai";
+import { FontType } from "../../../scripts/types/customTypes.js";
 
 describe("fileUtils - folders", () => {
   const testDir = `${testOutputDir}/test`;

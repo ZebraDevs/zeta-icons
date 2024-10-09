@@ -20,7 +20,7 @@ export const generateCodeConnectFile = async (outputDir: string, iconManifest: I
   );
   const codeConnectFile = await prettier.format(getNodeText(sourceFile), { parser: "typescript" });
 
-  writeFileSync(`${outputDir}/code-connect.ts`, codeConnectFile);
+  writeFileSync(`${outputDir}/code-connect.figma.ts`, codeConnectFile);
 };
 
 const getImportStatement = () =>

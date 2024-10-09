@@ -1,6 +1,12 @@
 import ts from "typescript";
 import { ZDS_ASSETS_FILE_ID } from "../../figmaConfig.js";
 
+/**
+ * Generates a figma code connect template for a given icon.
+ * @param iconName The name of the icon.
+ * @param id The id of the icon .
+ * @returns A typescript expression containing a call to figma.connect.
+ */
 export const generateFigmaConnectCall = (iconName: string, id: string): ts.ExpressionStatement => {
   return ts.factory.createExpressionStatement(
     ts.factory.createCallExpression(
@@ -19,6 +25,10 @@ export const generateFigmaConnectCall = (iconName: string, id: string): ts.Expre
 
 const getFigmaLink = (id: string) => `https://www.figma.com/design/${ZDS_ASSETS_FILE_ID}?node-id=${id}`;
 
+/**
+ * props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) }
+ * @returns A typescript property assignment containing the props object.
+ */
 const getPropsObject = () =>
   ts.factory.createPropertyAssignment(
     "props",
@@ -43,6 +53,11 @@ const getPropsObject = () =>
     ]),
   );
 
+/**
+ * example: (props) => html`<zeta-icon rounded={props.rounded}>icon name</zeta-icon>
+ * @param iconName The name of the icon.
+ * @returns A typescript property assignment containing the template.
+ */
 const getTemplate = (iconName: string) =>
   ts.factory.createPropertyAssignment(
     "example",

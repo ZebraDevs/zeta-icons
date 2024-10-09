@@ -1,4 +1,4 @@
-import { ComponentSets, FigmaNode } from "../fetch-icons/types/figmaTypes.js";
+import { ComponentSets, FigmaNode } from "../types/figmaTypes.js";
 import { toSnakeCase } from "./fileUtils.js";
 
 const IGNORED_ICONSETS = ["dna"];
@@ -69,7 +69,7 @@ export function extractCategoryNames(categoryNodes: FigmaNode[]): string[] {
 export function checkFigmaTokenIsSet(figmaToken: string | undefined): void {
   if (!figmaToken || figmaToken == "") {
     throw new Error(
-      '❌ Figma Token is not set. Set the Figma token by creating an `.env` file with its contents `FIGMA_ACCESS_TOKEN="..."`'
+      '❌ Figma Token is not set. Set the Figma token by creating an `.env` file with its contents `FIGMA_ACCESS_TOKEN="..."`',
     );
   }
 }

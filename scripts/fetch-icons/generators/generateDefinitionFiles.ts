@@ -1,4 +1,4 @@
-import { GenerateFontResult, IconManifest } from "../types/customTypes.js";
+import { GenerateFontResult, IconManifest } from "../../types/customTypes.js";
 import { readFileSync, writeFileSync } from "fs";
 import { flutterDir, webDir } from "../fetchIcons.js";
 import { createFolder } from "../../utils/fileUtils.js";

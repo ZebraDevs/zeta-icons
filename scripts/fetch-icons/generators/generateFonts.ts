@@ -1,5 +1,5 @@
 import { Result } from "webfont/dist/src/types/Result.js";
-import { FontType, GenerateFontResult } from "../types/customTypes.js";
+import { FontType, GenerateFontResult } from "../../types/customTypes.js";
 import { webfont } from "webfont";
 import { writeFileSync } from "fs";
 import { createFolder, getIconFileName, toSnakeCase } from "../../utils/fileUtils.js";

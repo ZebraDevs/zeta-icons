@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
-import { IconManifest, ImageManifest, GenerateFontResult } from "../../scripts/fetch-icons/types/customTypes.js";
-import { DocumentResponse, FigmaNode, ComponentSets } from "../../scripts/fetch-icons/types/figmaTypes.js";
+import { IconManifest, ImageManifest, GenerateFontResult } from "../../scripts/types/customTypes.js";
+import { DocumentResponse, FigmaNode, ComponentSets } from "../../scripts/types/figmaTypes.js";
 import { extractCategoryNames } from "../../scripts/utils/figmaUtils.js";
 
 export const outputDir = "./test/outputs";
@@ -11,17 +11,17 @@ export const categoryNodes: FigmaNode[] = JSON.parse(readFileSync("./test/data/c
 export const singleCategoryNode: FigmaNode = JSON.parse(readFileSync("./test/data/singleCategoryNode.json").toString());
 export const iconNodes: FigmaNode[] = JSON.parse(readFileSync("./test/data/iconNodes.json").toString());
 export const componentSets: ComponentSets = new Map(
-  Object.entries(JSON.parse(readFileSync("./test/data/componentSets.json").toString()))
+  Object.entries(JSON.parse(readFileSync("./test/data/componentSets.json").toString())),
 );
 
 export const manifest: IconManifest = new Map(
-  Object.entries(JSON.parse(readFileSync("./test/data/manifest.json").toString()))
+  Object.entries(JSON.parse(readFileSync("./test/data/manifest.json").toString())),
 );
 export const allImageFiles: ImageManifest = new Map(
-  Object.entries(JSON.parse(readFileSync("./test/data/allImageFiles.json").toString()))
+  Object.entries(JSON.parse(readFileSync("./test/data/allImageFiles.json").toString())),
 );
 export const hash = readFileSync("./test/data/hash.txt").toString();
 export const categoryNames = extractCategoryNames(categoryNodes);
 export const generatedFontDefinitions: GenerateFontResult = JSON.parse(
-  readFileSync("./test/data/generatedFontResponse.json").toString()
+  readFileSync("./test/data/generatedFontResponse.json").toString(),
 );

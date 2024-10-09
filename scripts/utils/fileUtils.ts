@@ -1,7 +1,7 @@
 import { mkdirSync, existsSync, rmSync, writeFileSync } from "fs";
 import * as path from "path";
 import { scale } from "scale-that-svg";
-import { FontType } from "../fetch-icons/types/customTypes.js";
+import { FontType } from "../types/customTypes.js";
 
 /**
  * Creates a directory recursively; creating intermediate directories if needed.

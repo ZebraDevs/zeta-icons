@@ -1,7 +1,7 @@
 import { generateDefinitionFiles } from "./generators/generateDefinitionFiles.js";
 import { generateFonts } from "./generators/generateFonts.js";
 import { generateIconManifest } from "./generators/generateIconManifest.js";
-import { ComponentSets } from "./types/figmaTypes.js";
+import { ComponentSets } from "../types/figmaTypes.js";
 import { generatePNGs } from "./generators/generatePNGs.js";
 import { getFigmaDocument, getImageFiles } from "../utils/api.js";
 import { findIconPage, extractCategoryNodes, extractCategoryNames } from "../utils/figmaUtils.js";

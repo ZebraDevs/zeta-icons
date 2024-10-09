@@ -1,5 +1,5 @@
 import { createFolder, writeSVGToFile } from "./fileUtils.js";
-import { ImageDefinition, ImageManifest } from "../fetch-icons/types/customTypes.js";
+import { ImageDefinition, ImageManifest } from "../types/customTypes.js";
 
 /**
  * Saves svg files within icons object to `{category}/{icon-name}.svg`.
@@ -12,7 +12,7 @@ import { ImageDefinition, ImageManifest } from "../fetch-icons/types/customTypes
 export const saveSVGs = async (
   icons: ImageManifest,
   iconsOutputDir: string,
-  categoryNames: string[]
+  categoryNames: string[],
 ): Promise<void> => {
   createFolder(iconsOutputDir);
 

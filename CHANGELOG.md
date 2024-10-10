@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.6.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.5.6...zeta-icons-v0.6.0) (2024-10-10)
+
+
+### ✨ New Features
+
+* Code connect ([9178c7e](https://github.com/ZebraDevs/zeta-icons/commit/9178c7e5cbf7006076a286a2cb6e07ecda69d919))
+* Icon updates 16-Sep-2024 ([33b57ef](https://github.com/ZebraDevs/zeta-icons/commit/33b57efe66415f2a22c4bcc86a060f369ed4c287))
+* Icon updates 16-Sep-2024 ([33b57ef](https://github.com/ZebraDevs/zeta-icons/commit/33b57efe66415f2a22c4bcc86a060f369ed4c287))
+* Icon updates 18-Sep-2024 ([5b6cd35](https://github.com/ZebraDevs/zeta-icons/commit/5b6cd352dd9d1c8250939be0de84149e76c42714))
+
+
+### 📈 Documentation
+
+* Documented the code connect scripts ([74bdfd2](https://github.com/ZebraDevs/zeta-icons/commit/74bdfd2f65dc1bd8eb62e1c64ca3b97c5a0c61e7))
+
+
+### 🧹 Miscellaneous Chores
+
+* Export version in web ([#30](https://github.com/ZebraDevs/zeta-icons/issues/30)) ([dc79c67](https://github.com/ZebraDevs/zeta-icons/commit/dc79c67c4bb8cc15c4ad7a0b2d46d6ba74846233))
+* Move release-please files ([dc79c67](https://github.com/ZebraDevs/zeta-icons/commit/dc79c67c4bb8cc15c4ad7a0b2d46d6ba74846233))
+
 ## [0.5.6](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.5.5...zeta-icons-v0.5.6) (2024-08-20)
 
 

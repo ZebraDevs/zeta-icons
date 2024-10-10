@@ -6,7 +6,8 @@
   },
   "extra-files": [
     "outputs/flutter/icons.g.dart",
-    "scripts/templates/icons.dart.template"
+    "scripts/templates/icons.dart.template",
+    "index.ts"
   ],
   "changelog-sections": [
     {

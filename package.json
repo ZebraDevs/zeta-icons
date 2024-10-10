@@ -1,6 +1,6 @@
 {
   "name": "@zebra-fed/zeta-icons",
-  "version": "0.5.2",
+  "version": "0.5.6",
   "type": "module",
   "main": "index.js",
   "types": "dist/index.d.ts",
@@ -35,7 +35,7 @@
     "jest": "^29.7.0",
     "md5": "^2.3.0",
     "mocha": "^10.4.0",
-    "oslllo-svg-fixer": "^3.0.0",
+    "oslllo-svg-fixer": "^5.0.0",
     "prettier": "^3.3.3",
     "scale-that-svg": "^1.0.6",
     "sharp": "^0.33.3",
@@ -43,7 +43,7 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
-    "webfont": "^11.2.26",
+    "webfont": "^6.0.2",
     "zeta-icon-name-checker": "^0.0.15"
   },
   "keywords": [

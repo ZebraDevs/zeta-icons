@@ -28,9 +28,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish code connect
-        uses: ./.github/publish_code_connect
-        with:
-          figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
+        run: npx figma connect publish --token ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}
 
   update_npm_dependencies:
     needs: publish

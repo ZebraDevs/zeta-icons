@@ -72,5 +72,8 @@
   "bugs": {
     "url": "https://github.com/zebratechnologies/zeta-icons/issues"
   },
-  "homepage": "https://github.com/zebratechnologies/zeta-icons#readme"
+  "homepage": "https://github.com/zebratechnologies/zeta-icons#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
 }

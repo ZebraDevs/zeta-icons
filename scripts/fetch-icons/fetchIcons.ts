@@ -9,12 +9,14 @@ import { clearDirectory } from "../utils/fileUtils.js";
 import { generateHash } from "../utils/hash.js";
 import { optimizeSVGs } from "../utils/optimizeSvgs.js";
 import { saveSVGs } from "../utils/saveSvgs.js";
+import { generateAndroidIcons } from "./generators/generateAndroidIcons.js";
 
 export const iconsDir = "/icons";
 export const tempDir = "/temp";
 export const pngDir = "/png";
 export const flutterDir = "/flutter";
 export const webDir = "/web";
+export const androidDir = "/android";
 
 /**
  * Main function to run icons action. For slightly more information, see {@link https://miro.com/app/board/uXjVKUMv1ME=/?share_link_id=952145602435 | Miro }
@@ -41,6 +43,7 @@ export default async function main(
   const pngOutputDir = outputDir + pngDir;
   const dartOutputDir = outputDir + flutterDir;
   const tsOutputDir = outputDir + webDir;
+  const androidOutputDir = outputDir + androidDir;
 
   const response = await getFigmaDocument(figmaFileId, figmaToken);
   console.log("✅ - Fetched figma document");
@@ -82,6 +85,9 @@ export default async function main(
 
   const generateFontResult = await generateFonts(tempOutputDir, "zeta-icons", dartOutputDir, tsOutputDir);
   console.log("✅ - Generated fonts");
+
+  generateAndroidIcons(androidOutputDir, manifest);
+  console.log("✅ - Generated Android icons.");
 
   generateDefinitionFiles(outputDir, generateFontResult, manifest);
   console.log("✅ - Generated definition files.");

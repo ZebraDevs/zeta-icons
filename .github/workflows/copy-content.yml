@@ -38,8 +38,8 @@ jobs:
         run: echo "pr_exists=$(gh pr list -R ${{ inputs.repo }} -H ${{ inputs.branch }} --json number -q length)" >> $GITHUB_OUTPUT
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Pull latest changes
-        run: git pull
+      # - name: Pull latest changes
+      #   run: git pull
       - name: Get current date
         id: date
         run: echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT

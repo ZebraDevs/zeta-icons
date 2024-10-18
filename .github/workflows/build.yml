@@ -57,9 +57,9 @@ jobs:
         id: title
         run: |
           if [ ${{github.ref_name=='main'}} ]; then
-            TITLE='feat: Icon updates ${{ steps.date.outputs.date }}'
+            TITLE='chore: Icon updates ${{ steps.date.outputs.date }}'
           else
-            TITLE='feat: Icon updates ${{ steps.date.outputs.date }}(${{github.ref_name}})'
+            TITLE='chore: Icon updates ${{ steps.date.outputs.date }}(${{github.ref_name}})'
           fi
           echo "TITLE=$TITLE" >> $GITHUB_OUTPUT
       - name: Push

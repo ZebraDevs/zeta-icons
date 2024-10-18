@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.7.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.6.2...zeta-icons-v0.7.0) (2024-10-18)
+
+
+### ✨ New Features
+
+* Created script to build android icons ([9c4d6bc](https://github.com/ZebraDevs/zeta-icons/commit/9c4d6bc4fe611a439aac447164b681a979df140d))
+* Created script to generate Android icons ([4154878](https://github.com/ZebraDevs/zeta-icons/commit/41548788a993a2d17cb3f862c1923fa8420e0250))
+* Icon updates 18-Oct-2024 ([3423869](https://github.com/ZebraDevs/zeta-icons/commit/34238690907d252b56206267cee88af24cebf54c))
+* Icon updates 18-Oct-2024 ([c554299](https://github.com/ZebraDevs/zeta-icons/commit/c554299c165526affd7916ff9c93ec8e05a05f21))
+
+
+### 🪲 Bug Fixes
+
+* Fixed code connect script ([abe548d](https://github.com/ZebraDevs/zeta-icons/commit/abe548dc2e8bab0b31dabeac2973a52ac01c61c4))
+* fixed import path for script ([cb7501d](https://github.com/ZebraDevs/zeta-icons/commit/cb7501d0b62fa44ba1fd44e815185840bc35a0ba))
+
 ## [0.6.2](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.6.1...zeta-icons-v0.6.2) (2024-10-11)
 
 ### 🪲 Bug Fixes

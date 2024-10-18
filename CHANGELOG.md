@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.7.0...zeta-icons-v0.8.0) (2024-10-18)
+
+
+### ✨ New Features
+
+* Icon updates 18-Oct-2024 ([977faaa](https://github.com/ZebraDevs/zeta-icons/commit/977faaa9bdc83ceb54a601d2ebcf4ea95524cb8b))
+
+
+### 🪲 Bug Fixes
+
+* Fixed android icons ([8fcfaa7](https://github.com/ZebraDevs/zeta-icons/commit/8fcfaa73f3a09c1f4b8969015ecf44024e5eef1b))
+* Fixed android repo name ([1b3d13a](https://github.com/ZebraDevs/zeta-icons/commit/1b3d13ab368414ef5235dcf00715ff87a44a4e88))
+
 ## [0.7.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.6.2...zeta-icons-v0.7.0) (2024-10-18)
 
 

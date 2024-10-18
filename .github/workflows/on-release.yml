@@ -37,3 +37,7 @@ jobs:
   update_flutter:
     uses: ./.github/workflows/update_zeta_flutter.yml
     secrets: inherit
+
+  update_android:
+    uses: ./.github/workflows/update_zds_android.yml
+    secrets: inherit

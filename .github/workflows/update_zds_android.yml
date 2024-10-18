@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/copy-content.yml
     secrets: inherit
     with:
-      repo: ZebraDevs/zds_android
+      repo: ZebraDevs/zds-android
       branch: "update-zeta-icons"
       source_dir: "./outputs/android/."
       destination_dir: "components/src/main/res/drawable"

@@ -1,0 +1,19 @@
+name: Update zds_android
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    secrets:
+      PAT:
+        required: true
+
+jobs:
+  publish_android:
+    uses: ./.github/workflows/copy-content.yml
+    secrets: inherit
+    with:
+      repo: ZebraDevs/zds_android
+      branch: "update-zeta-icons"
+      source_dir: "./outputs/android/."
+      destination_dir: "components/src/main/res/drawable"
+      commit_msg: "Update icons"

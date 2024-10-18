@@ -14,6 +14,8 @@ export const componentSets: ComponentSets = new Map(
   Object.entries(JSON.parse(readFileSync("./test/data/componentSets.json").toString())),
 );
 
+export const androidAddIcon = readFileSync("./test/data/add-icon.xml").toString();
+
 export const manifest: IconManifest = new Map(
   Object.entries(JSON.parse(readFileSync("./test/data/manifest.json").toString())),
 );

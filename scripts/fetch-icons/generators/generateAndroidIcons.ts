@@ -29,7 +29,7 @@ export const generateAndroidIcons = (outputDir: string, iconManifest: IconManife
  * @param iconName The name of the icon.
  * @returns The file name for the Android icon.
  */
-export const getAndroidIconFileName = (iconName: string) => `ic_${toSnakeCase(iconName)}_24.xml`;
+export const getAndroidIconFileName = (iconName: string) => `ic_${toSnakeCase(iconName)}.xml`;
 
 /**
  * Creates the contents of an xml file for an Android icon.

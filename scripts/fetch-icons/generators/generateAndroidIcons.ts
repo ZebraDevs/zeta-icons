@@ -10,6 +10,7 @@ import { createFolder, toSnakeCase } from "../../utils/fileUtils.js";
  */
 export const generateAndroidIcons = (outputDir: string, iconManifest: IconManifest) => {
   createFolder(outputDir);
+  copyReadme(outputDir);
   for (const icon of iconManifest) {
     const definition = icon[1];
     const svg = readFileSync(definition.roundPath).toString();
@@ -54,4 +55,14 @@ export const extractPath = (svgData: string): string => {
     throw new Error("Path not found");
   }
   return path;
+};
+
+/**
+ * Copies the README file to the output directory.
+ * This is useful for users to understand how to use the generated icons, but is also useful for the CI/CD pipeline so that for every version release there will be a change.
+ * @param outputDir - The android output directory.
+ */
+const copyReadme = (outputDir: string) => {
+  const readme = readFileSync("./scripts/fetch-icons/templates/android-readme.md.template").toString();
+  writeFileSync(`${outputDir}/README.md`, readme);
 };

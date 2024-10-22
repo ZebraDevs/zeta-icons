@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.8.0...zeta-icons-v0.8.1) (2024-10-22)
+
+
+### 🧹 Miscellaneous Chores
+
+* Refactor android to remove 24 from file name and create code in formatted state ([#44](https://github.com/ZebraDevs/zeta-icons/issues/44)) ([c88a550](https://github.com/ZebraDevs/zeta-icons/commit/c88a55083d0164f6e02399408542b52fbca7c8b2))
+
 ## [0.8.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.7.0...zeta-icons-v0.8.0) (2024-10-18)
 
 

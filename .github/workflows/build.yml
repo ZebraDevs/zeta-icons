@@ -39,20 +39,20 @@ jobs:
         if: ${{github.event_name  != 'schedule'}}
         run: |
           : > ./.github/fetch_icons/hash.txt
+      - name: Get date / time
+        id: date
+        run: echo date=$(date +'%d %b %Y, %H:%M:%S') >> $GITHUB_OUTPUT
       - name: Fetch icons
         id: "fetch_icons"
         uses: ./.github/fetch_icons
         with:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
+          date: ${{ steps.date.outputs.date }}
       - name: Icons changed
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
       - name: Create code connect files
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         uses: ./.github/create_code_connect
-      - name: Get current date
-        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
-        id: date
-        run: echo date=$(date +'%d-%b-%Y') >> $GITHUB_OUTPUT
       - name: Create PR title
         id: title
         run: |

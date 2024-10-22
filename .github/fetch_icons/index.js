@@ -4,6 +4,7 @@ import fetchIcons from "../../dist/scripts/fetch-icons/fetchIcons.js";
 import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../figmaConfig.js";
 
 const FIGMA_ACCESS_TOKEN = core.getInput("figma-access-token") || process.env.FIGMA_ACCESS_TOKEN;
+const DATE = core.getInput("date") || 'now';
 
 try {
   const hashPath = "./.github/fetch_icons/hash.txt";
@@ -26,6 +27,9 @@ try {
 
   if (newHash) {
     writeFileSync(hashPath, newHash);
+    const packageJson = JSON.parse(readFileSync("./package.json").toString());
+    packageJson.lastUpdated = DATE;
+    writeFileSync("./package.json", JSON.stringify(packageJson, null, 2));
   }
   console.log("Files changed", newHash);
   core.setOutput("files_changed", newHash != undefined);

@@ -22,3 +22,14 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm run test
+      - name: Get lastUpdated from package.json
+        id: lastUpdated
+        run: echo "lastUpdated=$(cat package.json | jq .lastUpdated)" >> $GITHUB_OUTPUT
+      - name: Comment
+        uses: mikedloss/create-update-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          unique-identifier: "lastUpdated comment"
+          message: |
+            ## PR is ready to merge. 
+            Last updated: ${{steps.lastUpdated.outputs.lastUpdated}}

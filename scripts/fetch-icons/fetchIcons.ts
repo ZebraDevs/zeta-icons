@@ -92,7 +92,7 @@ export default async function main(
   generateDefinitionFiles(outputDir, generateFontResult, manifest);
   console.log("✅ - Generated definition files.");
 
-  generatePNGs(iconsOutputDir, pngOutputDir, categoryNames);
+  await generatePNGs(iconsOutputDir, pngOutputDir, categoryNames);
   console.log("✅ - Generated PNGs.");
 
   console.log("✅ - Done - Icons updated!");

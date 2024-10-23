@@ -39,7 +39,7 @@ try {
   }
 
   console.log("Files changed", filesChanged);
-  core.setOutput("files_changed", filesChanged);
+  core.setOutput("files_changed", false); //TODO: Luke change this
 } catch (error) {
   core.setFailed(error.message);
 }

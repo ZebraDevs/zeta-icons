@@ -5,9 +5,11 @@ import { execSync } from "child_process";
  * @returns string[] - List of files that have changed
  */
 const getAllChangedFiles = (): string[] => {
+  console.log("git diff HEAD");
+  console.log(execSync(`git diff HEAD`).toString());
   const diffOutput = execSync(`git diff HEAD --name-only`).toString();
   if (diffOutput != "") {
-    console.log("Files changed:", diffOutput);
+    // console.log("Files changed:", diffOutput);
   }
   return diffOutput.toString().split("\n").filter(Boolean);
 };

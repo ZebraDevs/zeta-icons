@@ -1,6 +1,7 @@
 import core from "@actions/core";
 import { readFileSync, writeFileSync } from "fs";
 import fetchIcons from "../../dist/scripts/fetch-icons/fetchIcons.js";
+import { checkForFileChanges, stageAllFiles } from '../../dist/scripts/utils/checkGit.js';
 import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../figmaConfig.js";
 
 const FIGMA_ACCESS_TOKEN = core.getInput("figma-access-token") || process.env.FIGMA_ACCESS_TOKEN;
@@ -24,15 +25,21 @@ try {
     "outputs",
     false,
   );
+  let filesChanged = false;
 
   if (newHash) {
     writeFileSync(hashPath, newHash);
-    const packageJson = JSON.parse(readFileSync("./package.json").toString());
-    packageJson.lastUpdated = DATE;
-    writeFileSync("./package.json", JSON.stringify(packageJson, null, 2));
+    filesChanged = checkForFileChanges();
+    if (filesChanged) {
+      const packageJson = JSON.parse(readFileSync("./package.json").toString());
+      packageJson.lastUpdated = DATE;
+      writeFileSync("./package.json", JSON.stringify(packageJson, null, 2));
+      stageAllFiles();
+    }
   }
-  console.log("Files changed", newHash);
-  core.setOutput("files_changed", newHash != undefined);
+
+  console.log("Files changed", filesChanged);
+  core.setOutput("files_changed", filesChanged);
 } catch (error) {
   core.setFailed(error.message);
 }

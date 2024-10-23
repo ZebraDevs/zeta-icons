@@ -48,12 +48,14 @@ jobs:
         with:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
           date: ${{ steps.date.outputs.date }}
+          actions-runner-debug: ${{secrets.ACTIONS_RUNNER_DEBUG}}
       - name: Icons changed
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
       - name: Create code connect files
         if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         uses: ./.github/create_code_connect
       - name: Create PR title
+        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         id: title
         run: |
           if [ ${{github.ref_name=='main'}} ]; then
@@ -72,6 +74,7 @@ jobs:
           git commit -m "${{steps.title.outputs.TITLE}}"
           git push --set-upstream origin ${{steps.branch_name.outputs.BRANCH_NAME}} -f
       - name: Check if PR exists
+        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
         run: echo "pr_exists=$(gh pr list -H ${{steps.branch_name.outputs.BRANCH_NAME}} --json number -q length)" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ github.token }}

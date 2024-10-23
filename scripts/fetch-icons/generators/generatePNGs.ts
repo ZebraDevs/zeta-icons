@@ -8,7 +8,7 @@ import { createFolder } from "../../utils/fileUtils.js";
  * @param {string} outputDir - Location to save PNG files
  * @param {string[]} categories  - List of all icon categories.
  */
-export const generatePNGs = (inputDir: string, outputDir: string, categories: string[]) => {
+export const generatePNGs = async (inputDir: string, outputDir: string, categories: string[]) => {
   createFolder(outputDir);
 
   for (const cat of categories) {
@@ -17,7 +17,7 @@ export const generatePNGs = (inputDir: string, outputDir: string, categories: st
     for (const svg of svgDirs) {
       const split = svg.split("/");
       const name = split.pop()?.slice(0, -3);
-      sharp(inputDir + "/" + cat + "/" + svg)
+      await sharp(inputDir + "/" + cat + "/" + svg)
         .resize(512)
         .modulate({ lightness: 44 })
         .png()

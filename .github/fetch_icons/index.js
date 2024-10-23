@@ -5,6 +5,7 @@ import { checkForFileChanges, stageAllFiles } from '../../dist/scripts/utils/che
 import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../figmaConfig.js";
 
 const FIGMA_ACCESS_TOKEN = core.getInput("figma-access-token") || process.env.FIGMA_ACCESS_TOKEN;
+const VERBOSE_LOGS = core.getBooleanInput("actions-runner-debug",) || false;
 const DATE = core.getInput("date") || 'now';
 
 try {
@@ -23,13 +24,13 @@ try {
     ZDS_ASSETS_ICON_PAGE_NAME,
     oldHash,
     "outputs",
-    false,
+    VERBOSE_LOGS,
   );
   let filesChanged = false;
 
   if (newHash) {
     writeFileSync(hashPath, newHash);
-    filesChanged = checkForFileChanges();
+    filesChanged = checkForFileChanges(VERBOSE_LOGS);
     if (filesChanged) {
       const packageJson = JSON.parse(readFileSync("./package.json").toString());
       packageJson.lastUpdated = DATE;

@@ -31,10 +31,12 @@ jobs:
   release-comment:
     name: Release Comment
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.pull_request.title, 'release zeta-icons') }} && ${{ contains(github.event.pull_request.title, 'chore(main)') }}
+    if: ${{ contains(github.event.pull_request.title, 'release zeta-icons')}}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Get lastUpdated
-        if: lastUpdated
+        id: lastUpdated
         run: echo "lastUpdated=$(cat package.json | jq .lastUpdated)" >> $GITHUB_OUTPUT
       - name: Comment
         uses: mikedloss/create-update-comment@v1

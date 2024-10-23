@@ -35,7 +35,7 @@ jobs:
     steps:
       - name: Get lastUpdated
         if: lastUpdated
-        run: echo "lastUpdated=$(cat package.json | jq .lastUpdated)" >> $GITHUB_ENV
+        run: echo "lastUpdated=$(cat package.json | jq .lastUpdated)" >> $GITHUB_OUTPUT
       - name: Comment
         uses: mikedloss/create-update-comment@v1
         with:

@@ -2,6 +2,11 @@ name: CI - Pull Request
 
 on: pull_request
 
+# Pull Request Runs on the same branch will be cancelled
+concurrency:
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
+
 env:
   FIGMA_ACCESS_TOKEN: ${{secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}
 
@@ -22,3 +27,22 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm run test
+
+  release-comment:
+    name: Release Comment
+    runs-on: ubuntu-latest
+    if: ${{ contains(github.event.pull_request.title, 'release zeta-icons')}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Get lastUpdated
+        id: lastUpdated
+        run: echo "lastUpdated=$(cat package.json | jq .lastUpdated)" >> $GITHUB_OUTPUT
+      - name: Comment
+        uses: mikedloss/create-update-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          unique-identifier: "lastUpdated comment"
+          message: |
+            ### PR is ready to merge. 
+            Last updated: ${{ steps.lastUpdated.outputs.lastUpdated }}

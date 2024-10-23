@@ -48,6 +48,7 @@ jobs:
         with:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
           date: ${{ steps.date.outputs.date }}
+          actions-runner-debug: ${{secrets.ACTIONS_RUNNER_DEBUG}}
       - name: Icons changed
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
       - name: Create code connect files

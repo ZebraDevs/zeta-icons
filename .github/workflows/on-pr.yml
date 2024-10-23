@@ -27,6 +27,8 @@ jobs:
         run: npm ci
       - name: Run tests
         run: npm run test
+      - name: Run tsc
+        run: tsc
 
   release-comment:
     name: Release Comment

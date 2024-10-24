@@ -43,13 +43,29 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: "source"
-      - name: Checkout destination repo
+
+      - name: Checkout destination repo (Branch exists)
         uses: actions/checkout@v4
+        if: ${{ steps.check_branch.outputs.branch_exists != 0 }}
         with:
           path: "destination"
           repository: ${{ inputs.repo }}
           token: ${{ secrets.PAT }}
           ref: ${{ inputs.branch }}
+
+      - name: Checkout destination repo (Branch doesn't exist)
+        uses: actions/checkout@v4
+        if: ${{ steps.check_branch.outputs.branch_exists == 0 }}
+        with:
+          path: "destination"
+          repository: ${{ inputs.repo }}
+          token: ${{ secrets.PAT }}
+      - name: Create branch in destination repo
+        if: ${{ steps.check_branch.outputs.branch_exists == 0 }}
+        run: |
+          cd destination
+          git checkout -b ${{ inputs.branch }}
+
       - run: echo ${{inputs.prerun}}
       - name: Run pre-run command
         if: inputs.prerun != ''
@@ -70,9 +86,7 @@ jobs:
           git config --global user.email "zeta-icons-bot@github.com"
           git add -A
           git commit -m "deps(automated): ${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
-          git push
-
-      # --set-upstream origin ${{steps.branch_name.outputs.BRANCH_NAME}} -f
+          git push --set-upstream origin ${{inputs.branch}} -f
 
       # - name: Push files if branch exists
       #   uses: dmnemec/copy_file_to_another_repo_action@main

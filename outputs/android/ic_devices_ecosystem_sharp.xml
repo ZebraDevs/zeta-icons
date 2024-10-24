@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="1200"
+    android:viewportHeight="1200">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M150 300H1050V200H50V1000H350V900H150V300ZM650 600H450V689C419.5 716.5 400 755.5 400 800C400 844.5 419.5 883.5 450 911V1000H650V911C680.5 883.5 700 844 700 800C700 756 680.5 716.5 650 689V600ZM550 875C508.5 875 475 841.5 475 800C475 758.5 508.5 725 550 725C591.5 725 625 758.5 625 800C625 841.5 591.5 875 550 875ZM1150 400H750V1000H1150V400ZM1050 900H850V500H1050V900Z" />
+</vector>

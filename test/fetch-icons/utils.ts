@@ -12,7 +12,7 @@ export function checkIconsExist(manifest: IconManifest) {
 
 export function checkAndroidIconFilesExist(manifest: IconManifest, outputDir: string) {
   manifest.forEach((icon) => {
-    assert.equal(existsSync(`${outputDir}/${getAndroidIconFileName(icon.name)}`), true);
+    assert.equal(existsSync(`${outputDir}/${getAndroidIconFileName(icon.name, "round")}`), true);
   });
 }
 

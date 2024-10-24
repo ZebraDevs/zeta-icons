@@ -12,15 +12,22 @@ export const generateAndroidIcons = (outputDir: string, iconManifest: IconManife
   createFolder(outputDir);
   for (const icon of iconManifest) {
     const definition = icon[1];
-    const svg = readFileSync(definition.roundPath).toString();
-    try {
-      const file = generateAndroidIcon(svg);
-      if (file) {
-        writeFileSync(`${outputDir}/${getAndroidIconFileName(definition.name)}`, file);
-      }
-    } catch (e) {
-      console.error(`Error generating Android icon for ${definition.name}`);
+    outputAndroidFile(definition.roundPath, "round", definition.name, outputDir);
+    outputAndroidFile(definition.sharpPath, "sharp", definition.name, outputDir);
+  }
+};
+
+const outputAndroidFile = (svg: string, type: string, iconName: string, outputDir: string) => {
+  const svg2 = readFileSync(svg).toString();
+  try {
+    const file = generateAndroidIcon(svg2);
+    if (file) {
+      writeFileSync(`${outputDir}/${getAndroidIconFileName(iconName, type)}`, file);
+    } else {
+      throw new Error("Error generating Android icon");
     }
+  } catch (e) {
+    console.error(`Error generating Android icon for ${type} ${iconName}`, e);
   }
 };
 
@@ -29,7 +36,7 @@ export const generateAndroidIcons = (outputDir: string, iconManifest: IconManife
  * @param iconName The name of the icon.
  * @returns The file name for the Android icon.
  */
-export const getAndroidIconFileName = (iconName: string) => `ic_${toSnakeCase(iconName)}.xml`;
+export const getAndroidIconFileName = (iconName: string, type: String) => `ic_${toSnakeCase(iconName)}_${type}.xml`;
 
 /**
  * Creates the contents of an xml file for an Android icon.

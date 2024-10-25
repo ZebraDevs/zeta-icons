@@ -54,6 +54,7 @@ jobs:
           repository: ${{ inputs.repo }}
           token: ${{ secrets.PAT }}
           ref: ${{ inputs.branch }}
+          fetch-depth: 0
 
       - name: Checkout destination repo (Branch doesn't exist)
         uses: actions/checkout@v4
@@ -62,6 +63,7 @@ jobs:
           path: "destination"
           repository: ${{ inputs.repo }}
           token: ${{ secrets.PAT }}
+          fetch-depth: 0
 
       - name: Create branch in destination repo
         if: ${{ steps.check_branch.outputs.branch_exists == 0 }}
@@ -82,22 +84,13 @@ jobs:
       - name: Copy files
         run: cp -r source/${{ inputs.source_dir }}/* destination/${{ inputs.destination_dir }}
 
-      - name: Stage destination changes
+      - name: Stage / Push destination changes
+        continue-on-error: true
         run: |
           cd destination
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
           git add -A
-
-      - name: Check if there are changes
-        id: changed
-        run: |
-          cd destination
-          git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
-
-      - name: Commit and push changes
-        if: steps.changed.outputs.changed == 'true'
-        run: |
           git commit -m "deps(automated): ${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
           git push --set-upstream origin ${{inputs.branch}} -f
 

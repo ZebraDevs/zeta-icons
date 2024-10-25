@@ -14,7 +14,7 @@ jobs:
     with:
       repo: ZebraDevs/zds-android
       branch: "update-zeta-icons"
-      source_dir: "./outputs/android/."
+      source_dir: "outputs/android"
       destination_dir: "components/src/main/res/drawable"
       commit_msg: "Update icons"
       prerun: rm -f components/src/main/res/drawable/ic_*.xml

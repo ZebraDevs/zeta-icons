@@ -169,7 +169,9 @@ export const ZetaIconNameList = [
   "cloud_upload",
   "color_fill",
   "columns",
+  "comms_chat_new",
   "comms_chat",
+  "comms_chat_unread",
   "contactless_pay",
   "content",
   "contrast_image",
@@ -709,7 +711,9 @@ export type ZetaIconName = "activity"
  | "cloud_upload"
  | "color_fill"
  | "columns"
+ | "comms_chat_new"
  | "comms_chat"
+ | "comms_chat_unread"
  | "contactless_pay"
  | "content"
  | "contrast_image"

@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.9.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.8.1...zeta-icons-v0.9.0) (2024-11-11)
+
+
+### ✨ New Features
+
+* Add new icon: comms chat round and sharp ([7215025](https://github.com/ZebraDevs/zeta-icons/commit/7215025384e1ce6a1b863732db2c1248ce9578a0))
+
+
+### 🪲 Bug Fixes
+
+* **UX-1297:** Add both round and sharp icons to ZDS Android ([#58](https://github.com/ZebraDevs/zeta-icons/issues/58)) ([a80f61f](https://github.com/ZebraDevs/zeta-icons/commit/a80f61f97b6ee17ea2abbca0bd9a3b67fdd3f65e))
+
+
+### 🧹 Miscellaneous Chores
+
+* Icon updates 05 Nov 2024, 17:09:34 ([#60](https://github.com/ZebraDevs/zeta-icons/issues/60)) ([5a76443](https://github.com/ZebraDevs/zeta-icons/commit/5a76443a6093997b80c325204cc9455df252e888))
+* Icon updates 22-Oct-2024 ([#46](https://github.com/ZebraDevs/zeta-icons/issues/46)) ([dcff8b4](https://github.com/ZebraDevs/zeta-icons/commit/dcff8b459cdfbb8d4a433acd0b9f38357272a341))
+* Icon updates 24 Oct 2024, 19:01:50 ([#57](https://github.com/ZebraDevs/zeta-icons/issues/57)) ([c96c346](https://github.com/ZebraDevs/zeta-icons/commit/c96c3460b25ac585c63314f6f5682e1f79674866))
+* Icon updates 30 Oct 2024, 08:02:33 ([#59](https://github.com/ZebraDevs/zeta-icons/issues/59)) ([7215025](https://github.com/ZebraDevs/zeta-icons/commit/7215025384e1ce6a1b863732db2c1248ce9578a0))
+
 ## [0.8.1](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.8.0...zeta-icons-v0.8.1) (2024-10-22)
 
 

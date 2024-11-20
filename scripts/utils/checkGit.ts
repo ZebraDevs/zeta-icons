@@ -30,7 +30,7 @@ export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[]
     const matches = /^(A|C|D|M|R|T|U|X|B)\s+(.*)$/.exec(line);
     if (!matches) return null;
     return { type: matches[1] as GitChangeType, path: matches[2] };
-  }).filter((change) => change !== null);
+  }).filter((change) => change != null);
 };
 
 /**

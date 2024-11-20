@@ -32,21 +32,29 @@ try {
     "outputs",
     VERBOSE_LOGS,
   );
-  let filesChanged = false;
+  let filesChanged = [];
 
   if (newHash) {
     writeFileSync(hashPath, newHash);
     filesChanged = checkForFileChanges(VERBOSE_LOGS);
-    if (filesChanged) {
+    if (filesChanged.length > 0) {
       const packageJson = JSON.parse(readFileSync("./package.json").toString());
       packageJson.lastUpdated = DATE;
       writeFileSync("./package.json", JSON.stringify(packageJson, null, 2));
       stageAllFiles();
     }
   }
+  const filesChangedOutput = Object.entries(filesChanged.reduce((acc, {type, path}) => { 
+    const descriptiveChangeType = gitChangeTypeToString(type);
+    if(acc[descriptiveChangeType] == undefined) {
+      acc.descriptiveChangeType = [];
+    }
+    acc.descriptiveChangeType.push(`  ${path}`);
+    return acc;
+  }, [])).map(([key, value]) => `${key}:\n${value.join("\n")}`).join("\n\n");
 
   console.log("Files changed", filesChanged);
-  core.setOutput("files_changed", filesChanged);
+  core.setOutput("files_changed", filesChangedOutput);
 } catch (error) {
   core.setFailed(error.message);
 }

@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from "fs";
 import prettier from "prettier";
-import { IconManifest } from "../types/customTypes.js";
+import { IconManifest } from "../../types.js";
 import { generateFigmaConnectCall } from "./generate-code-connect-call.js";
 import ts from "typescript";
 import { getNodeText } from "./get-node-text.js";

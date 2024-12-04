@@ -1,5 +1,5 @@
 import { createFolder, writeSVGToFile } from "./fileUtils.js";
-import { ImageDefinition, ImageManifest } from "../types/customTypes.js";
+import { ImageDefinition, ImageManifest } from "../../types.js";
 
 /**
  * Saves svg files within icons object to `{category}/{icon-name}.svg`.

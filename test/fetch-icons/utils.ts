@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { FontType, IconManifest } from "../../scripts/types/customTypes.js";
+import { FontType, IconManifest } from "../../types.js";
 import { existsSync } from "fs";
 import { getAndroidIconFileName } from "../../scripts/fetch-icons/generators/generateAndroidIcons.js";
 

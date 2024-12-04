@@ -12,7 +12,7 @@ import {
   testTSOutputDir,
 } from "../../data/constants.js";
 import { categoryNames, generatedFontDefinitions } from "../../data/index.js";
-import { GenerateFontResult } from "../../../scripts/types/customTypes.js";
+import { GenerateFontResult } from "../../../types.js";
 
 describe("generateFontFiles", () => {
   let result: GenerateFontResult;

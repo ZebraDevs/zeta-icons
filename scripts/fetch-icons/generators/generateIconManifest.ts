@@ -1,6 +1,6 @@
 import { checkIconName, checkCategoryName, ErrorSeverity } from "zeta-icon-name-checker";
 import { extractIconSets, getSearchTerms } from "../../utils/figmaUtils.js";
-import { IconManifest } from "../../types/customTypes.js";
+import { IconManifest } from "../../../types.js";
 import { getIconFileName, toSnakeCase } from "../../utils/fileUtils.js";
 import { ComponentSets, FigmaNode } from "../../types/figmaTypes.js";
 

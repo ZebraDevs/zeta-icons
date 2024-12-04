@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import { IconManifest, ImageManifest, GenerateFontResult } from "../../scripts/types/customTypes.js";
+import { IconManifest, ImageManifest, GenerateFontResult } from "../../types.js";
 import { DocumentResponse, FigmaNode, ComponentSets } from "../../scripts/types/figmaTypes.js";
 import { extractCategoryNames } from "../../scripts/utils/figmaUtils.js";
 

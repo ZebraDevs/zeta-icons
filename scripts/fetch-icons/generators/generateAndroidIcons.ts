@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from "fs";
-import { IconManifest } from "../../types/customTypes.js";
+import { IconManifest } from "../../../types.js";
 import * as cheerio from "cheerio";
 import { createFolder, toSnakeCase } from "../../utils/fileUtils.js";
 

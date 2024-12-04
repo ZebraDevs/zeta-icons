@@ -2,19 +2,16 @@ import assert from "assert";
 import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../../figmaConfig.js";
 import { rmSync, existsSync, readFileSync } from "fs";
 import fetchIcons from "../../../scripts/fetch-icons/fetchIcons.js";
-import { IconManifest } from "../../../scripts/types/customTypes.js";
+import { IconManifest } from "../../../types.js";
 import { checkFigmaTokenIsSet } from "../../../scripts/utils/figmaUtils.js";
 import { zdsIntegrationOutputDir, testDartOutputDir, testTSOutputDir } from "../../data/constants.js";
 import { checkFontsExist, checkIconsExist } from "../utils.js";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
+import * as dotenv from "dotenv";
+dotenv.config({ path: ".env.test.local" });
 
 describe("fetchIcons", () => {
   before(async () => {
     rmSync(zdsIntegrationOutputDir, { recursive: true, force: true });
-    require("dotenv").config({
-      path: ".env.test.local",
-    });
 
     process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
     checkFigmaTokenIsSet(process.env.FIGMA_ACCESS_TOKEN);

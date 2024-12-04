@@ -8,19 +8,14 @@
     "allowArbitraryExtensions": true,
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
     "isolatedModules": true,
     "moduleResolution": "bundler",
     "allowJs": true,
     "checkJs": false,
     "resolveJsonModule": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "newLine": "lf",
     "typeRoots": ["./node_modules/@types", "scripts/definitions"]
   },
-  "ts-node": {
-    "esm": true,
-    "files": true
-  },
-  "exclude": ["./test", "./dist", "./tests"]
+  "exclude": ["test/", "dist/", "tests/"]
 }

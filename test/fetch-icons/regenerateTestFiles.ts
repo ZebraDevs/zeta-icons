@@ -19,7 +19,7 @@ import { generateIconManifest } from "../../scripts/fetch-icons/generators/gener
 import { generateFonts } from "../../scripts/fetch-icons/generators/generateFonts.js";
 import { saveSVGs } from "../../scripts/utils/saveSvgs.js";
 import { optimizeSVGs } from "../../scripts/utils/optimizeSvgs.js";
-import { ComponentSets } from "../../scripts/fetch-icons/types/figmaTypes.js";
+import { ComponentSets } from "../../scripts/types/figmaTypes.js";
 
 async function main() {
   const tempOutputDir = `${testOutputDir}/temp`;

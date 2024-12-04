@@ -1,4 +1,4 @@
-import iconManifest from "./outputs/icon-manifest.json";
+import iconManifest from "./outputs/icon-manifest.json" with { type: "json" };
 import { type IconManifest } from "./types.js";
 export { ZetaIconNameList } from "./outputs/web/icon-types.js";
 

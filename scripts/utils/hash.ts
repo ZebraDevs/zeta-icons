@@ -1,5 +1,5 @@
 import md5 from "md5";
-import { ImageManifest } from "../types/customTypes.js";
+import { ImageManifest } from "../../types.js";
 
 /**
  * Applies md5 hash to a Map.

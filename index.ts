@@ -1,5 +1,5 @@
 import iconManifest from "./outputs/icon-manifest.json";
-import { type IconManifest } from "./scripts/types/customTypes.js";
+import { type IconManifest } from "./types.js";
 export { ZetaIconNameList } from "./outputs/web/icon-types.js";
 
 const convertedIconManifest = new Map(Object.entries(iconManifest)) as IconManifest;
@@ -7,7 +7,7 @@ const convertedIconManifest = new Map(Object.entries(iconManifest)) as IconManif
 export { convertedIconManifest as iconManifest };
 
 export type { ZetaIconName } from "./outputs/web/icon-types.js";
-export type * from "./scripts/types/customTypes.js";
+export type * from "./types.js";
 
 // x-release-please-start-version
 export const version = "0.9.0";

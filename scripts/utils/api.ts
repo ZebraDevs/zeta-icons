@@ -1,4 +1,4 @@
-import { ImageManifest, IconManifest } from "../types/customTypes.js";
+import { ImageManifest, IconManifest } from "../../types.js";
 import { DocumentResponse } from "../types/figmaTypes.js";
 
 /**

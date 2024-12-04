@@ -4,7 +4,7 @@ import { testIconsOutputDir } from "../../data/constants.js";
 import { existsSync } from "fs";
 import { assert } from "chai";
 import { checkIconsExist } from "../utils.js";
-import { ImageManifest } from "../../../scripts/types/customTypes.js";
+import { ImageManifest } from "../../../types.js";
 
 describe("saveSvgs", () => {
   before(async () => {

@@ -2,7 +2,7 @@ import { clearDirectory, createFolder, getIconFileName } from "../../../scripts/
 import { existsSync, rmSync, writeFileSync } from "node:fs";
 import { testOutputDir } from "../../data/constants.js";
 import { assert } from "chai";
-import { FontType } from "../../../scripts/types/customTypes.js";
+import { FontType } from "../../../types.js";
 
 describe("fileUtils - folders", () => {
   const testDir = `${testOutputDir}/test`;

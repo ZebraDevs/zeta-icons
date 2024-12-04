@@ -2,7 +2,7 @@ import assert from "assert";
 import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../../figmaConfig.js";
 import { rmSync, existsSync, readFileSync } from "fs";
 import fetchIcons from "../../../scripts/fetch-icons/fetchIcons.js";
-import { IconManifest } from "../../../scripts/types/customTypes.js";
+import { IconManifest } from "../../../types.js";
 import { checkFigmaTokenIsSet } from "../../../scripts/utils/figmaUtils.js";
 import { zdsIntegrationOutputDir, testDartOutputDir, testTSOutputDir } from "../../data/constants.js";
 import { checkFontsExist, checkIconsExist } from "../utils.js";

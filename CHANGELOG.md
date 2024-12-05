@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.9.1](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.0...zeta-icons-v0.9.1) (2024-12-05)
+
+
+### 🪲 Bug Fixes
+
+* code-connect was creating icon names in kebab-case. Changed to snake_case ([64b48fd](https://github.com/ZebraDevs/zeta-icons/commit/64b48fd60c880204f65adb1d7cecd0d53691b72e))
+* customTypes wasn't being exported. Moved to root. ([64b48fd](https://github.com/ZebraDevs/zeta-icons/commit/64b48fd60c880204f65adb1d7cecd0d53691b72e))
+
+
+### 🧹 Miscellaneous Chores
+
+* updated all devDependencies to latest version ([64b48fd](https://github.com/ZebraDevs/zeta-icons/commit/64b48fd60c880204f65adb1d7cecd0d53691b72e))
+
 ## [0.9.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.8.1...zeta-icons-v0.9.0) (2024-11-11)
 
 

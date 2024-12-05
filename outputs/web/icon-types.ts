@@ -245,6 +245,7 @@ export const ZetaIconNameList = [
   "full_screen",
   "gif",
   "glossary",
+  "google_drive",
   "grid_off",
   "grid_on",
   "grid_view",
@@ -787,6 +788,7 @@ export type ZetaIconName = "activity"
  | "full_screen"
  | "gif"
  | "glossary"
+ | "google_drive"
  | "grid_off"
  | "grid_on"
  | "grid_view"

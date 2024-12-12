@@ -4,7 +4,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>check-box</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>check_box</zeta-icon>`,
   },
 );
 figma.connect(
@@ -12,7 +12,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>check-box-empty</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>check_box_empty</zeta-icon>`,
   },
 );
 figma.connect(
@@ -21,7 +21,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >indeterminate-check-box</zeta-icon
+        >indeterminate_check_box</zeta-icon
       >`,
   },
 );
@@ -31,7 +31,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >radio-button-checked</zeta-icon
+        >radio_button_checked</zeta-icon
       >`,
   },
 );
@@ -41,7 +41,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >radio-button-unchecked</zeta-icon
+        >radio_button_unchecked</zeta-icon
       >`,
   },
 );
@@ -50,7 +50,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>toggle-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>toggle_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -58,7 +58,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>toggle-on</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>toggle_on</zeta-icon>`,
   },
 );
 figma.connect(
@@ -74,7 +74,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>star-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>star_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -82,7 +82,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>star-half</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>star_half</zeta-icon>`,
   },
 );
 figma.connect(
@@ -90,7 +90,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-bar</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_bar</zeta-icon>`,
   },
 );
 figma.connect(
@@ -98,7 +98,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-line-predict</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_line_predict</zeta-icon>`,
   },
 );
 figma.connect(
@@ -106,7 +106,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-line</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_line</zeta-icon>`,
   },
 );
 figma.connect(
@@ -114,7 +114,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-pie</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_pie</zeta-icon>`,
   },
 );
 figma.connect(
@@ -122,7 +122,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-bubble</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_bubble</zeta-icon>`,
   },
 );
 figma.connect(
@@ -130,7 +130,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-line-stacked</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_line_stacked</zeta-icon>`,
   },
 );
 figma.connect(
@@ -138,7 +138,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-bubble-charts</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_bubble_charts</zeta-icon>`,
   },
 );
 figma.connect(
@@ -146,7 +146,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-pie-charts</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_pie_charts</zeta-icon>`,
   },
 );
 figma.connect(
@@ -154,7 +154,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-waterfall</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_waterfall</zeta-icon>`,
   },
 );
 figma.connect(
@@ -162,7 +162,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-filled</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_filled</zeta-icon>`,
   },
 );
 figma.connect(
@@ -170,7 +170,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -186,7 +186,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-gantt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_gantt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -194,7 +194,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-stacked</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_stacked</zeta-icon>`,
   },
 );
 figma.connect(
@@ -202,7 +202,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-doughnut</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_doughnut</zeta-icon>`,
   },
 );
 figma.connect(
@@ -226,7 +226,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-scatter-plot</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_scatter_plot</zeta-icon>`,
   },
 );
 figma.connect(
@@ -234,7 +234,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-rollover</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_rollover</zeta-icon>`,
   },
 );
 figma.connect(
@@ -242,7 +242,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-next</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_next</zeta-icon>`,
   },
 );
 figma.connect(
@@ -250,7 +250,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-gantt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_gantt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -266,7 +266,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-flexible</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_flexible</zeta-icon>`,
   },
 );
 figma.connect(
@@ -274,7 +274,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-on</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_on</zeta-icon>`,
   },
 );
 figma.connect(
@@ -282,7 +282,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-available</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_available</zeta-icon>`,
   },
 );
 figma.connect(
@@ -290,7 +290,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-missed</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_missed</zeta-icon>`,
   },
 );
 figma.connect(
@@ -298,7 +298,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-info</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_info</zeta-icon>`,
   },
 );
 figma.connect(
@@ -306,7 +306,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-start</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_start</zeta-icon>`,
   },
 );
 figma.connect(
@@ -314,7 +314,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-in-progress</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_in_progress</zeta-icon>`,
   },
 );
 figma.connect(
@@ -322,7 +322,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-stop</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_stop</zeta-icon>`,
   },
 );
 figma.connect(
@@ -330,7 +330,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-upcoming</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_upcoming</zeta-icon>`,
   },
 );
 figma.connect(
@@ -338,7 +338,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-switch</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_switch</zeta-icon>`,
   },
 );
 figma.connect(
@@ -346,7 +346,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-bid</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_bid</zeta-icon>`,
   },
 );
 figma.connect(
@@ -354,7 +354,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-edit</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_edit</zeta-icon>`,
   },
 );
 figma.connect(
@@ -362,7 +362,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-rollover</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_rollover</zeta-icon>`,
   },
 );
 figma.connect(
@@ -370,7 +370,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-timer</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_timer</zeta-icon>`,
   },
 );
 figma.connect(
@@ -378,7 +378,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-segment</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_segment</zeta-icon>`,
   },
 );
 figma.connect(
@@ -394,7 +394,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>timecard-warning</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>timecard_warning</zeta-icon>`,
   },
 );
 figma.connect(
@@ -402,7 +402,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>timecard-approve</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>timecard_approve</zeta-icon>`,
   },
 );
 figma.connect(
@@ -434,7 +434,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>audit-activity</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>audit_activity</zeta-icon>`,
   },
 );
 figma.connect(
@@ -442,7 +442,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>list-feedback</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>list_feedback</zeta-icon>`,
   },
 );
 figma.connect(
@@ -451,7 +451,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >list-bullet-contained</zeta-icon
+        >list_bullet_contained</zeta-icon
       >`,
   },
 );
@@ -460,7 +460,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>list-form</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>list_form</zeta-icon>`,
   },
 );
 figma.connect(
@@ -468,7 +468,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>face-id</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>face_id</zeta-icon>`,
   },
 );
 figma.connect(
@@ -476,7 +476,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>add-task</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>add_task</zeta-icon>`,
   },
 );
 figma.connect(
@@ -492,7 +492,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>video-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>video_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -516,7 +516,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>app-edit</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>app_edit</zeta-icon>`,
   },
 );
 figma.connect(
@@ -564,7 +564,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>eye-preview</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>eye_preview</zeta-icon>`,
   },
 );
 figma.connect(
@@ -572,7 +572,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>lock-undo</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>lock_undo</zeta-icon>`,
   },
 );
 figma.connect(
@@ -588,7 +588,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>link-add</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>link_add</zeta-icon>`,
   },
 );
 figma.connect(
@@ -620,7 +620,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>store-swap</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>store_swap</zeta-icon>`,
   },
 );
 figma.connect(
@@ -628,7 +628,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>store-transfer</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>store_transfer</zeta-icon>`,
   },
 );
 figma.connect(
@@ -636,7 +636,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>store-release</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>store_release</zeta-icon>`,
   },
 );
 figma.connect(
@@ -644,7 +644,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>how-do-i</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>how_do_i</zeta-icon>`,
   },
 );
 figma.connect(
@@ -708,7 +708,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>camera-switch</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>camera_switch</zeta-icon>`,
   },
 );
 figma.connect(
@@ -724,7 +724,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>user-minor</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>user_minor</zeta-icon>`,
   },
 );
 figma.connect(
@@ -732,7 +732,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-swap</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_swap</zeta-icon>`,
   },
 );
 figma.connect(
@@ -740,7 +740,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-walk</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_walk</zeta-icon>`,
   },
 );
 figma.connect(
@@ -748,7 +748,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-clock</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_clock</zeta-icon>`,
   },
 );
 figma.connect(
@@ -756,7 +756,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-move</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_move</zeta-icon>`,
   },
 );
 figma.connect(
@@ -764,7 +764,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-manager</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_manager</zeta-icon>`,
   },
 );
 figma.connect(
@@ -772,7 +772,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-assign</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_assign</zeta-icon>`,
   },
 );
 figma.connect(
@@ -780,7 +780,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-info</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_info</zeta-icon>`,
   },
 );
 figma.connect(
@@ -788,7 +788,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-admin</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_admin</zeta-icon>`,
   },
 );
 figma.connect(
@@ -796,7 +796,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>barcode-settings</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>barcode_settings</zeta-icon>`,
   },
 );
 figma.connect(
@@ -804,7 +804,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>barcode-bluetooth</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>barcode_bluetooth</zeta-icon>`,
   },
 );
 figma.connect(
@@ -813,7 +813,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >barcode-scanner-down</zeta-icon
+        >barcode_scanner_down</zeta-icon
       >`,
   },
 );
@@ -822,7 +822,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>barcode-qr-code</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>barcode_qr_code</zeta-icon>`,
   },
 );
 figma.connect(
@@ -846,7 +846,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>card-with-chip</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>card_with_chip</zeta-icon>`,
   },
 );
 figma.connect(
@@ -854,7 +854,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>card-orientation</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>card_orientation</zeta-icon>`,
   },
 );
 figma.connect(
@@ -862,7 +862,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>credit-card-swipe</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>credit_card_swipe</zeta-icon>`,
   },
 );
 figma.connect(
@@ -870,7 +870,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>contactless-pay</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>contactless_pay</zeta-icon>`,
   },
 );
 figma.connect(
@@ -878,7 +878,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>tap-to-pay</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>tap_to_pay</zeta-icon>`,
   },
 );
 figma.connect(
@@ -894,7 +894,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>issue-audit</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>issue_audit</zeta-icon>`,
   },
 );
 figma.connect(
@@ -902,7 +902,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>barcode-done</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>barcode_done</zeta-icon>`,
   },
 );
 figma.connect(
@@ -910,7 +910,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>barcode-image-scan</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>barcode_image_scan</zeta-icon>`,
   },
 );
 figma.connect(
@@ -934,7 +934,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>scan-rate</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>scan_rate</zeta-icon>`,
   },
 );
 figma.connect(
@@ -943,7 +943,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >chart-filled-enterprise</zeta-icon
+        >chart_filled_enterprise</zeta-icon
       >`,
   },
 );
@@ -953,7 +953,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >enterprise-diagnostics</zeta-icon
+        >enterprise_diagnostics</zeta-icon
       >`,
   },
 );
@@ -970,7 +970,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>zero-scale</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>zero_scale</zeta-icon>`,
   },
 );
 figma.connect(
@@ -978,7 +978,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>road-map</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>road_map</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1010,7 +1010,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>shape-recognition</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>shape_recognition</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1034,7 +1034,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>productivity-apps</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>productivity_apps</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1066,7 +1066,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>tag-enterprise</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>tag_enterprise</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1082,7 +1082,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>sim-card</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>sim_card</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1091,7 +1091,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >phone-bluetooth-speaker</zeta-icon
+        >phone_bluetooth_speaker</zeta-icon
       >`,
   },
 );
@@ -1100,7 +1100,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>phone-in-talk</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>phone_in_talk</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1124,7 +1124,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>sync-disabled</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>sync_disabled</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1132,7 +1132,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>sd-card</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>sd_card</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1148,7 +1148,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>add-call</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>add_call</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1156,7 +1156,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>call-back</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>call_back</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1164,7 +1164,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>end-call</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>end_call</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1172,7 +1172,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>email-alt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>email_alt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1180,7 +1180,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-search</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_search</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1220,7 +1220,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chat-bubble</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chat_bubble</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1228,7 +1228,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chat-bubble-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chat_bubble_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1236,7 +1236,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>qr-code</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>qr_code</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1244,7 +1244,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>rss-feed</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>rss_feed</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1260,7 +1260,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>new-chat</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>new_chat</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1268,7 +1268,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chat-search</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chat_search</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1276,7 +1276,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chat-message-unread</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chat_message_unread</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1356,7 +1356,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>location-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>location_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1364,7 +1364,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>notifications-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>notifications_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1372,7 +1372,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>email-reply-all</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>email_reply_all</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1388,7 +1388,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>react-add</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>react_add</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1396,7 +1396,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chat-message-read</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chat_message_read</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1404,7 +1404,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>react-thumbsup</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>react_thumbsup</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1412,7 +1412,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>point-token</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>point_token</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1444,7 +1444,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chat-bot</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chat_bot</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1492,7 +1492,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>comms-chat-unread</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>comms_chat_unread</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1500,7 +1500,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>comms-chat-new</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>comms_chat_new</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1508,7 +1508,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>comms-chat</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>comms_chat</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1532,7 +1532,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>bluetooth-searching</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>bluetooth_searching</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1540,7 +1540,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>bluetooth-disabled</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>bluetooth_disabled</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1556,7 +1556,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>uhf-rfid</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>uhf_rfid</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1572,7 +1572,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>location-point</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>location_point</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1580,7 +1580,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>light-mode</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>light_mode</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1588,7 +1588,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>dark-mode</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>dark_mode</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1604,7 +1604,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>cellular-signal</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>cellular_signal</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1612,7 +1612,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>network-signal</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>network_signal</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1620,7 +1620,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>restart-alt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>restart_alt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1628,7 +1628,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>screen-rotation</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>screen_rotation</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1652,7 +1652,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>usb-alt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>usb_alt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1660,7 +1660,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>usb-alt-device</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>usb_alt_device</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1676,7 +1676,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>battery-alert</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>battery_alert</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1692,7 +1692,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>battery-charging</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>battery_charging</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1700,7 +1700,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>flight-mode</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>flight_mode</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1740,7 +1740,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>mobile-friendly</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>mobile_friendly</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1756,7 +1756,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>add-alert</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>add_alert</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1764,7 +1764,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>auto-delete</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>auto_delete</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1780,7 +1780,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>error-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>error_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1789,7 +1789,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >important-notification</zeta-icon
+        >important_notification</zeta-icon
       >`,
   },
 );
@@ -1798,7 +1798,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>warning-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>warning_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1822,7 +1822,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>alert-active</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>alert_active</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1830,7 +1830,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>alert-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>alert_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1846,7 +1846,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>switch-user</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>switch_user</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1854,7 +1854,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>add-person</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>add_person</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1862,7 +1862,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>person-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>person_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1870,7 +1870,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>remove-person</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>remove_person</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1886,7 +1886,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>add-group</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>add_group</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1894,7 +1894,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>remove-group</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>remove_group</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1966,7 +1966,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>bad-mood</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>bad_mood</zeta-icon>`,
   },
 );
 figma.connect(
@@ -1998,7 +1998,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>very-satisfied</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>very_satisfied</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2014,7 +2014,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>point-heart</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>point_heart</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2022,7 +2022,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>point-star</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>point_star</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2046,7 +2046,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>point-money</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>point_money</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2054,7 +2054,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>point-gift</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>point_gift</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2062,7 +2062,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>money-usd</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>money_usd</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2070,7 +2070,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>money-euro</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>money_euro</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2078,7 +2078,15 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>money-pound</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>money_pound</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=7977:3567",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>google_drive</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2094,7 +2102,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>near-me</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>near_me</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2118,7 +2126,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>my-location</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>my_location</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2134,7 +2142,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>zoom-in-map</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>zoom_in_map</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2142,7 +2150,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>zoom-out-map</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>zoom_out_map</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2158,7 +2166,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>light-rail-train</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>light_rail_train</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2190,7 +2198,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>local-shipping</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>local_shipping</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2230,7 +2238,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>finished-download</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>finished_download</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2254,7 +2262,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>cloud-done</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>cloud_done</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2262,7 +2270,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>cloud-download</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>cloud_download</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2270,7 +2278,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>cloud-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>cloud_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2278,7 +2286,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>cloud-upload</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>cloud_upload</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2286,7 +2294,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>cloud-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>cloud_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2302,7 +2310,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>create-new-folder</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>create_new_folder</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2310,7 +2318,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>folder-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>folder_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2318,7 +2326,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>shared-folder</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>shared_folder</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2326,7 +2334,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>grid-view</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>grid_view</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2334,7 +2342,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>upload-file</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>upload_file</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2342,7 +2350,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>jpg-attach</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>jpg_attach</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2350,7 +2358,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>pdf-attach</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>pdf_attach</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2358,7 +2366,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>png-attach</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>png_attach</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2366,7 +2374,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>doc-attach</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>doc_attach</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2374,7 +2382,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>ppt-attach</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>ppt_attach</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2382,7 +2390,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>open-new-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>open_new_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2390,7 +2398,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>page-height</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>page_height</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2398,7 +2406,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>page-width</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>page_width</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2406,7 +2414,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>page-rotate</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>page_rotate</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2438,7 +2446,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>folder-file</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>folder_file</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2454,7 +2462,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>font-size-decrease</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>font_size_decrease</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2462,7 +2470,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>font-size-increase</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>font_size_increase</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2494,7 +2502,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>no-color</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>no_color</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2502,7 +2510,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>color-fill</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>color_fill</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2535,7 +2543,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >align-horizontal-center</zeta-icon
+        >align_horizontal_center</zeta-icon
       >`,
   },
 );
@@ -2545,7 +2553,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >align-vertical-center</zeta-icon
+        >align_vertical_center</zeta-icon
       >`,
   },
 );
@@ -2555,7 +2563,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >align-horizontal-right</zeta-icon
+        >align_horizontal_right</zeta-icon
       >`,
   },
 );
@@ -2565,7 +2573,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >align-horizontal-left</zeta-icon
+        >align_horizontal_left</zeta-icon
       >`,
   },
 );
@@ -2575,7 +2583,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >align-vertical-bottom</zeta-icon
+        >align_vertical_bottom</zeta-icon
       >`,
   },
 );
@@ -2584,7 +2592,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>align-vertical-top</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>align_vertical_top</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2600,7 +2608,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>indent-decrease</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>indent_decrease</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2608,7 +2616,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>indent-increase</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>indent_increase</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2616,7 +2624,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>bullet-list</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>bullet_list</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2624,7 +2632,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>distribute-vertical</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>distribute_vertical</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2633,7 +2641,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >distribute-horizontal</zeta-icon
+        >distribute_horizontal</zeta-icon
       >`,
   },
 );
@@ -2642,7 +2650,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>line-spacing</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>line_spacing</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2650,7 +2658,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>numbered-list</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>numbered_list</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2658,7 +2666,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>align-left</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>align_left</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2666,7 +2674,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>align-right</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>align_right</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2674,7 +2682,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>align-center</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>align_center</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2690,7 +2698,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>edit-border</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>edit_border</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2698,7 +2706,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>format-shapes</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>format_shapes</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2722,7 +2730,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>text-color</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>text_color</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2763,7 +2771,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >check-circle-outline-alt</zeta-icon
+        >check_circle_outline_alt</zeta-icon
       >`,
   },
 );
@@ -2773,7 +2781,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >check-circle-outline</zeta-icon
+        >check_circle_outline</zeta-icon
       >`,
   },
 );
@@ -2782,7 +2790,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>check-circle</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>check_circle</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2790,7 +2798,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>check-mark</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>check_mark</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2806,7 +2814,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>love-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>love_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2814,7 +2822,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>unlock-alt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>unlock_alt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2822,7 +2830,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>lock-alt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>lock_alt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2846,7 +2854,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>world-action</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>world_action</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2862,7 +2870,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>filter-alt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>filter_alt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2886,7 +2894,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>trending-up</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>trending_up</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2894,7 +2902,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>trending-down</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>trending_down</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2902,7 +2910,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>user-settings</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>user_settings</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2910,7 +2918,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>user-circle</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>user_circle</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2950,7 +2958,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>visibility-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>visibility_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2958,7 +2966,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clipboard-action</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clipboard_action</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2982,7 +2990,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>sync-action</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>sync_action</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2990,7 +2998,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>delete-forever</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>delete_forever</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3022,7 +3030,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>bookmark-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>bookmark_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3062,7 +3070,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>open-in-full</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>open_in_full</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3086,7 +3094,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>open-in-new-window</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>open_in_new_window</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3094,7 +3102,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>delete-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>delete_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3102,7 +3110,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>security-check</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>security_check</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3110,7 +3118,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>clock-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>clock_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3150,7 +3158,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>log-out</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>log_out</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3158,7 +3166,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>log-in</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>log_in</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3166,7 +3174,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>zoom-in</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>zoom_in</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3174,7 +3182,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>zoom-out</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>zoom_out</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3198,7 +3206,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>credit-card</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>credit_card</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3206,7 +3214,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-range</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_range</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3214,7 +3222,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-yearly</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_yearly</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3222,7 +3230,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-monthly</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_monthly</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3230,7 +3238,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-weekly</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_weekly</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3238,7 +3246,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-3-day</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_3_day</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3246,7 +3254,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-day</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_day</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3254,7 +3262,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-alt-2</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_alt_2</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3262,7 +3270,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-alt-1</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_alt_1</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3287,7 +3295,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >calendar-unavailable</zeta-icon
+        >calendar_unavailable</zeta-icon
       >`,
   },
 );
@@ -3296,7 +3304,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-available</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_available</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3304,7 +3312,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>calendar-edit</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>calendar_edit</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3312,7 +3320,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>ios-share</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>ios_share</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3336,7 +3344,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>play-circle</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>play_circle</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3344,7 +3352,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>play-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>play_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3352,7 +3360,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>stop-circle</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>stop_circle</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3360,7 +3368,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>pause-circle</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>pause_circle</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3384,7 +3392,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>fast-forward</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>fast_forward</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3392,7 +3400,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>fast-rewind</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>fast_rewind</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3400,7 +3408,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>skip-next</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>skip_next</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3408,7 +3416,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>skip-previous</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>skip_previous</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3416,7 +3424,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>volume-down</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>volume_down</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3424,7 +3432,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>volume-mute</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>volume_mute</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3432,7 +3440,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>volume-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>volume_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3440,7 +3448,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>volume-up</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>volume_up</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3456,7 +3464,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>microphone-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>microphone_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3464,7 +3472,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>microphone-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>microphone_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3480,7 +3488,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>closed-caption</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>closed_caption</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3488,7 +3496,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>video-camera</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>video_camera</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3504,7 +3512,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>camera-switch-image</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>camera_switch_image</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3512,7 +3520,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>camera-shutter</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>camera_shutter</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3520,7 +3528,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>image-library</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>image_library</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3536,7 +3544,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>eye-dropper</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>eye_dropper</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3544,7 +3552,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>contrast-image</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>contrast_image</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3568,7 +3576,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>rotate-left</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>rotate_left</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3576,7 +3584,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>rotate-right</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>rotate_right</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3584,7 +3592,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>slide-show</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>slide_show</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3656,7 +3664,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>wb-image</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>wb_image</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3664,7 +3672,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>grid-on</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>grid_on</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3672,7 +3680,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>grid-off</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>grid_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3712,7 +3720,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>drop-down-circle</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>drop_down_circle</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3728,7 +3736,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>more-vertical</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>more_vertical</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3736,7 +3744,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>more-horizontal</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>more_horizontal</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3744,7 +3752,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chevron-left</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chevron_left</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3752,7 +3760,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chevron-right</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chevron_right</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3760,7 +3768,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>expand-less</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>expand_less</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3768,7 +3776,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>expand-more</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>expand_more</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3776,7 +3784,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>caret-down</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>caret_down</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3784,7 +3792,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>caret-up</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>caret_up</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3792,7 +3800,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>caret-left</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>caret_left</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3800,7 +3808,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>caret-right</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>caret_right</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3808,7 +3816,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>full-screen-exit</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>full_screen_exit</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3816,7 +3824,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>full-screen</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>full_screen</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3824,7 +3832,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>hamburger-menu</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>hamburger_menu</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3833,7 +3841,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >hamburger-menu-thick</zeta-icon
+        >hamburger_menu_thick</zeta-icon
       >`,
   },
 );
@@ -3843,7 +3851,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >hamburger-menu-navigation-rail</zeta-icon
+        >hamburger_menu_navigation_rail</zeta-icon
       >`,
   },
 );
@@ -3860,7 +3868,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>arrow-up</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>arrow_up</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3868,7 +3876,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>arrow-forward</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>arrow_forward</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3876,7 +3884,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>arrow-down</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>arrow_down</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3884,7 +3892,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>arrow-back</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>arrow_back</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3892,7 +3900,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>unfold-more</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>unfold_more</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3900,7 +3908,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>unfold-less</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>unfold_less</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3908,7 +3916,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>caret-sort</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>caret_sort</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3916,7 +3924,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>first-page</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>first_page</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3924,7 +3932,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>last-page</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>last_page</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3940,7 +3948,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>cancel-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>cancel_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3948,7 +3956,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>list-alt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>list_alt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3964,7 +3972,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>help-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>help_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3988,7 +3996,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>sort-content</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>sort_content</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4004,7 +4012,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>copy-file</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>copy_file</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4013,7 +4021,7 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}
-        >remove-circle-outline</zeta-icon
+        >remove_circle_outline</zeta-icon
       >`,
   },
 );
@@ -4022,7 +4030,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>add-circle-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>add_circle_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4030,7 +4038,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>remove-circle</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>remove_circle</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4038,7 +4046,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>block-content</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>block_content</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4046,7 +4054,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>add-circle</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>add_circle</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4070,7 +4078,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>add-box</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>add_box</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4078,7 +4086,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>remove-box</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>remove_box</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4086,7 +4094,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>push-pin</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>push_pin</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4118,7 +4126,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>save-content</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>save_content</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4142,7 +4150,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>save-alt</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>save_alt</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4158,7 +4166,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>chart-pie-content</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>chart_pie_content</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4174,7 +4182,15 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>email-outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>email_outline</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=8167:17",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>push_pin_off</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4206,7 +4222,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>cast-connected</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>cast_connected</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4222,7 +4238,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>devices-ecosystem</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>devices_ecosystem</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4230,7 +4246,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>device-settings</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>device_settings</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4278,7 +4294,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>phone-android</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>phone_android</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4286,7 +4302,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>phone-iphone</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>phone_iphone</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4310,7 +4326,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>video-play</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>video_play</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4318,7 +4334,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>smart-phone</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>smart_phone</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4342,7 +4358,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>tablet-mac</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>tablet_mac</zeta-icon>`,
   },
 );
 figma.connect(

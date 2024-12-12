@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.2](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.1...zeta-icons-v0.9.2) (2024-12-12)
+
+
+### 🧹 Miscellaneous Chores
+
+* Icon updates 20 Nov 2024, 08:02:23 ([#61](https://github.com/ZebraDevs/zeta-icons/issues/61)) ([8700a5d](https://github.com/ZebraDevs/zeta-icons/commit/8700a5d4148cc20ca004fd327bff59363c6ce0a2))
+
 ## [0.9.1](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.0...zeta-icons-v0.9.1) (2024-12-05)
 
 

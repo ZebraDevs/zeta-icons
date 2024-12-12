@@ -245,6 +245,7 @@ export const ZetaIconNameList = [
   "full_screen",
   "gif",
   "glossary",
+  "google_drive",
   "grid_off",
   "grid_on",
   "grid_view",
@@ -388,6 +389,7 @@ export const ZetaIconNameList = [
   "productivity_apps",
   "ptt",
   "publish",
+  "push_pin_off",
   "push_pin",
   "qr_code",
   "queue",
@@ -787,6 +789,7 @@ export type ZetaIconName = "activity"
  | "full_screen"
  | "gif"
  | "glossary"
+ | "google_drive"
  | "grid_off"
  | "grid_on"
  | "grid_view"
@@ -930,6 +933,7 @@ export type ZetaIconName = "activity"
  | "productivity_apps"
  | "ptt"
  | "publish"
+ | "push_pin_off"
  | "push_pin"
  | "qr_code"
  | "queue"

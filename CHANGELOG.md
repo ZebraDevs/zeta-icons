@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.4](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.3...zeta-icons-v0.9.4) (2024-12-18)
+
+
+### 🪲 Bug Fixes
+
+* execSync failing ([8e2cce1](https://github.com/ZebraDevs/zeta-icons/commit/8e2cce1a792b37faef9149e70084a586ac36c6db))
+
+
+### 🧹 Miscellaneous Chores
+
+* Icon updates 18 Dec 2024, 16:16:08 ([#70](https://github.com/ZebraDevs/zeta-icons/issues/70)) ([a198e1e](https://github.com/ZebraDevs/zeta-icons/commit/a198e1e96afe5f6243e06ff86ddea8e71a2b5ec7))
+
 ## [0.9.3](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.2...zeta-icons-v0.9.3) (2024-12-12)
 
 

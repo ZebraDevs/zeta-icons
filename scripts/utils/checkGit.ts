@@ -19,7 +19,7 @@ const getAllChangedFiles = (verboseLogs?: boolean): string[] => {
  */
 export const stageAllFiles = (verboseLogs?: boolean): void => {
   if (verboseLogs) {
-    console.log("git add", execSync(`git add .`).toString());
+    // console.log("git add", execSync(`git add .`).toString());
   } else {
     execSync(`git add .`);
   }

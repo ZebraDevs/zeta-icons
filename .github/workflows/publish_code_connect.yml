@@ -1,0 +1,20 @@
+name: Publish code connect
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    secrets:
+      FIGMA_PERSONAL_ACCESS_TOKEN:
+        required: true
+
+jobs:
+  publish_code_connect:
+    name: Publish Code Connect
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install packages
+        run: npm ci
+      - name: Publish code connect
+        run: npx figma connect publish --token ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}

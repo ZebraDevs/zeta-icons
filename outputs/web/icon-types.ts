@@ -130,6 +130,8 @@ export const ZetaIconNameList = [
   "chat_message_unread",
   "chat",
   "chat_search",
+  "chat_sync_outline",
+  "chat_sync",
   "check_box_empty",
   "check_box",
   "check_circle_outline_alt",
@@ -173,6 +175,8 @@ export const ZetaIconNameList = [
   "comms_chat",
   "comms_chat_unread",
   "contactless_pay",
+  "contacts_outline",
+  "contacts",
   "content",
   "contrast_image",
   "contrast",
@@ -264,12 +268,16 @@ export const ZetaIconNameList = [
   "help",
   "history",
   "home",
+  "home_sync_outline",
+  "home_sync",
   "hourglass",
   "how_do_i",
   "image_library",
   "image",
   "important_notification",
   "inbox",
+  "incoming_call",
+  "incoming_video",
   "indent_decrease",
   "indent_increase",
   "indeterminate_check_box",
@@ -319,6 +327,8 @@ export const ZetaIconNameList = [
   "microphone_off",
   "microphone_outline",
   "microphone",
+  "missed_call",
+  "missed_video",
   "mobile_friendly",
   "money_euro",
   "money_pound",
@@ -341,6 +351,8 @@ export const ZetaIconNameList = [
   "open_in_full",
   "open_in_new_window",
   "open_new_off",
+  "outgoing_call",
+  "outgoing_video",
   "page_height",
   "page_rotate",
   "page_width",
@@ -369,6 +381,8 @@ export const ZetaIconNameList = [
   "phonelink",
   "phrase",
   "pin",
+  "place_maps",
+  "place_outline",
   "place",
   "planogram",
   "play_circle",
@@ -674,6 +688,8 @@ export type ZetaIconName = "activity"
  | "chat_message_unread"
  | "chat"
  | "chat_search"
+ | "chat_sync_outline"
+ | "chat_sync"
  | "check_box_empty"
  | "check_box"
  | "check_circle_outline_alt"
@@ -717,6 +733,8 @@ export type ZetaIconName = "activity"
  | "comms_chat"
  | "comms_chat_unread"
  | "contactless_pay"
+ | "contacts_outline"
+ | "contacts"
  | "content"
  | "contrast_image"
  | "contrast"
@@ -808,12 +826,16 @@ export type ZetaIconName = "activity"
  | "help"
  | "history"
  | "home"
+ | "home_sync_outline"
+ | "home_sync"
  | "hourglass"
  | "how_do_i"
  | "image_library"
  | "image"
  | "important_notification"
  | "inbox"
+ | "incoming_call"
+ | "incoming_video"
  | "indent_decrease"
  | "indent_increase"
  | "indeterminate_check_box"
@@ -863,6 +885,8 @@ export type ZetaIconName = "activity"
  | "microphone_off"
  | "microphone_outline"
  | "microphone"
+ | "missed_call"
+ | "missed_video"
  | "mobile_friendly"
  | "money_euro"
  | "money_pound"
@@ -885,6 +909,8 @@ export type ZetaIconName = "activity"
  | "open_in_full"
  | "open_in_new_window"
  | "open_new_off"
+ | "outgoing_call"
+ | "outgoing_video"
  | "page_height"
  | "page_rotate"
  | "page_width"
@@ -913,6 +939,8 @@ export type ZetaIconName = "activity"
  | "phonelink"
  | "phrase"
  | "pin"
+ | "place_maps"
+ | "place_outline"
  | "place"
  | "planogram"
  | "play_circle"

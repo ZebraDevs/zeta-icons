@@ -1,4 +1,10 @@
-import { checkIconName, checkCategoryName, ErrorSeverity } from "zeta-icon-name-checker";
+import {
+  ErrorSeverity,
+  RenameErrorType,
+  validateCategoryName,
+  validateIcon,
+  ZetaIconNameError,
+} from "@zebra-fed/zeta-icon-validator";
 import { extractIconSets, getSearchTerms } from "../../utils/figmaUtils.js";
 import { IconManifest } from "../../../types.js";
 import { getIconFileName, toSnakeCase } from "../../utils/fileUtils.js";
@@ -32,7 +38,7 @@ export function generateIconManifest(
       console.log(`---------------- Current category: ${formattedCategoryName} ----------------`);
     }
 
-    const categoryNameError = checkCategoryName(formattedCategoryName);
+    const categoryNameError = validateCategoryName(formattedCategoryName);
 
     if (categoryNameError.severity == ErrorSeverity.high) {
       console.log(categoryNameError.message);
@@ -47,33 +53,45 @@ export function generateIconManifest(
           console.log(`Current Icon: ${name}`);
         }
 
-        const nameError = checkIconName(name, category.name, usedIconNames);
+        const validationErrors = validateIcon(icon, category.name, usedIconNames);
 
-        if (nameError.severity == ErrorSeverity.high) {
-          console.log(nameError.message);
-        } else {
-          if (nameError.severity == ErrorSeverity.medium) console.log(nameError.message);
-          if (nameError.newName != undefined) {
-            name = nameError.newName;
+        let highestSeverity = ErrorSeverity.none;
+
+        for (const error of validationErrors) {
+          if (error.severity == ErrorSeverity.high) {
+            console.log(`❌ ${name}`, error.message);
+            highestSeverity = ErrorSeverity.high;
+            break;
+          } else if (error instanceof ZetaIconNameError && error.type == RenameErrorType.iconRenamed && error.newName) {
+            console.log(`✅ ${name} Renamed to: ${error.newName}`);
+            name = error.newName;
+          } else if (error.severity == ErrorSeverity.medium) {
+            highestSeverity = ErrorSeverity.medium;
+            console.log(`${name}`, error.message);
           }
+        }
 
-          usedIconNames.push(name);
-          try {
-            const sharpId = icon.children.filter((n) => n.name.toLowerCase().includes("sharp"))[0].id;
-            const roundId = icon.children.filter((n) => n.name.toLowerCase().includes("round"))[0].id;
+        // If the highest severity is high, skip the icon
+        if (highestSeverity == ErrorSeverity.high) {
+          continue;
+        }
 
-            iconMap.set(icon.id, {
-              name: name,
-              searchTerms: getSearchTerms(icon.id, componentSets),
-              roundPath: `${iconOutputDir}/${formattedCategoryName}/${getIconFileName(name, "round")}.svg`,
-              sharpPath: `${iconOutputDir}/${formattedCategoryName}/${getIconFileName(name, "sharp")}.svg`,
-              category: formattedCategoryName,
-              roundId: roundId,
-              sharpId: sharpId,
-            });
-          } catch (e) {
-            throw new Error(`❌ Error finding styles for ${name}`);
-          }
+        usedIconNames.push(name);
+        try {
+          const sharpId = icon.children.filter((n) => n.name.toLowerCase().includes("sharp"))[0].id;
+          const roundId = icon.children.filter((n) => n.name.toLowerCase().includes("round"))[0].id;
+
+          iconMap.set(icon.id, {
+            name: name,
+            searchTerms: getSearchTerms(icon.id, componentSets),
+            roundPath: `${iconOutputDir}/${formattedCategoryName}/${getIconFileName(name, "round")}.svg`,
+            sharpPath: `${iconOutputDir}/${formattedCategoryName}/${getIconFileName(name, "sharp")}.svg`,
+            category: formattedCategoryName,
+            roundId: roundId,
+            sharpId: sharpId,
+          });
+        } catch (e) {
+          throw new Error(` Error finding styles for ${name}`);
         }
       }
     }

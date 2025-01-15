@@ -1,3 +1,5 @@
+import { ComponentPropertyDefinitions } from "@zebra-fed/zeta-icon-validator/dist/src/figma-types";
+
 export type ComponentSets = Map<string, Component>;
 
 export interface DocumentResponse {
@@ -11,6 +13,7 @@ export interface FigmaNode {
   id: string;
   type: string;
   children: FigmaNode[];
+  componentPropertyDefinitions: ComponentPropertyDefinitions;
 }
 
 export interface Component {

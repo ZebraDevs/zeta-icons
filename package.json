@@ -48,7 +48,7 @@
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "webfont": "^11.2.26",
-    "zeta-icon-name-checker": "^0.0.15"
+    "@zebra-fed/zeta-icon-validator": "^0.1.5"
   },
   "keywords": [
     "zeta",

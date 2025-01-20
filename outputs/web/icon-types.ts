@@ -398,7 +398,9 @@ export const ZetaIconNameList = [
   "ppt_attach",
   "price",
   "printer",
+  "priority_important",
   "priority",
+  "priority_urgent",
   "pro",
   "productivity_apps",
   "ptt",
@@ -499,6 +501,8 @@ export const ZetaIconNameList = [
   "timecard",
   "timecard_warning",
   "timer",
+  "to_do_outline",
+  "to_do",
   "toggle_off",
   "toggle_on",
   "touch",
@@ -546,6 +550,14 @@ export const ZetaIconNameList = [
   "watch",
   "wb_image",
   "wb",
+  "wifi_0",
+  "wifi_1",
+  "wifi_2",
+  "wifi_alt",
+  "wifi_call",
+  "wifi_off_device",
+  "wifi_off",
+  "wifi",
   "world_action",
   "world",
   "write",
@@ -956,7 +968,9 @@ export type ZetaIconName = "activity"
  | "ppt_attach"
  | "price"
  | "printer"
+ | "priority_important"
  | "priority"
+ | "priority_urgent"
  | "pro"
  | "productivity_apps"
  | "ptt"
@@ -1057,6 +1071,8 @@ export type ZetaIconName = "activity"
  | "timecard"
  | "timecard_warning"
  | "timer"
+ | "to_do_outline"
+ | "to_do"
  | "toggle_off"
  | "toggle_on"
  | "touch"
@@ -1104,6 +1120,14 @@ export type ZetaIconName = "activity"
  | "watch"
  | "wb_image"
  | "wb"
+ | "wifi_0"
+ | "wifi_1"
+ | "wifi_2"
+ | "wifi_alt"
+ | "wifi_call"
+ | "wifi_off_device"
+ | "wifi_off"
+ | "wifi"
  | "world_action"
  | "world"
  | "write"

@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.9.5](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.4...zeta-icons-v0.9.5) (2025-02-03)
+
+
+### 🪲 Bug Fixes
+
+* Add comment for ignore in dart file ([#71](https://github.com/ZebraDevs/zeta-icons/issues/71)) ([1e6fb9f](https://github.com/ZebraDevs/zeta-icons/commit/1e6fb9fa24b66cf453434ae2a5dffd949ae3521c))
+
+
+### 🧹 Miscellaneous Chores
+
+* Icon updates 15 Jan 2025, 08:02:26 ([#73](https://github.com/ZebraDevs/zeta-icons/issues/73)) ([2b05346](https://github.com/ZebraDevs/zeta-icons/commit/2b0534695eb19cb5b6d5926ff383d4282770ab20))
+* Updated icon validator package ([#74](https://github.com/ZebraDevs/zeta-icons/issues/74)) ([eab0d8c](https://github.com/ZebraDevs/zeta-icons/commit/eab0d8c7fdef686afd040bf6bbbcce053bbc0a09))
+
 ## [0.9.4](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.3...zeta-icons-v0.9.4) (2024-12-18)
 
 

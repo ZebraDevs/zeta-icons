@@ -18,5 +18,5 @@ jobs:
       repo: ZebraDevs/zeta_flutter
       branch: "update-zeta-icons"
       source_dir: "./outputs/flutter/."
-      destination_dir: "packages/zeta_icons/lib"
+      destination_dir: "packages/zeta_icons/lib/src"
       commit_msg: "Update icons"

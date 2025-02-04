@@ -30,13 +30,11 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish_code_connect:
-    needs: publish
     uses: ./.github/workflows/publish_code_connect.yml
-    continue-on-error: true
+    if: always()
     secrets: inherit
 
   update_npm_dependencies:
-    needs: publish
     uses: ./.github/workflows/update_dependencies.yml
     secrets: inherit
 

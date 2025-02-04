@@ -71,7 +71,8 @@
     "fetch-icons": "npm run build:fetch-icons && node --env-file=.env ./.github/fetch_icons/index.js",
     "regenerate-test-files": "ts-node ./test/regenerateTestFiles.ts",
     "prepack": "npm run build",
-    "format-connect-files": "prettier outputs/code-connect/*.figma.ts --write"
+    "format-connect-files": "prettier outputs/code-connect/*.figma.ts --write",
+    "create-connect-files": "node --env-file=.env ./.github/create_code_connect/index.js"
   },
   "repository": {
     "type": "git",

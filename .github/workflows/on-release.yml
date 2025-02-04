@@ -22,6 +22,8 @@ jobs:
         run: npm ci
       - name: Compile Typescript files
         run: tsc
+      - name: Dry run
+        run: npx figma connect publish --dry-run --token ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}
       - name: Publish
         run: npm publish
         env:
@@ -30,6 +32,7 @@ jobs:
   publish_code_connect:
     needs: publish
     uses: ./.github/workflows/publish_code_connect.yml
+    continue-on-error: true
     secrets: inherit
 
   update_npm_dependencies:

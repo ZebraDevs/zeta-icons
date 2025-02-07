@@ -83,7 +83,7 @@ export default async function main(
   await optimizeSVGs(iconsOutputDir, tempOutputDir, categoryNames);
   console.log("✅ - Optimized SVGs");
 
-  const generateFontResult = await generateFonts(tempOutputDir, "zeta-icons", dartOutputDir, tsOutputDir);
+  const generateFontResult = await generateFonts(tempOutputDir, "zeta-icons", dartOutputDir + "/assets", tsOutputDir);
   console.log("✅ - Generated fonts");
 
   generateAndroidIcons(androidOutputDir, manifest);

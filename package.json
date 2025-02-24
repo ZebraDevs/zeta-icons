@@ -31,7 +31,6 @@
     "@types/node": "^22.14.0",
     "@types/react": "^18.3.12",
     "@types/sinon": "^17.0.3",
-    "@zebra-fed/zeta-icon-validator": "^0.1.5",
     "chai": "^5.2.0",
     "chai-xml": "^0.4.1",
     "cheerio": "^1.0.0",
@@ -44,10 +43,12 @@
     "scale-that-svg": "^1.0.6",
     "sharp": "^0.33.5",
     "sinon": "^19.0.2",
-    "ts-jest": "^29.3.1",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2",
-    "webfont": "^11.2.26"
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "webfont": "^11.2.26",
+    "@zebra-fed/zeta-icon-validator": "0.2.0"
   },
   "keywords": [
     "zeta",

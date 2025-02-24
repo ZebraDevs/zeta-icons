@@ -121,8 +121,9 @@ function getDartIconDefinition(iconName: string, unicode: string, type: FontType
   }
 
   return `${iconPreview}
-  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${type?.capitalize() ?? ""
-    }, fontPackage: package);`;
+  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${
+    type?.capitalize() ?? ""
+  }, fontPackage: package);`;
 }
 
 function getIconPreview(iconName: string, type: FontType | undefined) {
@@ -131,6 +132,7 @@ function getIconPreview(iconName: string, type: FontType | undefined) {
     .split("_")
     .map((e) => e.capitalize())
     .join(" ");
-  return `  /// <i> <img width='48' src="${GITHUB_URL}${name_link}.png"></br>${readableName} icon ${type != undefined ? `(${type})` : ""
-    }</i>`;
+  return `  /// <i> <img width='48' src="${GITHUB_URL}${name_link}.png"></br>${readableName} icon ${
+    type != undefined ? `(${type})` : ""
+  }</i>`;
 }

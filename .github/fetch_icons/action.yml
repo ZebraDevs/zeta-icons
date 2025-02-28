@@ -15,6 +15,8 @@ inputs:
 outputs:
   files_changed:
     description: "Array of files if any icons have been added or removed. If this length > 0, the PR should be created."
+  comment:
+    description: "The comment to be added to the PR"
 runs:
   using: "node20"
   main: "index.js"

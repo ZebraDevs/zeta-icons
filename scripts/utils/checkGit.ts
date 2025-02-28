@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
 
-enum GitChangeType {
+export enum GitChangeType {
   A = "Added",
   C = "Copied",
   D = "Deleted",
@@ -71,11 +71,11 @@ const parseIconName = (path: string): string => {
   const iconType = _iconName.pop()?.split(".")[0];
   const iconName = _iconName.join(" ");
 
-  return toTitleCase(`${category} / ${iconName} (${iconType})`);
+  return toTitleCase(`${category} / ${iconName} / ${iconType}`);
 };
 
 const buildIconsList = (icons: ChangedFilesDetails[]): string => {
-  return `\n ${icons.map((icon) => "* " + parseIconName(icon.path)).join("\n ")}\n\n`;
+  return `<br> ${icons.map((icon) => "* " + parseIconName(icon.path)).join("< br>")}<br><br>`;
 };
 
 export const parseFilesChanged = (changed: []): string => {

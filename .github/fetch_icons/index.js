@@ -26,8 +26,7 @@ try {
 
   const newHash = await fetchIcons(
     FIGMA_ACCESS_TOKEN,
-    // ZDS_ASSETS_FILE_ID,
-    '3KYzDHVbhkwdgl0k0nJAXk',
+    ZDS_ASSETS_FILE_ID,
     ZDS_ASSETS_ICON_PAGE_NAME,
     oldHash,
     "outputs",

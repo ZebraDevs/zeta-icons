@@ -51,6 +51,7 @@ jobs:
           date: ${{ steps.date.outputs.date }}
           actions-runner-debug: ${{secrets.ACTIONS_RUNNER_DEBUG}}
       - name: Icons changed
+        continue-on-error: true
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
       - name: Create code connect files
         if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
@@ -64,7 +65,7 @@ jobs:
           else
             TITLE='chore: Icon updates ${{ steps.date.outputs.date }}(${{github.ref_name}})'
           fi
-          BODY='${{ steps.fetch_icons.outputs.comment }}'
+          BODY="${{ steps.fetch_icons.outputs.comment }}"
           echo "TITLE=$TITLE" >> $GITHUB_OUTPUT
           echo "BODY=$BODY" >> $GITHUB_OUTPUT
       - name: Push

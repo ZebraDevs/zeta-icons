@@ -258,6 +258,7 @@ export const ZetaIconNameList = [
   "hamburger_menu_navigation_rail",
   "hamburger_menu",
   "hamburger_menu_thick",
+  "hammer_time",
   "hand",
   "happy",
   "hdmi",
@@ -318,7 +319,6 @@ export const ZetaIconNameList = [
   "log_out",
   "love_outline",
   "love",
-  "maintenance",
   "map",
   "meal",
   "medium",
@@ -336,6 +336,7 @@ export const ZetaIconNameList = [
   "monitor",
   "more_horizontal",
   "more_vertical",
+  "mr_worldwide",
   "my_location",
   "navigate",
   "navigation",
@@ -381,7 +382,6 @@ export const ZetaIconNameList = [
   "phonelink",
   "phrase",
   "pin",
-  "place_maps",
   "place_outline",
   "place",
   "planogram",
@@ -828,6 +828,7 @@ export type ZetaIconName = "activity"
  | "hamburger_menu_navigation_rail"
  | "hamburger_menu"
  | "hamburger_menu_thick"
+ | "hammer_time"
  | "hand"
  | "happy"
  | "hdmi"
@@ -888,7 +889,6 @@ export type ZetaIconName = "activity"
  | "log_out"
  | "love_outline"
  | "love"
- | "maintenance"
  | "map"
  | "meal"
  | "medium"
@@ -906,6 +906,7 @@ export type ZetaIconName = "activity"
  | "monitor"
  | "more_horizontal"
  | "more_vertical"
+ | "mr_worldwide"
  | "my_location"
  | "navigate"
  | "navigation"
@@ -951,7 +952,6 @@ export type ZetaIconName = "activity"
  | "phonelink"
  | "phrase"
  | "pin"
- | "place_maps"
  | "place_outline"
  | "place"
  | "planogram"

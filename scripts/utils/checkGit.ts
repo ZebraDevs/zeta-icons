@@ -1,6 +1,6 @@
 import { execSync } from "child_process";
 
-enum GitChangeType {
+export enum GitChangeType {
   A = "Added",
   C = "Copied",
   D = "Deleted",
@@ -71,11 +71,11 @@ const parseIconName = (path: string): string => {
   const iconType = _iconName.pop()?.split(".")[0];
   const iconName = _iconName.join(" ");
 
-  return toTitleCase(`${category} / ${iconName} (${iconType})`);
+  return toTitleCase(`${category} / ${iconName} / ${iconType}`);
 };
 
 const buildIconsList = (icons: ChangedFilesDetails[]): string => {
-  return `\n ${icons.map((icon) => "* " + parseIconName(icon.path)).join("\n ")}\n\n`;
+  return `<ul>${icons.map((icon) => "<li>" + parseIconName(icon.path) + "</li>").join("")}</ul>`;
 };
 
 export const parseFilesChanged = (changed: []): string => {
@@ -108,13 +108,13 @@ export const parseFilesChanged = (changed: []): string => {
     return "No icon changes";
   }
   if (newIcons.length > 0) {
-    comment += `## Icons added: ${buildIconsList(newIcons)}`;
+    comment += `<h2> Icons added: ${buildIconsList(newIcons)} </h2>`;
   }
   if (updatedIcons.length > 0) {
-    comment += `## Icons updated: ${buildIconsList(updatedIcons)}`;
+    comment += `<h2> Icons updated: ${buildIconsList(updatedIcons)} </h2>`;
   }
   if (deletedIcons.length > 0) {
-    comment += `## Icons deleted: ${buildIconsList(deletedIcons)}`;
+    comment += `<h2> Icons deleted: ${buildIconsList(deletedIcons)} </h2>`;
   }
 
   return comment;

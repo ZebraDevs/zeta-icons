@@ -249,6 +249,7 @@ export const ZetaIconNameList = [
   "full_screen",
   "gif",
   "glossary",
+  "google_drive_audio_video",
   "google_drive",
   "grid_off",
   "grid_on",
@@ -258,12 +259,14 @@ export const ZetaIconNameList = [
   "hamburger_menu_navigation_rail",
   "hamburger_menu",
   "hamburger_menu_thick",
+  "hammer_time",
   "hand",
   "happy",
   "hdmi",
   "hdr",
   "headphones",
   "headset",
+  "help_outline_navigation",
   "help_outline",
   "help",
   "history",
@@ -318,7 +321,6 @@ export const ZetaIconNameList = [
   "log_out",
   "love_outline",
   "love",
-  "maintenance",
   "map",
   "meal",
   "medium",
@@ -336,6 +338,7 @@ export const ZetaIconNameList = [
   "monitor",
   "more_horizontal",
   "more_vertical",
+  "mr_worldwide",
   "my_location",
   "navigate",
   "navigation",
@@ -381,7 +384,6 @@ export const ZetaIconNameList = [
   "phonelink",
   "phrase",
   "pin",
-  "place_maps",
   "place_outline",
   "place",
   "planogram",
@@ -819,6 +821,7 @@ export type ZetaIconName = "activity"
  | "full_screen"
  | "gif"
  | "glossary"
+ | "google_drive_audio_video"
  | "google_drive"
  | "grid_off"
  | "grid_on"
@@ -828,12 +831,14 @@ export type ZetaIconName = "activity"
  | "hamburger_menu_navigation_rail"
  | "hamburger_menu"
  | "hamburger_menu_thick"
+ | "hammer_time"
  | "hand"
  | "happy"
  | "hdmi"
  | "hdr"
  | "headphones"
  | "headset"
+ | "help_outline_navigation"
  | "help_outline"
  | "help"
  | "history"
@@ -888,7 +893,6 @@ export type ZetaIconName = "activity"
  | "log_out"
  | "love_outline"
  | "love"
- | "maintenance"
  | "map"
  | "meal"
  | "medium"
@@ -906,6 +910,7 @@ export type ZetaIconName = "activity"
  | "monitor"
  | "more_horizontal"
  | "more_vertical"
+ | "mr_worldwide"
  | "my_location"
  | "navigate"
  | "navigation"
@@ -951,7 +956,6 @@ export type ZetaIconName = "activity"
  | "phonelink"
  | "phrase"
  | "pin"
- | "place_maps"
  | "place_outline"
  | "place"
  | "planogram"

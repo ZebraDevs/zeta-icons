@@ -2322,14 +2322,6 @@ figma.connect(
   },
 );
 figma.connect(
-  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=258:1628",
-  {
-    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
-    example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>place_maps</zeta-icon>`,
-  },
-);
-figma.connect(
   "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=258:1629",
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
@@ -2447,6 +2439,14 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}>world</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=9396:159",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>mr_worldwide</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2670,7 +2670,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>maintenance</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>hammer_time</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3716,6 +3716,16 @@ figma.connect(
   },
 );
 figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=9416:43",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}
+        >google_drive_audio_video</zeta-icon
+      >`,
+  },
+);
+figma.connect(
   "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=259:1737",
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
@@ -3905,6 +3915,14 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}>timer</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=9416:35",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>help_outline</zeta-icon>`,
   },
 );
 figma.connect(
@@ -4188,7 +4206,9 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>help_outline</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}
+        >help_outline_navigation</zeta-icon
+      >`,
   },
 );
 figma.connect(

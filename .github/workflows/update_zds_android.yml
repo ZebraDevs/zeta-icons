@@ -6,8 +6,10 @@ on:
     secrets:
       PAT:
         required: true
+    inputs:
       comment:
         required: true
+        type: string
 
 jobs:
   publish_android:

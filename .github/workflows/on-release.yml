@@ -6,42 +6,64 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
-    name: Publish to NPM
+  get_changed_icons:
+    name: Get changed icons
     runs-on: ubuntu-latest
+    outputs:
+      BODY: ${{ steps.get-changed-icons.outputs.body }}
+      conventional-commit: ${{ steps.get-changed-icons.outputs.conventional-commit }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: ${{github.ref_name}}
       - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          registry-url: "https://registry.npmjs.org"
-      - name: Install packages
-        run: npm ci
-      - name: Compile Typescript files
-        run: tsc
-      - name: Dry run
-        run: npx figma connect publish --dry-run --token ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}
-      - name: Publish
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm i
+      - run: npm run build
+      - name: Get changed icons
+        id: get-changed-icons
+        uses: ./.github/get_changed_icons
 
-  publish_code_connect:
-    uses: ./.github/workflows/publish_code_connect.yml
-    if: always()
-    secrets: inherit
+  # publish:
+  #   name: Publish to NPM
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #       with:
+  #         ref: ${{github.ref_name}}
+  #     - uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 18
+  #         registry-url: "https://registry.npmjs.org"
+  #     - name: Install packages
+  #       run: npm ci
+  #     - name: Compile Typescript files
+  #       run: tsc
+  #     - name: Dry run
+  #       run: npx figma connect publish --dry-run --token ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}
+  #     - name: Publish
+  #       run: npm publish
+  #       env:
+  #         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-  update_npm_dependencies:
-    uses: ./.github/workflows/update_dependencies.yml
-    secrets: inherit
+  # publish_code_connect:
+  #   uses: ./.github/workflows/publish_code_connect.yml
+  #   if: always()
+  #   secrets: inherit
+
+  # update_npm_dependencies:
+  #   uses: ./.github/workflows/update_dependencies.yml
+  #   secrets: inherit
 
   update_flutter:
+    needs: get_changed_icons
     uses: ./.github/workflows/update_zeta_flutter.yml
     secrets: inherit
+    with:
+      comment: "${{ needs.get_changed_icons.outputs.BODY}} ${{ needs.get_changed_icons.outputs.conventional-commit}}"
 
   update_android:
+    needs: get_changed_icons
     uses: ./.github/workflows/update_zds_android.yml
     secrets: inherit
+    with:
+      comment: "${{ needs.get_changed_icons.outputs.BODY}} ${{ needs.get_changed_icons.outputs.conventional-commit}}"

@@ -31,6 +31,7 @@
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/sinon": "^17.0.3",
+    "@zebra-fed/zeta-icon-validator": "^0.1.5",
     "chai": "^5.1.2",
     "chai-xml": "^0.4.1",
     "cheerio": "^1.0.0",
@@ -45,10 +46,8 @@
     "sinon": "^19.0.2",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
-    "webfont": "^11.2.26",
-    "@zebra-fed/zeta-icon-validator": "^0.1.5"
+    "webfont": "^11.2.26"
   },
   "keywords": [
     "zeta",
@@ -72,7 +71,8 @@
     "regenerate-test-files": "ts-node ./test/regenerateTestFiles.ts",
     "prepack": "npm run build",
     "format-connect-files": "prettier outputs/code-connect/*.figma.ts --write",
-    "create-connect-files": "node --env-file=.env ./.github/create_code_connect/index.js"
+    "create-connect-files": "node --env-file=.env ./.github/create_code_connect/index.js",
+    "get-changed-icons": "npm run build && node .github/get_changed_icons/index.js"
   },
   "repository": {
     "type": "git",

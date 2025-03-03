@@ -1,0 +1,12 @@
+name: "Get Changed Icons (on-release)"
+description: "Gets icons that have changed from the contents of the changelog"
+
+outputs:
+  body:
+    description: "The comment to be added to the PR"
+  conventional-commit:
+    description: "The commit body data"
+
+runs:
+  using: "node20"
+  main: "index.js"

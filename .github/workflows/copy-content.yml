@@ -100,7 +100,9 @@ jobs:
       - name: Build PR comment
         id: build_comment
         run: |
-          echo "comment=${{inputs.pr_body}} <br /><sub>Created by the Zeta icons bot 🤖 <br />Last updated: ${{ steps.date.outputs.date }}</sub>" >> $GITHUB_OUTPUT
+          echo "comment<<EOF" >> "$GITHUB_OUTPUT"
+          echo "<sub>Created by the Zeta icons bot 🤖 <br />Last updated: ${{ steps.date.outputs.date }}</sub><br />${{inputs.pr_body}} " >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
 
       - name: Open PR
         uses: thecanadianroot/open-pull-request-action@v1.1.1
@@ -118,4 +120,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PAT }}
         if: ${{ steps.check_pr.outputs.pr_exists != 0 }}
-        run: gh pr comment -R ${{ inputs.repo }} ${{ inputs.branch }} --edit-last --body "${{ steps.build_comment.outputs.comment }}"
+        run: gh pr edit -R ${{ inputs.repo }} ${{ inputs.branch }} --body "${{ steps.build_comment.outputs.comment }}"

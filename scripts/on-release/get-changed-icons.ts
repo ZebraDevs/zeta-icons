@@ -12,6 +12,12 @@ interface Icon {
 
 type GitChangeType = "added" | "updated" | "removed";
 
+/**
+ * Parses a line from the changelog and returns an Icon object.
+ * @param line - Line from the changelog
+ * @param change - Type of change
+ * @returns {Icon} Icon object
+ */
 const parseIcon = (line: string, change: GitChangeType): Icon => {
   const category = line.split("**")[1].replace(":", "");
   const name = line.split("**")[2].split("(")[0].trim();
@@ -19,9 +25,10 @@ const parseIcon = (line: string, change: GitChangeType): Icon => {
   return { name: name, category: category, style: style, change: change };
 };
 
-const toConventionalCommit = (icon: Icon): string =>
-  "icon" + icon.change + "(" + icon.category + "): " + icon.name + " (" + icon.style + ")";
-
+/**
+ * Reads the changelog and returns the list of icons that were added, updated or removed
+ * @returns {Icon[]} List of icons
+ */
 export const getIcons = (): Icon[] => {
   const data = readFileSync(changelogPath, "utf8");
 
@@ -37,8 +44,9 @@ export const getIcons = (): Icon[] => {
       .split("###")[0]
       .split("\n")
       .filter((i) => i && i.trim())
-      .map((i) => parseIcon(i, "updated"));
+      .map((i) => parseIcon(i, "added"));
   } catch (e) {}
+
   try {
     updated = lastData
       .split("### 🎨 Icons updated")[1]
@@ -60,7 +68,21 @@ export const getIcons = (): Icon[] => {
   return [...added, ...updated, ...removed];
 };
 
-export const getConventionalCommit = (icons: Icon[]): string => "\n" + icons.map(toConventionalCommit).join("\n");
+/**
+ * Builds the conventional commit message for the release used for Android and Flutter repos
+ * @param icons - List of icons
+ * @returns {string} The conventional commit message
+ */
+export const getConventionalCommit = (icons: Icon[]): string =>
+  "\n" +
+  icons
+    .map((icon) => "icon" + icon.change + "(" + icon.category + "): " + icon.name + " (" + icon.style + ")")
+    .join("\n");
 
+/**
+ * Builds the body of the release, used for Android and Flutter repos
+ * @param icons - List of icons
+ * @returns {string} The body of the release
+ */
 export const getBody = (icons: Icon[]): string =>
   "\n## Icons updated \n" + icons.map((i) => `- ${i.category} /  ${i.name} (${i.style})`).join("\n") + "\n";

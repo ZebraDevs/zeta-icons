@@ -1,7 +1,7 @@
 import core from "@actions/core";
 import { readFileSync, writeFileSync } from "fs";
 import fetchIcons from "../../dist/scripts/fetch-icons/fetchIcons.js";
-import { checkForFileChanges, stageAllFiles, parseFilesChanged } from '../../dist/scripts/utils/checkGit.js';
+import { checkForIconChanges, stageAllFiles, parseFilesChanged } from '../../dist/scripts/utils/checkGit.js';
 import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../figmaConfig.js";
 
 const FIGMA_ACCESS_TOKEN = core.getInput("figma-access-token") || process.env.FIGMA_ACCESS_TOKEN;
@@ -39,7 +39,7 @@ try {
 
   if (newHash) {
     writeFileSync(hashPath, newHash);
-    filesChanged = checkForFileChanges(VERBOSE_LOGS);
+    filesChanged = checkForIconChanges(VERBOSE_LOGS);
     if (filesChanged.length > 0) {
       const packageJson = JSON.parse(readFileSync("./package.json").toString());
       packageJson.lastUpdated = DATE;

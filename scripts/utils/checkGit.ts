@@ -24,7 +24,7 @@ export const gitChangeTypeToString = (changeType: keyof typeof GitChangeType): s
 export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[] => {
   const diffOutput = execSync(`git diff HEAD --name-status`).toString();
   if (diffOutput != "" && verboseLogs) {
-    console.log("Files changed:", execSync(`git diff HEAD`).toString());
+    // console.log("Files changed:", execSync(`git diff HEAD`).toString());
   }
   return diffOutput
     .toString()
@@ -42,10 +42,13 @@ export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[]
  * @param {boolean} verboseLogs - Logs more verbose outputs for testing.
  */
 export const stageAllFiles = (verboseLogs?: boolean): void => {
-  if (verboseLogs) {
-    // console.log("git add", execSync(`git add .`).toString());
-  } else {
-    execSync(`git add .`);
+  const statusOutput = execSync(`git status --porcelain`).toString();
+  if (statusOutput != "" && verboseLogs) {
+    console.log("Files staged:", statusOutput);
+  }
+  const stageAllFiles = execSync(`git add -A`).toString();
+  if (stageAllFiles != "" && verboseLogs) {
+    console.log("Files staged:", stageAllFiles);
   }
 };
 
@@ -55,9 +58,13 @@ export const stageAllFiles = (verboseLogs?: boolean): void => {
  * @param {boolean} verboseLogs - Logs more verbose outputs for testing.
  * @returns string[] - The list of changed file paths. If files have changed the action should create a PR.
  */
-export const checkForFileChanges = (verboseLogs?: boolean): ChangedFilesDetails[] => {
+export const checkForIconChanges = (verboseLogs?: boolean): ChangedFilesDetails[] => {
   stageAllFiles(verboseLogs);
-  return getAllChangedFiles(verboseLogs).filter(({ path }) => path !== "outputs/code-connect.figma.ts");
+  const iconsChange = getAllChangedFiles(verboseLogs).filter(({ path }) => path.startsWith("outputs/icons/"));
+  if (iconsChange.length > 0) {
+    console.log("Icons changed:", getAllChangedFiles(verboseLogs));
+  }
+  return iconsChange;
 };
 
 const toTitleCase = (str: string) => {

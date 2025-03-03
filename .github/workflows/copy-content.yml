@@ -21,6 +21,9 @@ on:
       prerun:
         required: false
         type: string
+      pr_body:
+        required: true
+        type: string
     secrets:
       PAT:
         required: true
@@ -94,6 +97,11 @@ jobs:
           git commit -m "deps(automated): ${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
           git push --set-upstream origin ${{inputs.branch}} -f
 
+      - name: Build PR comment
+        id: build_comment
+        run: |
+          echo "comment=${{inputs.pr_body}} <br /><sub>Created by the Zeta icons bot 🤖 <br />Last updated: ${{ steps.date.outputs.date }}</sub>" >> $GITHUB_OUTPUT
+
       - name: Open PR
         uses: thecanadianroot/open-pull-request-action@v1.1.1
         if: ${{ steps.check_pr.outputs.pr_exists == 0 }}
@@ -103,11 +111,11 @@ jobs:
           head: ${{ inputs.branch }}
           title: "deps(automated): ${{inputs.commit_msg}}"
           labels: tokens
-          body: "${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
+          body: ${{ steps.build_comment.outputs.comment }}
           repository: ${{ inputs.repo }}
 
       - name: Add comment to existing PR
         env:
           GH_TOKEN: ${{ secrets.PAT }}
         if: ${{ steps.check_pr.outputs.pr_exists != 0 }}
-        run: gh pr comment -R ${{ inputs.repo }} ${{ inputs.branch }} --body "${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
+        run: gh pr comment -R ${{ inputs.repo }} ${{ inputs.branch }} --edit-last --body "${{ steps.build_comment.outputs.comment }}"

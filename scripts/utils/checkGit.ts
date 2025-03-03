@@ -74,10 +74,46 @@ const parseIconName = (path: string): string => {
   return toTitleCase(`${category} / ${iconName} / ${iconType}`);
 };
 
+const parseIconNameAndStyle = (path: string): string[] => {
+  const _iconName = path.split("outputs/icons/")[1].split("/")[1].split("_");
+  const iconStyle = _iconName.pop();
+  return [_iconName.join(" "), iconStyle ?? ""];
+};
+
 const buildIconsList = (icons: ChangedFilesDetails[]): string => {
   return `<ul>${icons.map((icon) => "<li>" + parseIconName(icon.path) + "</li>").join("")}</ul>`;
 };
 
+interface IconDetails {
+  name: string;
+  style: string;
+  category: string;
+}
+
+const parseIconDetails = (path: string): IconDetails => {
+  const category = path.split("outputs/icons/")[1].split("/")[0];
+  const _iconName = path.split("outputs/icons/")[1].split("/")[1].split("_");
+  const iconType = _iconName.pop()?.split(".")[0];
+  const iconName = _iconName.join(" ");
+
+  return {
+    name: toTitleCase(iconName),
+    category: toTitleCase(category),
+    style: iconType ?? "",
+  };
+};
+
+const buildIconConventionalCommit = (icons: ChangedFilesDetails[], type: IconChangeType): string => {
+  let str = "";
+
+  icons.forEach((icon) => {
+    const iconDetails = parseIconDetails(icon.path);
+
+    str += `\nicon${type}(${iconDetails.category}): ${iconDetails.name} (${iconDetails.style})`;
+  });
+
+  return str;
+};
 export const parseFilesChanged = (changed: []): string => {
   const filesChanged: ChangedFilesDetails[] = changed.map((file: any) => {
     return {
@@ -107,6 +143,25 @@ export const parseFilesChanged = (changed: []): string => {
   if (newIcons.length === 0 && updatedIcons.length === 0 && deletedIcons.length === 0) {
     return "No icon changes";
   }
+
+  const iconsWithRoundAndSharp: { [key: string]: any } = {};
+
+  newIcons.map((icon) => {
+    const iconDetails = parseIconNameAndStyle(icon.path);
+
+    if (iconDetails[1] === "round") {
+      iconsWithRoundAndSharp[iconDetails[0]]["round"] = true;
+    } else if (iconDetails[1] === "sharp") {
+      iconsWithRoundAndSharp[iconDetails[0]]["sharp"] = true;
+    }
+  });
+
+  // TODO: Find a way to generate correctly build conventional commit message
+  // iterate though icons both round and sharp, and add those to the conventional commit with (round and sharp)
+  // iterate though icons only round or sharp, and add those to the conventional commit with (round or sharp)
+  // Find a way to appeand the conventaionl commit as this would require multiline string which gh a does not allow?
+  // Find a way in the on-release script to read the latest change log, or the release notes and use the relevant parts of the release notes to become the body content in flutter  / android releeases.
+
   if (newIcons.length > 0) {
     comment += `<h2>Icons added:</h2> ${buildIconsList(newIcons)}`;
   }
@@ -117,5 +172,25 @@ export const parseFilesChanged = (changed: []): string => {
     comment += `<h2>Icons deleted:</h2> ${buildIconsList(deletedIcons)}`;
   }
 
+  console.log(updatedIcons);
+  console.log(newIcons);
+
+  if (newIcons.length > 0) {
+    console.log("here 1");
+    comment += buildIconConventionalCommit(newIcons, "add");
+  }
+  if (updatedIcons.length > 0) {
+    console.log("here 2");
+
+    comment += buildIconConventionalCommit(updatedIcons, "update");
+  }
+  if (deletedIcons.length > 0) {
+    console.log("here 3");
+
+    comment += buildIconConventionalCommit(deletedIcons, "remove");
+  }
+
   return comment;
 };
+
+type IconChangeType = "add" | "remove" | "update";

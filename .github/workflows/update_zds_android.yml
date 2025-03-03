@@ -6,6 +6,8 @@ on:
     secrets:
       PAT:
         required: true
+      comment:
+        required: true
 
 jobs:
   publish_android:
@@ -18,3 +20,4 @@ jobs:
       destination_dir: "components/src/main/res/drawable"
       commit_msg: "Update icons"
       prerun: rm -f components/src/main/res/drawable/ic_*.xml
+      pr_body: ${{inputs.comment}}

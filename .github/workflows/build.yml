@@ -65,9 +65,13 @@ jobs:
           else
             TITLE='chore: Icon updates ${{ steps.date.outputs.date }}(${{github.ref_name}})'
           fi
-          BODY="${{ steps.fetch_icons.outputs.comment }}"
+
           echo "TITLE=$TITLE" >> $GITHUB_OUTPUT
-          echo "BODY=$BODY" >> $GITHUB_OUTPUT
+
+          echo "BODY<<EOF" >> "$GITHUB_OUTPUT"
+          echo "${{ steps.fetch_icons.outputs.comment }}">>"$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
       - name: Push
         if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
         run: |

@@ -40,7 +40,7 @@ export const getIcons = (): Icon[] => {
 
   try {
     added = lastData
-      .split("### 🔺 Icons added")[1]
+      .split("### ✅ Icons added")[1]
       .split("###")[0]
       .split("\n")
       .filter((i) => i && i.trim())
@@ -58,7 +58,7 @@ export const getIcons = (): Icon[] => {
 
   try {
     removed = lastData
-      .split("### 🔻 Icons removed")[1]
+      .split("### ✂️ Icons removed")[1]
       .split("###")[0]
       .split("\n")
       .filter((i) => i && i.trim())

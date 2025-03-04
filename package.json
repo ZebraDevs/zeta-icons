@@ -44,6 +44,7 @@
     "scale-that-svg": "^1.0.6",
     "sharp": "^0.33.5",
     "sinon": "^19.0.2",
+    "tsx": "^4.19.3",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
@@ -81,5 +82,6 @@
   "bugs": {
     "url": "https://github.com/zebratechnologies/zeta-icons/issues"
   },
-  "homepage": "https://github.com/zebratechnologies/zeta-icons#readme"
+  "homepage": "https://github.com/zebratechnologies/zeta-icons#readme",
+  "dependencies": {}
 }

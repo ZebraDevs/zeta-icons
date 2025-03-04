@@ -40,11 +40,11 @@
     },
     {
       "type": "iconadd",
-      "section": "🔺 Icons added"
+      "section": "✅ Icons added"
     },
     {
       "type": "iconremove",
-      "section": "🔻 Icons removed"
+      "section": "✂️ Icons removed"
     },
     {
       "type": "iconupdate",

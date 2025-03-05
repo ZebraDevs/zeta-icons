@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.6](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.5...zeta-icons-v0.9.6) (2025-03-05)
+
+
+### 🪲 Bug Fixes
+
+* Make pr emojis more friendly ([5332fb9](https://github.com/ZebraDevs/zeta-icons/commit/5332fb95cff50f26935ee5bdb98310e9000f8ec0))
+
+
+### 🧹 Miscellaneous Chores
+
+* update destination directory for flutter files ([#75](https://github.com/ZebraDevs/zeta-icons/issues/75)) ([32093dc](https://github.com/ZebraDevs/zeta-icons/commit/32093dc014e124da1f4baacfc9cf3f2001616f6f))
+
 ## [0.9.5](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.4...zeta-icons-v0.9.5) (2025-02-03)
 
 

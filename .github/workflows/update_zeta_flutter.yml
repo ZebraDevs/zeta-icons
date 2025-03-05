@@ -6,6 +6,10 @@ on:
     secrets:
       PAT:
         required: true
+    inputs:
+      comment:
+        required: true
+        type: string
 
 env:
   flutter_branch: update-zeta-icons
@@ -20,3 +24,4 @@ jobs:
       source_dir: "./outputs/flutter/."
       destination_dir: "packages/zeta_icons/lib/src"
       commit_msg: "Update icons"
+      pr_body: ${{inputs.comment}}

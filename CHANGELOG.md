@@ -11,7 +11,7 @@
 ### 🧹 Miscellaneous Chores
 
 * Icon updates 15 Jan 2025, 08:02:26 ([#73](https://github.com/ZebraDevs/zeta-icons/issues/73)) ([2b05346](https://github.com/ZebraDevs/zeta-icons/commit/2b0534695eb19cb5b6d5926ff383d4282770ab20))
-* Updated icon validator package ([#74](https://github.com/ZebraDevs/zeta-icons/issues/74)) ([eab0d8c](https://github.com/ZebraDevs/zeta-icons/commit/eab0d8c7fdef686afd040bf6bbbcce053bbc0a09))
+* Updated icon validator package ([#74](https://github.com/ZebraDevs/zeta-icons/issues/74)) ([eab0d8c](https://github.com/ZebraDevs/zeta-icons/commit/eab0d8c7fdef686afd040bf6bbbcce053bbc0a09)) 
 
 ## [0.9.4](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.3...zeta-icons-v0.9.4) (2024-12-18)
 

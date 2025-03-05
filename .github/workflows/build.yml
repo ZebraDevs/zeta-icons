@@ -19,29 +19,37 @@ jobs:
     outputs:
       update: ${{ steps.fetch_icons.outputs.files_changed }}
       version: ${{ steps.package-version-new.outputs.current-version }}
+      comment: ${{ steps.fetch_icons.outputs.comment }}
     steps:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           registry-url: "https://registry.npmjs.org"
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{github.ref_name}}
+
       - name: Create new branch name
         id: "branch_name"
         run: echo "BRANCH_NAME='${{env.UPDATE_BRANCH_NAME}}-${{github.ref_name}}'" >> $GITHUB_OUTPUT
+
       - name: Install packages
         run: npm ci
+
       - name: Compile Typescript files
         run: npm run build:fetch-icons
+
       - name: Reset values if action is not scheduled.
         if: ${{github.event_name  != 'schedule'}}
         run: |
           : > ./.github/fetch_icons/hash.txt
+
       - name: Get date / time
         id: date
         run: echo date=$(date +'%d %b %Y, %H:%M:%S') >> $GITHUB_OUTPUT
+
       - name: Fetch icons
         id: "fetch_icons"
         uses: ./.github/fetch_icons
@@ -49,37 +57,63 @@ jobs:
           figma-access-token: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
           date: ${{ steps.date.outputs.date }}
           actions-runner-debug: ${{secrets.ACTIONS_RUNNER_DEBUG}}
+
       - name: Icons changed
+        continue-on-error: true
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
+
       - name: Create code connect files
-        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
+        if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
         uses: ./.github/create_code_connect
-      - name: Create PR title
-        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
-        id: title
+
+      - name: Check if PR exists
+        if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
+        run: |
+          pr=$(gh pr list -H ${{steps.branch_name.outputs.BRANCH_NAME}} --json number -q length)
+          echo "pr_exists=$pr" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Create PR details
+        if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
+        id: pr
         run: |
           if [ ${{github.ref_name=='main'}} ]; then
             TITLE='chore: Icon updates ${{ steps.date.outputs.date }}'
           else
             TITLE='chore: Icon updates ${{ steps.date.outputs.date }}(${{github.ref_name}})'
           fi
+
           echo "TITLE=$TITLE" >> $GITHUB_OUTPUT
+
+          echo "BODY<<EOF" >> "$GITHUB_OUTPUT"
+          echo "${{ steps.fetch_icons.outputs.comment }}">>"$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+          echo "PR_BODY<<EOF" >> "$GITHUB_OUTPUT"
+          echo "<sub>Created by the Zeta Icons bot 🤖</sub><br />${{ steps.fetch_icons.outputs.comment }}">>"$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
       - name: Push
-        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
+        if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
         run: |
           git checkout -b ${{steps.branch_name.outputs.BRANCH_NAME}}
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
           git add -A
-          git commit -m "${{steps.title.outputs.TITLE}}"
+          git commit -m "${{steps.pr.outputs.TITLE}}" -m "${{steps.pr.outputs.BODY}}"
           git push --set-upstream origin ${{steps.branch_name.outputs.BRANCH_NAME}} -f
-      - name: Check if PR exists
-        if: ${{ steps.fetch_icons.outputs.files_changed  == 'true'}}
-        run: echo "pr_exists=$(gh pr list -H ${{steps.branch_name.outputs.BRANCH_NAME}} --json number -q length)" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ github.token }}
+
       - name: Create Pull Request
-        if: ${{env.pr_exists == 0 && steps.fetch_icons.outputs.files_changed == 'true'}}
-        run: gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "${{steps.title.outputs.TITLE}}" --body 'Created by the Zeta Icons bot'
+        if: ${{env.pr_exists == 0 && steps.fetch_icons.outputs.files_changed != ''}}
+        run: gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "${{steps.pr.outputs.TITLE}}" --body "${{steps.pr.outputs.PR_BODY}}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Update PR comment
+        if: ${{env.pr_exists != 0 && steps.fetch_icons.outputs.files_changed != ''}}
+        run: gh pr edit ${{steps.branch_name.outputs.BRANCH_NAME}} -t "${{steps.pr.outputs.TITLE}}" -b "${{steps.pr.outputs.PR_BODY}}"
         env:
           GITHUB_TOKEN: ${{ github.token }}

@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.9.6](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.5...zeta-icons-v0.9.6) (2025-03-11)
+
+
+### 🪲 Bug Fixes
+
+* Make pr emojis more friendly ([5332fb9](https://github.com/ZebraDevs/zeta-icons/commit/5332fb95cff50f26935ee5bdb98310e9000f8ec0))
+
+
+### 🧹 Miscellaneous Chores
+
+* Icon updates 11 Mar 2025, 10:36:59 ([#83](https://github.com/ZebraDevs/zeta-icons/issues/83)) ([b6ea863](https://github.com/ZebraDevs/zeta-icons/commit/b6ea863b6150aebe5d3577600258dabcb66d05f0))
+* update destination directory for flutter files ([#75](https://github.com/ZebraDevs/zeta-icons/issues/75)) ([32093dc](https://github.com/ZebraDevs/zeta-icons/commit/32093dc014e124da1f4baacfc9cf3f2001616f6f))
+
+
+### 🎨 Icons updated
+
+* **Communication:** Missed Call (round) ([b6ea863](https://github.com/ZebraDevs/zeta-icons/commit/b6ea863b6150aebe5d3577600258dabcb66d05f0))
+* **Communication:** Missed Call (sharp) ([b6ea863](https://github.com/ZebraDevs/zeta-icons/commit/b6ea863b6150aebe5d3577600258dabcb66d05f0))
+
 ## [0.9.5](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.4...zeta-icons-v0.9.5) (2025-02-03)
 
 

@@ -39,15 +39,24 @@ try {
     writeFileSync(hashPath, newHash);
     filesChanged = checkForIconChanges(VERBOSE_LOGS);
     if (filesChanged.length > 0) {
+      console.log('1')
       const packageJson = JSON.parse(readFileSync("./package.json").toString());
+      console.log('2')
       packageJson.lastUpdated = DATE;
+      console.log('3')
       writeFileSync("./package.json", JSON.stringify(packageJson, null, 2));
+      console.log('4')
       stageAllFiles();
+      console.log('5')
       filesChangedOutput = parseFilesChanged(filesChanged);
+      console.log('6')
     }
   }
+  console.log('7')
   core.setOutput("files_changed", filesChangedOutput);
+  console.log('8')
   core.setOutput('comment', filesChangedOutput)
+  console.log('9')
 } catch (error) {
   core.setFailed(error.message);
 }

@@ -181,7 +181,9 @@ export const parseFilesChanged = (changed: []): string => {
 
   newIcons.map((icon) => {
     const iconDetails = parseIconDetails(icon.path);
-    console.log("iconDetails   -   " + iconDetails);
+    if (!iconsWithRoundAndSharp[iconDetails.name]) {
+      iconsWithRoundAndSharp[iconDetails.name] = { round: false, sharp: false };
+    }
     if (iconDetails.style === "round") {
       iconsWithRoundAndSharp[iconDetails.name]["round"] = true;
     } else if (iconDetails.style === "sharp") {

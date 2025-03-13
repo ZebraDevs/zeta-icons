@@ -452,6 +452,7 @@ export const ZetaIconNameList = [
   "security_check",
   "security",
   "send",
+  "server",
   "settings",
   "shape_recognition",
   "share",
@@ -1022,6 +1023,7 @@ export type ZetaIconName = "activity"
  | "security_check"
  | "security"
  | "send"
+ | "server"
  | "settings"
  | "shape_recognition"
  | "share"

@@ -36,7 +36,7 @@ jobs:
         run: echo "BRANCH_NAME='${{env.UPDATE_BRANCH_NAME}}-${{github.ref_name}}'" >> $GITHUB_OUTPUT
 
       - name: Install packages
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn install --immutable
 
       - name: Compile Typescript files
         run: yarn run build:fetch-icons

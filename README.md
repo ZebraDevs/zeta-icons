@@ -10,7 +10,7 @@ An icon library for the Zeta design system.
 
 Zeta Icons is hosted on [npm](https://www.npmjs.com/package/@zebra-fed/zeta-icons), and can be installed with:
 
-`npm i @zebra-fed/zeta-icons`
+`npm i @zebra-fed/zeta-icons` or `yarn add @zebra-fed/zeta-icons`
 
 ## Usage
 
@@ -78,13 +78,13 @@ Before any tests are ran, make sure to create an `env.test.local` file with the 
 
 To test the functionality of the scripts against a test Figma file with a subset of the icons, run
 
-`npm run test`
+`yarn run test`
 
 and inspect the outputs in test/outputs/test-figma.
 
 To run a full test against the ZDS Assets Figma, run
 
-`npm run test:build`
+`yarn run test:build`
 
 and inspect the outputs in test/outputs/zds.
 

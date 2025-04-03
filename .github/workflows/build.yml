@@ -36,10 +36,10 @@ jobs:
         run: echo "BRANCH_NAME='${{env.UPDATE_BRANCH_NAME}}-${{github.ref_name}}'" >> $GITHUB_OUTPUT
 
       - name: Install packages
-        run: npm ci
+        run: yarn install --immutable --immutable-cache --check-cache
 
       - name: Compile Typescript files
-        run: npm run build:fetch-icons
+        run: yarn run build:fetch-icons
 
       - name: Reset values if action is not scheduled.
         if: ${{github.event_name  != 'schedule'}}
@@ -79,9 +79,9 @@ jobs:
         id: pr
         run: |
           if [ ${{github.ref_name=='main'}} ]; then
-            TITLE='chore: Icon updates ${{ steps.date.outputs.date }}'
+            TITLE='iconchore: Icon updates ${{ steps.date.outputs.date }}'
           else
-            TITLE='chore: Icon updates ${{ steps.date.outputs.date }}(${{github.ref_name}})'
+            TITLE='iconchore: Icon updates ${{ steps.date.outputs.date }}(${{github.ref_name}})'
           fi
 
           echo "TITLE=$TITLE" >> $GITHUB_OUTPUT

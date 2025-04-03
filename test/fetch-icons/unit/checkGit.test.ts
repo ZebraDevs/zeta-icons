@@ -40,12 +40,12 @@ describe("parseFilesChange test", () => {
 
     expect(output.trim()).to.equal(
       `<h2>Icons added:</h2> <ul><li>Maps / Mr Worldwide / Round</li><li>Maps / Mr Worldwide / Sharp</li></ul><h2>Icons updated:</h2> <ul><li>File / Ppt Attach / Round</li><li>File / Ppt Attach / Sharp</li></ul><h2>Icons deleted:</h2> <ul><li>Maps / Place Maps / Round</li><li>Maps / Place Maps / Sharp</li></ul>
-     iconadd(Maps): Mr Worldwide (round)
-     iconadd(Maps): Mr Worldwide (sharp)
-     iconupdate(File): Ppt Attach (round)
-     iconupdate(File): Ppt Attach (sharp)
-     iconremove(Maps): Place Maps (round)
-     iconremove(Maps): Place Maps (sharp)`,
+iconadd(Maps): Mr Worldwide (round)
+iconadd(Maps): Mr Worldwide (sharp)
+iconupdate(File): Ppt Attach (round)
+iconupdate(File): Ppt Attach (sharp)
+iconremove(Maps): Place Maps (round)
+iconremove(Maps): Place Maps (sharp)`,
     );
   });
 });

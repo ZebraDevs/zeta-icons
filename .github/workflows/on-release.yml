@@ -16,8 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-      - run: npm i
-      - run: npm run build
+      - run: yarn install --immutable --immutable-cache --check-cache`
+      - run: yarn run build
       - name: Get changed icons
         id: get-changed-icons
         uses: ./.github/get_changed_icons
@@ -34,14 +34,18 @@ jobs:
         with:
           node-version: 18
           registry-url: "https://registry.npmjs.org"
+
       - name: Install packages
-        run: npm ci
+        run: yarn install --immutable --immutable-cache --check-cache
+
       - name: Compile Typescript files
         run: tsc
+
       - name: Dry run
         run: npx figma connect publish --dry-run --token ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}
+
       - name: Publish
-        run: npm publish
+        run: yarn npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

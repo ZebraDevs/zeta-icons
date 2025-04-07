@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.9.8](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.7...zeta-icons-v0.9.8) (2025-04-07)
+
+
+### ⛓️ Dependencies
+
+* Move to yarn rather than npm  ([#90](https://github.com/ZebraDevs/zeta-icons/issues/90)) ([5d6b226](https://github.com/ZebraDevs/zeta-icons/commit/5d6b22639f4d46a232e1046bd29fb53ded3bfc3f))
+
+
+### 🧪 Tests
+
+* Update failing test ([5d6b226](https://github.com/ZebraDevs/zeta-icons/commit/5d6b22639f4d46a232e1046bd29fb53ded3bfc3f))
+
 ## [0.9.7](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.9.6...zeta-icons-v0.9.7) (2025-03-13)
 
 ### ✨ New Features

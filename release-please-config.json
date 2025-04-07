@@ -51,6 +51,11 @@
       "section": "🎨 Icons updated"
     },
     {
+      "type": "iconchore",
+      "section": "🧹 Icon Chore",
+      "hidden": true
+    },
+    {
       "type": "perf",
       "section": "Performance Improvements",
       "hidden": true

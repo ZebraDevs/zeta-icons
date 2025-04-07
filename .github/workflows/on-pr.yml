@@ -17,16 +17,20 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           registry-url: "https://registry.npmjs.org"
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{github.head_ref}}
+
       - name: Install packages
-        run: npm ci
+        run: yarn install --immutable
+
       - name: Run tests
-        run: npm run test
+        run: yarn run test
+
       - name: Run tsc
         run: tsc
 

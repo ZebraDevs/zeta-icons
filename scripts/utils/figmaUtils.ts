@@ -15,6 +15,7 @@ const IGNORED_ICONSETS = ["dna", "internal use only"];
 export function findIconPage(document: FigmaNode, iconPageName: string): FigmaNode {
   const iconPage = document.children.filter((page) => page.name == iconPageName)[0];
   if (iconPage == undefined) {
+    console.log(iconPageName);
     throw new Error(`❌ Cannot find icons page for page name ${iconPageName}`);
   }
   return iconPage;
@@ -43,11 +44,13 @@ export function extractCategoryNodes(iconPage: FigmaNode): FigmaNode[] {
  * @returns {FigmaNode[]} A list of icon sets found from the given category node.
  */
 export function extractIconSets(categoryNode: FigmaNode): FigmaNode[] {
-  const foundNode = categoryNode.children.find((child) => child.name === categoryNode.name);
+  const foundNode = categoryNode.children.find((child) => child.name === categoryNode.name && child.type == "FRAME");
+
   if (!foundNode) {
+    console.log(categoryNode.name);
     throw new Error(`❌ Cannot find matching node for category name ${categoryNode.name}`);
   }
-  return foundNode.children.filter((child) => child.type == "COMPONENT_SET") as FigmaNode[];
+  return (foundNode.children ?? []).filter((child) => child.type == "COMPONENT_SET") as FigmaNode[];
 }
 
 /**

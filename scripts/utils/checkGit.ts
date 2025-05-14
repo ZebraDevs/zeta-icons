@@ -28,13 +28,12 @@ interface IconDetails {
  * @returns { type: GitChangeType, path: string }[] - List of files that have changed with their change type.
  */
 export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[] => {
-  const diff = spawnSync("git", ["diff", "HEAD", "--name-status", "--", "outputs/icons"], {
+  const diffOutput = spawnSync("git", ["diff", "HEAD", "--name-status", "--", "outputs/icons"], {
     encoding: "utf-8",
     maxBuffer: 1024 * 1024 * 1000,
-  });
-  const diffOutput = diff.stdout;
-  if (diffOutput != "" && verboseLogs) {
-    console.log("Files changed:", execSync(`git diff HEAD`).toString());
+  }).stdout;
+  if (verboseLogs) {
+    // console.log("Diff output:", diffOutput);
   }
   return diffOutput
     .toString()
@@ -52,10 +51,10 @@ export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[]
  * @param {boolean?} verboseLogs - Logs more verbose outputs for testing.
  */
 export const stageAllFiles = (verboseLogs?: boolean): void => {
-  // const statusOutput = execSync(`git status --porcelain`).toString();
-  // if (statusOutput != "" && verboseLogs) {
-  //   console.log("Files staged:", statusOutput);
-  // }
+  const statusOutput = execSync(`git status --porcelain`).toString();
+  if (statusOutput != "" && verboseLogs) {
+    // console.log("Files staged:", statusOutput);
+  }
   const stageAllFiles = execSync(`git add -A`).toString();
   if (stageAllFiles != "" && verboseLogs) {
     console.log("Files staged:", stageAllFiles);
@@ -69,11 +68,10 @@ export const stageAllFiles = (verboseLogs?: boolean): void => {
  * @returns string[] - The list of changed file paths. If files have changed the action should create a PR.
  */
 export const checkForIconChanges = (verboseLogs?: boolean): ChangedFilesDetails[] => {
-  stageAllFiles(verboseLogs);
+  // stageAllFiles(verboseLogs);
+  execSync(`git add -A`);
+  console.log("Staged all files");
   const iconsChange = getAllChangedFiles(verboseLogs);
-  if (iconsChange.length > 0) {
-    console.log("Icons changed:", getAllChangedFiles(verboseLogs));
-  }
   return iconsChange;
 };
 

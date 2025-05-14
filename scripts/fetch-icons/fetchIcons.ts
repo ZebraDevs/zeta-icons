@@ -63,9 +63,6 @@ export default async function main(
   const allImageFiles = await getImageFiles(manifest, figmaFileId, figmaToken);
   console.log("✅ - Fetched image files");
 
-  const iconManifestFile = JSON.stringify(Object.fromEntries(manifest));
-  writeFileSync(outputDir + "/icon-manifest.json", iconManifestFile);
-
   const newHash = generateHash(allImageFiles);
   console.log("✅ - Generated new hash");
 
@@ -77,6 +74,9 @@ export default async function main(
 
   await clearDirectory(outputDir);
   console.log("✅ - Deleted old files");
+
+  const iconManifestFile = JSON.stringify(Object.fromEntries(manifest));
+  writeFileSync(outputDir + "/icon-manifest.json", iconManifestFile);
 
   /// Create simple array of category names
   const categoryNames = extractCategoryNames(categories);

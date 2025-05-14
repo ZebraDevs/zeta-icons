@@ -18,8 +18,11 @@ export const optimizeSVGs = async (
   createFolder(tempOutputDir);
   await Promise.all(
     categories.map((category) => {
-      console.log(`Optimizing icons from ${category}`);
-      return SVGFixer(`${iconsOutputDir}/${category}`, tempOutputDir).fix();
+      try {
+        return SVGFixer(`${iconsOutputDir}/${category}`, tempOutputDir).fix();
+      } catch (e) {
+        console.error(`Error optimizing icons from ${category}: ${e}`);
+      }
     }),
   );
 };

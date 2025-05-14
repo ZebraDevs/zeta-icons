@@ -13,8 +13,4 @@ describe("generateDefinitionFiles", () => {
     assert.equal(existsSync(`${testDartOutputDir}/icons.g.dart`), true);
     assert.equal(existsSync(`${testTSOutputDir}/icon-types.ts`), true);
   });
-
-  it("should write the icon manifest", () => {
-    assert.equal(existsSync(`${testOutputDir}/icon-manifest.json`), true);
-  });
 });

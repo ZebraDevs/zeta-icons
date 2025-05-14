@@ -19,7 +19,7 @@ import { generateIconManifest } from "../../scripts/fetch-icons/generators/gener
 import { generateFonts } from "../../scripts/fetch-icons/generators/generateFonts.js";
 import { saveSVGs } from "../../scripts/utils/saveSvgs.js";
 import { optimizeSVGs } from "../../scripts/utils/optimizeSvgs.js";
-import { ComponentSets } from "../../scripts/types/figmaTypes.js";
+import { Component, ComponentSets } from "../../scripts/types/figmaTypes.js";
 
 async function main() {
   const tempOutputDir = `${testOutputDir}/temp`;
@@ -27,14 +27,17 @@ async function main() {
     path: ".env.test.local",
   });
 
-  process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
-
   if (process.env.FIGMA_ACCESS_TOKEN != undefined) {
     const response = await getFigmaDocument(testFileId, process.env.FIGMA_ACCESS_TOKEN);
     writeFile(response, "documentResponse.json");
-    writeFile(response.componentSets, "componentSets.json");
 
-    const componentSet: ComponentSets = new Map(Object.entries(response.componentSets));
+    const componentSetEntries = new Map(
+      Object.entries(response.componentSets).map(([key, value]) => {
+        delete value.key;
+        return [key, value];
+      }),
+    ) as ComponentSets;
+    writeFile(JSON.stringify(Object.fromEntries(componentSetEntries)), "componentSets.json");
 
     const iconPage = findIconPage(response.document, testIconPageName);
     writeFile(iconPage, "iconsPage.json");
@@ -47,7 +50,7 @@ async function main() {
     const iconNodes = extractIconSets(categories[0]);
     writeFile(iconNodes, "iconNodes.json");
 
-    const manifest = generateIconManifest(categories, componentSet, testIconsOutputDir, true);
+    const manifest = generateIconManifest(categories, componentSetEntries, testIconsOutputDir, true);
     writeFile(Object.fromEntries(manifest), "manifest.json");
 
     const allImageFiles = await getImageFiles(manifest, testFileId, process.env.FIGMA_ACCESS_TOKEN);
@@ -72,7 +75,11 @@ async function main() {
 }
 
 function writeFile(contents: Object, name: string) {
-  writeFileSync(`./test/data/${name}`, JSON.stringify(contents));
+  if (typeof contents === "string") {
+    writeFileSync(`./test/data/${name}`, contents);
+  } else {
+    writeFileSync(`./test/data/${name}`, JSON.stringify(contents));
+  }
 }
 
 main();

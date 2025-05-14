@@ -84,7 +84,6 @@ const generateAPICall = (ids: string[], fileID: string, accessToken: string): Pr
     },
   }).then(async (response) => {
     if (response.status != 200) {
-      console.log(`https://api.figma.com/v1/images/${fileID}?ids=${ids.join(",")}&format=svg`);
       throw new Error("Failed to fetch Figma images: " + response.statusText);
     }
 

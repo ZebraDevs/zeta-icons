@@ -41,7 +41,6 @@ export function generateIconManifest(
     const categoryNameError = validateCategoryName(formattedCategoryName);
 
     if (categoryNameError.severity == ErrorSeverity.high) {
-      console.log(categoryNameError.message);
       throw new Error(categoryNameError.message);
     } else {
       const icons = extractIconSets(category);
@@ -67,7 +66,6 @@ export function generateIconManifest(
             name = error.newName;
           } else if (error.severity == ErrorSeverity.medium) {
             highestSeverity = ErrorSeverity.medium;
-            console.log(`${name}`, error.message);
           }
         }
 

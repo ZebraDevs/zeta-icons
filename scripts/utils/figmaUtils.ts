@@ -1,7 +1,7 @@
 import { ComponentSets, FigmaNode } from "../types/figmaTypes.js";
 import { toSnakeCase } from "./fileUtils.js";
 
-const IGNORED_ICONSETS = ["dna"];
+const IGNORED_ICONSETS = ["dna", "internal use only"];
 
 /**
  * Locates the relevant icon page from a Figma document.
@@ -27,7 +27,11 @@ export function findIconPage(document: FigmaNode, iconPageName: string): FigmaNo
  * @returns {FigmaNode[]} A list of `FigmaNode`s representing categories.
  */
 export function extractCategoryNodes(iconPage: FigmaNode): FigmaNode[] {
-  return iconPage.children.filter((child) => {
+  const iconsPage = iconPage.children.find((page) => page.name.toLowerCase() === "icons");
+  if (!iconsPage) {
+    throw new Error("❌ Icons page not found in the document.");
+  }
+  return iconsPage.children.filter((child) => {
     return child.type == "FRAME" && !IGNORED_ICONSETS.includes(child.name.toLowerCase());
   }) as FigmaNode[];
 }
@@ -39,7 +43,12 @@ export function extractCategoryNodes(iconPage: FigmaNode): FigmaNode[] {
  * @returns {FigmaNode[]} A list of icon sets found from the given category node.
  */
 export function extractIconSets(categoryNode: FigmaNode): FigmaNode[] {
-  return categoryNode.children.filter((child) => child.type == "COMPONENT_SET") as FigmaNode[];
+  const foundNode = categoryNode.children.find((child) => child.name === categoryNode.name && child.type == "FRAME");
+
+  if (!foundNode) {
+    throw new Error(`❌ Cannot find matching node for category name ${categoryNode.name}`);
+  }
+  return (foundNode.children ?? []).filter((child) => child.type == "COMPONENT_SET") as FigmaNode[];
 }
 
 /**

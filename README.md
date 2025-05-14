@@ -4,7 +4,9 @@ An icon library for the Zeta design system.
 
 # Web
 
-> 🚧 **Note**: Currently, the only way to use these icons is directly from `zeta-icons`. This will change in the future with the impending release of `zeta-web` and `zeta-react`.
+See [Zeta Web](https://github.com/ZebraDevs/zeta-web) for information on using the icons with our web components.
+
+Otherwise, icons can be installed independently using the instructions below.
 
 ## Installation
 

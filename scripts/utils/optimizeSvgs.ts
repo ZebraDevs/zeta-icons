@@ -13,13 +13,13 @@ import SVGFixer from "oslllo-svg-fixer";
 export const optimizeSVGs = async (
   iconsOutputDir: string,
   tempOutputDir: string,
-  categories: string[]
+  categories: string[],
 ): Promise<void> => {
   createFolder(tempOutputDir);
   await Promise.all(
     categories.map((category) => {
       console.log(`Optimizing icons from ${category}`);
       return SVGFixer(`${iconsOutputDir}/${category}`, tempOutputDir).fix();
-    })
+    }),
   );
 };

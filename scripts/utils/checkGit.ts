@@ -52,10 +52,10 @@ export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[]
  * @param {boolean?} verboseLogs - Logs more verbose outputs for testing.
  */
 export const stageAllFiles = (verboseLogs?: boolean): void => {
-  const statusOutput = execSync(`git status --porcelain`).toString();
-  if (statusOutput != "" && verboseLogs) {
-    console.log("Files staged:", statusOutput);
-  }
+  // const statusOutput = execSync(`git status --porcelain`).toString();
+  // if (statusOutput != "" && verboseLogs) {
+  //   console.log("Files staged:", statusOutput);
+  // }
   const stageAllFiles = execSync(`git add -A`).toString();
   if (stageAllFiles != "" && verboseLogs) {
     console.log("Files staged:", stageAllFiles);

@@ -52,7 +52,6 @@ export const ZetaIconNameList = [
   "battery_alert",
   "battery_charging",
   "battery",
-  "block_content",
   "block",
   "blog",
   "bluetooth_disabled",
@@ -88,7 +87,6 @@ export const ZetaIconNameList = [
   "call_back",
   "camera",
   "camera_shutter",
-  "camera_switch_image",
   "camera_switch",
   "cancel_outline",
   "cancel",
@@ -107,18 +105,16 @@ export const ZetaIconNameList = [
   "certified",
   "chain",
   "chart_bar",
-  "chart_bubble_charts",
+  "chart_bubble_outline",
   "chart_bubble",
   "chart_doughnut",
-  "chart_filled_enterprise",
   "chart_filled",
   "chart_gantt",
   "chart_line_predict",
   "chart_line",
   "chart_line_stacked",
   "chart_outline",
-  "chart_pie_charts",
-  "chart_pie_content",
+  "chart_pie_outline",
   "chart_pie",
   "chart_scatter_plot",
   "chart_stacked",
@@ -142,7 +138,7 @@ export const ZetaIconNameList = [
   "chevron_left",
   "chevron_right",
   "choices",
-  "clipboard_action",
+  "clipboard_outline",
   "clipboard",
   "clock_available",
   "clock_bid",
@@ -168,6 +164,7 @@ export const ZetaIconNameList = [
   "cloud_off",
   "cloud_outline",
   "cloud",
+  "cloud_sync",
   "cloud_upload",
   "color_fill",
   "columns",
@@ -178,7 +175,6 @@ export const ZetaIconNameList = [
   "contacts_outline",
   "contacts",
   "content",
-  "contrast_image",
   "contrast",
   "conversation",
   "copy_file",
@@ -221,6 +217,7 @@ export const ZetaIconNameList = [
   "exit",
   "expand_less",
   "expand_more",
+  "exposure",
   "eye_dropper",
   "eye_preview",
   "face_id",
@@ -237,7 +234,6 @@ export const ZetaIconNameList = [
   "flight_mode",
   "flight",
   "flip",
-  "folder_file",
   "folder_outline",
   "folder",
   "font_size_decrease",
@@ -327,6 +323,7 @@ export const ZetaIconNameList = [
   "microphone_off",
   "microphone_outline",
   "microphone",
+  "microsd",
   "missed_call",
   "missed_video",
   "mobile_friendly",
@@ -381,7 +378,6 @@ export const ZetaIconNameList = [
   "phonelink",
   "phrase",
   "pin",
-  "place_maps",
   "place_outline",
   "place",
   "planogram",
@@ -440,7 +436,6 @@ export const ZetaIconNameList = [
   "sad",
   "satisfied",
   "save_alt",
-  "save_content",
   "save",
   "scan_rate",
   "scanner",
@@ -466,7 +461,6 @@ export const ZetaIconNameList = [
   "sms",
   "snooze",
   "solutions",
-  "sort_content",
   "sort",
   "speaker",
   "star_half",
@@ -486,13 +480,12 @@ export const ZetaIconNameList = [
   "subscribe",
   "swap",
   "switch_user",
-  "sync_action",
   "sync_disabled",
   "sync",
   "table",
   "tablet_mac",
   "tablet",
-  "tag_enterprise",
+  "tag_outline",
   "tag",
   "tap_to_pay",
   "taxi",
@@ -525,7 +518,6 @@ export const ZetaIconNameList = [
   "update",
   "upload_file",
   "upload",
-  "usb_alt_device",
   "usb_alt",
   "usb",
   "user_circle",
@@ -549,17 +541,15 @@ export const ZetaIconNameList = [
   "warning_outline",
   "warning",
   "watch",
-  "wb_image",
   "wb",
   "wifi_0",
   "wifi_1",
   "wifi_2",
   "wifi_alt",
   "wifi_call",
-  "wifi_off_device",
+  "wifi_off_alt",
   "wifi_off",
   "wifi",
-  "world_action",
   "world",
   "write",
   "youtube",
@@ -623,7 +613,6 @@ export type ZetaIconName = "activity"
  | "battery_alert"
  | "battery_charging"
  | "battery"
- | "block_content"
  | "block"
  | "blog"
  | "bluetooth_disabled"
@@ -659,7 +648,6 @@ export type ZetaIconName = "activity"
  | "call_back"
  | "camera"
  | "camera_shutter"
- | "camera_switch_image"
  | "camera_switch"
  | "cancel_outline"
  | "cancel"
@@ -678,18 +666,16 @@ export type ZetaIconName = "activity"
  | "certified"
  | "chain"
  | "chart_bar"
- | "chart_bubble_charts"
+ | "chart_bubble_outline"
  | "chart_bubble"
  | "chart_doughnut"
- | "chart_filled_enterprise"
  | "chart_filled"
  | "chart_gantt"
  | "chart_line_predict"
  | "chart_line"
  | "chart_line_stacked"
  | "chart_outline"
- | "chart_pie_charts"
- | "chart_pie_content"
+ | "chart_pie_outline"
  | "chart_pie"
  | "chart_scatter_plot"
  | "chart_stacked"
@@ -713,7 +699,7 @@ export type ZetaIconName = "activity"
  | "chevron_left"
  | "chevron_right"
  | "choices"
- | "clipboard_action"
+ | "clipboard_outline"
  | "clipboard"
  | "clock_available"
  | "clock_bid"
@@ -739,6 +725,7 @@ export type ZetaIconName = "activity"
  | "cloud_off"
  | "cloud_outline"
  | "cloud"
+ | "cloud_sync"
  | "cloud_upload"
  | "color_fill"
  | "columns"
@@ -749,7 +736,6 @@ export type ZetaIconName = "activity"
  | "contacts_outline"
  | "contacts"
  | "content"
- | "contrast_image"
  | "contrast"
  | "conversation"
  | "copy_file"
@@ -792,6 +778,7 @@ export type ZetaIconName = "activity"
  | "exit"
  | "expand_less"
  | "expand_more"
+ | "exposure"
  | "eye_dropper"
  | "eye_preview"
  | "face_id"
@@ -808,7 +795,6 @@ export type ZetaIconName = "activity"
  | "flight_mode"
  | "flight"
  | "flip"
- | "folder_file"
  | "folder_outline"
  | "folder"
  | "font_size_decrease"
@@ -898,6 +884,7 @@ export type ZetaIconName = "activity"
  | "microphone_off"
  | "microphone_outline"
  | "microphone"
+ | "microsd"
  | "missed_call"
  | "missed_video"
  | "mobile_friendly"
@@ -952,7 +939,6 @@ export type ZetaIconName = "activity"
  | "phonelink"
  | "phrase"
  | "pin"
- | "place_maps"
  | "place_outline"
  | "place"
  | "planogram"
@@ -1011,7 +997,6 @@ export type ZetaIconName = "activity"
  | "sad"
  | "satisfied"
  | "save_alt"
- | "save_content"
  | "save"
  | "scan_rate"
  | "scanner"
@@ -1037,7 +1022,6 @@ export type ZetaIconName = "activity"
  | "sms"
  | "snooze"
  | "solutions"
- | "sort_content"
  | "sort"
  | "speaker"
  | "star_half"
@@ -1057,13 +1041,12 @@ export type ZetaIconName = "activity"
  | "subscribe"
  | "swap"
  | "switch_user"
- | "sync_action"
  | "sync_disabled"
  | "sync"
  | "table"
  | "tablet_mac"
  | "tablet"
- | "tag_enterprise"
+ | "tag_outline"
  | "tag"
  | "tap_to_pay"
  | "taxi"
@@ -1096,7 +1079,6 @@ export type ZetaIconName = "activity"
  | "update"
  | "upload_file"
  | "upload"
- | "usb_alt_device"
  | "usb_alt"
  | "usb"
  | "user_circle"
@@ -1120,17 +1102,15 @@ export type ZetaIconName = "activity"
  | "warning_outline"
  | "warning"
  | "watch"
- | "wb_image"
  | "wb"
  | "wifi_0"
  | "wifi_1"
  | "wifi_2"
  | "wifi_alt"
  | "wifi_call"
- | "wifi_off_device"
+ | "wifi_off_alt"
  | "wifi_off"
  | "wifi"
- | "world_action"
  | "world"
  | "write"
  | "youtube"

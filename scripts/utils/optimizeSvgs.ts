@@ -20,8 +20,9 @@ export const optimizeSVGs = async (
   await Promise.all(
     categories.map((category) => {
       try {
-        execSync(`npx svgo -f ${iconsOutputDir}/${category}`);
-        return SVGFixer(`${iconsOutputDir}/${category}`, tempOutputDir).fix();
+        const safeCategory = category.replace(/[^a-zA-Z0-9-_]/g, "");
+        execSync(`npx svgo -f ${iconsOutputDir}/${safeCategory}`);
+        return SVGFixer(`${iconsOutputDir}/${safeCategory}`, tempOutputDir).fix();
       } catch (e) {
         console.error(`Error optimizing icons from ${category}: ${e}`);
       }

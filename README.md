@@ -6,7 +6,7 @@ An icon library for the Zeta design system.
 
 See [Zeta Web](https://github.com/ZebraDevs/zeta-web) for information on using the icons with our web components.
 
-Otherwise, icons can be installed independency using ths instructions below.
+Otherwise, icons can be installed independently using the instructions below.
 
 ## Installation
 

@@ -6,6 +6,7 @@ import iconManifestJson from "../../outputs/icon-manifest.json" with { type: "js
 import { readdirSync, statSync } from "fs";
 import { join } from "path";
 import { IconManifest } from "../../types.js";
+import { clearDirectory } from "../utils/fileUtils.js";
 
 export const iconsDir = "/icons";
 export const tempDir = "/temp";
@@ -34,6 +35,11 @@ export default async function main(outputDir: string): Promise<void> {
   const dartOutputDir = outputDir + flutterDir;
   const tsOutputDir = outputDir + webDir;
   const androidOutputDir = outputDir + androidDir;
+
+  await clearDirectory(pngOutputDir);
+  await clearDirectory(dartOutputDir);
+  await clearDirectory(tsOutputDir);
+  await clearDirectory(androidOutputDir);
 
   const categoryNames = getCategoryNames(iconsOutputDir);
   console.log("✅ - Extracted categories");

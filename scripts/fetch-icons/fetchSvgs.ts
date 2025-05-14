@@ -54,7 +54,8 @@ export default async function main(
   const newHash = generateHash(allImageFiles);
   console.log("✅ - Generated new hash");
 
-  await clearDirectory(outputDir);
+  await clearDirectory(outputDir + "/icons");
+  await clearDirectory(outputDir + "/temp");
   console.log("✅ - Deleted old files");
 
   /// Create simple array of category names

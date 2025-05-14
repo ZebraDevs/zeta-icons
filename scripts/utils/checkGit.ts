@@ -28,7 +28,10 @@ interface IconDetails {
  * @returns { type: GitChangeType, path: string }[] - List of files that have changed with their change type.
  */
 export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[] => {
-  const diff = spawnSync("git", ["diff", "HEAD", "--name-status"], { encoding: "utf-8", maxBuffer: 1024 * 1024 * 10 });
+  const diff = spawnSync("git", ["diff", "HEAD", "--name-status"], {
+    encoding: "utf-8",
+    maxBuffer: 1024 * 1024 * 1000,
+  });
   const diffOutput = diff.stdout;
   if (diffOutput != "" && verboseLogs) {
     console.log("Files changed:", execSync(`git diff HEAD`).toString());

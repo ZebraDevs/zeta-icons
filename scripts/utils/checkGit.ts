@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+import { execSync, spawnSync } from "child_process";
 
 export enum GitChangeType {
   A = "Added",
@@ -28,7 +28,8 @@ interface IconDetails {
  * @returns { type: GitChangeType, path: string }[] - List of files that have changed with their change type.
  */
 export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[] => {
-  const diffOutput = execSync(`git diff HEAD --name-status`).toString();
+  const diff = spawnSync("git", ["diff", "HEAD", "--name-status"], { encoding: "utf-8", maxBuffer: 1024 * 1024 * 10 });
+  const diffOutput = diff.stdout;
   if (diffOutput != "" && verboseLogs) {
     console.log("Files changed:", execSync(`git diff HEAD`).toString());
   }

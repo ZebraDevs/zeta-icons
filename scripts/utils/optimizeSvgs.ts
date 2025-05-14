@@ -1,3 +1,4 @@
+import { execSync } from "child_process";
 import { createFolder } from "./fileUtils.js";
 import SVGFixer from "oslllo-svg-fixer";
 
@@ -19,6 +20,7 @@ export const optimizeSVGs = async (
   await Promise.all(
     categories.map((category) => {
       try {
+        execSync(`npx svgo -f ${iconsOutputDir}/${category}`);
         return SVGFixer(`${iconsOutputDir}/${category}`, tempOutputDir).fix();
       } catch (e) {
         console.error(`Error optimizing icons from ${category}: ${e}`);

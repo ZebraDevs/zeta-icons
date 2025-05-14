@@ -10,6 +10,7 @@ import { generateHash } from "../utils/hash.js";
 import { optimizeSVGs } from "../utils/optimizeSvgs.js";
 import { saveSVGs } from "../utils/saveSvgs.js";
 import { generateAndroidIcons } from "./generators/generateAndroidIcons.js";
+import { writeFileSync } from "fs";
 
 export const iconsDir = "/icons";
 export const tempDir = "/temp";
@@ -61,6 +62,9 @@ export default async function main(
 
   const allImageFiles = await getImageFiles(manifest, figmaFileId, figmaToken);
   console.log("✅ - Fetched image files");
+
+  const iconManifestFile = JSON.stringify(Object.fromEntries(manifest));
+  writeFileSync(outputDir + "/icon-manifest.json", iconManifestFile);
 
   const newHash = generateHash(allImageFiles);
   console.log("✅ - Generated new hash");

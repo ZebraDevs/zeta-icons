@@ -137,8 +137,9 @@ const buildIconConventionalCommit = (icons: ChangedFilesDetails[], type: IconCha
 
   icons.forEach((icon) => {
     const iconDetails = parseIconDetails(icon.path);
-
-    str += `\nicon${type}(${iconDetails.category}): ${iconDetails.name} (${iconDetails.style})`;
+    if (!str.includes(iconDetails.name)) {
+      str += `\nicon${type}(${iconDetails.category}): ${iconDetails.name}`;
+    }
   });
 
   return str;

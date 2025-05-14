@@ -193,15 +193,15 @@ export const parseFilesChanged = (changed: []): string => {
     }
   });
 
-  if (newIcons.length > 0) {
-    comment += `<h2>Icons added:</h2> ${buildIconsList(newIcons)}`;
-  }
-  if (updatedIcons.length > 0) {
-    comment += `<h2>Icons updated:</h2> ${buildIconsList(updatedIcons)}`;
-  }
-  if (deletedIcons.length > 0) {
-    comment += `<h2>Icons deleted:</h2> ${buildIconsList(deletedIcons)}`;
-  }
+  // if (newIcons.length > 0) {
+  //   comment += `<h2>Icons added:</h2> ${buildIconsList(newIcons)}`;
+  // }
+  // if (updatedIcons.length > 0) {
+  //   comment += `<h2>Icons updated:</h2> ${buildIconsList(updatedIcons)}`;
+  // }
+  // if (deletedIcons.length > 0) {
+  //   comment += `<h2>Icons deleted:</h2> ${buildIconsList(deletedIcons)}`;
+  // }
 
   if (newIcons.length > 0) {
     comment += buildIconConventionalCommit(newIcons, "add");

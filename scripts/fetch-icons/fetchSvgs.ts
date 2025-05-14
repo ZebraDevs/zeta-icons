@@ -1,22 +1,16 @@
-import { generateDefinitionFiles } from "./generators/generateDefinitionFiles.js";
-import { generateFonts } from "./generators/generateFonts.js";
 import { generateIconManifest } from "./generators/generateIconManifest.js";
 import { ComponentSets } from "../types/figmaTypes.js";
-import { generatePNGs } from "./generators/generatePNGs.js";
 import { getFigmaDocument, getImageFiles } from "../utils/api.js";
 import { findIconPage, extractCategoryNodes, extractCategoryNames } from "../utils/figmaUtils.js";
 import { clearDirectory } from "../utils/fileUtils.js";
 import { generateHash } from "../utils/hash.js";
 import { optimizeSVGs } from "../utils/optimizeSvgs.js";
 import { saveSVGs } from "../utils/saveSvgs.js";
-import { generateAndroidIcons } from "./generators/generateAndroidIcons.js";
+import { writeFileSync } from "fs";
+import { ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME } from "../../figmaConfig.js";
 
 export const iconsDir = "/icons";
 export const tempDir = "/temp";
-export const pngDir = "/png";
-export const flutterDir = "/flutter";
-export const webDir = "/web";
-export const androidDir = "/android";
 
 /**
  * Main function to run icons action. For slightly more information, see {@link https://miro.com/app/board/uXjVKUMv1ME=/?share_link_id=952145602435 | Miro }
@@ -26,7 +20,7 @@ export const androidDir = "/android";
  * @param {string} iconPageName - The name of the icon page from the given Figma file that the icons will be extracted from.
  * @param {string} oldHash - Hash of icons from cache.
  * @param {string} outputDir - Directory to (potentially) save icons to.
- * @param {boolean} verboseLogs - Logs more verbose outputs for testing.
+
  *
  * @returns {string | undefined} Hash of updated icons. If undefined, icons have not changed.
  */
@@ -34,16 +28,11 @@ export default async function main(
   figmaToken: string,
   figmaFileId: string,
   iconPageName: string,
-  oldHash: string,
+
   outputDir: string,
-  verboseLogs: boolean,
 ): Promise<string | undefined> {
   const iconsOutputDir = outputDir + iconsDir;
   const tempOutputDir = outputDir + tempDir;
-  const pngOutputDir = outputDir + pngDir;
-  const dartOutputDir = outputDir + flutterDir;
-  const tsOutputDir = outputDir + webDir;
-  const androidOutputDir = outputDir + androidDir;
 
   const response = await getFigmaDocument(figmaFileId, figmaToken);
   console.log("✅ - Fetched figma document");
@@ -56,7 +45,7 @@ export default async function main(
   const categories = extractCategoryNodes(iconPage);
   console.log("✅ - Extracted categories");
 
-  const manifest = generateIconManifest(categories, componentSet, iconsOutputDir, verboseLogs);
+  const manifest = generateIconManifest(categories, componentSet, iconsOutputDir, false);
   console.log("✅ - Generated icon manifest");
 
   const allImageFiles = await getImageFiles(manifest, figmaFileId, figmaToken);
@@ -64,12 +53,6 @@ export default async function main(
 
   const newHash = generateHash(allImageFiles);
   console.log("✅ - Generated new hash");
-
-  /// Compare old hash from cache to new hash generated.
-  const isChanged = oldHash !== newHash;
-
-  console.log("\n\n👀 - Icons have" + (isChanged ? "" : " not") + " changed.\n\n");
-  if (!isChanged) return;
 
   await clearDirectory(outputDir);
   console.log("✅ - Deleted old files");
@@ -83,7 +66,12 @@ export default async function main(
   await optimizeSVGs(iconsOutputDir, tempOutputDir, categoryNames);
   console.log("✅ - Optimized SVGs");
 
+  writeFileSync(outputDir + "/icon-manifest.json", JSON.stringify(Object.fromEntries(manifest)));
+  console.log("✅ - Saved icon manifest");
+
   console.log("✅ - Done - Icon SVGs updated!");
 
   return newHash;
 }
+
+main(process.env.FIGMA_ACCESS_TOKEN ?? "", ZDS_ASSETS_FILE_ID, ZDS_ASSETS_ICON_PAGE_NAME, "outputs");

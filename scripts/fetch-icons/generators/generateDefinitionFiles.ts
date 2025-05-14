@@ -19,11 +19,11 @@ export const generateDefinitionFiles = (outputDir: string, fontData: GenerateFon
 
   const dartFile = generateDartFile(fontData);
   const tsFile = generateTSFile(fontData);
-  const iconManifestFile = JSON.stringify(Object.fromEntries(manifest));
+  // const iconManifestFile = JSON.stringify(Object.fromEntries(manifest));
 
   writeFileSync(dartOutputDir + "/icons.g.dart", dartFile);
   writeFileSync(tsOutputDir + "/icon-types.ts", tsFile);
-  writeFileSync(outputDir + "/icon-manifest.json", iconManifestFile);
+  // writeFileSync(outputDir + "/icon-manifest.json", iconManifestFile);
 };
 
 /**

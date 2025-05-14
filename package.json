@@ -63,7 +63,7 @@
     "test:connect": "mocha test/code-connect/**/*.test.ts --timeout 100000",
     "build": "npx tsc -p tsconfig.build.json",
     "build:fetch-icons": "npx tsc -p tsconfig.scripts.json",
-    "fetch-icons": "yarn run build:fetch-icons && node --env-file=.env ./.github/fetch_icons/index.js",
+    "fetch-icons": "NODE_OPTIONS='--max-old-space-size=4096' yarn run build:fetch-icons && node --env-file=.env  --max-old-space-size=8192 ./.github/fetch_icons/index.js",
     "regenerate-test-files": "tsx test/fetch-icons/regenerateTestFiles.ts",
     "prepack": "yarn run build",
     "format-connect-files": "prettier outputs/code-connect/*.figma.ts --write",

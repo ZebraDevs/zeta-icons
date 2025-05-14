@@ -39,7 +39,7 @@ export default async function main(outputDir: string): Promise<void> {
   await clearDirectory(pngOutputDir);
   await clearDirectory(dartOutputDir);
   await clearDirectory(tsOutputDir);
-  await clearDirectory(androidOutputDir);
+  // await clearDirectory(androidOutputDir);
 
   const categoryNames = getCategoryNames(iconsOutputDir);
   console.log("✅ - Extracted categories");
@@ -49,8 +49,8 @@ export default async function main(outputDir: string): Promise<void> {
 
   const manifest = new Map(Object.entries(iconManifestJson)) as IconManifest;
 
-  generateAndroidIcons(androidOutputDir, manifest);
-  console.log("✅ - Generated Android icons.");
+  // generateAndroidIcons(androidOutputDir, manifest);
+  // console.log("✅ - Generated Android icons.");
 
   generateDefinitionFiles(outputDir, generateFontResult, manifest);
   console.log("✅ - Generated definition files.");

@@ -28,7 +28,7 @@ interface IconDetails {
  * @returns { type: GitChangeType, path: string }[] - List of files that have changed with their change type.
  */
 export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[] => {
-  const diff = spawnSync("git", ["diff", "HEAD", "--name-status"], {
+  const diff = spawnSync("git", ["diff", "HEAD", "--name-status", "--", "outputs/icons"], {
     encoding: "utf-8",
     maxBuffer: 1024 * 1024 * 1000,
   });
@@ -70,7 +70,7 @@ export const stageAllFiles = (verboseLogs?: boolean): void => {
  */
 export const checkForIconChanges = (verboseLogs?: boolean): ChangedFilesDetails[] => {
   stageAllFiles(verboseLogs);
-  const iconsChange = getAllChangedFiles(verboseLogs).filter(({ path }) => path.startsWith("outputs/icons/"));
+  const iconsChange = getAllChangedFiles(verboseLogs);
   if (iconsChange.length > 0) {
     console.log("Icons changed:", getAllChangedFiles(verboseLogs));
   }

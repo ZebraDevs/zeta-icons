@@ -1,4 +1,4 @@
-import { execSync } from "child_process";
+import { execSync, spawnSync } from "child_process";
 
 export enum GitChangeType {
   A = "Added",
@@ -28,9 +28,12 @@ interface IconDetails {
  * @returns { type: GitChangeType, path: string }[] - List of files that have changed with their change type.
  */
 export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[] => {
-  const diffOutput = execSync(`git diff HEAD --name-status`).toString();
-  if (diffOutput != "" && verboseLogs) {
-    console.log("Files changed:", execSync(`git diff HEAD`).toString());
+  const diffOutput = spawnSync("git", ["diff", "HEAD", "--name-status", "--", "outputs/icons"], {
+    encoding: "utf-8",
+    maxBuffer: 1024 * 1024 * 1000,
+  }).stdout;
+  if (verboseLogs) {
+    // console.log("Diff output:", diffOutput);
   }
   return diffOutput
     .toString()
@@ -50,7 +53,7 @@ export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[]
 export const stageAllFiles = (verboseLogs?: boolean): void => {
   const statusOutput = execSync(`git status --porcelain`).toString();
   if (statusOutput != "" && verboseLogs) {
-    console.log("Files staged:", statusOutput);
+    // console.log("Files staged:", statusOutput);
   }
   const stageAllFiles = execSync(`git add -A`).toString();
   if (stageAllFiles != "" && verboseLogs) {
@@ -65,11 +68,10 @@ export const stageAllFiles = (verboseLogs?: boolean): void => {
  * @returns string[] - The list of changed file paths. If files have changed the action should create a PR.
  */
 export const checkForIconChanges = (verboseLogs?: boolean): ChangedFilesDetails[] => {
-  stageAllFiles(verboseLogs);
-  const iconsChange = getAllChangedFiles(verboseLogs).filter(({ path }) => path.startsWith("outputs/icons/"));
-  if (iconsChange.length > 0) {
-    console.log("Icons changed:", getAllChangedFiles(verboseLogs));
-  }
+  // stageAllFiles(verboseLogs);
+  execSync(`git add -A`);
+  console.log("Staged all files");
+  const iconsChange = getAllChangedFiles(verboseLogs);
   return iconsChange;
 };
 
@@ -135,8 +137,9 @@ const buildIconConventionalCommit = (icons: ChangedFilesDetails[], type: IconCha
 
   icons.forEach((icon) => {
     const iconDetails = parseIconDetails(icon.path);
-
-    str += `\nicon${type}(${iconDetails.category}): ${iconDetails.name} (${iconDetails.style})`;
+    if (!str.includes(iconDetails.name)) {
+      str += `\nicon${type}(${iconDetails.category}): ${iconDetails.name}`;
+    }
   });
 
   return str;
@@ -191,15 +194,15 @@ export const parseFilesChanged = (changed: []): string => {
     }
   });
 
-  if (newIcons.length > 0) {
-    comment += `<h2>Icons added:</h2> ${buildIconsList(newIcons)}`;
-  }
-  if (updatedIcons.length > 0) {
-    comment += `<h2>Icons updated:</h2> ${buildIconsList(updatedIcons)}`;
-  }
-  if (deletedIcons.length > 0) {
-    comment += `<h2>Icons deleted:</h2> ${buildIconsList(deletedIcons)}`;
-  }
+  // if (newIcons.length > 0) {
+  //   comment += `<h2>Icons added:</h2> ${buildIconsList(newIcons)}`;
+  // }
+  // if (updatedIcons.length > 0) {
+  //   comment += `<h2>Icons updated:</h2> ${buildIconsList(updatedIcons)}`;
+  // }
+  // if (deletedIcons.length > 0) {
+  //   comment += `<h2>Icons deleted:</h2> ${buildIconsList(deletedIcons)}`;
+  // }
 
   if (newIcons.length > 0) {
     comment += buildIconConventionalCommit(newIcons, "add");

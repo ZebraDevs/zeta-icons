@@ -18,8 +18,8 @@ export const generateAndroidIcons = (outputDir: string, iconManifest: IconManife
 };
 
 const outputAndroidFile = (svg: string, type: string, iconName: string, outputDir: string) => {
-  const svg2 = readFileSync(svg).toString();
   try {
+    const svg2 = readFileSync(svg).toString();
     const file = generateAndroidIcon(svg2);
     if (file) {
       writeFileSync(`${outputDir}/${getAndroidIconFileName(iconName, type)}`, file);

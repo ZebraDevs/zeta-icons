@@ -1,3 +1,4 @@
+import { execSync } from "child_process";
 import { createFolder } from "./fileUtils.js";
 import SVGFixer from "oslllo-svg-fixer";
 
@@ -16,10 +17,19 @@ export const optimizeSVGs = async (
   categories: string[],
 ): Promise<void> => {
   createFolder(tempOutputDir);
+
+  // Sanitize the category variable
+  const sanitizeInput = (input: string) => {
+    const pattern = /[^a-zA-Z0-9-_]/g;
+    return input.replace(pattern, (match) => `\\${match}`);
+  };
+
   await Promise.all(
     categories.map((category) => {
       try {
-        return SVGFixer(`${iconsOutputDir}/${category}`, tempOutputDir).fix();
+        const safeCategory = sanitizeInput(category).replace(/[^a-zA-Z0-9-_]/g, "");
+        execSync(`npx svgo -f ${iconsOutputDir}/${safeCategory}`);
+        return SVGFixer(`${iconsOutputDir}/${safeCategory}`, tempOutputDir).fix();
       } catch (e) {
         console.error(`Error optimizing icons from ${category}: ${e}`);
       }

@@ -19,7 +19,7 @@ export const generatePNGs = async (inputDir: string, outputDir: string, categori
       const name = split.pop()?.slice(0, -3);
       await sharp(inputDir + "/" + cat + "/" + svg)
         .resize(512)
-        .modulate({ lightness: 44 })
+        .modulate({ lightness: 43 })
         .png()
         .toFile(outputDir + "/" + name + "png");
     }

@@ -17,10 +17,17 @@ export const optimizeSVGs = async (
   categories: string[],
 ): Promise<void> => {
   createFolder(tempOutputDir);
+
+  // Sanitize the category variable
+  const sanitizeInput = (input: string) => {
+    const pattern = /[^a-zA-Z0-9-_]/g;
+    return input.replace(pattern, (match) => `\\${match}`);
+  };
+
   await Promise.all(
     categories.map((category) => {
       try {
-        const safeCategory = category.replace(/[^a-zA-Z0-9-_]/g, "");
+        const safeCategory = sanitizeInput(category).replace(/[^a-zA-Z0-9-_]/g, "");
         execSync(`npx svgo -f ${iconsOutputDir}/${safeCategory}`);
         return SVGFixer(`${iconsOutputDir}/${safeCategory}`, tempOutputDir).fix();
       } catch (e) {

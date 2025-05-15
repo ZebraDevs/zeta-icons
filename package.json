@@ -2,7 +2,7 @@
   "name": "@zebra-fed/zeta-icons",
   "version": "0.9.7",
   "type": "module",
-  "lastUpdated": "13 Mar 2025, 14:28:15",
+  "lastUpdated": "15 May 2025, 10:28:46",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

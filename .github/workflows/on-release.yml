@@ -35,6 +35,10 @@ jobs:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
 
+      - name: Inject auth token
+        run: |
+          echo npmAuthToken: "${{secrets.NPM_TOKEN}}" >> ./.yarnrc.yml
+
       - name: Install packages
         run: yarn install --immutable
 

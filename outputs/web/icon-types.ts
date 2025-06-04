@@ -290,6 +290,8 @@ export const ZetaIconNameList = [
   "laptop",
   "last_page",
   "layers",
+  "left_panel_close",
+  "left_panel_open",
   "light_mode",
   "light_rail_train",
   "lightbulb",
@@ -851,6 +853,8 @@ export type ZetaIconName = "activity"
  | "laptop"
  | "last_page"
  | "layers"
+ | "left_panel_close"
+ | "left_panel_open"
  | "light_mode"
  | "light_rail_train"
  | "lightbulb"

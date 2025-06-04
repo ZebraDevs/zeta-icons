@@ -1,4 +1,5 @@
 export const ZetaIconNameList = [
+  "aac_attach",
   "activity",
   "add_alert",
   "add_box",
@@ -10,6 +11,7 @@ export const ZetaIconNameList = [
   "add",
   "add_task",
   "adjustments",
+  "ai_attach",
   "alarm",
   "alert_active",
   "alert_outline",
@@ -33,11 +35,15 @@ export const ZetaIconNameList = [
   "arrow_down",
   "arrow_forward",
   "arrow_up",
+  "asp_attach",
+  "attach_3ds",
   "attachment",
+  "au_attach",
   "audio",
   "audit_activity",
   "auto_delete",
   "auto",
+  "avi_attach",
   "awb",
   "backspace",
   "bad_mood",
@@ -52,11 +58,13 @@ export const ZetaIconNameList = [
   "battery_alert",
   "battery_charging",
   "battery",
+  "bin_attach",
   "block",
   "blog",
   "bluetooth_disabled",
   "bluetooth",
   "bluetooth_searching",
+  "bmp_attach",
   "bold",
   "bookmark_outline",
   "bookmark",
@@ -168,6 +176,7 @@ export const ZetaIconNameList = [
   "cloud_upload",
   "color_fill",
   "columns",
+  "com_attach",
   "comms_chat_new",
   "comms_chat",
   "comms_chat_unread",
@@ -182,8 +191,12 @@ export const ZetaIconNameList = [
   "credit_card",
   "credit_card_swipe",
   "crop",
+  "css_attach",
+  "csv_attach",
   "dark_mode",
   "dashboard",
+  "dat_attach",
+  "dbf_attach",
   "delete_forever",
   "delete_outline",
   "delete",
@@ -195,12 +208,15 @@ export const ZetaIconNameList = [
   "dislike",
   "distribute_horizontal",
   "distribute_vertical",
+  "dll_attach",
   "doc_attach",
   "document",
+  "docx_attach",
   "dollar",
   "download",
   "downloading",
   "drop_down_circle",
+  "dwg_attach",
   "eas",
   "edit_border",
   "edit",
@@ -208,16 +224,20 @@ export const ZetaIconNameList = [
   "email_outline",
   "email_reply_all",
   "email",
+  "eml_attach",
   "end_call",
   "enterprise_diagnostics",
   "environmental",
+  "eps_attach",
   "error_outline",
   "error",
   "ethernet",
+  "exe_attach",
   "exit",
   "expand_less",
   "expand_more",
   "exposure",
+  "ext_attach",
   "eye_dropper",
   "eye_preview",
   "face_id",
@@ -230,10 +250,14 @@ export const ZetaIconNameList = [
   "filter",
   "finished_download",
   "first_page",
+  "fla_attach",
   "flag",
   "flight_mode",
   "flight",
   "flip",
+  "fodg_attach",
+  "fodp_attach",
+  "fods_attach",
   "folder_outline",
   "folder",
   "font_size_decrease",
@@ -243,6 +267,7 @@ export const ZetaIconNameList = [
   "freezer",
   "full_screen_exit",
   "full_screen",
+  "gif_attach",
   "gif",
   "glossary",
   "google_drive",
@@ -268,6 +293,9 @@ export const ZetaIconNameList = [
   "home_sync",
   "hourglass",
   "how_do_i",
+  "htm_attach",
+  "html_attach",
+  "ico_attach",
   "image_library",
   "image",
   "important_notification",
@@ -278,13 +306,20 @@ export const ZetaIconNameList = [
   "indent_increase",
   "indeterminate_check_box",
   "info",
+  "ini_attach",
   "instagram",
   "ios_share",
+  "iso_attach",
   "iso",
   "issue_audit",
   "italic",
+  "jar_attach",
+  "jpeg_attach",
   "jpg_attach",
+  "js_attach",
+  "json_attach",
   "justify",
+  "key_attach",
   "keyboard",
   "label",
   "laptop",
@@ -318,6 +353,7 @@ export const ZetaIconNameList = [
   "love",
   "maintenance",
   "map",
+  "mdb_attach",
   "meal",
   "medium",
   "memory",
@@ -328,6 +364,7 @@ export const ZetaIconNameList = [
   "microsd",
   "missed_call",
   "missed_video",
+  "mkv_attach",
   "mobile_friendly",
   "money_euro",
   "money_pound",
@@ -335,6 +372,12 @@ export const ZetaIconNameList = [
   "monitor",
   "more_horizontal",
   "more_vertical",
+  "mov_attach",
+  "mp3_attach",
+  "mp4_attach",
+  "mpeg_attach",
+  "mpg_attach",
+  "mpga_attach",
   "my_location",
   "navigate",
   "navigation",
@@ -342,14 +385,23 @@ export const ZetaIconNameList = [
   "network_signal",
   "new_chat",
   "nfc",
+  "nfo_attach",
   "night",
   "no_color",
   "note",
   "notifications_off",
   "numbered_list",
+  "obj_attach",
+  "odf_attach",
+  "odp_attach",
+  "ods_attach",
+  "odt_attach",
+  "oog_attach",
   "open_in_full",
   "open_in_new_window",
   "open_new_off",
+  "otf_attach",
+  "ott_attach",
   "outgoing_call",
   "outgoing_video",
   "page_height",
@@ -380,6 +432,7 @@ export const ZetaIconNameList = [
   "phonelink",
   "phrase",
   "pin",
+  "pkg_attach",
   "place_outline",
   "place",
   "planogram",
@@ -393,7 +446,9 @@ export const ZetaIconNameList = [
   "point_star",
   "point_token",
   "portrait",
+  "pps_attach",
   "ppt_attach",
+  "pptx_attach",
   "price",
   "printer",
   "priority_important",
@@ -401,6 +456,7 @@ export const ZetaIconNameList = [
   "priority_urgent",
   "pro",
   "productivity_apps",
+  "psd_attach",
   "ptt",
   "publish",
   "push_pin_off",
@@ -409,6 +465,7 @@ export const ZetaIconNameList = [
   "queue",
   "radio_button_checked",
   "radio_button_unchecked",
+  "rar_attach",
   "react_add",
   "react_thumbsup",
   "recall",
@@ -434,6 +491,7 @@ export const ZetaIconNameList = [
   "rotate_left",
   "rotate_right",
   "rss_feed",
+  "rtf_attach",
   "rules",
   "sad",
   "satisfied",
@@ -445,6 +503,8 @@ export const ZetaIconNameList = [
   "school",
   "screen_rotation",
   "sd_card",
+  "sdc_attach",
+  "sdd_attach",
   "search",
   "security_check",
   "security",
@@ -480,7 +540,9 @@ export const ZetaIconNameList = [
   "strategy",
   "strikethrough",
   "subscribe",
+  "svg_attach",
   "swap",
+  "swf_attach",
   "switch_user",
   "sync_disabled",
   "sync",
@@ -493,6 +555,8 @@ export const ZetaIconNameList = [
   "taxi",
   "text_color",
   "tiers",
+  "tif_attach",
+  "tiff_attach",
   "timecard_approve",
   "timecard",
   "timecard_warning",
@@ -506,8 +570,10 @@ export const ZetaIconNameList = [
   "transfer",
   "trending_down",
   "trending_up",
+  "ttf_attach",
   "tv",
   "twitter",
+  "txt_attach",
   "type",
   "uhf_rfid",
   "underline",
@@ -527,8 +593,10 @@ export const ZetaIconNameList = [
   "user",
   "user_settings",
   "vacation",
+  "vcf_attach",
   "verified",
   "very_satisfied",
+  "video_attach",
   "video_camera",
   "video_off",
   "video_play",
@@ -543,7 +611,9 @@ export const ZetaIconNameList = [
   "warning_outline",
   "warning",
   "watch",
+  "wav_attach",
   "wb",
+  "webm_attach",
   "wifi_0",
   "wifi_1",
   "wifi_2",
@@ -552,17 +622,30 @@ export const ZetaIconNameList = [
   "wifi_off_alt",
   "wifi_off",
   "wifi",
+  "wmv_attach",
+  "woff_attach",
   "world",
   "write",
+  "xlff_attach",
+  "xliff_attach",
+  "xls_attach",
+  "xlsb_attach",
+  "xlsm_attach",
+  "xlsx_attach",
+  "xml_attach",
+  "xsd_attach",
+  "xslt_attach",
   "youtube",
   "zero_scale",
+  "zip_attach",
   "zoom_in_map",
   "zoom_in",
   "zoom_out_map",
   "zoom_out"
 ];
 
-export type ZetaIconName = "activity"
+export type ZetaIconName = "aac_attach"
+ | "activity"
  | "add_alert"
  | "add_box"
  | "add_call"
@@ -573,6 +656,7 @@ export type ZetaIconName = "activity"
  | "add"
  | "add_task"
  | "adjustments"
+ | "ai_attach"
  | "alarm"
  | "alert_active"
  | "alert_outline"
@@ -596,11 +680,15 @@ export type ZetaIconName = "activity"
  | "arrow_down"
  | "arrow_forward"
  | "arrow_up"
+ | "asp_attach"
+ | "attach_3ds"
  | "attachment"
+ | "au_attach"
  | "audio"
  | "audit_activity"
  | "auto_delete"
  | "auto"
+ | "avi_attach"
  | "awb"
  | "backspace"
  | "bad_mood"
@@ -615,11 +703,13 @@ export type ZetaIconName = "activity"
  | "battery_alert"
  | "battery_charging"
  | "battery"
+ | "bin_attach"
  | "block"
  | "blog"
  | "bluetooth_disabled"
  | "bluetooth"
  | "bluetooth_searching"
+ | "bmp_attach"
  | "bold"
  | "bookmark_outline"
  | "bookmark"
@@ -731,6 +821,7 @@ export type ZetaIconName = "activity"
  | "cloud_upload"
  | "color_fill"
  | "columns"
+ | "com_attach"
  | "comms_chat_new"
  | "comms_chat"
  | "comms_chat_unread"
@@ -745,8 +836,12 @@ export type ZetaIconName = "activity"
  | "credit_card"
  | "credit_card_swipe"
  | "crop"
+ | "css_attach"
+ | "csv_attach"
  | "dark_mode"
  | "dashboard"
+ | "dat_attach"
+ | "dbf_attach"
  | "delete_forever"
  | "delete_outline"
  | "delete"
@@ -758,12 +853,15 @@ export type ZetaIconName = "activity"
  | "dislike"
  | "distribute_horizontal"
  | "distribute_vertical"
+ | "dll_attach"
  | "doc_attach"
  | "document"
+ | "docx_attach"
  | "dollar"
  | "download"
  | "downloading"
  | "drop_down_circle"
+ | "dwg_attach"
  | "eas"
  | "edit_border"
  | "edit"
@@ -771,16 +869,20 @@ export type ZetaIconName = "activity"
  | "email_outline"
  | "email_reply_all"
  | "email"
+ | "eml_attach"
  | "end_call"
  | "enterprise_diagnostics"
  | "environmental"
+ | "eps_attach"
  | "error_outline"
  | "error"
  | "ethernet"
+ | "exe_attach"
  | "exit"
  | "expand_less"
  | "expand_more"
  | "exposure"
+ | "ext_attach"
  | "eye_dropper"
  | "eye_preview"
  | "face_id"
@@ -793,10 +895,14 @@ export type ZetaIconName = "activity"
  | "filter"
  | "finished_download"
  | "first_page"
+ | "fla_attach"
  | "flag"
  | "flight_mode"
  | "flight"
  | "flip"
+ | "fodg_attach"
+ | "fodp_attach"
+ | "fods_attach"
  | "folder_outline"
  | "folder"
  | "font_size_decrease"
@@ -806,6 +912,7 @@ export type ZetaIconName = "activity"
  | "freezer"
  | "full_screen_exit"
  | "full_screen"
+ | "gif_attach"
  | "gif"
  | "glossary"
  | "google_drive"
@@ -831,6 +938,9 @@ export type ZetaIconName = "activity"
  | "home_sync"
  | "hourglass"
  | "how_do_i"
+ | "htm_attach"
+ | "html_attach"
+ | "ico_attach"
  | "image_library"
  | "image"
  | "important_notification"
@@ -841,13 +951,20 @@ export type ZetaIconName = "activity"
  | "indent_increase"
  | "indeterminate_check_box"
  | "info"
+ | "ini_attach"
  | "instagram"
  | "ios_share"
+ | "iso_attach"
  | "iso"
  | "issue_audit"
  | "italic"
+ | "jar_attach"
+ | "jpeg_attach"
  | "jpg_attach"
+ | "js_attach"
+ | "json_attach"
  | "justify"
+ | "key_attach"
  | "keyboard"
  | "label"
  | "laptop"
@@ -881,6 +998,7 @@ export type ZetaIconName = "activity"
  | "love"
  | "maintenance"
  | "map"
+ | "mdb_attach"
  | "meal"
  | "medium"
  | "memory"
@@ -891,6 +1009,7 @@ export type ZetaIconName = "activity"
  | "microsd"
  | "missed_call"
  | "missed_video"
+ | "mkv_attach"
  | "mobile_friendly"
  | "money_euro"
  | "money_pound"
@@ -898,6 +1017,12 @@ export type ZetaIconName = "activity"
  | "monitor"
  | "more_horizontal"
  | "more_vertical"
+ | "mov_attach"
+ | "mp3_attach"
+ | "mp4_attach"
+ | "mpeg_attach"
+ | "mpg_attach"
+ | "mpga_attach"
  | "my_location"
  | "navigate"
  | "navigation"
@@ -905,14 +1030,23 @@ export type ZetaIconName = "activity"
  | "network_signal"
  | "new_chat"
  | "nfc"
+ | "nfo_attach"
  | "night"
  | "no_color"
  | "note"
  | "notifications_off"
  | "numbered_list"
+ | "obj_attach"
+ | "odf_attach"
+ | "odp_attach"
+ | "ods_attach"
+ | "odt_attach"
+ | "oog_attach"
  | "open_in_full"
  | "open_in_new_window"
  | "open_new_off"
+ | "otf_attach"
+ | "ott_attach"
  | "outgoing_call"
  | "outgoing_video"
  | "page_height"
@@ -943,6 +1077,7 @@ export type ZetaIconName = "activity"
  | "phonelink"
  | "phrase"
  | "pin"
+ | "pkg_attach"
  | "place_outline"
  | "place"
  | "planogram"
@@ -956,7 +1091,9 @@ export type ZetaIconName = "activity"
  | "point_star"
  | "point_token"
  | "portrait"
+ | "pps_attach"
  | "ppt_attach"
+ | "pptx_attach"
  | "price"
  | "printer"
  | "priority_important"
@@ -964,6 +1101,7 @@ export type ZetaIconName = "activity"
  | "priority_urgent"
  | "pro"
  | "productivity_apps"
+ | "psd_attach"
  | "ptt"
  | "publish"
  | "push_pin_off"
@@ -972,6 +1110,7 @@ export type ZetaIconName = "activity"
  | "queue"
  | "radio_button_checked"
  | "radio_button_unchecked"
+ | "rar_attach"
  | "react_add"
  | "react_thumbsup"
  | "recall"
@@ -997,6 +1136,7 @@ export type ZetaIconName = "activity"
  | "rotate_left"
  | "rotate_right"
  | "rss_feed"
+ | "rtf_attach"
  | "rules"
  | "sad"
  | "satisfied"
@@ -1008,6 +1148,8 @@ export type ZetaIconName = "activity"
  | "school"
  | "screen_rotation"
  | "sd_card"
+ | "sdc_attach"
+ | "sdd_attach"
  | "search"
  | "security_check"
  | "security"
@@ -1043,7 +1185,9 @@ export type ZetaIconName = "activity"
  | "strategy"
  | "strikethrough"
  | "subscribe"
+ | "svg_attach"
  | "swap"
+ | "swf_attach"
  | "switch_user"
  | "sync_disabled"
  | "sync"
@@ -1056,6 +1200,8 @@ export type ZetaIconName = "activity"
  | "taxi"
  | "text_color"
  | "tiers"
+ | "tif_attach"
+ | "tiff_attach"
  | "timecard_approve"
  | "timecard"
  | "timecard_warning"
@@ -1069,8 +1215,10 @@ export type ZetaIconName = "activity"
  | "transfer"
  | "trending_down"
  | "trending_up"
+ | "ttf_attach"
  | "tv"
  | "twitter"
+ | "txt_attach"
  | "type"
  | "uhf_rfid"
  | "underline"
@@ -1090,8 +1238,10 @@ export type ZetaIconName = "activity"
  | "user"
  | "user_settings"
  | "vacation"
+ | "vcf_attach"
  | "verified"
  | "very_satisfied"
+ | "video_attach"
  | "video_camera"
  | "video_off"
  | "video_play"
@@ -1106,7 +1256,9 @@ export type ZetaIconName = "activity"
  | "warning_outline"
  | "warning"
  | "watch"
+ | "wav_attach"
  | "wb"
+ | "webm_attach"
  | "wifi_0"
  | "wifi_1"
  | "wifi_2"
@@ -1115,10 +1267,22 @@ export type ZetaIconName = "activity"
  | "wifi_off_alt"
  | "wifi_off"
  | "wifi"
+ | "wmv_attach"
+ | "woff_attach"
  | "world"
  | "write"
+ | "xlff_attach"
+ | "xliff_attach"
+ | "xls_attach"
+ | "xlsb_attach"
+ | "xlsm_attach"
+ | "xlsx_attach"
+ | "xml_attach"
+ | "xsd_attach"
+ | "xslt_attach"
  | "youtube"
  | "zero_scale"
+ | "zip_attach"
  | "zoom_in_map"
  | "zoom_in"
  | "zoom_out_map"

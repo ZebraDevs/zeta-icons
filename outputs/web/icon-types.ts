@@ -92,6 +92,7 @@ export const ZetaIconNameList = [
   "calendar_unavailable",
   "calendar_weekly",
   "calendar_yearly",
+  "calibrate_media",
   "call_back",
   "camera",
   "camera_shutter",
@@ -199,6 +200,7 @@ export const ZetaIconNameList = [
   "dbf_attach",
   "delete_forever",
   "delete_outline",
+  "delete_printer",
   "delete",
   "desktop",
   "device_settings",
@@ -450,6 +452,9 @@ export const ZetaIconNameList = [
   "ppt_attach",
   "pptx_attach",
   "price",
+  "print_configuration_label",
+  "print_directory_list",
+  "print_test_label",
   "printer",
   "priority_important",
   "priority",
@@ -486,6 +491,7 @@ export const ZetaIconNameList = [
   "reply",
   "report",
   "restart_alt",
+  "restart_printer",
   "review",
   "road_map",
   "rotate_left",
@@ -737,6 +743,7 @@ export type ZetaIconName = "aac_attach"
  | "calendar_unavailable"
  | "calendar_weekly"
  | "calendar_yearly"
+ | "calibrate_media"
  | "call_back"
  | "camera"
  | "camera_shutter"
@@ -844,6 +851,7 @@ export type ZetaIconName = "aac_attach"
  | "dbf_attach"
  | "delete_forever"
  | "delete_outline"
+ | "delete_printer"
  | "delete"
  | "desktop"
  | "device_settings"
@@ -1095,6 +1103,9 @@ export type ZetaIconName = "aac_attach"
  | "ppt_attach"
  | "pptx_attach"
  | "price"
+ | "print_configuration_label"
+ | "print_directory_list"
+ | "print_test_label"
  | "printer"
  | "priority_important"
  | "priority"
@@ -1131,6 +1142,7 @@ export type ZetaIconName = "aac_attach"
  | "reply"
  | "report"
  | "restart_alt"
+ | "restart_printer"
  | "review"
  | "road_map"
  | "rotate_left"

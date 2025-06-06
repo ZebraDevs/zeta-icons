@@ -59,7 +59,9 @@ jobs:
     secrets: inherit
 
   update_npm_dependencies:
+    needs: publish
     uses: ./.github/workflows/update_dependencies.yml
+
     secrets: inherit
 
   update_flutter:

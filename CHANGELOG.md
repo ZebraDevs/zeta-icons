@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.1](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.0...zeta-icons-v0.11.1) (2025-06-06)
+
+
+### ⛓️ Dependencies
+
+* Update yarn deps ([cab3d4d](https://github.com/ZebraDevs/zeta-icons/commit/cab3d4d91eaa8a13e436f3ec7fcfd692836d290f))
+
 ## [0.11.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.10.2...zeta-icons-v0.11.0) (2025-06-06)
 
 

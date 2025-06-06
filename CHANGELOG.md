@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.10.2...zeta-icons-v0.11.0) (2025-06-06)
+
+
+### 🧹 Miscellaneous Chores
+
+* bump release ([eae6c23](https://github.com/ZebraDevs/zeta-icons/commit/eae6c23f45fc7cb86fa59554dc24ef083179f7f4))
+
 ## [0.10.2](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.10.1...zeta-icons-v0.10.2) (2025-06-06)
 
 

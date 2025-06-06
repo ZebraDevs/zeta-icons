@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="1200"
+    android:viewportHeight="1200">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M550 1150V941.25L495 995l-70-70 175-175 175 175-70 70-55-53.75V1150zM275 775l-70-70 53.75-55H50V550h208.75L205 495l70-70 175 175zm650 0L750 600l175-175 70 70-53.75 55H1150v100H941.25L995 705zM600 675c-20.835 0-38.54-7.29-53.125-21.875S525 620.835 525 600s7.29-38.54 21.875-53.125S579.165 525 600 525s38.54 7.29 53.125 21.875S675 579.165 675 600s-7.29 38.54-21.875 53.125S620.835 675 600 675m0-225L425 275l70-70 55 53.75V50h100v208.75L705 205l70 70z" />
+</vector>

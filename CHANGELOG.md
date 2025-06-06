@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.10.2](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.10.1...zeta-icons-v0.10.2) (2025-06-06)
+
+
+### 🧹 Miscellaneous Chores
+
+* Update icon page name to match figma ([50493d6](https://github.com/ZebraDevs/zeta-icons/commit/50493d63dc427dc7eb8c6ce2ba15a7dd7d6dde64))
+
+
+### ✅ Icons added
+
+* **Printer:** Calibrate Media ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Printer:** Delete Printer ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Printer:** Print Configuration Label ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Printer:** Print Directory List ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Printer:** Print Test Label ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Printer:** Restart Printer ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+
+
+### 🎨 Icons updated
+
+* **Communication:** Incoming Video ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Communication:** Missed Call ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Communication:** Missed Video ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Communication:** Outgoing Video ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Communication:** To Do ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Enterprise:** Factory ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **File:** Open New Off ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **General:** List Form ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **General:** Swap ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **General:** To Do Outline ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Navigation:** Last Page ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+* **Social:** Money Usd ([4567d78](https://github.com/ZebraDevs/zeta-icons/commit/4567d78c883c9ce3c1289add9ca34af377ee731a))
+
 ## [0.10.1](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.10.0...zeta-icons-v0.10.1) (2025-06-04)
 
 

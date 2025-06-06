@@ -10,5 +10,5 @@ export type { ZetaIconName } from "./outputs/web/icon-types.js";
 export type * from "./types.js";
 
 // x-release-please-start-version
-export const version = "0.10.1";
+export const version = "0.10.2";
 // x-release-please-end

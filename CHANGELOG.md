@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.11.1](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.0...zeta-icons-v0.11.1) (2025-06-17)
+
+
+### ⛓️ Dependencies
+
+* Update yarn deps ([cab3d4d](https://github.com/ZebraDevs/zeta-icons/commit/cab3d4d91eaa8a13e436f3ec7fcfd692836d290f))
+
+
+### ✅ Icons added
+
+* **Navigation:** Double Arrow Left ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **Navigation:** Double Arrow Right ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+
+
+### 🎨 Icons updated
+
+* **Communication:** Sync ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **Communication:** To Do ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **General:** List Form ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **General:** Reorder ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **General:** Swap ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **General:** Video Off ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **Navigation:** Last Page ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **Printer:** Delete Printer ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **Printer:** Restart Printer ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+* **Social:** Google Drive ([ffb27d6](https://github.com/ZebraDevs/zeta-icons/commit/ffb27d6e16282cac19d4ce7c4cd7b0afd143f8cf))
+
 ## [0.11.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.10.2...zeta-icons-v0.11.0) (2025-06-06)
 
 

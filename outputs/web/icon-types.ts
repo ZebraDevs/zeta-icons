@@ -215,6 +215,8 @@ export const ZetaIconNameList = [
   "document",
   "docx_attach",
   "dollar",
+  "double_arrow_left",
+  "double_arrow_right",
   "download",
   "downloading",
   "drop_down_circle",
@@ -866,6 +868,8 @@ export type ZetaIconName = "aac_attach"
  | "document"
  | "docx_attach"
  | "dollar"
+ | "double_arrow_left"
+ | "double_arrow_right"
  | "download"
  | "downloading"
  | "drop_down_circle"

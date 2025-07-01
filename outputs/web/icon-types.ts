@@ -12,6 +12,9 @@ export const ZetaIconNameList = [
   "add_task",
   "adjustments",
   "ai_attach",
+  "ai_measure",
+  "ai_single_star",
+  "ai_stars",
   "alarm",
   "alert_active",
   "alert_outline",
@@ -665,6 +668,9 @@ export type ZetaIconName = "aac_attach"
  | "add_task"
  | "adjustments"
  | "ai_attach"
+ | "ai_measure"
+ | "ai_single_star"
+ | "ai_stars"
  | "alarm"
  | "alert_active"
  | "alert_outline"

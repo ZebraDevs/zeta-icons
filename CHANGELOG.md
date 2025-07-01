@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.11.3](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.2...zeta-icons-v0.11.3) (2025-07-01)
+
+
+### ✅ Icons added
+
+* **Ai:** Ai Measure ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+* **Ai:** Ai Single Star ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+* **Ai:** Ai Stars ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+
+
+### 🎨 Icons updated
+
+* **Communication:** Chat Message Unread ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+* **Communication:** Comms Chat Unread ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+* **File:** Open New Off ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+* **General:** Swap ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+* **Navigation:** Double Arrow Left ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+* **Navigation:** Double Arrow Right ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+* **Social:** Google Drive ([76dde19](https://github.com/ZebraDevs/zeta-icons/commit/76dde19aa74b21b45b88752b64b6e6d2326a4185))
+
 ## [0.11.2](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.1...zeta-icons-v0.11.2) (2025-06-17)
 
 

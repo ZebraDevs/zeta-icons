@@ -88,17 +88,23 @@ jobs:
         run: cp -r source/${{ inputs.source_dir }}/* destination/${{ inputs.destination_dir }}
 
       - name: Stage / Push destination changes
-        continue-on-error: true
+        id: push_changes
         run: |
           cd destination
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
           git add -A
-          git commit -m "deps(automated): ${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
-          git push --set-upstream origin ${{inputs.branch}} -f
+          if git diff --staged --quiet --exit-code; then
+            echo "changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changes=true" >> "$GITHUB_OUTPUT"
+            git commit -m "deps(automated): ${{inputs.commit_msg}} ${{ steps.date.outputs.date }}"
+            git push --set-upstream origin ${{inputs.branch}} -f
+          fi
 
       - name: Build PR comment
         id: build_comment
+        if: ${{ steps.push_changes.outputs.changes == 'true' }}
         run: |
           echo "comment<<EOF" >> "$GITHUB_OUTPUT"
           echo "<sub>Created by the Zeta icons bot 🤖 <br />Last updated: ${{ steps.date.outputs.date }}</sub><br />${{inputs.pr_body}} " >> "$GITHUB_OUTPUT"
@@ -106,7 +112,7 @@ jobs:
 
       - name: Open PR
         uses: thecanadianroot/open-pull-request-action@v1.1.1
-        if: ${{ steps.check_pr.outputs.pr_exists == 0 }}
+        if: ${{ steps.check_pr.outputs.pr_exists == 0  && steps.push_changes.outputs.changes == 'true' }}
         with:
           token: ${{ secrets.PAT }}
           base: main
@@ -119,5 +125,5 @@ jobs:
       - name: Add comment to existing PR
         env:
           GH_TOKEN: ${{ secrets.PAT }}
-        if: ${{ steps.check_pr.outputs.pr_exists != 0 }}
+        if: ${{ steps.check_pr.outputs.pr_exists != 0 && steps.push_changes.outputs.changes == 'true' }}
         run: gh pr edit -R ${{ inputs.repo }} ${{ inputs.branch }} --body "${{ steps.build_comment.outputs.comment }}"

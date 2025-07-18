@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.3...zeta-icons-v0.9.0) (2025-07-18)
+
+
+### Release-As
+
+* 0.9.0 ([66083fa](https://github.com/ZebraDevs/zeta-icons/commit/66083fa519a2a3068ce552451b2d6a7269fe68d3))
+
 ## [0.11.3](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.2...zeta-icons-v0.11.3) (2025-07-01)
 
 

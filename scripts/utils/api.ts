@@ -69,7 +69,11 @@ export async function getImageFiles(
   } = Object.fromEntries(new Map<string, string>(svgTextResponse));
 
   for (const [iconId, icon] of manifest) {
-    allImageFiles.set(iconId, { ...icon, roundData: svgObj[icon.roundId], sharpData: svgObj[icon.sharpId] });
+    allImageFiles.set(iconId, {
+      ...icon,
+      roundData: svgObj[icon.roundId].replace(/#[0-9A-Fa-f]{6}/g, "#000000"),
+      sharpData: svgObj[icon.sharpId].replace(/#[0-9A-Fa-f]{6}/g, "#000000"),
+    });
   }
 
   return allImageFiles;

@@ -67,7 +67,7 @@
     "fetch-icons": "NODE_OPTIONS='--max-old-space-size=4096' yarn run build:fetch-icons && node --env-file=.env  --max-old-space-size=8192 ./.github/fetch_icons/index.js",
     "regenerate-test-files": "tsx test/fetch-icons/regenerateTestFiles.ts",
     "prepack": "yarn run build",
-    "format-connect-files": "prettier outputs/code-connect/*.figma.ts --write",
+    "format-connect-files": "prettier outputs/code-connect.figma.ts --write",
     "create-connect-files": "node --env-file=.env ./.github/create_code_connect/index.js",
     "get-changed-icons": "yarn run build && node .github/get_changed_icons/index.js"
   },

@@ -1,6 +1,9 @@
 import { ImageManifest, IconManifest } from "../../types.js";
 import { DocumentResponse } from "../types/figmaTypes.js";
 
+const COLOR_REGEX = /#[0-9A-Fa-f]{6}(?<!000000)/g;
+const COLOR_REPLACE_BLACK = "#000000";
+
 /**
  * Fetches a Figma document.
  *
@@ -71,8 +74,8 @@ export async function getImageFiles(
   for (const [iconId, icon] of manifest) {
     allImageFiles.set(iconId, {
       ...icon,
-      roundData: svgObj[icon.roundId].replace(/#[0-9A-Fa-f]{6}/g, "#000000"),
-      sharpData: svgObj[icon.sharpId].replace(/#[0-9A-Fa-f]{6}/g, "#000000"),
+      roundData: svgObj[icon.roundId].replace(COLOR_REGEX, COLOR_REPLACE_BLACK) || "",
+      sharpData: svgObj[icon.sharpId].replace(COLOR_REGEX, COLOR_REPLACE_BLACK) || "",
     });
   }
 

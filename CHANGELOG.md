@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.11.4](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.3...zeta-icons-v0.11.4) (2025-07-24)
+
+
+### 🪲 Bug Fixes
+
+* Replace all hex colors with 000000 ([#117](https://github.com/ZebraDevs/zeta-icons/issues/117)) ([1f0285f](https://github.com/ZebraDevs/zeta-icons/commit/1f0285fde5ee237f0a3cd31555aaf0d15790d2a6))
+
+
+### 🧹 Miscellaneous Chores
+
+* **deps:** bump form-data from 4.0.2 to 4.0.4 ([#115](https://github.com/ZebraDevs/zeta-icons/issues/115)) ([7d0bb5e](https://github.com/ZebraDevs/zeta-icons/commit/7d0bb5e8a645d11aad6cf1780c2e30bf0a5acf4b))
+
+
+### ✅ Icons added
+
+* **Maps:** Las ([537bfb4](https://github.com/ZebraDevs/zeta-icons/commit/537bfb4a0fc7c81b0bac73727c4d603aa23d9956))
+
 ## [0.11.3](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.2...zeta-icons-v0.11.3) (2025-07-01)
 
 

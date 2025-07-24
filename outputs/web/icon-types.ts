@@ -330,6 +330,7 @@ export const ZetaIconNameList = [
   "keyboard",
   "label",
   "laptop",
+  "las",
   "last_page",
   "layers",
   "left_panel_close",
@@ -986,6 +987,7 @@ export type ZetaIconName = "aac_attach"
  | "keyboard"
  | "label"
  | "laptop"
+ | "las"
  | "last_page"
  | "layers"
  | "left_panel_close"

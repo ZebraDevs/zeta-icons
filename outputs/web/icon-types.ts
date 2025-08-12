@@ -46,6 +46,7 @@ export const ZetaIconNameList = [
   "audit_activity",
   "auto_delete",
   "auto",
+  "average_current_status",
   "avi_attach",
   "awb",
   "backspace",
@@ -703,6 +704,7 @@ export type ZetaIconName = "aac_attach"
  | "audit_activity"
  | "auto_delete"
  | "auto"
+ | "average_current_status"
  | "avi_attach"
  | "awb"
  | "backspace"

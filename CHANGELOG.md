@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.5](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.4...zeta-icons-v0.11.5) (2025-08-12)
+
+
+### ✅ Icons added
+
+* **General:** Average Current Status ([a5f32ea](https://github.com/ZebraDevs/zeta-icons/commit/a5f32eab8455584ed169c11fde2d6ada4744e047))
+
 ## [0.11.4](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.3...zeta-icons-v0.11.4) (2025-07-24)
 
 

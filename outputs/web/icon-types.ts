@@ -257,6 +257,7 @@ export const ZetaIconNameList = [
   "filter_alt",
   "filter",
   "finished_download",
+  "fire",
   "first_page",
   "fla_attach",
   "flag",
@@ -915,6 +916,7 @@ export type ZetaIconName = "aac_attach"
  | "filter_alt"
  | "filter"
  | "finished_download"
+ | "fire"
  | "first_page"
  | "fla_attach"
  | "flag"

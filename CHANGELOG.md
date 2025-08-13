@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.11.6](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.5...zeta-icons-v0.11.6) (2025-08-13)
+
+
+### ✅ Icons added
+
+* **General:** Fire ([79ef0f9](https://github.com/ZebraDevs/zeta-icons/commit/79ef0f9666583126ea1ec0559b22776ff1440883))
+
+
+### 🎨 Icons updated
+
+* **File:** Open New Off ([79ef0f9](https://github.com/ZebraDevs/zeta-icons/commit/79ef0f9666583126ea1ec0559b22776ff1440883))
+* **General:** List Form ([79ef0f9](https://github.com/ZebraDevs/zeta-icons/commit/79ef0f9666583126ea1ec0559b22776ff1440883))
+* **General:** Reorder ([79ef0f9](https://github.com/ZebraDevs/zeta-icons/commit/79ef0f9666583126ea1ec0559b22776ff1440883))
+* **General:** Swap ([79ef0f9](https://github.com/ZebraDevs/zeta-icons/commit/79ef0f9666583126ea1ec0559b22776ff1440883))
+* **General:** Video Off ([79ef0f9](https://github.com/ZebraDevs/zeta-icons/commit/79ef0f9666583126ea1ec0559b22776ff1440883))
+
 ## [0.11.5](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-v0.11.4...zeta-icons-v0.11.5) (2025-08-12)
 
 

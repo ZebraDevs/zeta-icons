@@ -2008,14 +2008,6 @@ figma.connect(
   },
 );
 figma.connect(
-  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=250:726",
-  {
-    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
-    example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>push_pin</zeta-icon>`,
-  },
-);
-figma.connect(
   "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=8167:17",
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
@@ -2103,6 +2095,14 @@ figma.connect(
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
       html`<zeta-icon rounded=${props.rounded}>undo</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=11678:32",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>push_pin</zeta-icon>`,
   },
 );
 figma.connect(
@@ -3302,7 +3302,9 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>shared_folder</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}
+        >shared_folder_filled</zeta-icon
+      >`,
   },
 );
 figma.connect(

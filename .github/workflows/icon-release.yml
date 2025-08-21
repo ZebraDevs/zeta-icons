@@ -64,7 +64,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: `zeta-icons-v${{ env.VERSION }}`,
-              changelog: `${{steps.changelog_msg.outputs.msg}}`
+              body: `${{steps.changelog_msg.outputs.msg}}`
             })
 
   publish-npm:

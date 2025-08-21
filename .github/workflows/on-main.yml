@@ -4,21 +4,23 @@ on:
   push:
     branches:
       - main
-      - UX-1462
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
-  on-develop:
+  on-main:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[released]')"
+    outputs:
+      icons-changed: ${{ steps.check-icons.outputs.icons_changed }}
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # token: ${{secrets.PAT}}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -32,46 +34,22 @@ jobs:
             echo "icons_changed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Stop if icons have not changed
-        if: steps.check-icons.outputs.icons_changed == 'false'
-        run: |
-          echo "No icon changes detected. Skipping workflow."
-          exit 0
-      # TODO: Do regular release please?
-      - name: Run release script
-        run: bash scripts/ci/changelog.sh
-
-      - name: Get version from package.json
-        id: get-version
-        run: |
-          echo "VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
-
-      - name: Read changelog message
-        id: changelog_msg
-        run: |
-          {
-            echo 'msg<<EOF'
-            cat cmt_msg.tmp
-            echo 'EOF'
-          } >> $GITHUB_OUTPUT
-
-      - name: Push changes
-        run: |
-          git config --global user.name "zeta-icons-bot"
-          git config --global user.email "zeta-icons-bot@github.com"
-          git add package.json CHANGELOG.md
-          git commit --amend -m "$(git log -1 --pretty=%B) [released]"
-          git tag -f zeta-icons-v${{ env.VERSION }} -m '${{steps.changelog_msg.outputs.msg}}'
-          git push origin UX-1462 --force-with-lease
-          git push --tags
-
-      - uses: actions/github-script@v7
-        name: Create release
+      - uses: googleapis/release-please-action@v4
+        if: steps.check-icons.outputs.icons_changed != 'true'
         with:
-          script: |
-            github.rest.repos.createRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              tag_name: `zeta-icons-v${{ env.VERSION }}`,
-              body: `${{steps.changelog_msg.outputs.msg}}`
-            })
+          token: ${{ secrets.PAT }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+      - name: Run icon-release reusable workflow
+        if: steps.check-icons.outputs.icons_changed == 'true'
+        uses: ./.github/workflows/icon-release.yml
+
+  icon-release:
+    uses: ./.github/workflows/icon-release.yml
+    needs: on-main
+    if: needs.on-main.outputs.icons-changed == 'true'
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      PAT: ${{ secrets.PAT }}
+      FIGMA_PERSONAL_ACCESS_TOKEN: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}

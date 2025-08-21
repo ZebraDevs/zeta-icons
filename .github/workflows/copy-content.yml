@@ -22,7 +22,7 @@ on:
         required: false
         type: string
       pr_body:
-        required: true
+        required: false # NOTE: If not provided, no PR will be created
         type: string
     secrets:
       PAT:
@@ -104,7 +104,7 @@ jobs:
 
       - name: Build PR comment
         id: build_comment
-        if: ${{ steps.push_changes.outputs.changes == 'true' }}
+        if: ${{ steps.push_changes.outputs.changes == 'true' && inputs.pr_body != '' }}
         run: |
           echo "comment<<EOF" >> "$GITHUB_OUTPUT"
           echo "<sub>Created by the Zeta icons bot 🤖 <br />Last updated: ${{ steps.date.outputs.date }}</sub><br />${{inputs.pr_body}} " >> "$GITHUB_OUTPUT"
@@ -112,7 +112,7 @@ jobs:
 
       - name: Open PR
         uses: thecanadianroot/open-pull-request-action@v1.1.1
-        if: ${{ steps.check_pr.outputs.pr_exists == 0  && steps.push_changes.outputs.changes == 'true' }}
+        if: ${{ steps.check_pr.outputs.pr_exists == 0  && steps.push_changes.outputs.changes == 'true' && inputs.pr_body != '' }}
         with:
           token: ${{ secrets.PAT }}
           base: main
@@ -125,5 +125,5 @@ jobs:
       - name: Add comment to existing PR
         env:
           GH_TOKEN: ${{ secrets.PAT }}
-        if: ${{ steps.check_pr.outputs.pr_exists != 0 && steps.push_changes.outputs.changes == 'true' }}
+        if: ${{ steps.check_pr.outputs.pr_exists != 0 && steps.push_changes.outputs.changes == 'true' && inputs.pr_body != '' }}
         run: gh pr edit -R ${{ inputs.repo }} ${{ inputs.branch }} --body "${{ steps.build_comment.outputs.comment }}"

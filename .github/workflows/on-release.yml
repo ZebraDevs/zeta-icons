@@ -24,14 +24,14 @@ jobs:
 
   update_flutter:
     needs: get_changed_icons
-    uses: ./.github/workflows/update_zeta_flutter.yml
+    uses: ./.github/workflows/update-zeta_flutter.yml
     secrets: inherit
     with:
       comment: "${{ needs.get_changed_icons.outputs.BODY}} ${{ needs.get_changed_icons.outputs.conventional-commit}}"
 
   update_android:
     needs: get_changed_icons
-    uses: ./.github/workflows/update_zds_android.yml
+    uses: ./.github/workflows/update-zds-android.yml
     secrets: inherit
     with:
       comment: "${{ needs.get_changed_icons.outputs.BODY}} ${{ needs.get_changed_icons.outputs.conventional-commit}}"

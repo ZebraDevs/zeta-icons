@@ -1,0 +1,113 @@
+name: CI - Icon Release
+
+on:
+  workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: true
+      PAT:
+        required: true
+      FIGMA_PERSONAL_ACCESS_TOKEN:
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  icon-release:
+    runs-on: ubuntu-latest
+    outputs:
+      changelog: ${{ steps.changelog_msg.outputs.msg }}
+      version: ${{ steps.get-version.outputs.VERSION }}
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Run release script
+        run: bash scripts/ci/changelog.sh
+
+      - name: Get version from package.json
+        id: get-version
+        run: |
+          echo "VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+
+      - name: Read changelog message
+        id: changelog_msg
+        run: |
+          {
+            echo 'msg<<EOF'
+            cat cmt_msg.tmp
+            echo 'EOF'
+          } >> $GITHUB_OUTPUT
+
+      - name: Push changes
+        run: |
+          git config --global user.name "zeta-icons-bot"
+          git config --global user.email "zeta-icons-bot@github.com"
+          git add package.json CHANGELOG.md
+          git commit --amend -m "$(git log -1 --pretty=%B) [released]"
+          git tag -f zeta-icons-v${{ env.VERSION }} -m '${{steps.changelog_msg.outputs.msg}}'
+          git push origin main --force-with-lease
+          git push --tags
+
+      - uses: actions/github-script@v7
+        name: Create release
+        with:
+          script: |
+            github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: `zeta-icons-v${{ env.VERSION }}`,
+              body: `${{steps.changelog_msg.outputs.msg}}`
+            })
+
+  publish-npm:
+    uses: ./.github/workflows/publish-npm.yml
+    needs: icon-release
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+  update-zeta-web:
+    uses: ./.github/workflows/update-zeta-web.yml
+    needs: icon-release
+    secrets:
+      PAT: ${{ secrets.PAT }}
+    with:
+      version: ${{ needs.icon-release.outputs.version }}
+
+  update-zeta-icons-website:
+    uses: ./.github/workflows/update-zeta-icons-website.yml
+    needs: icon-release
+    secrets:
+      PAT: ${{ secrets.PAT }}
+    with:
+      version: ${{ needs.icon-release.outputs.version }}
+
+  update-zds-android:
+    uses: ./.github/workflows/update-zds-android.yml
+    needs: icon-release
+    secrets:
+      PAT: ${{ secrets.PAT }}
+    with:
+      changelog: ${{ needs.icon-release.outputs.changelog }}
+
+  update-zeta_flutter:
+    uses: ./.github/workflows/update-zeta_flutter.yml
+    needs: icon-release
+    secrets:
+      PAT: ${{ secrets.PAT }}
+    with:
+      changelog: ${{ needs.icon-release.outputs.changelog }}
+      version: ${{ needs.icon-release.outputs.version }}
+
+  publish-code-connect:
+    uses: ./.github/workflows/publish-code-connect.yml
+    needs: icon-release
+    secrets:
+      FIGMA_PERSONAL_ACCESS_TOKEN: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}

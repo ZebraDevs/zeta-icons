@@ -1,25 +1,26 @@
 name: Update zds_android
 
 on:
-  workflow_dispatch:
   workflow_call:
-    secrets:
-      PAT:
-        required: true
     inputs:
-      comment:
+      changelog:
+        description: "Changelog for the icons update"
         required: true
         type: string
+    secrets:
+      PAT:
+        description: "Personal Access Token for GitHub"
+        required: true
 
 jobs:
   publish_android:
     uses: ./.github/workflows/copy-content.yml
-    secrets: inherit
+    secrets:
+      PAT: ${{ secrets.PAT }}
     with:
       repo: ZebraDevs/zds-android
-      branch: "update-zeta-icons"
+      branch: "main"
       source_dir: "outputs/android"
       destination_dir: "components/src/main/res/drawable"
-      commit_msg: "Update icons"
+      commit_msg: "${{inputs.changelog}}"
       prerun: rm -f components/src/main/res/drawable/ic_*.xml
-      pr_body: ${{inputs.comment}}

@@ -22,58 +22,16 @@ jobs:
         id: get-changed-icons
         uses: ./.github/get_changed_icons
 
-  publish:
-    name: Publish to NPM
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: ${{github.ref_name}}
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: "https://registry.npmjs.org"
-
-      - name: Inject auth token
-        run: |
-          echo npmAuthToken: "${{secrets.NPM_TOKEN}}" >> ./.yarnrc.yml
-
-      - name: Install packages
-        run: yarn install --immutable
-
-      - name: Compile Typescript files
-        run: tsc
-
-      - name: Dry run
-        run: npx figma connect publish --dry-run --token ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}
-
-      - name: Publish
-        run: yarn npm publish --access=public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  publish_code_connect:
-    uses: ./.github/workflows/publish_code_connect.yml
-    if: always()
-    secrets: inherit
-
-  update_npm_dependencies:
-    needs: publish
-    uses: ./.github/workflows/update_dependencies.yml
-
-    secrets: inherit
-
   update_flutter:
     needs: get_changed_icons
-    uses: ./.github/workflows/update_zeta_flutter.yml
+    uses: ./.github/workflows/update-zeta_flutter.yml
     secrets: inherit
     with:
       comment: "${{ needs.get_changed_icons.outputs.BODY}} ${{ needs.get_changed_icons.outputs.conventional-commit}}"
 
   update_android:
     needs: get_changed_icons
-    uses: ./.github/workflows/update_zds_android.yml
+    uses: ./.github/workflows/update-zds-android.yml
     secrets: inherit
     with:
       comment: "${{ needs.get_changed_icons.outputs.BODY}} ${{ needs.get_changed_icons.outputs.conventional-commit}}"

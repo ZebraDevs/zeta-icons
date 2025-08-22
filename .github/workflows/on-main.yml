@@ -10,11 +10,46 @@ permissions:
   pull-requests: write
 
 jobs:
-  release-please:
+  on-main:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[released]')"
+    outputs:
+      icons-changed: ${{ steps.check-icons.outputs.icons_changed }}
+
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Check if icons have updated
+        id: check-icons
+        run: |
+          if git diff --name-only HEAD~1 HEAD | grep -q '^outputs/'; then
+            echo "icons_changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "icons_changed=false" >> $GITHUB_OUTPUT
+          fi
+
       - uses: googleapis/release-please-action@v4
+        if: steps.check-icons.outputs.icons_changed != 'true'
         with:
           token: ${{ secrets.PAT }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+
+      - name: Run icon-release reusable workflow
+        if: steps.check-icons.outputs.icons_changed == 'true'
+        uses: ./.github/workflows/icon-release.yml
+
+  icon-release:
+    uses: ./.github/workflows/icon-release.yml
+    needs: on-main
+    if: needs.on-main.outputs.icons-changed == 'true'
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      PAT: ${{ secrets.PAT }}
+      FIGMA_PERSONAL_ACCESS_TOKEN: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}

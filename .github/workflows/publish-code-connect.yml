@@ -1,7 +1,6 @@
 name: Publish code connect
 
 on:
-  workflow_dispatch:
   workflow_call:
     secrets:
       FIGMA_PERSONAL_ACCESS_TOKEN:
@@ -14,7 +13,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Install packages
         run: yarn install --immutable
+
       - name: Publish code connect
         run: npx figma connect publish --token ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN}}

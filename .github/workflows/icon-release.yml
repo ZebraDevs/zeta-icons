@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.PAT }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -52,7 +53,7 @@ jobs:
           git config --global user.email "zeta-icons-bot@github.com"
           git add package.json CHANGELOG.md
           git commit --amend -m "$(git log -1 --pretty=%B) [released]"
-          git tag -f zeta-icons-v${{ env.VERSION }} -m '${{steps.changelog_msg.outputs.msg}}'
+          git tag -f zeta-icons-v${{ env.VERSION }} -m "${{steps.changelog_msg.outputs.msg}}"
           git push origin main --force-with-lease
           git push --tags
 

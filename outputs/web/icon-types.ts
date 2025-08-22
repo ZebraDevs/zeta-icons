@@ -527,6 +527,7 @@ export const ZetaIconNameList = [
   "settings",
   "shape_recognition",
   "share",
+  "shared_folder_filled",
   "shared_folder",
   "ship",
   "sim_card",
@@ -1186,6 +1187,7 @@ export type ZetaIconName = "aac_attach"
  | "settings"
  | "shape_recognition"
  | "share"
+ | "shared_folder_filled"
  | "shared_folder"
  | "ship"
  | "sim_card"

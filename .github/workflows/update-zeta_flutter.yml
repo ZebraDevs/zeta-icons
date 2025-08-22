@@ -30,8 +30,8 @@ jobs:
               repo: 'zeta_flutter',
               workflow_id: 'fetch-icons.yml',
               ref: 'main',
-              inputs:{
-                changelog: '${{ inputs.changelog }}',
-                version: '${{ inputs.version }}'
+              inputs: {
+                changelog: `${{ inputs.changelog }}`,
+                version: `${{ inputs.version }}`
               }
             })

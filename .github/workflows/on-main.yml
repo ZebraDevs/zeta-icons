@@ -41,10 +41,6 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
-      - name: Run icon-release reusable workflow
-        if: steps.check-icons.outputs.icons_changed == 'true'
-        uses: ./.github/workflows/icon-release.yml
-
   icon-release:
     uses: ./.github/workflows/icon-release.yml
     needs: on-main

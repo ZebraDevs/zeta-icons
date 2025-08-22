@@ -21,6 +21,7 @@ jobs:
           repository: zebratechnologies/zeta-icons-website
           ref: main
           fetch-depth: 0
+          token: ${{ secrets.PAT }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -38,7 +39,7 @@ jobs:
           git config --global user.name "zeta-icons-bot"
           git config --global user.email "zeta-icons-bot@github.com"
           git add package.json yarn.lock
-          git commit -m 'deps(automated): Update zeta-icons to v${{ inputs.version }}'
+          git commit -m "deps(automated): Update zeta-icons to v${{ inputs.version }}"
           git push origin main --force-with-lease
 
       - name: Rebuild website

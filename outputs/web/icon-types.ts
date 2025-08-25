@@ -393,6 +393,7 @@ export const ZetaIconNameList = [
   "navigation",
   "near_me",
   "network_signal",
+  "neutral",
   "new_chat",
   "nfc",
   "nfo_attach",
@@ -473,6 +474,7 @@ export const ZetaIconNameList = [
   "ptt",
   "publish",
   "push_pin_off",
+  "push_pin_outline",
   "push_pin",
   "qr_code",
   "queue",
@@ -1053,6 +1055,7 @@ export type ZetaIconName = "aac_attach"
  | "navigation"
  | "near_me"
  | "network_signal"
+ | "neutral"
  | "new_chat"
  | "nfc"
  | "nfo_attach"
@@ -1133,6 +1136,7 @@ export type ZetaIconName = "aac_attach"
  | "ptt"
  | "publish"
  | "push_pin_off"
+ | "push_pin_outline"
  | "push_pin"
  | "qr_code"
  | "queue"

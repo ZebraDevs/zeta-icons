@@ -120,17 +120,25 @@ function getDartIconDefinition(iconName: string, unicode: string, type: FontType
     iconName = getIconFileName(iconName, type);
   }
 
+  const cap = type?.capitalize() ?? "";
+  if (cap.length === 0) {
+    console.warn("Icon type is undefined for icon:", iconName);
+  }
   return `${iconPreview}
-  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${
-    type?.capitalize() ?? ""
-  }, fontPackage: package);`;
+  static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${cap}, fontPackage: package);`;
 }
 
 function getIconPreview(iconName: string, type: FontType | undefined) {
   const name_link = `${iconName}_${type === undefined ? "round" : type}`;
   const readableName = iconName
     .split("_")
-    .map((e) => e.capitalize())
+    .map((e) => {
+      const cap = e.capitalize();
+      if (cap.length === 0) {
+        console.warn("Icon name part is empty:", e, "in icon:", iconName);
+      }
+      return cap;
+    })
     .join(" ");
   return `  /// <i> <img width='48' src="${GITHUB_URL}${name_link}.png"></br>${readableName} icon ${
     type != undefined ? `(${type})` : ""

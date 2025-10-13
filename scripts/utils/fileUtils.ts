@@ -42,6 +42,10 @@ export const toSnakeCase = function (string: string, separator: string = " "): s
  * Capitalizes first letter of a string.
  */
 String.prototype.capitalize = function (): string {
+  if (!this || this.length === 0) {
+    console.warn("capitalize() was called on an empty string.");
+    return "";
+  }
   return `${this[0].toUpperCase()}${this.slice(1)}`;
 };
 

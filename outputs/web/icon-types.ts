@@ -521,7 +521,16 @@ export const ZetaIconNameList = [
   "sd_card",
   "sdc_attach",
   "sdd_attach",
+  "search_checkmark",
+  "search_data",
+  "search_document",
+  "search_file",
+  "search_image",
+  "search_refresh",
   "search",
+  "search_settings",
+  "search_star",
+  "search_tab",
   "security_check",
   "security",
   "send",
@@ -1183,7 +1192,16 @@ export type ZetaIconName = "aac_attach"
  | "sd_card"
  | "sdc_attach"
  | "sdd_attach"
+ | "search_checkmark"
+ | "search_data"
+ | "search_document"
+ | "search_file"
+ | "search_image"
+ | "search_refresh"
  | "search"
+ | "search_settings"
+ | "search_star"
+ | "search_tab"
  | "security_check"
  | "security"
  | "send"

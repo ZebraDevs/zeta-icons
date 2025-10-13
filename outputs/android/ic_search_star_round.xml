@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="1200"
+    android:viewportHeight="1200">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M980 1050 665 735q-37.5 30.001-86.25 47.5T475 800q-136.251-.001-230.625-94.375Q150 611.253 150 475q0-136.251 94.375-230.625Q338.749 150 475 150q136.253 0 230.625 94.375Q799.999 338.749 800 475q-.001 54.999-17.5 103.75T735 665l315 315zM475 700q93.75 0 159.375-65.625T700 475t-65.625-159.375T475 250t-159.375 65.625T250 475t65.625 159.375T475 700m-100-75 37.5-122.5-100-80H435L475 300l40 122.5h122.5l-100 80L575 625l-100-77.5z" />
+</vector>

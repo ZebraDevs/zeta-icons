@@ -52,7 +52,7 @@ export function generateIconManifest(
           console.log(`Current Icon: ${name}`);
         }
 
-        const validationErrors = validateIcon(icon, category.name, usedIconNames);
+        const validationErrors = validateIcon(icon, category.name, usedIconNames, verboseLogs);
 
         let highestSeverity = ErrorSeverity.none;
 

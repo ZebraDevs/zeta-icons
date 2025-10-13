@@ -61,9 +61,16 @@ export async function getImageFiles(
 
   const svgTextResponse: any[] = await Promise.all(
     Object.entries(json).map(([key, value]) => {
-      return fetch(value)
-        .then((response: Response) => response.text())
-        .then((url: string) => [key, url]);
+      return (async () => {
+        try {
+          const response = await fetch(value);
+          const url = await response.text();
+          return [key, url];
+        } catch (error) {
+          console.error(`Error fetching SVG for key ${key}:`, error);
+          return [key, ""];
+        }
+      })();
     }),
   );
 

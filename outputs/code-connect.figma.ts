@@ -598,6 +598,78 @@ figma.connect(
   },
 );
 figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:68",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_tab</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:141",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_image</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:83",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_refresh</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:73",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_checkmark</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:146",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_settings</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:126",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_file</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:78",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_star</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:131",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_document</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12131:136",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>search_data</zeta-icon>`,
+  },
+);
+figma.connect(
   "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=10998:240",
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
@@ -1854,7 +1926,7 @@ figma.connect(
   },
 );
 figma.connect(
-  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=8207:122",
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12160:114",
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>

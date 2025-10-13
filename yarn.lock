@@ -1456,7 +1456,7 @@ __metadata:
     oslllo-svg-fixer: "npm:^5.0.0"
     prettier: "npm:^3.6.2"
     scale-that-svg: "npm:^1.0.6"
-    sharp: "npm:^0.34.4"
+    sharp: "npm:^0.34.3"
     tsx: "npm:^4.20.6"
     typescript: "npm:^5.9.3"
     webfont: "npm:^11.2.26"
@@ -4682,7 +4682,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.34.4":
+"sharp@npm:^0.34.3":
   version: 0.34.4
   resolution: "sharp@npm:0.34.4"
   dependencies:

@@ -354,6 +354,7 @@ export const ZetaIconNameList = [
   "location_off",
   "location_point",
   "location",
+  "locations",
   "lock_alt",
   "lock",
   "lock_undo",
@@ -1025,6 +1026,7 @@ export type ZetaIconName = "aac_attach"
  | "location_off"
  | "location_point"
  | "location"
+ | "locations"
  | "lock_alt"
  | "lock"
  | "lock_undo"

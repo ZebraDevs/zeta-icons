@@ -4880,6 +4880,14 @@ figma.connect(
   },
 );
 figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12200:70",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>locations</zeta-icon>`,
+  },
+);
+figma.connect(
   "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=243:4163",
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },

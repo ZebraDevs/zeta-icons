@@ -113,6 +113,7 @@ export const ZetaIconNameList = [
   "caret_up",
   "cast_connected",
   "cast",
+  "category",
   "cellular_signal",
   "certificate",
   "certified",
@@ -255,6 +256,8 @@ export const ZetaIconNameList = [
   "fast_rewind",
   "file",
   "filter_alt",
+  "filter_off",
+  "filter_outlne",
   "filter",
   "finished_download",
   "fire",
@@ -273,6 +276,7 @@ export const ZetaIconNameList = [
   "font_size_increase",
   "format_shapes",
   "forward",
+  "frame_inspect",
   "freezer",
   "full_screen_exit",
   "full_screen",
@@ -416,6 +420,7 @@ export const ZetaIconNameList = [
   "ott_attach",
   "outgoing_call",
   "outgoing_video",
+  "page_detail",
   "page_height",
   "page_rotate",
   "page_width",
@@ -455,6 +460,7 @@ export const ZetaIconNameList = [
   "point_gift",
   "point_heart",
   "point_money",
+  "point_scan",
   "point_star",
   "point_token",
   "portrait",
@@ -479,6 +485,7 @@ export const ZetaIconNameList = [
   "push_pin",
   "qr_code",
   "queue",
+  "quote_",
   "radio_button_checked",
   "radio_button_unchecked",
   "rar_attach",
@@ -514,6 +521,7 @@ export const ZetaIconNameList = [
   "satisfied",
   "save_alt",
   "save",
+  "scan_document",
   "scan_rate",
   "scanner",
   "schedule",
@@ -598,6 +606,7 @@ export const ZetaIconNameList = [
   "trending_down",
   "trending_up",
   "ttf_attach",
+  "tune",
   "tv",
   "twitter",
   "txt_attach",
@@ -785,6 +794,7 @@ export type ZetaIconName = "aac_attach"
  | "caret_up"
  | "cast_connected"
  | "cast"
+ | "category"
  | "cellular_signal"
  | "certificate"
  | "certified"
@@ -927,6 +937,8 @@ export type ZetaIconName = "aac_attach"
  | "fast_rewind"
  | "file"
  | "filter_alt"
+ | "filter_off"
+ | "filter_outlne"
  | "filter"
  | "finished_download"
  | "fire"
@@ -945,6 +957,7 @@ export type ZetaIconName = "aac_attach"
  | "font_size_increase"
  | "format_shapes"
  | "forward"
+ | "frame_inspect"
  | "freezer"
  | "full_screen_exit"
  | "full_screen"
@@ -1088,6 +1101,7 @@ export type ZetaIconName = "aac_attach"
  | "ott_attach"
  | "outgoing_call"
  | "outgoing_video"
+ | "page_detail"
  | "page_height"
  | "page_rotate"
  | "page_width"
@@ -1127,6 +1141,7 @@ export type ZetaIconName = "aac_attach"
  | "point_gift"
  | "point_heart"
  | "point_money"
+ | "point_scan"
  | "point_star"
  | "point_token"
  | "portrait"
@@ -1151,6 +1166,7 @@ export type ZetaIconName = "aac_attach"
  | "push_pin"
  | "qr_code"
  | "queue"
+ | "quote_"
  | "radio_button_checked"
  | "radio_button_unchecked"
  | "rar_attach"
@@ -1186,6 +1202,7 @@ export type ZetaIconName = "aac_attach"
  | "satisfied"
  | "save_alt"
  | "save"
+ | "scan_document"
  | "scan_rate"
  | "scanner"
  | "schedule"
@@ -1270,6 +1287,7 @@ export type ZetaIconName = "aac_attach"
  | "trending_down"
  | "trending_up"
  | "ttf_attach"
+ | "tune"
  | "tv"
  | "twitter"
  | "txt_attach"

@@ -48,6 +48,7 @@ export const ZetaIconNameList = [
   "auto",
   "average_current_status",
   "avi_attach",
+  "award_star",
   "awb",
   "backspace",
   "bad_mood",
@@ -199,6 +200,7 @@ export const ZetaIconNameList = [
   "crop",
   "css_attach",
   "csv_attach",
+  "currency_north_america_$",
   "dark_mode",
   "dashboard",
   "dat_attach",
@@ -264,6 +266,9 @@ export const ZetaIconNameList = [
   "first_page",
   "fla_attach",
   "flag",
+  "flash_auto",
+  "flash_off",
+  "flash_on",
   "flight_mode",
   "flight",
   "flip",
@@ -404,6 +409,7 @@ export const ZetaIconNameList = [
   "nfo_attach",
   "night",
   "no_color",
+  "no_flash",
   "note",
   "notifications_off",
   "numbered_list",
@@ -428,6 +434,7 @@ export const ZetaIconNameList = [
   "partner",
   "pause_circle",
   "pause",
+  "payment_card",
   "pdf_attach",
   "pending",
   "person_admin",
@@ -467,7 +474,7 @@ export const ZetaIconNameList = [
   "pps_attach",
   "ppt_attach",
   "pptx_attach",
-  "price",
+  "price_or_dollar",
   "print_configuration_label",
   "print_directory_list",
   "print_test_label",
@@ -530,6 +537,7 @@ export const ZetaIconNameList = [
   "sd_card",
   "sdc_attach",
   "sdd_attach",
+  "search_check_2",
   "search_checkmark",
   "search_data",
   "search_document",
@@ -550,7 +558,9 @@ export const ZetaIconNameList = [
   "shared_folder_filled",
   "shared_folder",
   "ship",
+  "shopping_basket",
   "sim_card",
+  "siren_check",
   "skip_next",
   "skip_previous",
   "slide_show",
@@ -587,6 +597,7 @@ export const ZetaIconNameList = [
   "tag_outline",
   "tag",
   "tap_to_pay",
+  "target",
   "taxi",
   "text_color",
   "tiers",
@@ -616,6 +627,8 @@ export const ZetaIconNameList = [
   "undo",
   "unfold_less",
   "unfold_more",
+  "universal_currency_alt",
+  "universal_currency",
   "unlock_alt",
   "unlock",
   "unsubscribe",
@@ -729,6 +742,7 @@ export type ZetaIconName = "aac_attach"
  | "auto"
  | "average_current_status"
  | "avi_attach"
+ | "award_star"
  | "awb"
  | "backspace"
  | "bad_mood"
@@ -880,6 +894,7 @@ export type ZetaIconName = "aac_attach"
  | "crop"
  | "css_attach"
  | "csv_attach"
+ | "currency_north_america_$"
  | "dark_mode"
  | "dashboard"
  | "dat_attach"
@@ -945,6 +960,9 @@ export type ZetaIconName = "aac_attach"
  | "first_page"
  | "fla_attach"
  | "flag"
+ | "flash_auto"
+ | "flash_off"
+ | "flash_on"
  | "flight_mode"
  | "flight"
  | "flip"
@@ -1085,6 +1103,7 @@ export type ZetaIconName = "aac_attach"
  | "nfo_attach"
  | "night"
  | "no_color"
+ | "no_flash"
  | "note"
  | "notifications_off"
  | "numbered_list"
@@ -1109,6 +1128,7 @@ export type ZetaIconName = "aac_attach"
  | "partner"
  | "pause_circle"
  | "pause"
+ | "payment_card"
  | "pdf_attach"
  | "pending"
  | "person_admin"
@@ -1148,7 +1168,7 @@ export type ZetaIconName = "aac_attach"
  | "pps_attach"
  | "ppt_attach"
  | "pptx_attach"
- | "price"
+ | "price_or_dollar"
  | "print_configuration_label"
  | "print_directory_list"
  | "print_test_label"
@@ -1211,6 +1231,7 @@ export type ZetaIconName = "aac_attach"
  | "sd_card"
  | "sdc_attach"
  | "sdd_attach"
+ | "search_check_2"
  | "search_checkmark"
  | "search_data"
  | "search_document"
@@ -1231,7 +1252,9 @@ export type ZetaIconName = "aac_attach"
  | "shared_folder_filled"
  | "shared_folder"
  | "ship"
+ | "shopping_basket"
  | "sim_card"
+ | "siren_check"
  | "skip_next"
  | "skip_previous"
  | "slide_show"
@@ -1268,6 +1291,7 @@ export type ZetaIconName = "aac_attach"
  | "tag_outline"
  | "tag"
  | "tap_to_pay"
+ | "target"
  | "taxi"
  | "text_color"
  | "tiers"
@@ -1297,6 +1321,8 @@ export type ZetaIconName = "aac_attach"
  | "undo"
  | "unfold_less"
  | "unfold_more"
+ | "universal_currency_alt"
+ | "universal_currency"
  | "unlock_alt"
  | "unlock"
  | "unsubscribe"

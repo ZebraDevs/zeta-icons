@@ -9,6 +9,4 @@ export { convertedIconManifest as iconManifest };
 export type { ZetaIconName } from "./outputs/web/icon-types.js";
 export type * from "./types.js";
 
-// x-release-please-start-version
-export const version = "1.4.0";
-// x-release-please-end
+export const version = '1.7.0';

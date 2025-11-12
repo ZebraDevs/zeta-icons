@@ -1,29 +1,60 @@
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync, existsSync } from "fs";
+import { resolve } from "path";
 import packageJson from "../../package.json" with { type: "json" };
 
-const indexTsPath = "./index.ts";
-const dartTemplatePath = "./scripts/fetch-icons/templates/icons.dart.template";
-const dartOutputPath = "./outputs/flutter/icons.g.dart";
+interface FileConfig {
+  path: string;
+  regex: RegExp;
+  replacement: string;
+}
+
+const updateFile = (config: FileConfig): void => {
+  const path = resolve(config.path);
+
+  if (!existsSync(path)) {
+    throw new Error(`File not found: ${config.path}`);
+  }
+
+  const content = readFileSync(path, "utf-8");
+
+  if (!config.regex.test(content)) {
+    throw new Error(`Version pattern not found in ${config.path}`);
+  }
+
+  writeFileSync(path, content.replace(config.regex, config.replacement), "utf-8");
+};
 
 const updateVersionConst = (): void => {
-  let indexTsContent = readFileSync(indexTsPath).toString();
-  const versionRegex = /const\s+version\s*=\s*['"`][^'"`]+['"`]/;
-  const newVersionLine = `const version = '${packageJson.version}'`;
-  indexTsContent = indexTsContent.replace(versionRegex, newVersionLine);
+  try {
+    const version = packageJson.version;
+    if (!version || !/^\d+\.\d+\.\d+/.test(version)) {
+      throw new Error(`Invalid version: ${version}`);
+    }
 
-  let dartTemplateContent = readFileSync(dartTemplatePath).toString();
-  const dartVersionRegex = /const\s+zetaIconsVersion\s*=\s*['"`][^'"`]+['"`];/;
-  const newDartVersionLine = `const zetaIconsVersion = '${packageJson.version}';`;
+    const configs: FileConfig[] = [
+      {
+        path: "./index.ts",
+        regex: /const\s+version\s*=\s*['"`][^'"`]+['"`]/,
+        replacement: `const version = '${version}'`,
+      },
+      {
+        path: "./scripts/fetch-icons/templates/icons.dart.template",
+        regex: /const\s+zetaIconsVersion\s*=\s*['"`][^'"`]+['"`];/,
+        replacement: `const zetaIconsVersion = '${version}';`,
+      },
+      {
+        path: "./outputs/flutter/icons.g.dart",
+        regex: /const\s+zetaIconsVersion\s*=\s*['"`][^'"`]+['"`];/,
+        replacement: `const zetaIconsVersion = '${version}';`,
+      },
+    ];
 
-  dartTemplateContent = dartTemplateContent.replace(dartVersionRegex, newDartVersionLine);
-  writeFileSync(dartTemplatePath, dartTemplateContent);
-
-  let dartGeneratedContent = readFileSync(dartOutputPath).toString();
-  dartGeneratedContent = dartGeneratedContent.replace(dartVersionRegex, newDartVersionLine);
-  writeFileSync(dartOutputPath, dartGeneratedContent);
-
-  console.log(`Updating version in index.ts to ${packageJson.version}`);
-  writeFileSync(indexTsPath, indexTsContent);
+    configs.forEach(updateFile);
+    console.log(`✓ Updated version to ${version}`);
+  } catch (error) {
+    console.error(`❌ ${error instanceof Error ? error.message : String(error)}`);
+    process.exit(1);
+  }
 };
 
 updateVersionConst();

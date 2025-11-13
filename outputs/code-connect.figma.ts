@@ -742,6 +742,14 @@ figma.connect(
   },
 );
 figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12427:2923",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>side_bar_toggle</zeta-icon>`,
+  },
+);
+figma.connect(
   "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12427:2888",
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
@@ -2116,9 +2124,23 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}
-        >currency_north_america_$</zeta-icon
-      >`,
+      html`<zeta-icon rounded=${props.rounded}>currency_dollar</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12427:2905",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>local_mall</zeta-icon>`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12427:2908",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>savings</zeta-icon>`,
   },
 );
 figma.connect(
@@ -2145,6 +2167,14 @@ figma.connect(
       html`<zeta-icon rounded=${props.rounded}
         >universal_currency_alt</zeta-icon
       >`,
+  },
+);
+figma.connect(
+  "https://www.figma.com/design/VQ7Aa3rDYB7mgpToI3bZ4D?node-id=12427:2920",
+  {
+    props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
+    example: (props) =>
+      html`<zeta-icon rounded=${props.rounded}>currency_pound</zeta-icon>`,
   },
 );
 figma.connect(

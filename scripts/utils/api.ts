@@ -1,6 +1,24 @@
 import { ImageManifest, IconManifest } from "../../types.js";
 import { DocumentResponse } from "../types/figmaTypes.js";
 
+// Helper to add timeout to fetch
+function fetchWithTimeout(resource: RequestInfo, options: RequestInit = {}, timeout = 10000): Promise<Response> {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      reject(new Error("Request timed out"));
+    }, timeout);
+    fetch(resource, options)
+      .then((response) => {
+        clearTimeout(timer);
+        resolve(response);
+      })
+      .catch((err) => {
+        clearTimeout(timer);
+        reject(err);
+      });
+  });
+}
+
 const COLOR_REGEX = /#[0-9A-Fa-f]{6}(?<!000000)/g;
 const COLOR_REPLACE_BLACK = "#000000";
 
@@ -13,13 +31,17 @@ const COLOR_REPLACE_BLACK = "#000000";
  * @throws A network error if the request fails.
  */
 export async function getFigmaDocument(fileID: string, accessToken: string): Promise<DocumentResponse> {
-  const response = await fetch(`https://api.figma.com/v1/files/${fileID}`, {
-    method: "get",
-    headers: {
-      "X-Figma-Token": accessToken,
-      "Content-Type": "application/json",
+  const response = await fetchWithTimeout(
+    `https://api.figma.com/v1/files/${fileID}`,
+    {
+      method: "get",
+      headers: {
+        "X-Figma-Token": accessToken,
+        "Content-Type": "application/json",
+      },
     },
-  });
+    10000,
+  );
 
   if (response.status != 200) {
     throw new Error(`Failed to fetch Figma document: ${response.statusText}`);
@@ -63,7 +85,7 @@ export async function getImageFiles(
     Object.entries(json).map(([key, value]) => {
       return (async () => {
         try {
-          const response = await fetch(value);
+          const response = await fetchWithTimeout(value, {}, 10000);
           const url = await response.text();
           return [key, url];
         } catch (error) {
@@ -90,13 +112,17 @@ export async function getImageFiles(
 }
 
 const generateAPICall = (ids: string[], fileID: string, accessToken: string): Promise<Map<string, string>> => {
-  return fetch(`https://api.figma.com/v1/images/${fileID}?ids=${ids.join(",")}&format=svg`, {
-    method: "get",
-    headers: {
-      "X-Figma-Token": accessToken,
-      "Content-Type": "application/json",
+  return fetchWithTimeout(
+    `https://api.figma.com/v1/images/${fileID}?ids=${ids.join(",")}&format=svg`,
+    {
+      method: "get",
+      headers: {
+        "X-Figma-Token": accessToken,
+        "Content-Type": "application/json",
+      },
     },
-  }).then(async (response) => {
+    10000,
+  ).then(async (response) => {
     if (response.status != 200) {
       throw new Error("Failed to fetch Figma images: " + response.statusText);
     }

@@ -34,6 +34,54 @@ jobs:
       - name: Run tsc
         run: tsc
 
+  check_generated_files:
+    name: Check Generated Files Validity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{github.head_ref}}
+
+      - name: Check TypeScript validity (icon-types.ts)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: TypeScript check
+        run: npx tsc outputs/web/icon-types.ts --noEmit
+        continue-on-error: true
+
+      - name: Comment if TypeScript check failed
+        if: failure() && steps.TypeScript_check.outcome == 'failure'
+        uses: mikedloss/create-update-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          unique-identifier: "ts-check-failed"
+          message: |
+            :x: **TypeScript check failed for outputs/web/icon-types.ts**
+            Please review the errors above and fix any issues.
+
+      - name: Check Dart validity (icons.g.dart)
+        uses: dart-lang/setup-dart@v1
+        continue-on-error: true
+
+      - name: Dart analyze
+        run: dart analyze outputs/flutter/icons.g.dart
+        continue-on-error: true
+
+      - name: Comment if Dart analyze failed
+        if: failure() && steps.Dart_analyze.outcome == 'failure'
+        uses: mikedloss/create-update-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          unique-identifier: "dart-analyze-failed"
+          message: |
+            :x: **Dart analyze failed for outputs/flutter/icons.g.dart**
+            Please review the errors above and fix any issues.
+
   release-comment:
     name: Release Comment
     runs-on: ubuntu-latest

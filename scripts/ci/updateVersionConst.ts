@@ -35,7 +35,7 @@ const updateVersionConst = (): void => {
       {
         path: "./index.ts",
         regex: /const\s+version\s*=\s*['"`][^'"`]+['"`]/,
-        replacement: `const version = '${version}'`,
+        replacement: `const version = "${version}"`,
       },
       {
         path: "./scripts/fetch-icons/templates/icons.dart.template",

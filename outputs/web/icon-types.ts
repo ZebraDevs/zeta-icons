@@ -200,7 +200,8 @@ export const ZetaIconNameList = [
   "crop",
   "css_attach",
   "csv_attach",
-  "currency_north_america_$",
+  "currency_dollar",
+  "currency_pound",
   "dark_mode",
   "dashboard",
   "dat_attach",
@@ -359,6 +360,7 @@ export const ZetaIconNameList = [
   "list_feedback",
   "list_form",
   "list",
+  "local_mall",
   "local_shipping",
   "location_off",
   "location_point",
@@ -528,6 +530,7 @@ export const ZetaIconNameList = [
   "satisfied",
   "save_alt",
   "save",
+  "savings",
   "scan_document",
   "scan_rate",
   "scanner",
@@ -559,6 +562,7 @@ export const ZetaIconNameList = [
   "shared_folder",
   "ship",
   "shopping_basket",
+  "side_bar_toggle",
   "sim_card",
   "siren_check",
   "skip_next",
@@ -894,7 +898,8 @@ export type ZetaIconName = "aac_attach"
  | "crop"
  | "css_attach"
  | "csv_attach"
- | "currency_north_america_$"
+ | "currency_dollar"
+ | "currency_pound"
  | "dark_mode"
  | "dashboard"
  | "dat_attach"
@@ -1053,6 +1058,7 @@ export type ZetaIconName = "aac_attach"
  | "list_feedback"
  | "list_form"
  | "list"
+ | "local_mall"
  | "local_shipping"
  | "location_off"
  | "location_point"
@@ -1222,6 +1228,7 @@ export type ZetaIconName = "aac_attach"
  | "satisfied"
  | "save_alt"
  | "save"
+ | "savings"
  | "scan_document"
  | "scan_rate"
  | "scanner"
@@ -1253,6 +1260,7 @@ export type ZetaIconName = "aac_attach"
  | "shared_folder"
  | "ship"
  | "shopping_basket"
+ | "side_bar_toggle"
  | "sim_card"
  | "siren_check"
  | "skip_next"

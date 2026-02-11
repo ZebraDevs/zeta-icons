@@ -8,7 +8,11 @@ ICON_REMOVE=$(git log -$GIT_LOG_NUM --pretty=%B | grep -E '^(iconremove)' || tru
 HEAD_LINE=$(head -n 4 CHANGELOG.md)
 echo "$(tail -n +5 CHANGELOG.md)" > CHANGELOG.md
 OLD_VERSION=$(jq -r .version package.json)
-NEW_VERSION=$( npx commit-and-tag-version --dry-run | grep "bump" | head -n 1 | awk '{print $NF}')
+
+# Calculate NEW_VERSION by incrementing patch version
+IFS='.' read -r major minor patch <<< "$OLD_VERSION"
+NEW_VERSION="$major.$minor.$((patch + 1))"
+
 jq --arg v "$NEW_VERSION" '.version = $v' package.json > package.json.tmp && mv package.json.tmp package.json
 HEAD_LINES=$'\n\n## ['"$NEW_VERSION"'](https://github.com/ZebraDevs/zeta-icons/compare/zeta-icons-'"$OLD_VERSION"'...zeta-icons-'"$NEW_VERSION"') ('"$(date +'%Y-%m-%d')"')'
 

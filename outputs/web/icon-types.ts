@@ -1,5 +1,6 @@
 export const ZetaIconNameList = [
   "aac_attach",
+  "achievement_sync_outline",
   "activity",
   "add_alert",
   "add_box",
@@ -698,6 +699,7 @@ export const ZetaIconNameList = [
 ];
 
 export type ZetaIconName = "aac_attach"
+ | "achievement_sync_outline"
  | "activity"
  | "add_alert"
  | "add_box"

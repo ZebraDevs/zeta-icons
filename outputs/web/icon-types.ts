@@ -212,6 +212,7 @@ export const ZetaIconNameList = [
   "delete_outline",
   "delete_printer",
   "delete",
+  "delete_scanner",
   "desktop",
   "device_settings",
   "devices_ecosystem",
@@ -364,6 +365,7 @@ export const ZetaIconNameList = [
   "list",
   "local_mall",
   "local_shipping",
+  "locate_scanner",
   "location_off",
   "location_point",
   "location",
@@ -502,6 +504,7 @@ export const ZetaIconNameList = [
   "rar_attach",
   "react_add",
   "react_thumbsup",
+  "reboot_scanner",
   "recall",
   "receipt",
   "recording",
@@ -519,8 +522,12 @@ export const ZetaIconNameList = [
   "replay",
   "reply",
   "report",
+  "reset_network",
   "restart_alt",
   "restart_printer",
+  "restore_network_defaults",
+  "restore_printer_defaults",
+  "retrieve_scanner_settings",
   "review",
   "road_map",
   "rotate_left",
@@ -912,6 +919,7 @@ export type ZetaIconName = "aac_attach"
  | "delete_outline"
  | "delete_printer"
  | "delete"
+ | "delete_scanner"
  | "desktop"
  | "device_settings"
  | "devices_ecosystem"
@@ -1064,6 +1072,7 @@ export type ZetaIconName = "aac_attach"
  | "list"
  | "local_mall"
  | "local_shipping"
+ | "locate_scanner"
  | "location_off"
  | "location_point"
  | "location"
@@ -1202,6 +1211,7 @@ export type ZetaIconName = "aac_attach"
  | "rar_attach"
  | "react_add"
  | "react_thumbsup"
+ | "reboot_scanner"
  | "recall"
  | "receipt"
  | "recording"
@@ -1219,8 +1229,12 @@ export type ZetaIconName = "aac_attach"
  | "replay"
  | "reply"
  | "report"
+ | "reset_network"
  | "restart_alt"
  | "restart_printer"
+ | "restore_network_defaults"
+ | "restore_printer_defaults"
+ | "retrieve_scanner_settings"
  | "review"
  | "road_map"
  | "rotate_left"

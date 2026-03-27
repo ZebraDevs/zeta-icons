@@ -21,6 +21,8 @@ export interface GenerateFontResult {
   dartDefinitions: string[];
   dartRoundDefinitions: string[];
   dartSharpDefinitions: string[];
+  dartRoundLookup: string[];
+  dartSharpLookup: string[];
   iconNames: string[];
 }
 

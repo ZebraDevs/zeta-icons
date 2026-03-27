@@ -28,6 +28,8 @@ export const generateFonts = async (
     dartDefinitions: [],
     dartRoundDefinitions: [],
     dartSharpDefinitions: [],
+    dartRoundLookup: [],
+    dartSharpLookup: [],
     iconNames: [],
   };
 
@@ -87,10 +89,12 @@ const buildFontFile = async (type: FontType, fontResult: GenerateFontResult, inp
         if (type === "round") {
           fontResult.dartDefinitions.push(getDartIconDefinition(obj.name, strUnicode, undefined));
           fontResult.dartRoundDefinitions.push(getDartIconDefinition(obj.name, strUnicode, "round"));
+          fontResult.dartRoundLookup.push(`  0x${strUnicode}: ZetaIcons.${getIconFileName(obj.name, "round")}`);
 
           fontResult.iconNames.push(obj.name);
         } else if (type === "sharp") {
           fontResult.dartSharpDefinitions.push(getDartIconDefinition(obj.name, strUnicode, "sharp"));
+          fontResult.dartSharpLookup.push(`  0x${strUnicode}: ZetaIcons.${getIconFileName(obj.name, "sharp")}`);
         }
 
         unicodeAcc++;

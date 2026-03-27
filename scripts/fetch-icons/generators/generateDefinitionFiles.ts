@@ -41,11 +41,15 @@ const generateDartFile = (fontData: GenerateFontResult): string => {
   const sharpIcons = fontData.dartSharpDefinitions.join(newLine);
   const iconNames =
     fontData.iconNames.map((iconName) => `  '${iconName}': ZetaIcons.${iconName}`).join(`,${newLine}`) + ",";
+  const roundLookup = fontData.dartRoundLookup.join(`,${newLine}`) + ",";
+  const sharpLookup = fontData.dartSharpLookup.join(`,${newLine}`) + ",";
 
   dartTemplate = dartTemplate.replace("{{icons}}", icons);
   dartTemplate = dartTemplate.replace("{{roundIcons}}", roundIcons);
   dartTemplate = dartTemplate.replace("{{sharpIcons}}", sharpIcons);
   dartTemplate = dartTemplate.replace("{{iconNames}}", iconNames);
+  dartTemplate = dartTemplate.replace("{{roundLookup}}", roundLookup);
+  dartTemplate = dartTemplate.replace("{{sharpLookup}}", sharpLookup);
 
   return dartTemplate;
 };

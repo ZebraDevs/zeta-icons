@@ -316,9 +316,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@figma/code-connect@npm:^1.4.1":
-  version: 1.4.1
-  resolution: "@figma/code-connect@npm:1.4.1"
+"@figma/code-connect@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "@figma/code-connect@npm:1.4.2"
   dependencies:
     boxen: "npm:5.1.1"
     chalk: "npm:^4.1.2"
@@ -344,7 +344,7 @@ __metadata:
     zod-validation-error: "npm:^3.2.0"
   bin:
     figma: bin/figma
-  checksum: 10c0/64e195529004edd26338b12c8518544cea5396d421d0aeee203947e14799f0a7575fc58be256ac31e3bf3b29a8dfc627afb1a6e421fcdbfad0658470676c9d81
+  checksum: 10c0/e3a2b9d788e64f96c3c767c731d8f835645371e087c87b3c5166deb3f5a6be7cf156577f5927204c09d0e1ed84522ee66e08a4a8b62f52bd1a6f1f820813f8d8
   languageName: node
   linkType: hard
 
@@ -1422,12 +1422,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.11.0":
-  version: 24.11.0
-  resolution: "@types/node@npm:24.11.0"
+"@types/node@npm:^24.12.0":
+  version: 24.12.0
+  resolution: "@types/node@npm:24.12.0"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/4fb7390259e3b158d25dbecf52de8ce70fa18a4ed0949c9444bb6384517c361fa19781e6821ca8c18dc5f6af43eab72e9e159e07000e6b1286d082e8585d8c41
+  checksum: 10c0/8b31c0af5b5474f13048a4e77c57f22cd4f8fe6e58c4b6fde9456b0c13f46a5bfaf5744ff88fd089581de9f0d6e99c584e022681de7acb26a58d258c654c4843
   languageName: node
   linkType: hard
 
@@ -1468,11 +1468,11 @@ __metadata:
   resolution: "@zebra-fed/zeta-icons@workspace:."
   dependencies:
     "@actions/core": "npm:^1.11.1"
-    "@figma/code-connect": "npm:^1.4.1"
+    "@figma/code-connect": "npm:^1.4.2"
     "@types/chai": "npm:^5.2.3"
     "@types/md5": "npm:^2.3.6"
     "@types/mocha": "npm:^10.0.10"
-    "@types/node": "npm:^24.11.0"
+    "@types/node": "npm:^24.12.0"
     "@types/react": "npm:^19.2.14"
     "@zebra-fed/zeta-icon-validator": "npm:0.2.4"
     chai: "npm:^6.2.2"

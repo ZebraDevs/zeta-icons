@@ -25,11 +25,11 @@
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
-    "@figma/code-connect": "^1.4.1",
+    "@figma/code-connect": "^1.4.2",
     "@types/chai": "^5.2.3",
     "@types/md5": "^2.3.6",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^24.11.0",
+    "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",
     "@zebra-fed/zeta-icon-validator": "0.2.4",
     "chai": "^6.2.2",
@@ -81,5 +81,5 @@
     "url": "https://github.com/ZebraDevs/zeta-icons/issues"
   },
   "homepage": "https://github.com/ZebraDevs/zeta-icons#readme",
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.13.0"
 }

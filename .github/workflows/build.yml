@@ -63,11 +63,11 @@ jobs:
         run: echo ${{ steps.fetch_icons.outputs.files_changed }}
 
       - name: Create code connect files
-        if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.fetch_icons.outputs.files_changed != ''}}
         uses: ./.github/create_code_connect
 
       - name: Check if PR exists
-        if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.fetch_icons.outputs.files_changed != ''}}
         run: |
           pr=$(gh pr list -H ${{steps.branch_name.outputs.BRANCH_NAME}} --json number -q length)
           echo "pr_exists=$pr" >> $GITHUB_ENV
@@ -75,7 +75,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Create PR details
-        if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.fetch_icons.outputs.files_changed != ''}}
         id: pr
         run: |
           if [ ${{github.ref_name=='main'}} ]; then
@@ -95,7 +95,7 @@ jobs:
           echo "EOF" >> "$GITHUB_OUTPUT"
 
       - name: Push
-        if: ${{ steps.fetch_icons.outputs.files_changed != ''}}
+        if: ${{ github.event_name == 'workflow_dispatch' || steps.fetch_icons.outputs.files_changed != ''}}
         run: |
           git checkout -b ${{steps.branch_name.outputs.BRANCH_NAME}}
           git config --global user.name "zeta-icons-bot"
@@ -107,13 +107,13 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Create Pull Request
-        if: ${{env.pr_exists == 0 && steps.fetch_icons.outputs.files_changed != ''}}
+        if: ${{env.pr_exists == 0 && (github.event_name == 'workflow_dispatch' || steps.fetch_icons.outputs.files_changed != '')}}
         run: gh pr create -B main -H ${{steps.branch_name.outputs.BRANCH_NAME}} --title "${{steps.pr.outputs.TITLE}}" --body "${{steps.pr.outputs.PR_BODY}}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Update PR comment
-        if: ${{env.pr_exists != 0 && steps.fetch_icons.outputs.files_changed != ''}}
+        if: ${{env.pr_exists != 0 && (github.event_name == 'workflow_dispatch' || steps.fetch_icons.outputs.files_changed != '')}}
         run: gh pr edit ${{steps.branch_name.outputs.BRANCH_NAME}} -t "${{steps.pr.outputs.TITLE}}" -b "${{steps.pr.outputs.PR_BODY}}"
         env:
           GITHUB_TOKEN: ${{ github.token }}

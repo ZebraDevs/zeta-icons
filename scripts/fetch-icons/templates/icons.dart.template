@@ -37,3 +37,17 @@ abstract class ZetaIcons {
 const Map<String, IconData> icons = {
 {{iconNames}}
 };
+
+/// Lookup map from codePoint to const round [IconData].
+/// Used to resolve the round variant without creating non-constant [IconData],
+/// which allows Flutter to tree-shake unused icon fonts.
+const Map<int, IconData> iconsRound = {
+{{roundLookup}}
+};
+
+/// Lookup map from codePoint to const sharp [IconData].
+/// Used to resolve the sharp variant without creating non-constant [IconData],
+/// which allows Flutter to tree-shake unused icon fonts.
+const Map<int, IconData> iconsSharp = {
+{{sharpLookup}}
+};

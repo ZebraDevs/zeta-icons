@@ -15,6 +15,7 @@
     "resolveJsonModule": true,
     "outDir": "dist",
     "newLine": "lf",
+    "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types", "scripts/definitions"]
   },
   "exclude": ["test/", "dist/", "tests/"]

@@ -504,6 +504,7 @@ export const ZetaIconNameList = [
   "rar_attach",
   "react_add",
   "react_thumbsup",
+  "read",
   "reboot_scanner",
   "recall",
   "receipt",
@@ -1211,6 +1212,7 @@ export type ZetaIconName = "aac_attach"
  | "rar_attach"
  | "react_add"
  | "react_thumbsup"
+ | "read"
  | "reboot_scanner"
  | "recall"
  | "receipt"

@@ -33,6 +33,8 @@ export const ZetaIconNameList = [
   "analytics",
   "android",
   "antenna",
+  "api_collection",
+  "api",
   "app_edit",
   "apps",
   "ar",
@@ -251,6 +253,7 @@ export const ZetaIconNameList = [
   "exit",
   "expand_less",
   "expand_more",
+  "export",
   "exposure",
   "ext_attach",
   "eye_dropper",
@@ -320,6 +323,7 @@ export const ZetaIconNameList = [
   "ico_attach",
   "image_library",
   "image",
+  "import",
   "important_notification",
   "inbox",
   "incoming_call",
@@ -741,6 +745,8 @@ export type ZetaIconName = "aac_attach"
  | "analytics"
  | "android"
  | "antenna"
+ | "api_collection"
+ | "api"
  | "app_edit"
  | "apps"
  | "ar"
@@ -959,6 +965,7 @@ export type ZetaIconName = "aac_attach"
  | "exit"
  | "expand_less"
  | "expand_more"
+ | "export"
  | "exposure"
  | "ext_attach"
  | "eye_dropper"
@@ -1028,6 +1035,7 @@ export type ZetaIconName = "aac_attach"
  | "ico_attach"
  | "image_library"
  | "image"
+ | "import"
  | "important_notification"
  | "inbox"
  | "incoming_call"

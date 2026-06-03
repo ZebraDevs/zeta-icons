@@ -134,10 +134,12 @@ const parseIconDetails = (path: string): IconDetails => {
  */
 const buildIconConventionalCommit = (icons: ChangedFilesDetails[], type: IconChangeType): string => {
   let str = "";
+  const seenNames = new Set<string>();
 
   icons.forEach((icon) => {
     const iconDetails = parseIconDetails(icon.path);
-    if (!str.includes(iconDetails.name)) {
+    if (!seenNames.has(iconDetails.name)) {
+      seenNames.add(iconDetails.name);
       str += `\nicon${type}(${iconDetails.category}): ${iconDetails.name}`;
     }
   });

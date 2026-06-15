@@ -569,6 +569,7 @@ export const ZetaIconNameList = [
   "security",
   "send",
   "server",
+  "setting_tool",
   "settings",
   "shape_recognition",
   "share",
@@ -1281,6 +1282,7 @@ export type ZetaIconName = "aac_attach"
  | "security"
  | "send"
  | "server"
+ | "setting_tool"
  | "settings"
  | "shape_recognition"
  | "share"

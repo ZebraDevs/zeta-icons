@@ -44,7 +44,8 @@ jobs:
   icon-release:
     uses: ./.github/workflows/icon-release.yml
     needs: on-main
-    if: needs.on-main.outputs.icons-changed == 'true'
+    with:
+      icons-changed: ${{ needs.on-main.outputs.icons-changed }}
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       PAT: ${{ secrets.PAT }}

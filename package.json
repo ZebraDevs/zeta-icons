@@ -25,23 +25,24 @@
   },
   "devDependencies": {
     "@actions/core": "^1.11.1",
-    "@figma/code-connect": "^1.4.8",
+    "@figma/code-connect": "^1.5.3",
     "@types/chai": "^5.2.3",
     "@types/md5": "^2.3.6",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^24.13.2",
-    "@types/react": "^19.2.17",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
     "@zebra-fed/zeta-icon-validator": "0.2.4",
-    "chai": "^6.2.2",
+    "c8": "^12.0.0",
+    "chai": "^6.3.0",
     "cheerio": "^1.2.0",
     "dotenv": "^17.4.2",
     "md5": "^2.3.0",
-    "mocha": "11.7.6",
+    "mocha": "11.8.0",
     "oslllo-svg-fixer": "^5.0.0",
-    "prettier": "^3.8.4",
+    "prettier": "^3.9.10",
     "scale-that-svg": "^1.0.6",
-    "sharp": "^0.34.5",
-    "tsx": "^4.22.4",
+    "sharp": "^0.35.4",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.3",
     "webfont": "^11.2.26"
   },
@@ -68,10 +69,19 @@
     "prepack": "yarn run build",
     "format-connect-files": "prettier outputs/code-connect.figma.ts --write",
     "create-connect-files": "node --env-file=.env ./.github/create_code_connect/index.js",
-    "get-changed-icons": "yarn run build && node .github/get_changed_icons/index.js"
+    "get-changed-icons": "yarn run build && node .github/get_changed_icons/index.js",
+    "test:unit": "mocha \"test/unit/**/*.test.ts\" --timeout 100000",
+    "test:coverage": "c8 mocha \"test/unit/**/*.test.ts\" --timeout 100000"
   },
   "resolutions": {
-    "xml2js": "^0.5.0"
+    "xml2js": "^0.5.0",
+    "@xmldom/xmldom": "^0.8.15",
+    "ip-address": "^10.7.1",
+    "ws": "^8.21.0",
+    "undici@npm:^5.25.4": "^6.28.0",
+    "diff": "^8.0.3",
+    "serialize-javascript": "^7.0.5",
+    "piscina": "^4.9.4"
   },
   "repository": {
     "type": "git",
@@ -81,5 +91,5 @@
     "url": "https://github.com/ZebraDevs/zeta-icons/issues"
   },
   "homepage": "https://github.com/ZebraDevs/zeta-icons#readme",
-  "packageManager": "yarn@4.17.0"
+  "packageManager": "yarn@4.18.1"
 }

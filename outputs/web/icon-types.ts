@@ -36,6 +36,7 @@ export const ZetaIconNameList = [
   "api_collection",
   "api",
   "app_edit",
+  "app_setup",
   "apps",
   "ar",
   "arrow_back",
@@ -216,6 +217,7 @@ export const ZetaIconNameList = [
   "delete",
   "delete_scanner",
   "desktop",
+  "device_profile_deployment",
   "device_settings",
   "devices_ecosystem",
   "devices",
@@ -488,6 +490,7 @@ export const ZetaIconNameList = [
   "print_configuration_label",
   "print_directory_list",
   "print_test_label",
+  "printer_profile_deployment",
   "printer",
   "priority_important",
   "priority",
@@ -547,6 +550,7 @@ export const ZetaIconNameList = [
   "savings",
   "scan_document",
   "scan_rate",
+  "scanner_profile_deployment",
   "scanner",
   "schedule",
   "school",
@@ -749,6 +753,7 @@ export type ZetaIconName = "aac_attach"
  | "api_collection"
  | "api"
  | "app_edit"
+ | "app_setup"
  | "apps"
  | "ar"
  | "arrow_back"
@@ -929,6 +934,7 @@ export type ZetaIconName = "aac_attach"
  | "delete"
  | "delete_scanner"
  | "desktop"
+ | "device_profile_deployment"
  | "device_settings"
  | "devices_ecosystem"
  | "devices"
@@ -1201,6 +1207,7 @@ export type ZetaIconName = "aac_attach"
  | "print_configuration_label"
  | "print_directory_list"
  | "print_test_label"
+ | "printer_profile_deployment"
  | "printer"
  | "priority_important"
  | "priority"
@@ -1260,6 +1267,7 @@ export type ZetaIconName = "aac_attach"
  | "savings"
  | "scan_document"
  | "scan_rate"
+ | "scanner_profile_deployment"
  | "scanner"
  | "schedule"
  | "school"

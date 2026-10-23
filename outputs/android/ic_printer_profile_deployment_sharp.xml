@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="1200"
+    android:viewportHeight="1200">
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M950 400c42.5 0 78.135 14.365 106.885 43.115S1100 507.5 1100 550v37.5c-22.495-11.665-46.03-20.825-70.605-27.49-24.58-6.665-49.805-10.01-75.635-10.01-65 0-123.99 18.315-176.905 54.98S685.835 690 662.5 750H400v200h254.98c5.835 18.335 12.955 35.825 21.29 52.49s18.315 32.51 29.98 47.51H300V850H100V550c0-42.5 14.583-78.135 43.75-106.885C172.916 414.368 208.335 400 250 400zM900 350H300V150h600z" />
+</vector>

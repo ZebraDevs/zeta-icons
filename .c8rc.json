@@ -1,0 +1,7 @@
+{
+  "all": true,
+  "include": ["scripts/**/*.ts"],
+  "exclude": ["scripts/**/*.d.ts", "scripts/types/**"],
+  "reporter": ["text", "lcov"],
+  "src": ["scripts"]
+}

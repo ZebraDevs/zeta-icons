@@ -490,7 +490,7 @@ figma.connect(
   {
     props: { rounded: figma.enum("Style", { Round: true, Sharp: false }) },
     example: (props) =>
-      html`<zeta-icon rounded=${props.rounded}>quote_</zeta-icon>`,
+      html`<zeta-icon rounded=${props.rounded}>quote</zeta-icon>`,
   },
 );
 figma.connect(

@@ -505,7 +505,7 @@ export const ZetaIconNameList = [
   "push_pin",
   "qr_code",
   "queue",
-  "quote_",
+  "quote",
   "radio_button_checked",
   "radio_button_unchecked",
   "rar_attach",
@@ -1222,7 +1222,7 @@ export type ZetaIconName = "aac_attach"
  | "push_pin"
  | "qr_code"
  | "queue"
- | "quote_"
+ | "quote"
  | "radio_button_checked"
  | "radio_button_unchecked"
  | "rar_attach"

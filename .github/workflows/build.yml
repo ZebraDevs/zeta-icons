@@ -59,8 +59,9 @@ jobs:
           actions-runner-debug: ${{secrets.ACTIONS_RUNNER_DEBUG}}
 
       - name: Icons changed
-        continue-on-error: true
-        run: echo ${{ steps.fetch_icons.outputs.files_changed }}
+        env:
+          FILES_CHANGED: ${{ steps.fetch_icons.outputs.files_changed }}
+        run: echo "$FILES_CHANGED"
 
       - name: Create code connect files
         if: ${{ github.event_name == 'workflow_dispatch' || steps.fetch_icons.outputs.files_changed != ''}}

@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 jobs:
   on-main:
@@ -46,6 +47,5 @@ jobs:
     needs: on-main
     if: needs.on-main.outputs.icons-changed == 'true'
     secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       PAT: ${{ secrets.PAT }}
       FIGMA_PERSONAL_ACCESS_TOKEN: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}

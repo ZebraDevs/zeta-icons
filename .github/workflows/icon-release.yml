@@ -3,8 +3,6 @@ name: CI - Icon Release
 on:
   workflow_call:
     secrets:
-      NPM_TOKEN:
-        required: true
       PAT:
         required: true
       FIGMA_PERSONAL_ACCESS_TOKEN:
@@ -72,8 +70,9 @@ jobs:
   publish-npm:
     uses: ./.github/workflows/publish-npm.yml
     needs: icon-release
-    secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    permissions:
+      contents: read
+      id-token: write
 
   update-zeta-web:
     uses: ./.github/workflows/update-zeta-web.yml

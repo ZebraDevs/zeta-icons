@@ -31,7 +31,7 @@ describe("checkGit (real temporary repo)", () => {
       write("outputs/icons/action/remove_round.svg", "bye");
       write("outputs/other.txt", "other");
       git("add -A");
-      git('commit -q -m init');
+      git("commit -q -m init");
     });
   });
   afterEach(() => tmp.cleanup());
@@ -103,10 +103,7 @@ describe("checkGit (real temporary repo)", () => {
     }));
 
   it("GitChangeType exposes every git status letter", () => {
-    assert.deepEqual(
-      Object.keys(GitChangeType).sort(),
-      ["A", "B", "C", "D", "M", "R", "T", "U", "X"],
-    );
+    assert.deepEqual(Object.keys(GitChangeType).sort(), ["A", "B", "C", "D", "M", "R", "T", "U", "X"]);
     assert.equal(GitChangeType.A, "Added");
     assert.equal(GitChangeType.R, "Renamed");
   });
@@ -118,7 +115,13 @@ describe("parseFilesChanged (extra)", () => {
   it("returns 'No icon changes' for an empty list", () => assert.equal(parse([]), "No icon changes"));
 
   it("returns 'No icon changes' when only non-icon files changed", () =>
-    assert.equal(parse([{ type: "M", path: "package.json" }, { type: "A", path: "outputs/png/a_round.png" }]), "No icon changes"));
+    assert.equal(
+      parse([
+        { type: "M", path: "package.json" },
+        { type: "A", path: "outputs/png/a_round.png" },
+      ]),
+      "No icon changes",
+    ));
 
   it("returns 'No icon changes' for icon files with an unhandled change type", () =>
     assert.equal(parse([{ type: "T", path: "outputs/icons/a/b_round.svg" }]), "No icon changes"));
@@ -151,4 +154,43 @@ describe("parseFilesChanged (extra)", () => {
 
   it("handles single word icon names", () =>
     assert.equal(parse([{ type: "A", path: "outputs/icons/x/star_round.svg" }]), "\niconadd(X): Star"));
+
+  it("lists only icon changes from a full build output diff", () => {
+    const filesChanged = [
+      { type: "M", path: ".github/fetch_icons/action.yml" },
+      { type: "M", path: ".github/fetch_icons/hash.txt" },
+      { type: "M", path: ".github/fetch_icons/index.js" },
+      { type: "M", path: ".github/workflows/build.yml" },
+      { type: "A", path: "outputs/android/ic_mr_worldwide_round.xml" },
+      { type: "A", path: "outputs/android/ic_mr_worldwide_sharp.xml" },
+      { type: "D", path: "outputs/android/ic_place_maps_round.xml" },
+      { type: "D", path: "outputs/android/ic_place_maps_sharp.xml" },
+      { type: "M", path: "outputs/android/ic_ppt_attach_sharp.xml" },
+      { type: "M", path: "outputs/flutter/assets/zeta-icons-round.ttf" },
+      { type: "M", path: "outputs/flutter/assets/zeta-icons-sharp.ttf" },
+      { type: "M", path: "outputs/flutter/icons.g.dart" },
+      { type: "M", path: "outputs/icon-manifest.json" },
+      { type: "M", path: "outputs/icons/file/ppt_attach_round.svg" },
+      { type: "M", path: "outputs/icons/file/ppt_attach_sharp.svg" },
+      { type: "A", path: "outputs/icons/maps/mr_worldwide_round.svg" },
+      { type: "A", path: "outputs/icons/maps/mr_worldwide_sharp.svg" },
+      { type: "D", path: "outputs/icons/maps/place_maps_round.svg" },
+      { type: "D", path: "outputs/icons/maps/place_maps_sharp.svg" },
+      { type: "A", path: "outputs/png/mr_worldwide_round.png" },
+      { type: "A", path: "outputs/png/mr_worldwide_sharp.png" },
+      { type: "D", path: "outputs/png/place_maps_round.png" },
+      { type: "D", path: "outputs/png/place_maps_sharp.png" },
+      { type: "M", path: "outputs/png/ppt_attach_round.png" },
+      { type: "M", path: "outputs/png/ppt_attach_sharp.png" },
+      { type: "M", path: "outputs/web/icon-types.ts" },
+      { type: "M", path: "outputs/web/zeta-icons-round.woff2" },
+      { type: "M", path: "outputs/web/zeta-icons-sharp.woff2" },
+      { type: "M", path: "package.json" },
+      { type: "M", path: "scripts/utils/checkGit.ts" },
+    ];
+    assert.equal(
+      parse(filesChanged).trim(),
+      "iconadd(Maps): Mr Worldwide\niconupdate(File): Ppt Attach\niconremove(Maps): Place Maps",
+    );
+  });
 });

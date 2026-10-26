@@ -22,6 +22,16 @@ import { optimizeSVGs } from "../../scripts/utils/optimizeSvgs.js";
 import { ComponentSets, FigmaNode } from "../../scripts/types/figmaTypes.js";
 import { ImageManifest } from "../../types.js";
 import { captureConsole, makeTmpDir, svgWithPath } from "./helpers.js";
+import { testIconPageName } from "../data/constants.js";
+import {
+  categoryNames,
+  categoryNodes,
+  componentSets as fixtureComponentSets,
+  figmaDoc,
+  iconNodes,
+  iconPage,
+  singleCategoryNode,
+} from "../data/index.js";
 
 const node = (name: string, type: string, children: FigmaNode[] = [], id = name): FigmaNode =>
   ({ name, type, id, children }) as FigmaNode;
@@ -31,7 +41,10 @@ describe("figmaUtils (synthetic)", () => {
     it("returns the first page with a matching name", () => {
       const first = node("Icons", "CANVAS", [], "1");
       const second = node("Icons", "CANVAS", [], "2");
-      assert.strictEqual(findIconPage(node("doc", "DOCUMENT", [node("Other", "CANVAS"), first, second]), "Icons"), first);
+      assert.strictEqual(
+        findIconPage(node("doc", "DOCUMENT", [node("Other", "CANVAS"), first, second]), "Icons"),
+        first,
+      );
     });
 
     it("throws a descriptive error when no page matches (case-sensitive)", () => {
@@ -59,7 +72,10 @@ describe("figmaUtils (synthetic)", () => {
     });
 
     it("throws when there is no icons node", () => {
-      assert.throws(() => extractCategoryNodes(node("page", "CANVAS", [node("Cover", "FRAME")])), "Icons page not found");
+      assert.throws(
+        () => extractCategoryNodes(node("page", "CANVAS", [node("Cover", "FRAME")])),
+        "Icons page not found",
+      );
     });
   });
 
@@ -98,10 +114,10 @@ describe("figmaUtils (synthetic)", () => {
 
   describe("extractCategoryNames", () => {
     it("snake_cases each category name", () => {
-      assert.deepEqual(
-        extractCategoryNames([node("Action", "FRAME"), node("Arrows And Things", "FRAME")]),
-        ["action", "arrows_and_things"],
-      );
+      assert.deepEqual(extractCategoryNames([node("Action", "FRAME"), node("Arrows And Things", "FRAME")]), [
+        "action",
+        "arrows_and_things",
+      ]);
     });
     it("returns [] for no categories", () => assert.deepEqual(extractCategoryNames([]), []));
   });
@@ -119,7 +135,8 @@ describe("fileUtils (extra)", () => {
   afterEach(() => tmp.cleanup());
 
   describe("toSnakeCase", () => {
-    it("lowercases and replaces spaces by default", () => assert.equal(toSnakeCase("Add Circle Outline"), "add_circle_outline"));
+    it("lowercases and replaces spaces by default", () =>
+      assert.equal(toSnakeCase("Add Circle Outline"), "add_circle_outline"));
     it("replaces every occurrence of a custom separator", () => assert.equal(toSnakeCase("A-B-C", "-"), "a_b_c"));
     it("leaves an empty string alone", () => assert.equal(toSnakeCase(""), ""));
     it("does not replace other characters", () => assert.equal(toSnakeCase("A-B C"), "a-b_c"));
@@ -303,4 +320,21 @@ describe("optimizeSVGs", function () {
       output.restore();
     }
   });
+});
+
+describe("figmaUtils (Figma document fixture)", () => {
+  it("findIconPage finds the page with the given name", () =>
+    assert.deepEqual(findIconPage(figmaDoc.document, testIconPageName), iconPage));
+
+  it("extractCategoryNodes extracts the categories of the icon page", () =>
+    assert.deepEqual(extractCategoryNodes(iconPage), categoryNodes));
+
+  it("extractIconSets extracts the icon sets of a category", () =>
+    assert.deepEqual(extractIconSets(singleCategoryNode), iconNodes));
+
+  it("getSearchTerms returns the search terms for an icon id", () =>
+    assert.deepEqual(getSearchTerms("176:5662", fixtureComponentSets), ["Plus", "add", "create", "request"]));
+
+  it("extractCategoryNames returns the category names", () =>
+    assert.deepEqual(extractCategoryNames(categoryNodes), categoryNames));
 });

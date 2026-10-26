@@ -33,7 +33,6 @@ export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[]
     maxBuffer: 1024 * 1024 * 1000,
   }).stdout;
   if (verboseLogs) {
-    // console.log("Diff output:", diffOutput);
   }
   return diffOutput
     .toString()
@@ -53,7 +52,6 @@ export const getAllChangedFiles = (verboseLogs?: boolean): ChangedFilesDetails[]
 export const stageAllFiles = (verboseLogs?: boolean): void => {
   const statusOutput = execSync(`git status --porcelain`).toString();
   if (statusOutput != "" && verboseLogs) {
-    // console.log("Files staged:", statusOutput);
   }
   const stageAllFiles = execSync(`git add -A`).toString();
   if (stageAllFiles != "" && verboseLogs) {

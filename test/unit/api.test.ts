@@ -133,20 +133,23 @@ describe("api (offline)", () => {
 
     it("replaces every non-black hex colour with #000000 and leaves black alone", async () => {
       restore = stubFetch(
-        figmaHandler(() => '<path fill="#FF00AA"/><path fill="#000000"/><path stroke="#abcdef"/><path fill="#fff"/>'),
+        figmaHandler(
+          () => '<svg><path fill="#FF00AA"/><path fill="#000000"/><path stroke="#abcdef"/><path fill="#fff"/></svg>',
+        ),
       ).restore;
 
       const result = await getImageFiles(makeManifest(1), "FILE", "tok");
 
       assert.equal(
         result.get("icon0")!.roundData,
-        '<path fill="#000000"/><path fill="#000000"/><path stroke="#000000"/><path fill="#fff"/>',
+        '<svg><path fill="#000000"/><path fill="#000000"/><path stroke="#000000"/><path fill="#fff"/></svg>',
       );
     });
 
-    it("falls back to empty data and logs when an svg download fails", async () => {
+    it("retries a failed svg download and succeeds", async () => {
+      let attempts = 0;
       const stub = stubFetch((url) =>
-        url.endsWith("/s0.svg") ? Promise.reject(new Error("boom")) : figmaHandler()(url),
+        url.endsWith("/s0.svg") && ++attempts < 3 ? Promise.reject(new Error("boom")) : figmaHandler()(url),
       );
       const output = captureConsole();
       restore = () => {
@@ -156,10 +159,29 @@ describe("api (offline)", () => {
 
       const result = await getImageFiles(makeManifest(1), "FILE", "tok");
 
-      assert.equal(result.get("icon0")!.roundData, '<svg id="r0"/>');
-      assert.equal(result.get("icon0")!.sharpData, "");
-      assert.equal(output.error.length, 1);
-      assert.equal(output.error[0][0], "Error fetching SVG for key s0:");
+      assert.equal(result.get("icon0")!.sharpData, '<svg id="s0"/>');
+      assert.equal(output.error.length, 2);
+    });
+
+    it("throws naming the icon when an svg download fails 3 times", async () => {
+      const stub = stubFetch((url) =>
+        url.endsWith("/s0.svg") ? Promise.reject(new Error("boom")) : figmaHandler()(url),
+      );
+      const output = captureConsole();
+      restore = () => {
+        output.restore();
+        stub.restore();
+      };
+
+      let error: Error | undefined;
+      try {
+        await getImageFiles(makeManifest(1), "FILE", "tok");
+      } catch (e) {
+        error = e as Error;
+      }
+
+      assert.equal(error?.message, "Could not fetch SVG for Icon 0 (sharp) [s0]");
+      assert.equal(output.error.length, 3);
     });
 
     it("throws when the Figma images endpoint returns a non-200 status", async () => {

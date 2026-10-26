@@ -51,5 +51,6 @@ try {
   core.setOutput("files_changed", filesChangedOutput);
   core.setOutput('comment', filesChangedOutput)
 } catch (error) {
+  console.error(error); // full stack and cause; setFailed only shows the message
   core.setFailed(error.message);
 }

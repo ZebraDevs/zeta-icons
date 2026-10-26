@@ -108,7 +108,9 @@ describe("figmaUtils (synthetic)", () => {
     ]);
 
     it("splits the description on ', '", () => assert.deepEqual(getSearchTerms("1", sets), ["Plus", "add", "create"]));
-    it("returns [''] for an empty description", () => assert.deepEqual(getSearchTerms("2", sets), [""]));
+    it("returns [] for an empty description", () => assert.deepEqual(getSearchTerms("2", sets), []));
+    it("trims whitespace around terms", () =>
+      assert.deepEqual(getSearchTerms("4", new Map([["4", { name: "X", description: " a ,b,  c " }]])), ["a", "b", "c"]));
     it("returns [] for an unknown id", () => assert.deepEqual(getSearchTerms("3", sets), []));
   });
 
@@ -138,6 +140,7 @@ describe("fileUtils (extra)", () => {
     it("lowercases and replaces spaces by default", () =>
       assert.equal(toSnakeCase("Add Circle Outline"), "add_circle_outline"));
     it("replaces every occurrence of a custom separator", () => assert.equal(toSnakeCase("A-B-C", "-"), "a_b_c"));
+    it("trims surrounding whitespace", () => assert.equal(toSnakeCase("Quote "), "quote"));
     it("leaves an empty string alone", () => assert.equal(toSnakeCase(""), ""));
     it("does not replace other characters", () => assert.equal(toSnakeCase("A-B C"), "a-b_c"));
   });

@@ -335,8 +335,6 @@ describe("generateFonts", function () {
     assert.include(result.dartSharpDefinitions[0], "static const IconData alpha_sharp = IconData(0xe001, fontFamily: familySharp, fontPackage: package);");
     assert.include(result.dartSharpDefinitions[0], "outputs/png/alpha_sharp.png");
     assert.include(result.dartSharpDefinitions[0], "Alpha icon (sharp)");
-    // dartDefinitions are generated without a type, so they warn.
-    assert.isAtLeast(output.warn.length, 2);
   });
 
   it("rejects when there are no svgs to build a font from", async () => {

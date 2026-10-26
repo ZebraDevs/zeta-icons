@@ -125,9 +125,7 @@ function getDartIconDefinition(iconName: string, unicode: string, type: FontType
   }
 
   const cap = type?.capitalize() ?? "";
-  if (cap.length === 0) {
-    console.warn("Icon type is undefined for icon:", iconName);
-  }
+
   return `${iconPreview}
   static const IconData ${iconName} = IconData(0x${unicode}, fontFamily: family${cap}, fontPackage: package);`;
 }

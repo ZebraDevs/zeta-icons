@@ -46,7 +46,7 @@ export function generateIconManifest(
       const icons = extractIconSets(category);
 
       for (const icon of icons) {
-        let name = icon.name;
+        let name = icon.name.trim();
 
         if (verboseLogs) {
           console.log(`Current Icon: ${name}`);

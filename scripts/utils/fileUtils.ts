@@ -35,7 +35,7 @@ export const getIconFileName = (iconName: string, type: FontType): string => `${
  * @param {string} separator - Character used as word separator in string. Defaults to ` ` (space).
  */
 export const toSnakeCase = function (string: string, separator: string = " "): string {
-  return `${string.toLowerCase().replaceAll(separator, "_")}`;
+  return string.trim().toLowerCase().replaceAll(separator, "_");
 };
 
 /**

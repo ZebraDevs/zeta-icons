@@ -62,7 +62,10 @@ export function getSearchTerms(iconSetId: string, componentSets: ComponentSets):
   const iconComponentSet = componentSets.get(iconSetId);
 
   if (!iconComponentSet) return [];
-  return iconComponentSet.description.split(", ") ?? "";
+  return iconComponentSet.description
+    .split(",")
+    .map((term) => term.trim())
+    .filter(Boolean);
 }
 
 /**

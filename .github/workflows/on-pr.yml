@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           registry-url: "https://registry.npmjs.org"
 
       - name: Checkout
@@ -46,7 +46,7 @@ jobs:
       - name: Check TypeScript validity (icon-types.ts)
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - name: Install dependencies
         run: yarn install --immutable
 

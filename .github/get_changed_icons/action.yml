@@ -8,5 +8,5 @@ outputs:
     description: "The commit body data"
 
 runs:
-  using: "node20"
+  using: "node24"
   main: "index.js"

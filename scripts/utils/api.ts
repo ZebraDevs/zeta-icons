@@ -81,16 +81,29 @@ export async function getImageFiles(
     return { ...acc, ...images };
   });
 
+  const iconNames = new Map<string, string>();
+  manifest.forEach((d) => {
+    iconNames.set(d.roundId, `${d.name} (round)`);
+    iconNames.set(d.sharpId, `${d.name} (sharp)`);
+  });
+
   const svgTextResponse: any[] = await Promise.all(
     Object.entries(json).map(([key, value]) => {
       return (async () => {
-        try {
-          const response = await fetchWithTimeout(value, {}, 10000);
-          const url = await response.text();
-          return [key, url];
-        } catch (error) {
-          console.error(`Error fetching SVG for key ${key}:`, error);
-          return [key, ""];
+        const label = `${iconNames.get(key) ?? "unknown icon"} [${key}]`;
+        for (let attempt = 1; ; attempt++) {
+          try {
+            const response = await fetchWithTimeout(value, {}, 10000);
+            const text = await response.text();
+            if (!response.ok || !text.includes("<svg")) {
+              throw new Error(`HTTP ${response.status}, body: ${text.slice(0, 100)}`);
+            }
+            return [key, text];
+          } catch (error) {
+            console.error(`Error fetching SVG for ${label} (attempt ${attempt}/3):`, error);
+            // Fail here with the icon name, rather than later on an empty SVG.
+            if (attempt === 3) throw new Error(`Could not fetch SVG for ${label}`, { cause: error });
+          }
         }
       })();
     }),

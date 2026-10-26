@@ -69,7 +69,13 @@ export const clearDirectory = async (dir: string) => {
  * @param {string} filePath - Location to save SVG. Should include full file path, name and extension.
  */
 export const writeSVGToFile = async (svg: string, filePath: string): Promise<void> => {
-  svg = await scale(svg, { scale: 50 });
+  try {
+    svg = await scale(svg, { scale: 50 });
+  } catch (error) {
+    throw new Error(`Failed to scale SVG for ${filePath} (${svg.length} chars): ${(error as Error).message}`, {
+      cause: error,
+    });
+  }
 
   writeFileSync(filePath, svg);
 };

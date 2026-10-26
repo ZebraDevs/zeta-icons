@@ -17,5 +17,5 @@ outputs:
   comment:
     description: "The comment to be added to the PR"
 runs:
-  using: "node20"
+  using: "node24"
   main: "index.js"

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: # manual npm publish only (see publish-npm job)
 
 permissions:
   contents: write
@@ -13,7 +14,7 @@ permissions:
 jobs:
   on-main:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[released]')"
+    if: github.event_name == 'push' && !contains(github.event.head_commit.message, '[released]')
     outputs:
       icons-changed: ${{ steps.check-icons.outputs.icons_changed }}
 
@@ -49,3 +50,10 @@ jobs:
     secrets:
       PAT: ${{ secrets.PAT }}
       FIGMA_PERSONAL_ACCESS_TOKEN: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
+
+  publish-npm:
+    if: github.event_name == 'workflow_dispatch'
+    uses: ./.github/workflows/publish-npm.yml
+    permissions:
+      contents: read
+      id-token: write

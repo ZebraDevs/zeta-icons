@@ -3,8 +3,8 @@ import { tmpdir } from "os";
 import { join } from "path";
 
 /** Creates a throwaway directory; returns its path and a cleanup function. */
-export const makeTmpDir = (prefix = "zeta-icons-test-") => {
-  const dir = mkdtempSync(join(tmpdir(), prefix));
+export const makeTmpDir = () => {
+  const dir = mkdtempSync(join(tmpdir(), "zeta-icons-test-"));
   return { dir, cleanup: () => rmSync(dir, { recursive: true, force: true }) };
 };
 

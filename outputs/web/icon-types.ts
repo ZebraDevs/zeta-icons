@@ -542,6 +542,7 @@ export const ZetaIconNameList = [
   "rotate_right",
   "rss_feed",
   "rtf_attach",
+  "rules_label",
   "rules",
   "sad",
   "satisfied",
@@ -1259,6 +1260,7 @@ export type ZetaIconName = "aac_attach"
  | "rotate_right"
  | "rss_feed"
  | "rtf_attach"
+ | "rules_label"
  | "rules"
  | "sad"
  | "satisfied"
